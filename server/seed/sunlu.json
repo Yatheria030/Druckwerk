@@ -1,0 +1,880 @@
+{
+ "brand": "Sunlu",
+ "match": "sunlu",
+ "url": "https://store.sunlu.com",
+ "source": "Shop store.sunlu.com (Sorten, Namen), Farbtabelle der Produktseiten de.store.sunlu.com (Hex), sonst SpoolmanDB (MIT); null = unbekannt",
+ "lines": [
+  {
+   "material": "PLA",
+   "name": "PLA",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Klein Blue", "hex": "1729AB", "code": null},
+    {"name": "Gold", "hex": "EFA537", "code": null},
+    {"name": "Silver", "hex": "9299A9", "code": null},
+    {"name": "Transparent Orange", "hex": "FDB958", "code": null},
+    {"name": "Vivid Yellow", "hex": "EAC642", "code": null},
+    {"name": "Ceramic White", "hex": "F4F9FF", "code": null},
+    {"name": "Bone White", "hex": "EEE7D4", "code": null},
+    {"name": "Midnight", "hex": "28334A", "code": null},
+    {"name": "Roasted Chestnut Black", "hex": "1D0E07", "code": null},
+    {"name": "Oak", "hex": "C2B29A", "code": null},
+    {"name": "Orange", "hex": "F25602", "code": null},
+    {"name": "Grass Green", "hex": "328169", "code": null},
+    {"name": "Lemon Yellow", "hex": "E6E55F", "code": null},
+    {"name": "Sky Blue", "hex": "69E2FF", "code": null},
+    {"name": "Transparent Yellow", "hex": "E2CC5B", "code": null},
+    {"name": "Transparent Purple", "hex": "8E8AF8", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Sakura Pink", "hex": "F6C7B3", "code": null},
+    {"name": "Beige", "hex": "F0E0D6", "code": null},
+    {"name": "Mint Green", "hex": "0CCEB4", "code": null},
+    {"name": "Cyan", "hex": "00A3E0", "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Coffee Brown", "hex": "362111", "code": null},
+    {"name": "Transparent", "hex": "C4C2C8", "code": null},
+    {"name": "Transparent Red", "hex": "FF4747", "code": null},
+    {"name": "Transparent Blue", "hex": "3A87FE", "code": null},
+    {"name": "Transparent Green", "hex": "16BA36", "code": null},
+    {"name": "Magenta", "hex": "C52E79", "code": null},
+    {"name": "Cherry Red", "hex": "E63034", "code": null},
+    {"name": "Blue Grey", "hex": "3E53D5", "code": null},
+    {"name": "Fuchsia", "hex": "B63ED4", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Matte",
+   "profile_id": null,
+   "colors": [
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Latte Brown", "hex": null, "code": null},
+    {"name": "Ivory White", "hex": null, "code": null},
+    {"name": "Desert Tan", "hex": null, "code": null},
+    {"name": "Grass Green", "hex": "328169", "code": null},
+    {"name": "Dark Brown", "hex": null, "code": null},
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Charcoal", "hex": null, "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Klein Blue", "hex": "1729AB", "code": null},
+    {"name": "Bright Yellow", "hex": null, "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Light Blue", "hex": null, "code": null},
+    {"name": "Powder Blue", "hex": null, "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Clay", "hex": "978F81", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Pink", "hex": "E684B4", "code": null},
+    {"name": "Ocean Blue", "hex": "A6D4E8", "code": null},
+    {"name": "Sprout Green", "hex": "DDF650", "code": null},
+    {"name": "Blue", "hex": "3D67BE", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Bone White", "hex": "EEE7D4", "code": null},
+    {"name": "Oak", "hex": "C2B29A", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Meta",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Cherry Red", "hex": "ED374D", "code": null},
+    {"name": "Sky Blue", "hex": "0AB4E5", "code": null},
+    {"name": "Lemon Yellow", "hex": "FBF9AF", "code": null},
+    {"name": "Mint Green", "hex": "03CCB5", "code": null},
+    {"name": "Sakura Pink", "hex": "FDD4DE", "code": null},
+    {"name": "Chocolate", "hex": "895A4E", "code": null},
+    {"name": "Taro Purple", "hex": "AF98DF", "code": null},
+    {"name": "Cream White", "hex": "EEE7D4", "code": null},
+    {"name": "Apple Green", "hex": "A9EAA7", "code": null},
+    {"name": "Ice Blue", "hex": "9FECF7", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Sunny Orange", "hex": "FC8B4C", "code": null},
+    {"name": "Teal", "hex": "009CA6", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA High Speed",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Klein Blue", "hex": "1729AB", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Orange", "hex": "F25602", "code": null},
+    {"name": "Pink", "hex": "FF89C0", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Coral Pink", "hex": "FF8674", "code": null},
+    {"name": "Mocha Mousse", "hex": "A47B67", "code": null},
+    {"name": "Sky Blue", "hex": "4CCBFE", "code": null},
+    {"name": "Jelly Green", "hex": "72DBD4", "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA High Speed Matte",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "1F2123", "code": null},
+    {"name": "White", "hex": "FFFFF9", "code": null},
+    {"name": "Grey", "hex": "63666A", "code": null},
+    {"name": "Cherry Red", "hex": "FD404B", "code": null},
+    {"name": "Sky Blue", "hex": "AEEAFF", "code": null},
+    {"name": "Sunny Orange", "hex": "FF8C54", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Sakura Pink", "hex": "FFE0E8", "code": null},
+    {"name": "Lemon Yellow", "hex": "F2F0A1", "code": null},
+    {"name": "Mint Green", "hex": "00C7B1", "code": null},
+    {"name": "Chocolate", "hex": "906557", "code": null},
+    {"name": "CMYK", "hex": null, "code": null},
+    {"name": "Pri-Magenta", "hex": "D5419E", "code": null},
+    {"name": "Pri-White", "hex": "F9FDFF", "code": null},
+    {"name": "Pri-Yellow", "hex": "F0EA02", "code": null},
+    {"name": "Pri-Cyan", "hex": "00A4E1", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Lite",
+   "profile_id": null,
+   "colors": [
+    {"name": "Grey", "hex": "63666A", "code": null},
+    {"name": "Black", "hex": "1F2123", "code": null},
+    {"name": "Cherry Red", "hex": "FD404B", "code": null},
+    {"name": "Sunny Orange", "hex": "FF8C54", "code": null},
+    {"name": "Lemon Yellow", "hex": "F2F0A1", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Mint Green", "hex": "00C7B1", "code": null},
+    {"name": "Sky Blue", "hex": "AEEAFF", "code": null},
+    {"name": "Sakura Pink", "hex": "FFE0E8", "code": null},
+    {"name": "Chocolate", "hex": "906557", "code": null},
+    {"name": "Pri-Magenta", "hex": "D5419E", "code": null},
+    {"name": "Pri-White", "hex": "F9FDFF", "code": null},
+    {"name": "Pri-Cyan", "hex": "00A4E1", "code": null},
+    {"name": "Pri-Yellow", "hex": "F0EA02", "code": null},
+    {"name": "White", "hex": "FFFFF9", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Transparent",
+   "profile_id": null,
+   "colors": [
+    {"name": "Strawberry Jam", "hex": "F87272", "code": null},
+    {"name": "Orange Juice", "hex": "FFC867", "code": null},
+    {"name": "Grape Jelly", "hex": "C5B5E4", "code": null},
+    {"name": "Mint Ice", "hex": "7ECDB6", "code": null},
+    {"name": "Ocean Haze", "hex": "75AABE", "code": null},
+    {"name": "Mist Black", "hex": "000000", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Fluorescent",
+   "profile_id": null,
+   "colors": [
+    {"name": "Blue", "hex": null, "code": null},
+    {"name": "Green", "hex": null, "code": null},
+    {"name": "Purple", "hex": null, "code": null},
+    {"name": "Red", "hex": null, "code": null},
+    {"name": "Orange", "hex": null, "code": null},
+    {"name": "Yellow", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Pastel",
+   "profile_id": null,
+   "colors": [
+    {"name": "Pistachio Green", "hex": null, "code": null},
+    {"name": "Sage Green", "hex": null, "code": null},
+    {"name": "Pastel Blue", "hex": null, "code": null},
+    {"name": "Peach Pink", "hex": "FF9A8D", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Vibrant",
+   "profile_id": null,
+   "colors": [
+    {"name": "Earth Green", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Glow",
+   "profile_id": null,
+   "colors": [
+    {"name": "White (Glow Green)", "hex": "DCEABE", "code": null},
+    {"name": "White (Glow Blue)", "hex": "F1F4ED", "code": null},
+    {"name": "Yellow (Glow Yellow)", "hex": "FFFF00", "code": null},
+    {"name": "Red (Glow Orange)", "hex": "FF0000", "code": null},
+    {"name": "Blue (Glow Blue)", "hex": null, "code": null},
+    {"name": "Future Green (Glow Green)", "hex": null, "code": null},
+    {"name": "Cyber Orange (Glow Orange)", "hex": "FF833F", "code": null},
+    {"name": "Tech Blue", "hex": "0073CB", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Marble",
+   "profile_id": null,
+   "colors": [
+    {"name": "Brick Red", "hex": "8F4938", "code": null},
+    {"name": "Forest Green", "hex": "C3D3D0", "code": null},
+    {"name": "Oreo", "hex": "DDDFE3", "code": null},
+    {"name": "Chestnut Brown", "hex": "E1E0DE", "code": null},
+    {"name": "Ashen Concrete", "hex": "838383", "code": null},
+    {"name": "Shadow Storm", "hex": "D8D7D8", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Galaxy",
+   "profile_id": null,
+   "colors": [
+    {"name": "Starlit Flow", "hex": null, "code": null},
+    {"name": "Galaxy Green", "hex": null, "code": null},
+    {"name": "Stardust Purple", "hex": null, "code": null},
+    {"name": "Star Brown", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Twinkling",
+   "profile_id": null,
+   "colors": [
+    {"name": "Blue", "hex": null, "code": null},
+    {"name": "Black", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Metallic",
+   "profile_id": null,
+   "colors": [
+    {"name": "Azurite", "hex": "295D8A", "code": null},
+    {"name": "Brass Gold", "hex": "796734", "code": null},
+    {"name": "Marrakech Bronze", "hex": "946B3A", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Wood",
+   "profile_id": null,
+   "colors": [
+    {"name": "Cherry", "hex": "DC9E97", "code": null},
+    {"name": "Walnut", "hex": "997261", "code": null},
+    {"name": "Maple", "hex": "F3D4A4", "code": null},
+    {"name": "Wood", "hex": "BFA086", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Anti-String",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "1F2123", "code": null},
+    {"name": "Cream White", "hex": "EEE7D4", "code": null},
+    {"name": "Grey", "hex": "63666A", "code": null},
+    {"name": "Dark Green", "hex": "5A6D3D", "code": null},
+    {"name": "Light Blue", "hex": "AEEAFF", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Lightweight",
+   "profile_id": null,
+   "colors": [
+    {"name": "White", "hex": "FFFFFF", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Matte Dual-Color",
+   "profile_id": null,
+   "colors": [
+    {"name": "Red+Yellow", "hex": null, "code": null},
+    {"name": "Red+Blue", "hex": null, "code": null},
+    {"name": "Black+Red", "hex": null, "code": null},
+    {"name": "Orange+Red", "hex": null, "code": null},
+    {"name": "Black+Blue", "hex": null, "code": null},
+    {"name": "Yellow+Cyan", "hex": null, "code": null},
+    {"name": "Green+Purple", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Rainbow",
+   "profile_id": null,
+   "colors": [
+    {"name": "Rainbow-01", "hex": null, "code": null},
+    {"name": "Rainbow-02", "hex": null, "code": null},
+    {"name": "Rainbow-03", "hex": null, "code": null},
+    {"name": "Rainbow-04", "hex": null, "code": null},
+    {"name": "Transparent Rainbow-01", "hex": null, "code": null},
+    {"name": "Transparent Rainbow-02", "hex": null, "code": null},
+    {"name": "Transparent Rainbow-03", "hex": null, "code": null},
+    {"name": "Transparent Rainbow-04", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PLA-CF",
+   "name": "PLA-CF",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA+",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Klein Blue", "hex": "1729AB", "code": null},
+    {"name": "Gold", "hex": "EFA537", "code": null},
+    {"name": "Silver", "hex": "9299A9", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Transparent", "hex": "C4C2C8", "code": null},
+    {"name": "Transparent Blue", "hex": "3A87FE", "code": null},
+    {"name": "Transparent Green", "hex": "16BA36", "code": null},
+    {"name": "Transparent Red", "hex": "FF4747", "code": null},
+    {"name": "Transparent Orange", "hex": "FDB958", "code": null},
+    {"name": "Magenta", "hex": "C52E79", "code": null},
+    {"name": "Vivid Yellow", "hex": "EAC642", "code": null},
+    {"name": "Ceramic White", "hex": "F4F9FF", "code": null},
+    {"name": "Bone White", "hex": "EEE7D4", "code": null},
+    {"name": "Midnight", "hex": "28334A", "code": null},
+    {"name": "Roasted Chestnut Black", "hex": "1D0E07", "code": null},
+    {"name": "Oak", "hex": "C2B29A", "code": null},
+    {"name": "Orange", "hex": "F25602", "code": null},
+    {"name": "Mint Green", "hex": "0CCEB4", "code": null},
+    {"name": "Cherry Red", "hex": "E63034", "code": null},
+    {"name": "Lemon Yellow", "hex": "E6E55F", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Sakura Pink", "hex": "F6C7B3", "code": null},
+    {"name": "Sky Blue", "hex": "69E2FF", "code": null},
+    {"name": "Transparent Yellow", "hex": "E2CC5B", "code": null},
+    {"name": "Transparent Purple", "hex": "8E8AF8", "code": null},
+    {"name": "Coffee Brown", "hex": "362111", "code": null},
+    {"name": "Light Gold", "hex": "FADD47", "code": null},
+    {"name": "Chocolate", "hex": "563835", "code": null},
+    {"name": "Grass Green", "hex": "328169", "code": null},
+    {"name": "Beige", "hex": "F0E0D6", "code": null},
+    {"name": "Cyan", "hex": "00A3E0", "code": null},
+    {"name": "Blue Grey", "hex": "3E53D5", "code": null},
+    {"name": "Pink", "hex": "FFABD3", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA+ 2.0",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Klein Blue", "hex": "1729AB", "code": null},
+    {"name": "Silver", "hex": "9299A9", "code": null},
+    {"name": "Vivid Yellow", "hex": "EAC642", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Magenta", "hex": "C52E79", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Coffee Brown", "hex": "362111", "code": null},
+    {"name": "Ceramic White", "hex": "F4F9FF", "code": null},
+    {"name": "Bone White", "hex": "EEE7D4", "code": null},
+    {"name": "Midnight", "hex": "28334A", "code": null},
+    {"name": "Roasted Chestnut Black", "hex": "1D0E07", "code": null},
+    {"name": "Oak", "hex": "C2B29A", "code": null},
+    {"name": "Cyan", "hex": "00A3E0", "code": null},
+    {"name": "Beige", "hex": "F0E0D6", "code": null},
+    {"name": "Gold", "hex": "EFA537", "code": null},
+    {"name": "Lemon Yellow", "hex": "E6E55F", "code": null},
+    {"name": "Cherry Red", "hex": "E63034", "code": null},
+    {"name": "Mint Green", "hex": "0CCEB4", "code": null},
+    {"name": "Chocolate", "hex": "563835", "code": null},
+    {"name": "Pure Yellow", "hex": "EAC642", "code": null},
+    {"name": "Blue Grey", "hex": "3E53D5", "code": null},
+    {"name": "Orange", "hex": "F25602", "code": null},
+    {"name": "Grass Green", "hex": "328169", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA+ High Speed",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "26282A", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "54565A", "code": null},
+    {"name": "Red", "hex": "BB4041", "code": null},
+    {"name": "Blue", "hex": "2556BC", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Orange", "hex": "EF8646", "code": null},
+    {"name": "Pink", "hex": "E67C99", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA+ High Speed 2.0",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Blue", "hex": "2556BC", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Pink", "hex": "E67C99", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Orange", "hex": "EF8646", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA+ Silk",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "1D1C1B", "code": null},
+    {"name": "White", "hex": "FFFFF9", "code": null},
+    {"name": "Grey", "hex": "7F95A5", "code": null},
+    {"name": "Red", "hex": "E13E52", "code": null},
+    {"name": "Blue", "hex": "00AAEA", "code": null},
+    {"name": "Green", "hex": "04C7B1", "code": null},
+    {"name": "Silver", "hex": "91A2C0", "code": null},
+    {"name": "Light Gold", "hex": "F1BE48", "code": null},
+    {"name": "Red Copper", "hex": "A45E49", "code": null},
+    {"name": "Pink", "hex": "FFC2D8", "code": null},
+    {"name": "Yellow", "hex": "F7DE02", "code": null},
+    {"name": "Purple", "hex": "904896", "code": null},
+    {"name": "Brass", "hex": "FFAE11", "code": null},
+    {"name": "Bronze", "hex": "779E7C", "code": null},
+    {"name": "Orange", "hex": "FF7F32", "code": null},
+    {"name": "Black Jade", "hex": "3D493E", "code": null},
+    {"name": "Candy Dandy", "hex": "FB637E", "code": null},
+    {"name": "Dark Purple", "hex": "485CC7", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA+ Silk 2.0",
+   "profile_id": null,
+   "colors": [
+    {"name": "Vivid Rose", "hex": "E31C79", "code": null},
+    {"name": "Violet", "hex": "753BBD", "code": null},
+    {"name": "Shiny Blue", "hex": "0072CE", "code": null},
+    {"name": "Glossy Lake Cyan", "hex": "009CA6", "code": null},
+    {"name": "Streamer Blue", "hex": "A7C6ED", "code": null},
+    {"name": "Light Gilded Gold", "hex": "AC906A", "code": null},
+    {"name": "Metallic Green", "hex": "679A6F", "code": null},
+    {"name": "Satin Glow Orange", "hex": "FF6720", "code": null},
+    {"name": "Titanium Steel", "hex": "8C8B89", "code": null},
+    {"name": "Luxury Bright Red", "hex": "D6001C", "code": null},
+    {"name": "Copper Red", "hex": "A55F49", "code": null},
+    {"name": "Silver", "hex": "919CAC", "code": null},
+    {"name": "Soft Satin Pink", "hex": "F8B5C4", "code": null},
+    {"name": "Light Gold", "hex": null, "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "Gold", "hex": "F1BE48", "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA+ Silk Multi-Color",
+   "profile_id": null,
+   "colors": [
+    {"name": "Dual-Color Black+Purple", "hex": null, "code": null},
+    {"name": "Dual-Color Black+White", "hex": null, "code": null},
+    {"name": "Dual-Color Black+Gold", "hex": null, "code": null},
+    {"name": "Dual-Color Blue+Green", "hex": null, "code": null},
+    {"name": "Dual-Color Pink+Gold", "hex": null, "code": null},
+    {"name": "Dual-Color Black+Blue", "hex": null, "code": null},
+    {"name": "Dual-Color Black+Green", "hex": null, "code": null},
+    {"name": "Dual-Color Red+Blue", "hex": null, "code": null},
+    {"name": "Dual-Color Red+Gold", "hex": null, "code": null},
+    {"name": "Tri-Color Red+Yellow+Blue", "hex": null, "code": null},
+    {"name": "Tri-Color Red+Yellow+Green", "hex": null, "code": null},
+    {"name": "Tri-Color Blue+Green+Purple", "hex": null, "code": null},
+    {"name": "Tri-Color Orange+Blue+Green", "hex": null, "code": null},
+    {"name": "Tri-Color Black+Gold+Purple", "hex": null, "code": null},
+    {"name": "Four-Color Black+Gray+Red+Yellow", "hex": null, "code": null},
+    {"name": "Four-Color Blue+Purple+Orange+Yellow", "hex": null, "code": null},
+    {"name": "Four-Color Blue+Purple+Red+Gold", "hex": null, "code": null},
+    {"name": "Four-Color Red+Yellow+Green+Black", "hex": null, "code": null},
+    {"name": "Dual-Color Green+Purple", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA+ Silk Rainbow",
+   "profile_id": null,
+   "colors": [
+    {"name": "Rainbow-01", "hex": null, "code": null},
+    {"name": "Rainbow-02", "hex": null, "code": null},
+    {"name": "Rainbow-03", "hex": null, "code": null},
+    {"name": "Rainbow-04", "hex": null, "code": null},
+    {"name": "Rainbow-05", "hex": null, "code": null},
+    {"name": "Rainbow-06", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PETG",
+   "name": "PETG",
+   "profile_id": null,
+   "colors": [
+    {"name": "Ceramic White", "hex": "F4F9FF", "code": null},
+    {"name": "Bone White", "hex": "EEE7D4", "code": null},
+    {"name": "Oak", "hex": "C2B29A", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Transparent", "hex": "C4C2C8", "code": null},
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Klein Blue", "hex": "1729AB", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Cherry Red", "hex": "E63034", "code": null},
+    {"name": "Lemon Yellow", "hex": "E6E55F", "code": null},
+    {"name": "Mint Green", "hex": "0CCEB4", "code": null},
+    {"name": "Sakura Pink", "hex": "F6C7B3", "code": null},
+    {"name": "Transparent Yellow", "hex": "E2CC5B", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Midnight", "hex": "28334A", "code": null},
+    {"name": "Roasted Chestnut Black", "hex": "1D0E07", "code": null},
+    {"name": "Coffee Brown", "hex": "362111", "code": null},
+    {"name": "Cyan", "hex": "00A3E0", "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Magenta", "hex": "C52E79", "code": null},
+    {"name": "Beige", "hex": "F0E0D6", "code": null},
+    {"name": "Sky Blue", "hex": "69E2FF", "code": null},
+    {"name": "Chocolate", "hex": "793D00", "code": null},
+    {"name": "Orange", "hex": "F25602", "code": null},
+    {"name": "Vivid Yellow", "hex": "EAC642", "code": null},
+    {"name": "Transparent Blue", "hex": "3A87FE", "code": null},
+    {"name": "Transparent Green", "hex": "44F867", "code": null},
+    {"name": "Transparent Purple", "hex": "8E8AF8", "code": null},
+    {"name": "Transparent Red", "hex": "FF4747", "code": null},
+    {"name": "Transparent Orange", "hex": "FDB958", "code": null}
+   ]
+  },
+  {
+   "material": "PETG",
+   "name": "PETG 2.0",
+   "profile_id": null,
+   "colors": [
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Klein Blue", "hex": "1729AB", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Bone White", "hex": "EEE7D4", "code": null},
+    {"name": "Coffee Brown", "hex": "362111", "code": null},
+    {"name": "Vivid Yellow", "hex": "EAC642", "code": null},
+    {"name": "Cyan", "hex": "00A3E0", "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Magenta", "hex": "C52E79", "code": null},
+    {"name": "Beige", "hex": "F0E0D6", "code": null},
+    {"name": "Oak", "hex": "C2B29A", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Aqua Blue", "hex": "00ADAD", "code": null},
+    {"name": "Blush Pink", "hex": "F9C5C2", "code": null},
+    {"name": "Peach Pink", "hex": "FF9A8D", "code": null},
+    {"name": "Roasted Chestnut Black", "hex": "1D0E07", "code": null},
+    {"name": "Midnight", "hex": "28334A", "code": null},
+    {"name": "Ceramic White", "hex": "F4F9FF", "code": null}
+   ]
+  },
+  {
+   "material": "PETG",
+   "name": "PETG High Speed Matte",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Blue", "hex": "1729AB", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Pink", "hex": "FCA2D3", "code": null},
+    {"name": "Mint Green", "hex": "4CA98F", "code": null},
+    {"name": "Sky Blue", "hex": "4CCBFE", "code": null},
+    {"name": "Orange", "hex": "F55F35", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Mocha Mousse", "hex": "A47B67", "code": null},
+    {"name": "Magenta", "hex": "C52E79", "code": null},
+    {"name": "Coral Pink", "hex": "FF8674", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null}
+   ]
+  },
+  {
+   "material": "PETG",
+   "name": "PETG Glow",
+   "profile_id": null,
+   "colors": [
+    {"name": "Red (Glow Red)", "hex": null, "code": null},
+    {"name": "Blue (Glow Blue)", "hex": null, "code": null},
+    {"name": "Yellow (Glow Yellow)", "hex": null, "code": null},
+    {"name": "Green (Glow Green)", "hex": null, "code": null},
+    {"name": "White (Glow Green)", "hex": null, "code": null},
+    {"name": "White (Glow Blue)", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PETG",
+   "name": "PETG Rainbow",
+   "profile_id": null,
+   "colors": [
+    {"name": "Rainbow-01", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PETG-CF",
+   "name": "PETG-CF",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null}
+   ]
+  },
+  {
+   "material": "ABS",
+   "name": "ABS",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Klein Blue", "hex": "1729AB", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Beige", "hex": "F0E0D6", "code": null},
+    {"name": "Light Gold", "hex": "FADD47", "code": null},
+    {"name": "Gold", "hex": "EFA537", "code": null},
+    {"name": "Silver", "hex": "888F98", "code": null},
+    {"name": "Cyan", "hex": "00A3E0", "code": null},
+    {"name": "Magenta", "hex": "C52E79", "code": null},
+    {"name": "Coffee Brown", "hex": "362111", "code": null},
+    {"name": "Olive Green", "hex": "5A6D3D", "code": null},
+    {"name": "Transparent White", "hex": null, "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Vivid Yellow", "hex": "EAC642", "code": null},
+    {"name": "Oak", "hex": "C2B29A", "code": null},
+    {"name": "Golden", "hex": "BDA261", "code": null}
+   ]
+  },
+  {
+   "material": "ABS",
+   "name": "ABS Easy",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Mint Green", "hex": "0CCEB4", "code": null},
+    {"name": "Natural", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "ABS",
+   "name": "ABS-FR",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "Natural", "hex": "F6F2E8", "code": null}
+   ]
+  },
+  {
+   "material": "ABS-GF",
+   "name": "ABS-GF",
+   "profile_id": null,
+   "colors": [
+    {"name": "Natural", "hex": "FFFFFF", "code": null}
+   ]
+  },
+  {
+   "material": "ASA",
+   "name": "ASA",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Klein Blue", "hex": "1729AB", "code": null},
+    {"name": "Natural", "hex": "F4F2EB", "code": null},
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Mocha Mousse", "hex": "A47B67", "code": null},
+    {"name": "Lavender Purple", "hex": "685BC7", "code": null},
+    {"name": "Yellow", "hex": "FFF13F", "code": null}
+   ]
+  },
+  {
+   "material": "TPU",
+   "name": "TPU 95A",
+   "profile_id": null,
+   "colors": [
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Azure", "hex": "008BE4", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Yellow", "hex": "FCE300", "code": null},
+    {"name": "Pink", "hex": "F57EB6", "code": null}
+   ]
+  },
+  {
+   "material": "TPU",
+   "name": "TPU 90A",
+   "profile_id": null,
+   "colors": [
+    {"name": "Grey", "hex": "75787B", "code": null},
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "Red", "hex": "BC2726", "code": null},
+    {"name": "Green", "hex": "1DAA27", "code": null},
+    {"name": "Sunny Orange", "hex": "ED7334", "code": null},
+    {"name": "Azure", "hex": "008BE4", "code": null},
+    {"name": "White", "hex": "FFFFFF", "code": null},
+    {"name": "Yellow", "hex": "FCE300", "code": null},
+    {"name": "Pink", "hex": "F57EB6", "code": null}
+   ]
+  },
+  {
+   "material": "TPU",
+   "name": "TPU Silk",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "1D1C1B", "code": null},
+    {"name": "Cream White", "hex": "F9F4E2", "code": null},
+    {"name": "Burgundy", "hex": "66435A", "code": null},
+    {"name": "Dark Blue", "hex": "304C87", "code": null},
+    {"name": "Light Blue", "hex": "96E0E5", "code": null}
+   ]
+  },
+  {
+   "material": "PC",
+   "name": "PC",
+   "profile_id": null,
+   "colors": [
+    {"name": "Natural", "hex": "FEFEFF", "code": null}
+   ]
+  },
+  {
+   "material": "PC",
+   "name": "PC-ABS",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "White", "hex": "F9F8F4", "code": null}
+   ]
+  },
+  {
+   "material": "PA",
+   "name": "PA Easy",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "Natural", "hex": "F6F2E8", "code": null}
+   ]
+  },
+  {
+   "material": "PA6-CF",
+   "name": "PA6-CF",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null}
+   ]
+  },
+  {
+   "material": "PA6-GF",
+   "name": "PA6-GF",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "Grey", "hex": "6E7174", "code": null}
+   ]
+  },
+  {
+   "material": "PA12-CF",
+   "name": "PA12-CF",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null}
+   ]
+  },
+  {
+   "material": "PP",
+   "name": "PP",
+   "profile_id": null,
+   "colors": [
+    {"name": "Natural", "hex": null, "code": null}
+   ]
+  },
+  {
+   "material": "PP",
+   "name": "PP 2.0",
+   "profile_id": null,
+   "colors": [
+    {"name": "Natural", "hex": "FFFFFF", "code": null}
+   ]
+  },
+  {
+   "material": "PEEK",
+   "name": "PEEK",
+   "profile_id": null,
+   "colors": [
+    {"name": "Natural", "hex": "C8BCA5", "code": null}
+   ]
+  },
+  {
+   "material": "PVB",
+   "name": "PVB",
+   "profile_id": null,
+   "colors": [
+    {"name": "Black", "hex": "000000", "code": null},
+    {"name": "Transparent", "hex": "C4C2C8", "code": null}
+   ]
+  }
+ ]
+}

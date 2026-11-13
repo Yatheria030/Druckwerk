@@ -1,0 +1,19 @@
+# Druckwerk mit Docker Compose: `mkdir -p data && docker compose up -d --build`, dann http://<host>:8795 öffnen.
+# Beim ersten Start führt der Assistent durch Drucker, Filament und Link-Import; alles Weitere unter Einstellungen.
+services:
+  druckwerk:
+    build:
+      context: .
+      args:
+        FFMPEG: "1"                    # Kamera von X1, H2 und P2S (RTSPS über ffmpeg); "0" reicht für A1 und P1
+    image: druckwerk:local
+    container_name: druckwerk
+    restart: unless-stopped
+    user: "1000:1000"                  # Besitzer von ./data
+    ports:
+      - "8795:8795"
+    env_file:                          # optional, siehe .env.example
+      - path: .env
+        required: false
+    volumes:
+      - ./data:/data                   # SQLite-Datenbank, Modelldateien, Vorschaubilder, Druckfotos

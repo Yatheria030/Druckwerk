@@ -1,0 +1,423 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light dark;
+  --c-bg: #f6f6f4;
+  --c-card: #ffffff;
+  --c-card2: #fbfbfa;
+  --c-ink: #17181b;
+  --c-ink2: #5e6168;
+  --c-ink3: #8b8e95;
+  --c-ink4: #c9cbd0;
+  --c-fill: #f1f1ee;
+  --c-fill2: #e6e6e1;
+  --c-sep: #e6e6e1;
+  --c-line: #dadad4;
+  --c-accent: #c4521d;
+  --c-accent-hover: #a24317;
+  --c-accent-soft: #fbeee6;
+  --c-on-accent: #ffffff;
+  --c-sidebar: #ffffff;
+  --c-toolbar: rgba(255, 255, 255, 0.88);
+  --c-seg-active: #ffffff;
+  --c-hover: rgba(23, 24, 27, 0.04);
+  --c-selected: #fbeee6;
+  --c-star: #c98a1b;
+  --c-green: #2f7d4f;
+  --c-green-soft: #e3f1e8;
+  --c-red: #b3261e;
+  --c-red-soft: #fbeceb;
+  --c-orange: #b5540f;
+  --c-chart-muted: #b9bbb4;
+  --c-grid: #eeeeea;
+  --c-tile-a: #f3f3f0;
+  --c-tile-b: #e7e7e2;
+  --c-overlay: rgba(23, 24, 27, 0.36);
+  --sh-card: 0 0 0 1px var(--c-sep);
+  --sh-seg: 0 0 0 1px var(--c-line), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --sh-pop: 0 16px 48px rgba(23, 24, 27, 0.16), 0 0 0 1px var(--c-sep);
+  --sh-art: 0 0 0 1px var(--c-sep);
+  --wood-top: #d9b48a;
+  --wood-a: #c49565;
+  --wood-b: #a8794b;
+  --wood-edge: #7c5532;
+  --wall-a: #ebe7e0;
+  --wall-b: #e2ddd4;
+  --wall-dot: rgba(70, 55, 40, 0.13);
+  --ams-a: #34383d;
+  --ams-b: #1f2225;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg: #111312;
+    --c-card: #1a1c1b;
+    --c-card2: #202321;
+    --c-ink: #ecede9;
+    --c-ink2: #a9aca6;
+    --c-ink3: #84877f;
+    --c-ink4: #4a4d48;
+    --c-fill: #242725;
+    --c-fill2: #2e322f;
+    --c-sep: #2a2d2b;
+    --c-line: #383c39;
+    --c-accent: #f08a50;
+    --c-accent-hover: #f6a679;
+    --c-accent-soft: rgba(240, 138, 80, 0.15);
+    --c-on-accent: #1f0d03;
+    --c-sidebar: #161817;
+    --c-toolbar: rgba(17, 19, 18, 0.86);
+    --c-seg-active: #343835;
+    --c-hover: rgba(255, 255, 255, 0.04);
+    --c-selected: rgba(240, 138, 80, 0.13);
+    --c-star: #e8b04a;
+    --c-green: #6fbf95;
+    --c-green-soft: rgba(111, 191, 149, 0.15);
+    --c-red: #ff7a6e;
+    --c-red-soft: rgba(255, 122, 110, 0.14);
+    --c-orange: #f0a35c;
+    --c-chart-muted: #5a5e58;
+    --c-grid: #262927;
+    --c-tile-a: #222523;
+    --c-tile-b: #1a1c1b;
+    --c-overlay: rgba(0, 0, 0, 0.6);
+    --sh-card: 0 0 0 1px var(--c-sep);
+    --sh-seg: 0 0 0 1px var(--c-line);
+    --sh-pop: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--c-line);
+    --sh-art: 0 0 0 1px var(--c-sep);
+    --wood-top: #6e5139;
+    --wood-a: #5a412d;
+    --wood-b: #44301f;
+    --wood-edge: #2c1f14;
+    --wall-a: #1d1f1e;
+    --wall-b: #171918;
+    --wall-dot: rgba(255, 255, 255, 0.05);
+    --ams-a: #2c3034;
+    --ams-b: #17191b;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-card: var(--c-card);
+  --color-card2: var(--c-card2);
+  --color-ink: var(--c-ink);
+  --color-ink2: var(--c-ink2);
+  --color-ink3: var(--c-ink3);
+  --color-ink4: var(--c-ink4);
+  --color-fill: var(--c-fill);
+  --color-fill2: var(--c-fill2);
+  --color-sep: var(--c-sep);
+  --color-accent: var(--c-accent);
+  --color-accent-hover: var(--c-accent-hover);
+  --color-accent-soft: var(--c-accent-soft);
+  --color-hover: var(--c-hover);
+  --color-selected: var(--c-selected);
+  --color-star: var(--c-star);
+  --color-good: var(--c-green);
+  --color-good-soft: var(--c-green-soft);
+  --color-bad: var(--c-red);
+  --color-bad-soft: var(--c-red-soft);
+  --color-warn: var(--c-orange);
+  --font-sans: "Manrope Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Manrope Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-line: var(--c-line);
+  --color-on-accent: var(--c-on-accent);
+  --shadow-card: var(--sh-card);
+  --shadow-seg: var(--sh-seg);
+  --shadow-pop: var(--sh-pop);
+  --shadow-art: var(--sh-art);
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--c-bg);
+    color: var(--c-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    min-height: 100dvh;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: default;
+  }
+  :focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--c-accent) 55%, transparent);
+    outline-offset: 2px;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  /* Vorschlagsfelder (datalist): der Pfeil von Chrome rückt den Wert vom rechten Rand weg, die Vorschläge kommen auch ohne ihn */
+  input[list]::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--c-accent) 26%, transparent);
+  }
+  /* Überschriften brechen ausgewogen um, Fließtext ohne einzelnes Wort in der letzten Zeile */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .frost {
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    backdrop-filter: blur(30px) saturate(180%);
+  }
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .field {
+    width: 100%;
+    min-width: 0;
+    background: transparent;
+    border: 0;
+    outline: none;
+    font: inherit;
+    color: var(--c-ink);
+  }
+  .field::placeholder {
+    color: var(--c-ink3);
+  }
+  .range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 28px;
+    background: transparent;
+    --p: 50%;
+  }
+  .range::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to right, var(--c-accent) var(--p), var(--c-fill2) var(--p));
+  }
+  .range::-moz-range-track {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to right, var(--c-accent) var(--p), var(--c-fill2) var(--p));
+  }
+  .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    margin-top: -9px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0.5px 4px rgba(0, 0, 0, 0.12), 0 3px 8px rgba(0, 0, 0, 0.15), 0 0 0 0.5px rgba(0, 0, 0, 0.04);
+  }
+  .range::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0.5px 4px rgba(0, 0, 0, 0.12), 0 3px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.anim-sheet {
+  animation: sheet-in 0.28s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.anim-fade {
+  animation: fade-in 0.2s ease;
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--c-fill) 25%, var(--c-fill2) 50%, var(--c-fill) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+/* Filament: drehende Spule, fließender Faden, Trocknungswellen, Regal */
+@keyframes spool-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spool-spin {
+  transform-box: view-box;
+  transform-origin: 100px 100px;
+  animation: spool-spin 2.6s linear infinite;
+}
+@keyframes spool-glow {
+  50% {
+    opacity: 0.35;
+  }
+}
+.spool-glow {
+  animation: spool-glow 1.8s ease-in-out infinite;
+}
+@keyframes flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+.flow {
+  stroke-dasharray: 7 5;
+  animation: flow 0.7s linear infinite;
+}
+@keyframes heat {
+  0% {
+    transform: translateY(3px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+}
+.heat path {
+  animation: heat 1.6s ease-in-out infinite;
+}
+.heat path:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.heat path:nth-child(3) {
+  animation-delay: 0.6s;
+}
+@keyframes roll-in {
+  from {
+    transform: translateX(-70px) rotate(-220deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.roll-in {
+  animation: roll-in 0.9s cubic-bezier(0.2, 0.85, 0.25, 1) both;
+}
+@keyframes rise-in {
+  from {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.rise-in {
+  animation: rise-in 0.5s cubic-bezier(0.2, 0.85, 0.25, 1) both;
+}
+.shelf-wall {
+  background-color: var(--wall-a);
+  background-image:
+    radial-gradient(var(--wall-dot) 1.4px, transparent 1.6px),
+    linear-gradient(180deg, var(--wall-a), var(--wall-b));
+  background-size: 18px 18px, 100% 100%;
+}
+.shelf-board {
+  background: linear-gradient(180deg, var(--wood-top) 0 3px, var(--wood-a) 3px 55%, var(--wood-b) 55% calc(100% - 3px), var(--wood-edge) calc(100% - 3px));
+  box-shadow: 0 10px 14px -6px rgba(0, 0, 0, 0.35);
+}
+.shelf-board::after {
+  content: "";
+  position: absolute;
+  inset: 3px 0 3px 0;
+  background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0 2px, transparent 2px 23px, rgba(255, 255, 255, 0.05) 23px 25px, transparent 25px 61px);
+}
+.ams-shell {
+  background: linear-gradient(170deg, var(--ams-a), var(--ams-b));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.ams-bay {
+  background: radial-gradient(120% 90% at 50% 0%, rgba(255, 255, 255, 0.07), rgba(0, 0, 0, 0.18));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06), inset 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+.spool-hover {
+  transition: transform 0.45s cubic-bezier(0.2, 0.85, 0.25, 1);
+}
+@media (hover: hover) {
+  .group:hover .spool-hover {
+    transform: translateY(-6px) rotate(28deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spool-spin,
+  .spool-glow,
+  .flow,
+  .heat path,
+  .roll-in,
+  .rise-in {
+    animation: none !important;
+  }
+}
+
+/* Spule ziehen: keine Textauswahl, Greif-Cursor, Ziele hervorheben */
+body.dragging,
+body.dragging * {
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grabbing !important;
+}
+.drop-ok {
+  outline: 2px dashed color-mix(in srgb, var(--c-accent) 70%, transparent);
+  outline-offset: 2px;
+}
+.drop-over {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+.ams-bay.drop-over,
+.ams-shell.drop-over {
+  transform: scale(1.04);
+}
+.drop-locked {
+  opacity: 0.4;
+}
