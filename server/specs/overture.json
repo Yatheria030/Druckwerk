@@ -1,0 +1,460 @@
+{
+ "brand": "Overture",
+ "source": "Technische Datenblätter des Herstellers, Werte wie angegeben (Einheiten vereinheitlicht)",
+ "lines": {
+  "PLA": {
+   "source": "https://overture3d.com/cdn/shop/files/OVERTURE_PLA_TDS_EN_V5.1_a4102671-a3b0-416f-9191-7e6feb681e3e.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 64.2,
+     "std": "ISO 306"
+    },
+    "mfi": {
+     "v": 9.0,
+     "std": "210 °C / 2,15 kg"
+    },
+    "melt": {
+     "v": 148,
+     "std": "DSC 10 °C/min"
+    },
+    "tensile_modulus": {
+     "v": 2641,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 47.1,
+     "std": "ISO 527",
+     "z": 38.9
+    },
+    "elongation": {
+     "v": 5.1,
+     "std": "ISO 527"
+    },
+    "flexural_modulus": {
+     "v": 3279,
+     "std": "ISO 178"
+    },
+    "flexural_strength": {
+     "v": 84.9,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 3.1,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 220
+    },
+    "bed_min": {
+     "v": 25
+    },
+    "bed_max": {
+     "v": 60
+    }
+   },
+   "note": "TDS V5.1 (Juli 2024). Die neuere Datei OVERTURE_PLA___TDS_EN_5.2.1 ist das Blatt für PLA+ (Super PLA), nicht für PLA."
+  },
+  "PLA Rock": {
+   "source": "https://overture3d.com/cdn/shop/files/OVERTURE__ROCK_PLA_TDS_EN_V5.1.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.37,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 62,
+     "std": "ISO 306"
+    },
+    "mfi": {
+     "v": 14.66,
+     "std": "210 °C / 2,16 kg"
+    },
+    "melt": {
+     "v": 161.2,
+     "std": "DSC 10 °C/min"
+    },
+    "tensile_modulus": {
+     "v": 2356.8,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 25.9,
+     "std": "ISO 527",
+     "z": 16.6
+    },
+    "elongation": {
+     "v": 25.6,
+     "std": "ISO 527"
+    },
+    "flexural_modulus": {
+     "v": 2516.1,
+     "std": "ISO 178"
+    },
+    "flexural_strength": {
+     "v": 40.1,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 8.1,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 50
+    },
+    "bed_max": {
+     "v": 70
+    }
+   },
+   "note": "TDS V5.1 (Juli 2024)."
+  },
+  "PLA Silk": {
+   "source": "https://overture3d.com/cdn/shop/files/OVERTURE_SILK_PLA_TDS_EN_V5.1_09e26446-13ed-49b4-a85f-b8a460d8b16e.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.19,
+     "std": "ISO 1183"
+    },
+    "mfi": {
+     "v": 12.8,
+     "std": "190 °C / 2,16 kg"
+    },
+    "melt": {
+     "v": 153,
+     "std": "DSC 10 °C/min"
+    },
+    "tensile_modulus": {
+     "v": 3173,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 55.2,
+     "std": "ISO 527",
+     "z": 18.9
+    },
+    "elongation": {
+     "v": 3.5,
+     "std": "ISO 527"
+    },
+    "flexural_modulus": {
+     "v": 3518,
+     "std": "ISO 178"
+    },
+    "flexural_strength": {
+     "v": 87.1,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 2.87,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 200
+    },
+    "nozzle_max": {
+     "v": 220
+    },
+    "bed_min": {
+     "v": 50
+    },
+    "bed_max": {
+     "v": 60
+    }
+   },
+   "note": "TDS V5.1 (Juli 2024). Vicat im Blatt N/A."
+  },
+  "PLA Matte": {
+   "source": "https://overture3d.com/cdn/shop/files/OVERTURE_MATTE_PLA_TDS_EN_V5.1_0ae7a33c-dd34-49b9-a202-c6ba0fddfdcb.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.3,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 62.9,
+     "std": "ISO 306"
+    },
+    "mfi": {
+     "v": 20.0,
+     "std": "210 °C / 2,16 kg"
+    },
+    "melt": {
+     "v": 150,
+     "std": "DSC 10 °C/min"
+    },
+    "tensile_modulus": {
+     "v": 1879,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 20.9,
+     "std": "ISO 527",
+     "z": 10.9
+    },
+    "elongation": {
+     "v": 29.2,
+     "std": "ISO 527"
+    },
+    "flexural_modulus": {
+     "v": 2671,
+     "std": "ISO 178"
+    },
+    "flexural_strength": {
+     "v": 40.1,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 5.7,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 50
+    },
+    "bed_max": {
+     "v": 70
+    }
+   },
+   "note": "TDS V5.1 (Juli 2024). Das Blatt enthält zusätzlich eine Carbon-Fiber-Variante (Matte PLA CF: Dichte 1,31, Zug 28,8 MPa, E-Modul 2945 MPa); hier die Werte der normalen Matte PLA."
+  },
+  "PETG": {
+   "source": "https://overture3d.com/cdn/shop/files/OVERTURE_PETG_TDS_EN_V5.2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.3,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 75,
+     "std": "ISO 306"
+    },
+    "mfi": {
+     "v": 8.8,
+     "std": "240 °C / 2,16 kg"
+    },
+    "tensile_modulus": {
+     "v": 2311.1,
+     "std": "ISO 527",
+     "z": 2200.1
+    },
+    "tensile_strength": {
+     "v": 47.9,
+     "std": "ISO 527",
+     "z": 45.7
+    },
+    "elongation": {
+     "v": 9.3,
+     "std": "ISO 527",
+     "z": 3.5
+    },
+    "flexural_modulus": {
+     "v": 2277.3,
+     "std": "ISO 178",
+     "z": 1958.72
+    },
+    "flexural_strength": {
+     "v": 80.1,
+     "std": "ISO 178",
+     "z": 57.6
+    },
+    "impact": {
+     "v": 20.2,
+     "std": "ISO 179 Charpy ungekerbt",
+     "z": 15.7
+    },
+    "nozzle_min": {
+     "v": 230
+    },
+    "nozzle_max": {
+     "v": 260
+    },
+    "bed_min": {
+     "v": 65
+    },
+    "bed_max": {
+     "v": 70
+    },
+    "dry_temp": {
+     "v": 60
+    },
+    "dry_hours": {
+     "v": 5
+    }
+   },
+   "note": "TDS V5.2 (Dez. 2025). Ältere V5.1 hatte andere Werte (z. B. E-Modul 1986 MPa)."
+  },
+  "ABS": {
+   "source": "https://overture3d.com/cdn/shop/files/OVERTURE_ABS_TDS_EN_V5.1_9d827267-f215-4734-9c0b-c04232b8df92.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.15,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 103.4,
+     "std": "ISO 306"
+    },
+    "mfi": {
+     "v": 13.8,
+     "std": "220 °C / 2,16 kg"
+    },
+    "tensile_modulus": {
+     "v": 1685,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 25.1,
+     "std": "ISO 527",
+     "z": 21.3
+    },
+    "elongation": {
+     "v": 8.2,
+     "std": "ISO 527"
+    },
+    "flexural_modulus": {
+     "v": 1965,
+     "std": "ISO 178"
+    },
+    "flexural_strength": {
+     "v": 52.1,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 2.6,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 245
+    },
+    "nozzle_max": {
+     "v": 265
+    },
+    "bed_min": {
+     "v": 80
+    },
+    "bed_max": {
+     "v": 100
+    }
+   },
+   "note": "TDS V5.1 (Juli 2024). Low-VOC-ABS. Auffällig: Probekörper laut Blatt bei 205 °C Düse / 40 °C Bett gedruckt (wohl aus dem PLA-Blatt kopiert)."
+  },
+  "ASA": {
+   "source": "https://overture3d.com/cdn/shop/files/OVERTURE_ASA_TDS_EN_V5.1_60023de4-0977-4f96-9c55-0d94bacc7d0f.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.14,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 106.2,
+     "std": "ISO 306"
+    },
+    "mfi": {
+     "v": 13.1,
+     "std": "220 °C / 10 kg"
+    },
+    "tensile_modulus": {
+     "v": 2372,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 45.1,
+     "std": "ISO 527",
+     "z": 33.1
+    },
+    "elongation": {
+     "v": 4.2,
+     "std": "ISO 527"
+    },
+    "flexural_modulus": {
+     "v": 3221,
+     "std": "ISO 178"
+    },
+    "flexural_strength": {
+     "v": 74.9,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 13.1,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 240
+    },
+    "nozzle_max": {
+     "v": 270
+    },
+    "bed_min": {
+     "v": 70
+    },
+    "bed_max": {
+     "v": 95
+    }
+   },
+   "note": "TDS V5.1 (Juli 2024), UV-/wetterbeständig."
+  },
+  "TPU High Speed 95A": {
+   "source": "https://overture3d.com/cdn/shop/files/OVERTURE__HIGH_SPEED_TPU_TDS_EN_V5.1_112e83e3-da49-495b-bd52-96b491f2fc64.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.19,
+     "std": "ISO 1183"
+    },
+    "mfi": {
+     "v": 9.5,
+     "std": "210 °C / 1,2 kg"
+    },
+    "tensile_strength": {
+     "v": 27.1,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 301.8,
+     "std": "ISO 527"
+    },
+    "hardness": {
+     "v": 95,
+     "std": "Shore A (ISO 7619, ~95A)"
+    },
+    "nozzle_min": {
+     "v": 200
+    },
+    "nozzle_max": {
+     "v": 240
+    },
+    "bed_min": {
+     "v": 25
+    },
+    "bed_max": {
+     "v": 60
+    }
+   },
+   "note": "TDS V5.1 (Juli 2024). 100-%-Modul (X-Y) 14,9 MPa (kein Zug-E-Modul)."
+  }
+ }
+}

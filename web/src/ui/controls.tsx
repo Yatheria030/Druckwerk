@@ -71,7 +71,7 @@ export function Field({
   );
 }
 
-export function Dialog({ title, onClose, children, wide }: { title: string; onClose: () => void; children: ReactNode; wide?: boolean }) {
+export function Dialog({ title, onClose, children, wide }: { title: string; onClose: () => void; children: ReactNode; wide?: boolean | "xl" }) {
   useEffect(() => {
     const k = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", k);
@@ -87,7 +87,7 @@ export function Dialog({ title, onClose, children, wide }: { title: string; onCl
       <div
         role="dialog"
         aria-label={title}
-        className={`anim-sheet flex max-h-[92dvh] w-full flex-col rounded-t-2xl bg-bg shadow-pop sm:rounded-2xl ${wide ? "sm:max-w-2xl" : "sm:max-w-md"}`}
+        className={`anim-sheet flex max-h-[92dvh] w-full flex-col rounded-t-2xl bg-bg shadow-pop sm:rounded-2xl ${wide === "xl" ? "sm:max-w-3xl lg:max-w-5xl 2xl:max-w-6xl" : wide ? "sm:max-w-2xl" : "sm:max-w-md"}`}
       >
         <div className="flex items-center justify-between gap-3 px-5 pt-4 pb-2">
           <h2 className="text-lg font-bold">{title}</h2>

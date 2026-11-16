@@ -1,0 +1,2363 @@
+{
+ "brand": "Polymaker",
+ "source": "Technische Datenblätter des Herstellers, Werte wie angegeben (Einheiten vereinheitlicht)",
+ "lines": {
+  "PolyLite CosPLA": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/cospla_A_and_B_TDS_5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Blatt nennt zwei Formeln, Werte nur wo A und B gleich. Version A: Dichte 1,24, MFI 8 (210 °C/2,16 kg), Tg 59, Schmelz 161, Vicat 62, HDT 0,45/1,8 MPa 58/56 °C, Zug 31,1 (Z 16,7) MPa, E-Modul 2246 MPa, Dehnung 13,8 %, Biegung 58,7 MPa/2442 MPa, Charpy gekerbt 5,9 kJ/m², Bett 25–60 °C. Version B: Dichte 1,22, MFI 6, Tg 62, Schmelz 150, Vicat 63, HDT 59/58 °C, Zug 49,8 (Z 36,5) MPa, E-Modul 2932 MPa, Dehnung 6,3 %, Biegung 77,9 MPa/2934 MPa, Charpy gekerbt 17,1 kJ/m², Bett 30–60 °C. Wasseraufnahme 0,41 % bzw. 0,29 %"
+  },
+  "PolyLite LW-PLA": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_LW-PLA_TDS_US_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 0.9,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 59,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 150,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 54,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 50,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 60,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 24.4,
+     "std": "ISO 527",
+     "z": 20.8
+    },
+    "tensile_modulus": {
+     "v": 1688.5,
+     "std": "ISO 527",
+     "z": 1726.3
+    },
+    "elongation": {
+     "v": 8.8,
+     "std": "ISO 527",
+     "z": 2.0
+    },
+    "flexural_strength": {
+     "v": 50.2,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 1958.9,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 2.4,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 210,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Schaum-PLA (aufgeschäumt, geringe Dichte). Blatt V7.0; Biegewerte dort mit Norm ISO 527 beschriftet. Wasseraufnahme 0,40 %. Proben bei 210 °C gedruckt"
+  },
+  "Panchroma Regular": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.32,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 62,
+     "std": "ISO 306"
+    },
+    "tensile_modulus": {
+     "v": 3071,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 40.4,
+     "std": "ISO 527",
+     "z": 27.2
+    },
+    "impact_notched": {
+     "v": 6.76,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Panchroma-Sammelblatt V2.1, Spalte „Basic“. Bis 350 mm/s"
+  },
+  "Panchroma Dual": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf",
+   "specimen": "printed",
+   "values": {
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Produktseiten Dual Matte/Silk/Special verlinken das Panchroma-Sammelblatt, das aber keine eigene Dual-Spalte hat; nur die für alle Panchroma-Sorten geltenden Druckwerte übernommen"
+  },
+  "PolyLite PLA Pro": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polylite_PLA_Pro_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 62,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 150,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 59,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 58,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 63,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 49.8,
+     "std": "ISO 527",
+     "z": 36.5
+    },
+    "tensile_modulus": {
+     "v": 2932.2,
+     "std": "ISO 527",
+     "z": 2633.0
+    },
+    "elongation": {
+     "v": 6.3,
+     "std": "ISO 527",
+     "z": 2.4
+    },
+    "flexural_strength": {
+     "v": 77.9,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2933.8,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 17.1,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 15.5,
+     "std": "210 °C/2,16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Blatt V5.5. Mechanik-/Thermikwerte identisch mit CosPLA Version B. Wasseraufnahme 0,29 %"
+  },
+  "PolyLite PLA": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_PLA_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 61,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 150,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 60,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 58,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 63,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 52.3,
+     "std": "ISO 527",
+     "z": 40.5
+    },
+    "tensile_modulus": {
+     "v": 3426.9,
+     "std": "ISO 527",
+     "z": 3064.9
+    },
+    "elongation": {
+     "v": 6.3,
+     "std": "ISO 527",
+     "z": 1.8
+    },
+    "flexural_strength": {
+     "v": 86.9,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 3230.9,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 3.3,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 9.0,
+     "std": "210 °C/2,16 kg, 7–11"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Wasseraufnahme 0,51 %"
+  },
+  "PolyMax PLA": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyMax_PLA_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.205,
+     "std": "ISO 1183, 1.17–1.24"
+    },
+    "tg": {
+     "v": 61,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 149,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 52,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 62,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 41.3,
+     "std": "ISO 527",
+     "z": 32.4
+    },
+    "tensile_modulus": {
+     "v": 2150.8,
+     "std": "ISO 527",
+     "z": 1983.6
+    },
+    "elongation": {
+     "v": 5.7,
+     "std": "ISO 527",
+     "z": 4.7
+    },
+    "flexural_strength": {
+     "v": 62.0,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2393.2,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 38.9,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 6.5,
+     "std": "210 °C/2,16 kg, 5–8"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Schlagzäh modifiziertes PLA. Wasseraufnahme 0,51 %"
+  },
+  "PolySonic PLA": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PolySonic_PLA_V6.0_2026-06-08_EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 59,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 53,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 52,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 61,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 46.0,
+     "std": "ISO 527",
+     "z": 37.3
+    },
+    "tensile_modulus": {
+     "v": 2878.3,
+     "std": "ISO 527",
+     "z": 2689.8
+    },
+    "elongation": {
+     "v": 21.5,
+     "std": "ISO 527",
+     "z": 4.2
+    },
+    "flexural_strength": {
+     "v": 76.5,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2868.2,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 6.1,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 15.4,
+     "std": "210 °C/2,16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Mechanik bei klassischer Geschwindigkeit (46,7 mm/s, 210 °C); bei 300 mm/s/230 °C: Zug 43,9 (Z 32,4) MPa, E-Modul 2650 MPa, Charpy gekerbt 5,0 kJ/m². Düse klassisch 190–210, Highspeed 210–230 °C. Wasseraufnahme 0,40 %"
+  },
+  "PolySonic PLA Pro": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolySonic_PLA_Pro_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 61,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 52,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 61,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 41.2,
+     "std": "ISO 527",
+     "z": 33.6
+    },
+    "tensile_modulus": {
+     "v": 2360.0,
+     "std": "ISO 527",
+     "z": 2283.3
+    },
+    "elongation": {
+     "v": 23.4,
+     "std": "ISO 527",
+     "z": 4.9
+    },
+    "flexural_strength": {
+     "v": 67.5,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2688.7,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 22.7,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 15.5,
+     "std": "210 °C/2,16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Blatt aus dem Polymaker-Wiki; im Shop leitet PolySonic PLA Pro inzwischen auf den Nachfolger „Polymaker PLA Pro“ (eigenes TDS V6.0) weiter. Mechanik bei klassischer Geschwindigkeit; bei 300 mm/s: Zug 39,3 (Z 31,9) MPa, Charpy gekerbt 19,4 kJ/m². Düse klassisch 190–210, Highspeed 210–230 °C"
+  },
+  "Panchroma Luminous": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 63,
+     "std": "ISO 306"
+    },
+    "tensile_modulus": {
+     "v": 3427,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 52.3,
+     "std": "ISO 527",
+     "z": 40.5
+    },
+    "impact_notched": {
+     "v": 3.3,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Panchroma-Sammelblatt V2.1, Spalte „Others“. Effekt-Sorten ohne eigene Spalte fallen unter „Others“ (Produktseite verlinkt dieses Blatt). Bis 200 mm/s; Luminous braucht laut Produktseite eine gehärtete Düse"
+  },
+  "Panchroma Matte": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.37,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 62,
+     "std": "ISO 306"
+    },
+    "tensile_modulus": {
+     "v": 1997,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 23.2,
+     "std": "ISO 527",
+     "z": 12.2
+    },
+    "impact_notched": {
+     "v": 10.0,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Panchroma-Sammelblatt V2.1, Spalte „Matte“. Vicat in der Tabelle 62 °C, in der Grafik 63 °C. Bis 300 mm/s"
+  },
+  "Panchroma Marble": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 63,
+     "std": "ISO 306"
+    },
+    "tensile_modulus": {
+     "v": 3427,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 52.3,
+     "std": "ISO 527",
+     "z": 40.5
+    },
+    "impact_notched": {
+     "v": 3.3,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Panchroma-Sammelblatt V2.1, Spalte „Others“. Effekt-Sorten ohne eigene Spalte fallen unter „Others“ (Produktseite verlinkt dieses Blatt). Bis 200 mm/s"
+  },
+  "Panchroma Starlight": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 63,
+     "std": "ISO 306"
+    },
+    "tensile_modulus": {
+     "v": 3427,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 52.3,
+     "std": "ISO 527",
+     "z": 40.5
+    },
+    "impact_notched": {
+     "v": 3.3,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Panchroma-Sammelblatt V2.1, Spalte „Others“. Effekt-Sorten ohne eigene Spalte fallen unter „Others“ (Produktseite verlinkt dieses Blatt). Bis 200 mm/s"
+  },
+  "Panchroma Celestial": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 63,
+     "std": "ISO 306"
+    },
+    "tensile_modulus": {
+     "v": 3427,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 52.3,
+     "std": "ISO 527",
+     "z": 40.5
+    },
+    "impact_notched": {
+     "v": 3.3,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Panchroma-Sammelblatt V2.1, Spalte „Others“. Effekt-Sorten ohne eigene Spalte fallen unter „Others“ (Produktseite verlinkt dieses Blatt). Bis 200 mm/s"
+  },
+  "Panchroma Silk": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 64.7,
+     "std": "ISO 306"
+    },
+    "tensile_modulus": {
+     "v": 2403,
+     "std": "ISO 527"
+    },
+    "tensile_strength": {
+     "v": 41.1,
+     "std": "ISO 527",
+     "z": 23.8
+    },
+    "impact_notched": {
+     "v": 13.8,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Panchroma-Sammelblatt V2.1, Spalte „Silk“. Bis 250 mm/s"
+  },
+  "PolyLite PETG": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_PETG_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 81,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 78,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 75,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 84,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 50.8,
+     "std": "ISO 527",
+     "z": 42.8
+    },
+    "tensile_modulus": {
+     "v": 2116.8,
+     "std": "ISO 527",
+     "z": 1898.7
+    },
+    "elongation": {
+     "v": 8.4,
+     "std": "ISO 527",
+     "z": 3.3
+    },
+    "flexural_strength": {
+     "v": 69.6,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 1898.5,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 2.6,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 10.8,
+     "std": "240 °C/2,16 kg"
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 80,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Im Shop leitet PolyLite PETG auf „Polymaker PETG“ (Nachfolger, eigenes TDS V3.0) weiter. Wasseraufnahme 0,54 %"
+  },
+  "PolyMax PETG": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyMax_PETG_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 79,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 76,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 72,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 82,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 37.9,
+     "std": "ISO 527",
+     "z": 29.4
+    },
+    "tensile_modulus": {
+     "v": 1684,
+     "std": "ISO 527",
+     "z": 1603
+    },
+    "elongation": {
+     "v": 5.22,
+     "std": "ISO 527",
+     "z": 3.1
+    },
+    "flexural_strength": {
+     "v": 58.3,
+     "std": "ISO 178",
+     "z": 55.1
+    },
+    "flexural_modulus": {
+     "v": 1068,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 11.6,
+     "std": "ISO 179 Charpy gekerbt",
+     "z": 2.4
+    },
+    "mfi": {
+     "v": 9,
+     "std": "240 °C/2,16 kg"
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 80,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Schlagzäh modifiziertes PETG. Wasseraufnahme 0,54 %"
+  },
+  "PolyLite ABS": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_ABS_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.04,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 101,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 100,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 98,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 104,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 33.4,
+     "std": "ISO 527",
+     "z": 29.7
+    },
+    "tensile_modulus": {
+     "v": 2246.6,
+     "std": "ISO 527",
+     "z": 2080.9
+    },
+    "elongation": {
+     "v": 17.9,
+     "std": "ISO 527",
+     "z": 3.1
+    },
+    "flexural_strength": {
+     "v": 56.2,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2127.2,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 18.0,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 11.5,
+     "std": "220 °C/2,16 kg, 9–14"
+    },
+    "nozzle_min": {
+     "v": 245,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 265,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Blatt V5.5. Wasseraufnahme 0,35 %"
+  },
+  "PolyLite ASA": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_ASA_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.13,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 98,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 103,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 100,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 105,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 43.8,
+     "std": "ISO 527",
+     "z": 32
+    },
+    "tensile_modulus": {
+     "v": 2379,
+     "std": "ISO 527",
+     "z": 1965
+    },
+    "elongation": {
+     "v": 6.7,
+     "std": "ISO 527",
+     "z": 1.65
+    },
+    "flexural_strength": {
+     "v": 73.4,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 3206,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 10.3,
+     "std": "ISO 179 Charpy gekerbt",
+     "z": 6.7
+    },
+    "mfi": {
+     "v": 25,
+     "std": "220 °C/10 kg"
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 75,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 95,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 7,
+     "std": "TDS"
+    }
+   },
+   "note": "Datei heißt PolyLite ASA, Inhalt ist „Polymaker ASA“ V6.0 (laut Fußnote an PolyLite ASA gemessen); PolyLite ASA leitet im Shop dorthin. Geschlossener Bauraum nötig. Wasseraufnahme 0,40 %"
+  },
+  "PolyFlex TPU90": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyFlex_TPU90_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183"
+    },
+    "mfi": {
+     "v": 6.1,
+     "std": "185 °C/1,2 kg"
+    },
+    "elongation": {
+     "v": 592.1,
+     "std": "ISO 37"
+    },
+    "hardness": {
+     "v": 90,
+     "std": "Shore A (ISO 7619-1)"
+    },
+    "tensile_strength": {
+     "v": 30.1,
+     "std": "ISO 37"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS"
+    }
+   },
+   "note": "Covestro Addigy, UV-beständig. Blatt V5.5, keine Thermikwerte. Wasseraufnahme 0,67 %"
+  },
+  "PolyFlex TPU95": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyFlex_TPU95_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "ISO 1183, 1.2–1.24"
+    },
+    "mfi": {
+     "v": 4.5,
+     "std": "210 °C/1,2 kg, 3–6"
+    },
+    "elongation": {
+     "v": 551.2,
+     "std": "ISO 37"
+    },
+    "hardness": {
+     "v": 95,
+     "std": "Shore A (ISO 7619-1)"
+    },
+    "tensile_modulus": {
+     "v": 33.6,
+     "std": "ISO 37"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS"
+    }
+   },
+   "note": "Blatt nennt „Young’s modulus 33,6 MPa“ (ISO 37) statt Zugfestigkeit, so übernommen. Keine Thermikwerte. Wasseraufnahme 0,82 %"
+  },
+  "PolyFlex TPU95-HF": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyFlex_TPU95_HF_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.16,
+     "std": "ISO 1183"
+    },
+    "mfi": {
+     "v": 9.3,
+     "std": "185 °C/1,2 kg"
+    },
+    "elongation": {
+     "v": 495.8,
+     "std": "ISO 37"
+    },
+    "hardness": {
+     "v": 95,
+     "std": "Shore A (ISO 7619-1)"
+    },
+    "tensile_strength": {
+     "v": 26.6,
+     "std": "ISO 37"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS"
+    }
+   },
+   "note": "Covestro Addigy, High-Flow, UV-beständig. Keine Thermikwerte. Wasseraufnahme 0,69 %"
+  },
+  "PolyLite PC": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_PC_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.19,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 113,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 111,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 107,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 120,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 69.1,
+     "std": "ISO 527",
+     "z": 52.8
+    },
+    "tensile_modulus": {
+     "v": 2497,
+     "std": "ISO 527",
+     "z": 2371
+    },
+    "elongation": {
+     "v": 4.8,
+     "std": "ISO 527",
+     "z": 2.7
+    },
+    "flexural_strength": {
+     "v": 106.1,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2640,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 4.1,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 9.5,
+     "std": "260 °C/2,16 kg, 8–11"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 105,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 75,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Geschlossener Bauraum nötig (70–100 °C), Tempern 90 °C/2 h empfohlen. Wasseraufnahme 0,25 %"
+  },
+  "PC-ABS": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polymaker_PC_ABS_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.1,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 109,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 112,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 106,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 135,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 39.9,
+     "std": "ISO 527",
+     "z": 22.9
+    },
+    "tensile_modulus": {
+     "v": 1835,
+     "std": "ISO 527",
+     "z": 1677
+    },
+    "elongation": {
+     "v": 4.2,
+     "std": "ISO 527",
+     "z": 1.5
+    },
+    "flexural_strength": {
+     "v": 66.3,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2081,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 25.8,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 14.0,
+     "std": "260 °C/5 kg, 11–17"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 105,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 75,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Geschlossener Bauraum nötig (90–100 °C), Tempern 90 °C/2 h empfohlen. Charpy gekerbt bei −30 °C: 13 (Z 1,5) kJ/m². Wasseraufnahme 0,35 %"
+  },
+  "PC-PBT": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polymaker_PC_PBT_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.2,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 140,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 223,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 107,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 91,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 139,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 50.4,
+     "std": "ISO 527",
+     "z": 37.9
+    },
+    "tensile_modulus": {
+     "v": 1940.2,
+     "std": "ISO 527",
+     "z": 1743.4
+    },
+    "elongation": {
+     "v": 4.6,
+     "std": "ISO 527",
+     "z": 3.8
+    },
+    "flexural_strength": {
+     "v": 77.3,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 1950.3,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 33.0,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 19.0,
+     "std": "260 °C/5 kg, 16–22"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 115,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 75,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Blatt nicht auf der Shopseite (nicht mehr gelistet), verlinkt im Polymaker-Wiki. Geschlossener Bauraum nötig (100–110 °C), Tempern 90 °C/2 h empfohlen. Charpy gekerbt bei −30 °C: 15,7 kJ/m². Gute Chemikalienbeständigkeit. Wasseraufnahme 0,26 %"
+  },
+  "PolyMax PC": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyMax_PC_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.19,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 113,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 114,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 99,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 117,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 53.44,
+     "std": "ISO 527",
+     "z": 41.43
+    },
+    "tensile_modulus": {
+     "v": 2435,
+     "std": "ISO 527",
+     "z": 2149
+    },
+    "elongation": {
+     "v": 4.53,
+     "std": "ISO 527",
+     "z": 2.79
+    },
+    "flexural_strength": {
+     "v": 81.29,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2050,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 21.28,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 7.0,
+     "std": "260 °C/1,2 kg, 6–8"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 105,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 75,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "Geschlossener Bauraum nötig (70–100 °C), Tempern 90 °C/2 h empfohlen. Charpy gekerbt bei −30 °C: 9,2 kJ/m². Wasseraufnahme 0,25 %"
+  },
+  "PolyMax PC-FR": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyMax_PC_FR_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.2,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 115,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 110,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 107,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 116,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 67,
+     "std": "ISO 527",
+     "z": 46
+    },
+    "tensile_modulus": {
+     "v": 2634,
+     "std": "ISO 527",
+     "z": 2743
+    },
+    "elongation": {
+     "v": 3.49,
+     "std": "ISO 527",
+     "z": 2.2
+    },
+    "flexural_strength": {
+     "v": 96.6,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2518,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 11.7,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 14.5,
+     "std": "260 °C/5 kg, 12–17"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 105,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 75,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS"
+    }
+   },
+   "note": "UL94 V0 (Covestro Makrolon). Geschlossener Bauraum nötig (70–100 °C), Tempern 90 °C/2 h empfohlen. Charpy gekerbt bei −30 °C: 7,5 kJ/m². Wasseraufnahme 0,22 %"
+  },
+  "Fiberon PA12-CF10": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_FIBERON_PA12-CF10_V1.1_EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.06,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 55,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 171,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 131,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 105,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 170.2,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 77.4,
+     "std": "ISO 527",
+     "z": 52.2
+    },
+    "tensile_modulus": {
+     "v": 3311.2,
+     "std": "ISO 527",
+     "z": 1806.6
+    },
+    "elongation": {
+     "v": 4.2,
+     "std": "ISO 527",
+     "z": 5.0
+    },
+    "flexural_strength": {
+     "v": 112.4,
+     "std": "ISO 178",
+     "z": 69.8
+    },
+    "flexural_modulus": {
+     "v": 2886.5,
+     "std": "ISO 178",
+     "z": 1452.8
+    },
+    "impact": {
+     "v": 33.7,
+     "std": "ISO 179 Charpy ungekerbt",
+     "z": 27.6
+    },
+    "impact_notched": {
+     "v": 9.9,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 25.0,
+     "std": "280 °C/2,16 kg"
+    },
+    "nozzle_min": {
+     "v": 280,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 300,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 40,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 100,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "TDS"
+    }
+   },
+   "note": "Werte trocken, Proben 16 h bei 100 °C getempert. UL94 HB (1,5 mm). Gehärtete Düse nötig, Lagerung unter 20 % rF. Nass (2,9 % Feuchte): Zug 71,7 MPa, E-Modul 3132 MPa. Wasseraufnahme 1,5 %"
+  },
+  "Fiberon PA6-CF20": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_FIBERON_PA6-CF20_V1.1_EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 74.2,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 218.5,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 215,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 173,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 219.2,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 109.3,
+     "std": "ISO 527",
+     "z": 54.0
+    },
+    "tensile_modulus": {
+     "v": 8636.5,
+     "std": "ISO 527",
+     "z": 3759.5
+    },
+    "elongation": {
+     "v": 2.1,
+     "std": "ISO 527",
+     "z": 1.9
+    },
+    "flexural_strength": {
+     "v": 161.0,
+     "std": "ISO 178",
+     "z": 71.3
+    },
+    "flexural_modulus": {
+     "v": 7037.6,
+     "std": "ISO 178",
+     "z": 2975.3
+    },
+    "impact": {
+     "v": 24.0,
+     "std": "ISO 179 Charpy ungekerbt",
+     "z": 7.5
+    },
+    "impact_notched": {
+     "v": 11.0,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 20.5,
+     "std": "300 °C/2,16 kg"
+    },
+    "nozzle_min": {
+     "v": 280,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 300,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 40,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 100,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "TDS"
+    }
+   },
+   "note": "Werte trocken, Proben 16 h bei 100 °C getempert. UL94 HB (1,5 mm). Gehärtete Düse nötig, Lagerung unter 20 % rF. Nass (5,3 % Feuchte): Zug 54,7 MPa, E-Modul 2508 MPa. Wasseraufnahme 3,3 %"
+  },
+  "Fiberon PA6-GF25": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_FIBERON_PA6-GF25_V1.1_EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.2,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 70.4,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 214.5,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 191,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 157,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 211.7,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 80.1,
+     "std": "ISO 527",
+     "z": 60.7
+    },
+    "tensile_modulus": {
+     "v": 5356.9,
+     "std": "ISO 527",
+     "z": 3375.9
+    },
+    "elongation": {
+     "v": 2.4,
+     "std": "ISO 527",
+     "z": 4.0
+    },
+    "flexural_strength": {
+     "v": 133.8,
+     "std": "ISO 178",
+     "z": 99.9
+    },
+    "flexural_modulus": {
+     "v": 4314.2,
+     "std": "ISO 178",
+     "z": 2849.5
+    },
+    "impact": {
+     "v": 27.4,
+     "std": "ISO 179 Charpy ungekerbt",
+     "z": 16.2
+    },
+    "impact_notched": {
+     "v": 10.0,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 15.9,
+     "std": "300 °C/2,16 kg"
+    },
+    "nozzle_min": {
+     "v": 280,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 300,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 40,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 100,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "TDS"
+    }
+   },
+   "note": "Werte trocken, Proben 16 h bei 100 °C getempert. UL94 HB (1,5 mm). Gehärtete Düse nötig, Lagerung unter 20 % rF. Nass (4,6 % Feuchte): Zug 40,2 MPa, E-Modul 1794 MPa. Wasseraufnahme 3,33 %"
+  },
+  "PolyMide CoPA": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyMide_CoPA_TDS_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.12,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 66,
+     "std": "DSC 10 °C/min"
+    },
+    "melt": {
+     "v": 189,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 111,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 70,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 180,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 78.0,
+     "std": "ISO 527",
+     "z": 45.8
+    },
+    "tensile_modulus": {
+     "v": 2703,
+     "std": "ISO 527",
+     "z": 2209
+    },
+    "elongation": {
+     "v": 12.7,
+     "std": "ISO 527",
+     "z": 1.3
+    },
+    "flexural_strength": {
+     "v": 109.8,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2510,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 6.9,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 12,
+     "std": "260 °C/1,2 kg"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 100,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS"
+    }
+   },
+   "note": "Copolymer PA6/PA66. Werte trocken (Proben 6 h bei 80 °C getempert); nass (6,2 % Feuchte): Zug 34,3 MPa, E-Modul 724 MPa, Charpy gekerbt 27,7. Gehärtete Düse empfohlen, Lagerung unter 20 % rF. Wasseraufnahme 2,82 %"
+  },
+  "PolyCast": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyCast_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.1,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 70,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 67,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 53,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 67,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 53.2,
+     "std": "ISO 527",
+     "z": 26.3
+    },
+    "tensile_modulus": {
+     "v": 2215,
+     "std": "ISO 527",
+     "z": 2111
+    },
+    "elongation": {
+     "v": 5.7,
+     "std": "ISO 527",
+     "z": 1.3
+    },
+    "flexural_strength": {
+     "v": 78.0,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2233,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 2.9,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 6.65,
+     "std": "260 °C/2,16 kg, 6.6–6.7"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 220,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 12,
+     "std": "TDS"
+    }
+   },
+   "note": "PVB für Feinguss (rückstandsarm ausbrennbar). Wasseraufnahme 2,09 %"
+  },
+  "PolySmooth": {
+   "source": "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolySmooth_TDS_EN_V5.4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.1,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 70,
+     "std": "DSC 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 68,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 66,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 70,
+     "std": "ISO 306"
+    },
+    "tensile_strength": {
+     "v": 51.8,
+     "std": "ISO 527",
+     "z": 38.9
+    },
+    "tensile_modulus": {
+     "v": 2199,
+     "std": "ISO 527",
+     "z": 2010
+    },
+    "elongation": {
+     "v": 14.5,
+     "std": "ISO 527",
+     "z": 2.8
+    },
+    "flexural_strength": {
+     "v": 75.9,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2198,
+     "std": "ISO 178"
+    },
+    "impact_notched": {
+     "v": 3.1,
+     "std": "ISO 179 Charpy gekerbt"
+    },
+    "mfi": {
+     "v": 6.7,
+     "std": "210 °C/2,16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS"
+    },
+    "nozzle_max": {
+     "v": 220,
+     "std": "TDS"
+    },
+    "bed_min": {
+     "v": 25,
+     "std": "TDS"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 12,
+     "std": "TDS"
+    }
+   },
+   "note": "PVB, mit Alkohol glättbar (Polysher). Wasseraufnahme 2,36 %"
+  }
+ }
+}

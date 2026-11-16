@@ -196,7 +196,8 @@ function apiError(e: unknown): ScrapeError {
   return new ScrapeError(e instanceof Error ? e.message : String(e), 500);
 }
 
-export async function scrapeFilament(url: string, signal?: AbortSignal): Promise<SpoolDraft> {
+/** Gemeinsame Schleife: Seite vorab laden, Modell mit Websuche/-abruf arbeiten lassen, bis es das Werkzeug aufruft */
+async function runTool(url: string, system: string, tool: BetaTool, signal?: AbortSignal, budget?: { search: number; fetch: number }): Promise<unknown> {
   const key = settingWithSource("import", "api_key").value as string | null;
   if (!key) throw new ScrapeError("Kein API-Key für den Link-Import: in den Einstellungen eintragen.", 400);
   const model = setting<string>("import", "model");
@@ -205,9 +206,16 @@ export async function scrapeFilament(url: string, signal?: AbortSignal): Promise
   const messages: BetaMessageParam[] = [
     {
       role: "user",
-      content: `Link: ${url}\n${pre ?? "Die Seite ließ sich vorab nicht laden. Rufe sie mit web_fetch ab oder suche das Produkt."}`,
+      content: `Link: ${url}\n${pre ?? "Die Seite ließ sich vorab nicht laden. Rufe sie mit web_fetch ab oder suche danach."}`,
     },
   ];
+  const tools: BetaToolUnion[] = budget
+    ? [
+        { type: "web_search_20260209", name: "web_search", max_uses: budget.search },
+        { type: "web_fetch_20260209", name: "web_fetch", max_uses: budget.fetch, max_content_tokens: 30_000 },
+        tool,
+      ]
+    : [...TOOLS.slice(0, 2), tool];
   const client = new Anthropic({ apiKey: key, maxRetries: 2, timeout: 5 * 60_000 });
   try {
     for (let round = 0; round < 8; round++) {
@@ -216,8 +224,8 @@ export async function scrapeFilament(url: string, signal?: AbortSignal): Promise
           {
             model,
             max_tokens: 16_000,
-            system: SYSTEM,
-            tools: TOOLS,
+            system,
+            tools,
             output_config: { effort: "medium" },
             betas: ["server-side-fallback-2026-07-01"],
             fallbacks: "default",
@@ -231,38 +239,86 @@ export async function scrapeFilament(url: string, signal?: AbortSignal): Promise
         messages.push({ role: "assistant", content: res.content });
         continue;
       }
-      const call = res.content.find((b) => b.type === "tool_use" && b.name === "save_filament");
-      if (call && call.type === "tool_use") {
-        const t = toolInput.parse(call.input);
-        const profile = profileById(t.profile_id);
-        const [lo, hi] = [t.nozzle_min, t.nozzle_max];
-        return {
-          brand: t.brand,
-          material: t.material.toUpperCase() || profile?.type || "PLA",
-          name: t.name,
-          color_name: t.color_name,
-          color: t.color_hex || null,
-          colors: t.colors.filter((c) => c.hex),
-          net_g: t.net_g ? Math.round(t.net_g) : null,
-          tare_g: t.tare_g ? Math.round(t.tare_g) : null,
-          price: t.price,
-          price_sale: t.price != null && t.price_sale != null && t.price_sale < t.price ? t.price_sale : null,
-          nozzle_min: lo != null && hi != null && lo > hi ? hi : lo,
-          nozzle_max: lo != null && hi != null && lo > hi ? lo : hi,
-          bed_temp: t.bed_temp,
-          dry_temp: t.dry_temp,
-          dry_hours: t.dry_hours,
-          profile_id: profile?.id ?? null,
-          profile_reason: profile ? t.profile_reason : "",
-          note: t.note,
-          url,
-        };
-      }
+      const call = res.content.find((b) => b.type === "tool_use" && b.name === tool.name);
+      if (call && call.type === "tool_use") return call.input;
       // Ohne Werkzeugaufruf beendet: einmal daran erinnern
-      messages.push({ role: "assistant", content: res.content }, { role: "user", content: "Bitte trage die Angaben jetzt mit save_filament ein." });
+      messages.push({ role: "assistant", content: res.content }, { role: "user", content: `Bitte trage die Angaben jetzt mit ${tool.name} ein.` });
     }
     throw new ScrapeError("Das Modell hat keine Angaben geliefert. Bitte erneut versuchen.", 502);
   } catch (e) {
     throw apiError(e);
   }
 }
+
+export async function scrapeFilament(url: string, signal?: AbortSignal): Promise<SpoolDraft> {
+  const t = toolInput.parse(await runTool(url, SYSTEM, SAVE, signal));
+  const profile = profileById(t.profile_id);
+  const [lo, hi] = [t.nozzle_min, t.nozzle_max];
+  return {
+    brand: t.brand,
+    material: t.material.toUpperCase() || profile?.type || "PLA",
+    name: t.name,
+    color_name: t.color_name,
+    color: t.color_hex || null,
+    colors: t.colors.filter((c) => c.hex),
+    net_g: t.net_g ? Math.round(t.net_g) : null,
+    tare_g: t.tare_g ? Math.round(t.tare_g) : null,
+    price: t.price,
+    price_sale: t.price != null && t.price_sale != null && t.price_sale < t.price ? t.price_sale : null,
+    nozzle_min: lo != null && hi != null && lo > hi ? hi : lo,
+    nozzle_max: lo != null && hi != null && lo > hi ? lo : hi,
+    bed_temp: t.bed_temp,
+    dry_temp: t.dry_temp,
+    dry_hours: t.dry_hours,
+    profile_id: profile?.id ?? null,
+    profile_reason: profile ? t.profile_reason : "",
+    note: t.note,
+    url,
+  };
+}
+
+// ---------- 3D-Modell (MakerWorld, Thingiverse u. a.): nur Angaben und Bilder, Dateien brauchen dort meist eine Anmeldung ----------
+
+const MODEL_SYSTEM = `Du liest die Seite eines 3D-Druck-Modells (MakerWorld, Thingiverse, Cults3D, Thangs o. ä.) und trägst die Angaben über save_model ein.
+Regeln:
+- Nur Angaben von der Seite, nichts erfinden. Unbekannt: leerer String bzw. leere Liste.
+- name: Titel des Modells. creator: Name des Designers. license: Lizenz wie auf der Seite (z. B. „CC BY-NC-SA 4.0“, „Standard Digital File License“).
+- description: Beschreibung als schlichter Text auf Deutsch zusammengefasst (Zweck, Druckhinweise wie Material, Stützen, Teile), höchstens 1200 Zeichen.
+- tags: bis zu 8 kurze Stichworte in Kleinbuchstaben (Deutsch, wenn sinnvoll).
+- images: direkte Bild-URLs (jpg/png/webp) der Galerie, die ersten höchstens 4, Titelbild zuerst.
+- Lädt die Seite nicht, rufe sie mit web_fetch ab oder suche nach dem Modell.`;
+
+const SAVE_MODEL: BetaTool = {
+  name: "save_model",
+  description: "Trägt die gelesenen Angaben des 3D-Modells ein.",
+  strict: true,
+  input_schema: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      name: { type: "string" },
+      creator: { type: "string" },
+      license: { type: "string" },
+      description: { type: "string" },
+      tags: { type: "array", items: { type: "string" } },
+      images: { type: "array", items: { type: "string" } },
+    },
+    required: ["name", "creator", "license", "description", "tags", "images"],
+  },
+};
+
+const modelInput = z.object({
+  name: str(200),
+  creator: str(200),
+  license: str(200),
+  description: str(4000),
+  tags: z.array(str(40)).transform((a) => a.filter(Boolean).slice(0, 8)),
+  images: z.array(z.string()).transform((a) => a.filter((u) => /^https:\/\//i.test(u)).slice(0, 4)),
+});
+export type ModelMeta = z.infer<typeof modelInput>;
+
+export async function scrapeModelMeta(url: string, signal?: AbortSignal): Promise<ModelMeta> {
+  return modelInput.parse(await runTool(url, MODEL_SYSTEM, SAVE_MODEL, signal, { search: 3, fetch: 4 }));
+}
+
+export const hasImportKey = () => !!settingWithSource("import", "api_key").value;

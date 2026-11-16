@@ -1,0 +1,2102 @@
+{
+ "brand": "eSUN",
+ "source": "Technische Datenblätter des Herstellers, Werte wie angegeben (Einheiten vereinheitlicht)",
+ "lines": {
+  "PLA Basic": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Basic/PLA-Basic-TDS-EN-_2026.6.5.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 6.48,
+     "std": "GB/T 3682, 190 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 53.65,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 64.27,
+     "std": "GB/T 1040",
+     "z": 32.34
+    },
+    "elongation": {
+     "v": 4.61,
+     "std": "GB/T 1040",
+     "z": 2.89
+    },
+    "flexural_strength": {
+     "v": 106.8,
+     "std": "GB/T 9341",
+     "z": 53.2
+    },
+    "flexural_modulus": {
+     "v": 3775.06,
+     "std": "GB/T 9341",
+     "z": 3285.49
+    },
+    "impact_notched": {
+     "v": 3.25,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.31
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "TDS, 8–12 h"
+    }
+   },
+   "note": "TDS Feb. 2026 V1.0."
+  },
+  "PLA+": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA/PLA_-TDS-en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 3.7,
+     "std": "GB/T 3682, 190 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 53.78,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 70.37,
+     "std": "GB/T 1040",
+     "z": 36.36
+    },
+    "elongation": {
+     "v": 4.14,
+     "std": "GB/T 1040",
+     "z": 2.92
+    },
+    "flexural_strength": {
+     "v": 100.3,
+     "std": "GB/T 9341",
+     "z": 56.4
+    },
+    "flexural_modulus": {
+     "v": 3259.39,
+     "std": "GB/T 9341",
+     "z": 2873.94
+    },
+    "impact_notched": {
+     "v": 7.27,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.22
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "TDS, 8–12 h"
+    }
+   },
+   "note": "TDS Feb. 2026 V1.0. Produktseite verlinkt FDA-, EU-Lebensmittel- und EN71-3-Nachweise."
+  },
+  "PLA HF": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-HF/PLA-HF-TDS--_2026.2.2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 5.37,
+     "std": "GB/T 3682, 190 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 52.45,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 64.28,
+     "std": "GB/T 1040",
+     "z": 33.9
+    },
+    "elongation": {
+     "v": 5.19,
+     "std": "GB/T 1040",
+     "z": 2.8
+    },
+    "flexural_strength": {
+     "v": 100,
+     "std": "GB/T 9341",
+     "z": 65.3
+    },
+    "flexural_modulus": {
+     "v": 3403.33,
+     "std": "GB/T 9341",
+     "z": 3152.18
+    },
+    "impact_notched": {
+     "v": 5.33,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.02
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 65,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "TDS, 8–12 h"
+    }
+   },
+   "note": "TDS Feb. 2026 V1.0."
+  },
+  "PLA Matte": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Matte/PLA-Matte_TDS_2025.06.19_1.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.329,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 5.8,
+     "std": "GB/T 3682, 190 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 51,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 25.976,
+     "std": "GB/T 1040",
+     "z": 14.31
+    },
+    "elongation": {
+     "v": 7.23,
+     "std": "GB/T 1040",
+     "z": 2.26
+    },
+    "flexural_strength": {
+     "v": 42.6,
+     "std": "GB/T 9341",
+     "z": 21.1
+    },
+    "flexural_modulus": {
+     "v": 2249.05,
+     "std": "GB/T 9341",
+     "z": 1782.62
+    },
+    "impact_notched": {
+     "v": 4.7,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.15
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Juni 2025 V1.0."
+  },
+  "PLA Matte Rainbow": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Matte_Rainbow/PLA-Matte_Rainbow_TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.329,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 5.8,
+     "std": "GB/T 3682, 190 °C/2.19 kg (so im Blatt)"
+    },
+    "hdt_045": {
+     "v": 50.2,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 39.81,
+     "std": "GB/T 1040",
+     "z": 16.23
+    },
+    "elongation": {
+     "v": 5.75,
+     "std": "GB/T 1040",
+     "z": 1.8
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "GB/T 9341",
+     "z": 26.6
+    },
+    "flexural_modulus": {
+     "v": 2914.68,
+     "std": "GB/T 9341",
+     "z": 2223.34
+    },
+    "impact_notched": {
+     "v": 3.67,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.41
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 65,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 65,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS März 2025 V1.0."
+  },
+  "PLA Silk": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Silk/PLA-Silk_TDS_2025.06.19.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 4.8,
+     "std": "GB/T 3682, 190 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 50,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 32.53,
+     "std": "GB/T 1040",
+     "z": 17.36
+    },
+    "elongation": {
+     "v": 11.65,
+     "std": "GB/T 1040",
+     "z": 1.84
+    },
+    "flexural_strength": {
+     "v": 44.4,
+     "std": "GB/T 9341",
+     "z": 23.1
+    },
+    "flexural_modulus": {
+     "v": 1917.35,
+     "std": "GB/T 9341",
+     "z": 1858.86
+    },
+    "impact_notched": {
+     "v": 2.93,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.19
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Juli 2024 V1.0."
+  },
+  "PLA Silk Candy": {
+   "source": "https://www.esun3d.com/epla-silk-candy-product",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "Produktseite"
+    },
+    "mfi": {
+     "v": 4.5,
+     "std": "Produktseite, 190 °C/2.16 kg"
+    },
+    "flexural_strength": {
+     "v": 85.08,
+     "std": "Produktseite"
+    },
+    "flexural_modulus": {
+     "v": 2770.8,
+     "std": "Produktseite"
+    },
+    "impact_notched": {
+     "v": 3.45,
+     "std": "Izod (Produktseite, Norm/Kerbung nicht angegeben)"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Produktseite"
+    }
+   },
+   "note": "Kein TDS-PDF verlinkt; Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). Zugfestigkeit/Bruchdehnung nur Z angegeben, Biegung/Izod nur XY. HDT 52.15 °C (GB/T 1634, Last nicht angegeben, daher nicht als hdt_045 übernommen). Früheres TDS-PDF (/uploads/ePLA-Silk-Candy-TDS.pdf) ist nicht mehr erreichbar.; Nur in Z-Richtung (quer zu den Schichten) angegeben: Zugfestigkeit 19,33 MPa, Bruchdehnung 3,03 %"
+  },
+  "PLA Metal": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Metal/PLA-Metal-TDS-V2.pdf",
+   "specimen": "printed",
+   "values": {
+    "mfi": {
+     "v": 5.7,
+     "std": "GB/T 3682, 190 °C/2.16 kg"
+    },
+    "tensile_strength": {
+     "v": 57,
+     "std": "GB/T 1040",
+     "z": 30
+    },
+    "elongation": {
+     "v": 5.1,
+     "std": "GB/T 1040",
+     "z": 2.9
+    },
+    "flexural_strength": {
+     "v": 93,
+     "std": "GB/T 9341",
+     "z": 50
+    },
+    "flexural_modulus": {
+     "v": 3240,
+     "std": "GB/T 9341",
+     "z": 2679
+    },
+    "impact_notched": {
+     "v": 15.2,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.1
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 220,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 65,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 4.5,
+     "std": "TDS, 4–5 h"
+    }
+   },
+   "note": "TDS Dez. 2026 V1.0, Werte aus „Printing performance“ (gedruckte Proben). Dichte nur „<1,24 g/cm³“. Materialtabelle ohne Achsangabe: Zug 60 MPa, Dehnung 5,2 %, Biegung 95 MPa/3422 MPa, Izod 8,4 kJ/m². HDT 53 °C (XY) / 51 °C (Z), GB/T 1634, Last nicht angegeben."
+  },
+  "PLA Rock": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Rock/PLA-Rock_TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 8.5,
+     "std": "GB/T 3682, 190 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 52.3,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "flexural_strength": {
+     "v": 55.8,
+     "std": "GB/T 9341"
+    },
+    "flexural_modulus": {
+     "v": 2705.1,
+     "std": "GB/T 9341"
+    },
+    "impact_notched": {
+     "v": 4.43,
+     "std": "Izod gekerbt GB/T 1843"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Okt. 2024 V4.0. Zug/Dehnung nur Z, Biegung/Izod nur XY.; Nur in Z-Richtung (quer zu den Schichten) angegeben: Zugfestigkeit 18,08 MPa, Bruchdehnung 2,05 %"
+  },
+  "PLA Coffee": {
+   "source": "https://www.esun3d.com/pla-coffee-product",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "Produktseite"
+    },
+    "mfi": {
+     "v": 5.04,
+     "std": "Produktseite, 190 °C/2.16 kg"
+    },
+    "tensile_strength": {
+     "v": 52.12,
+     "std": "Produktseite",
+     "z": 24.25
+    },
+    "elongation": {
+     "v": 3.96,
+     "std": "Produktseite",
+     "z": 2.12
+    },
+    "flexural_strength": {
+     "v": 86.3,
+     "std": "Produktseite",
+     "z": 40.6
+    },
+    "flexural_modulus": {
+     "v": 3952.89,
+     "std": "Produktseite",
+     "z": 3187.59
+    },
+    "impact_notched": {
+     "v": 11.74,
+     "std": "Izod (Produktseite, Norm/Kerbung nicht angegeben)",
+     "z": 2.18
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 55,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 65,
+     "std": "Produktseite"
+    }
+   },
+   "note": "Kein TDS-PDF verlinkt; Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). HDT 53.8 °C (GB/T 1634, Last nicht angegeben, daher nicht als hdt_045 übernommen)."
+  },
+  "PLA Clear": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Clear/PLA-Clear_TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 8,
+     "std": "GB/T 3682, 190 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 56.1,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 69.73,
+     "std": "GB/T 1040",
+     "z": 25.86
+    },
+    "elongation": {
+     "v": 4.05,
+     "std": "GB/T 1040",
+     "z": 2.16
+    },
+    "flexural_strength": {
+     "v": 111.4,
+     "std": "GB/T 9341",
+     "z": 58.2
+    },
+    "flexural_modulus": {
+     "v": 3559.47,
+     "std": "GB/T 9341",
+     "z": 3463.39
+    },
+    "impact_notched": {
+     "v": 2.13,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.07
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Dez. 2025 V2.0. EN71-Nachweis verlinkt."
+  },
+  "PLA Clear Rainbow": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Clear_Rainbow/PLA-Clear_Rainbow_TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 8.5,
+     "std": "GB/T 3682, 190 °C/2.19 kg (so im Blatt)"
+    },
+    "hdt_045": {
+     "v": 55.3,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 76.85,
+     "std": "GB/T 1040",
+     "z": 45.95
+    },
+    "elongation": {
+     "v": 4.61,
+     "std": "GB/T 1040",
+     "z": 2.68
+    },
+    "flexural_strength": {
+     "v": 130.5,
+     "std": "GB/T 9341",
+     "z": 79.9
+    },
+    "flexural_modulus": {
+     "v": 4051.39,
+     "std": "GB/T 9341",
+     "z": 3632.44
+    },
+    "impact_notched": {
+     "v": 3.54,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.19
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 55,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 55,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Juli 2025 V1.0."
+  },
+  "PLA UV Color Change": {
+   "source": "https://www.esun3d.com/pla-uv-cc-product",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "Produktseite"
+    },
+    "mfi": {
+     "v": 8.5,
+     "std": "Produktseite, 190 °C/2.16 kg"
+    },
+    "tensile_strength": {
+     "v": 56.22,
+     "std": "Produktseite",
+     "z": 31.81
+    },
+    "elongation": {
+     "v": 5.5,
+     "std": "Produktseite",
+     "z": 2.68
+    },
+    "flexural_strength": {
+     "v": 92,
+     "std": "Produktseite",
+     "z": 56.4
+    },
+    "flexural_modulus": {
+     "v": 2932.43,
+     "std": "Produktseite",
+     "z": 2870.01
+    },
+    "impact_notched": {
+     "v": 3,
+     "std": "Izod (Produktseite, Norm/Kerbung nicht angegeben)",
+     "z": 2.33
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Produktseite"
+    }
+   },
+   "note": "Kein TDS-PDF verlinkt; Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). HDT 50.75 °C (GB/T 1634, Last nicht angegeben, daher nicht als hdt_045 übernommen)."
+  },
+  "PLA Revive": {
+   "source": "https://www.esun3d.com/pla-revive-product",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "Produktseite"
+    },
+    "mfi": {
+     "v": 10.05,
+     "std": "Produktseite, 190 °C/2.16 kg"
+    },
+    "tensile_strength": {
+     "v": 57.28,
+     "std": "Produktseite",
+     "z": 24.28
+    },
+    "elongation": {
+     "v": 5.38,
+     "std": "Produktseite",
+     "z": 3.6
+    },
+    "flexural_strength": {
+     "v": 86.78,
+     "std": "Produktseite",
+     "z": 29.38
+    },
+    "flexural_modulus": {
+     "v": 3796.2,
+     "std": "Produktseite",
+     "z": 2078.2
+    },
+    "impact_notched": {
+     "v": 6.04,
+     "std": "Izod (Produktseite, Norm/Kerbung nicht angegeben)",
+     "z": 1.88
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 45,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 65,
+     "std": "Produktseite"
+    }
+   },
+   "note": "Kein TDS-PDF verlinkt; Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). Recycling-PLA. HDT 55.8 °C (GB/T 1634, Last nicht angegeben, daher nicht als hdt_045 übernommen)."
+  },
+  "PETG": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PETG/eSUN_PETG_Filament_TDS_1.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 20,
+     "std": "GB/T 3682, 250 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 64,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 34.77,
+     "std": "GB/T 1040",
+     "z": 28.65
+    },
+    "elongation": {
+     "v": 5.15,
+     "std": "GB/T 1040",
+     "z": 3.91
+    },
+    "flexural_strength": {
+     "v": 41.9,
+     "std": "GB/T 9341",
+     "z": 39.9
+    },
+    "flexural_modulus": {
+     "v": 1228.33,
+     "std": "GB/T 9341",
+     "z": 1276.45
+    },
+    "impact_notched": {
+     "v": 4.86,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 1.78
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 75,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Juli 2025 V2.0. FDA-, EU-Lebensmittel- und EN71-3-Nachweise verlinkt."
+  },
+  "PETG Basic": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PETG-Basic/PETG_Basic_TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 28,
+     "std": "GB/T 3682, 250 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 73.8,
+     "std": "GB/T 1634 0.45 MPa",
+     "z": 68.1
+    },
+    "tensile_strength": {
+     "v": 68.41,
+     "std": "GB/T 1040",
+     "z": 35.84
+    },
+    "elongation": {
+     "v": 7.56,
+     "std": "GB/T 1040",
+     "z": 3.17
+    },
+    "flexural_strength": {
+     "v": 100.2,
+     "std": "GB/T 9341",
+     "z": 59.7
+    },
+    "flexural_modulus": {
+     "v": 2636.66,
+     "std": "GB/T 9341",
+     "z": 2207.6
+    },
+    "impact_notched": {
+     "v": 2.28,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.06
+    },
+    "nozzle_min": {
+     "v": 245,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 255,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "TDS"
+    }
+   },
+   "note": "TDS Juli 2024 V1.0 (Produktseite epetg-lite = PETG-Basic). Düse 250±5 °C. HDT XY 73,8 / Z 68,1 °C."
+  },
+  "PETG+": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PETG/PETG_-TDS-en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 15,
+     "std": "GB/T 3682, 250 °C/2.16 kg, 15±5"
+    },
+    "hdt_045": {
+     "v": 70,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 48,
+     "std": "GB/T 1040",
+     "z": 26
+    },
+    "elongation": {
+     "v": 5.56,
+     "std": "GB/T 1040",
+     "z": 3.31
+    },
+    "flexural_strength": {
+     "v": 83.2,
+     "std": "GB/T 9341",
+     "z": 53.2
+    },
+    "flexural_modulus": {
+     "v": 1993.64,
+     "std": "GB/T 9341",
+     "z": 1687.64
+    },
+    "impact_notched": {
+     "v": 2.21,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.02
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 250,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 75,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Nov. 2025 V1.0 (Produktseite PETG+ / PETG Pro)."
+  },
+  "PETG Matte": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PETG-Matte/PETG-Matte_TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.35,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 17,
+     "std": "GB/T 3682, 250 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 71.1,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 49.79,
+     "std": "GB/T 1040",
+     "z": 19.51
+    },
+    "elongation": {
+     "v": 13.49,
+     "std": "GB/T 1040",
+     "z": 2.71
+    },
+    "flexural_strength": {
+     "v": 77.1,
+     "std": "GB/T 9341",
+     "z": 30.1
+    },
+    "flexural_modulus": {
+     "v": 2405.17,
+     "std": "GB/T 9341",
+     "z": 1757.03
+    },
+    "impact_notched": {
+     "v": 2.2,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.29
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "TDS"
+    }
+   },
+   "note": "TDS Juli 2025 V1.0."
+  },
+  "PETG Luminous": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PETG-Luminous/PET-Luminous-TDS-en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 28.75,
+     "std": "GB/T 3682, 250 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 70,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 56.08,
+     "std": "GB/T 1040",
+     "z": 31.24
+    },
+    "elongation": {
+     "v": 5.01,
+     "std": "GB/T 1040",
+     "z": 3.42
+    },
+    "flexural_strength": {
+     "v": 82.7,
+     "std": "GB/T 9341",
+     "z": 42.8
+    },
+    "flexural_modulus": {
+     "v": 2499.31,
+     "std": "GB/T 9341",
+     "z": 1743.61
+    },
+    "impact_notched": {
+     "v": 2.85,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.3
+    },
+    "nozzle_min": {
+     "v": 245,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "Blatt heißt „PET-Luminous/Blue“ (Apr. 2025 V1.0), von der Produktseite PETG Luminous verlinkt."
+  },
+  "PETG UV Color Change": {
+   "source": "https://www.esun3d.com/petg-uv-color-change-product",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.29,
+     "std": "Produktseite"
+    },
+    "mfi": {
+     "v": 10,
+     "std": "Produktseite, 190 °C/2.16 kg, 10±5"
+    },
+    "tensile_strength": {
+     "v": 60,
+     "std": "Produktseite",
+     "z": 33
+    },
+    "elongation": {
+     "v": 6.33,
+     "std": "Produktseite",
+     "z": 3.57
+    },
+    "flexural_strength": {
+     "v": 83.2,
+     "std": "Produktseite",
+     "z": 56.2
+    },
+    "flexural_modulus": {
+     "v": 2338.79,
+     "std": "Produktseite",
+     "z": 2088.06
+    },
+    "impact_notched": {
+     "v": 2.98,
+     "std": "Izod (Produktseite, Norm/Kerbung nicht angegeben)",
+     "z": 2.07
+    },
+    "nozzle_min": {
+     "v": 245,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 265,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 75,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "Produktseite"
+    }
+   },
+   "note": "Kein TDS-PDF verlinkt; Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). HDT 64 °C (GB/T 1634, Last nicht angegeben, daher nicht als hdt_045 übernommen)."
+  },
+  "PETG-ESD": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PETG-ESD/PETG-ESD_TDS-EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 18.1,
+     "std": "GB/T 3682, 230 °C/5 kg"
+    },
+    "hdt_045": {
+     "v": 68,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 48.11,
+     "std": "GB/T 1040",
+     "z": 19.34
+    },
+    "elongation": {
+     "v": 8.97,
+     "std": "GB/T 1040",
+     "z": 2.52
+    },
+    "flexural_strength": {
+     "v": 77.7,
+     "std": "GB/T 9341",
+     "z": 41.2
+    },
+    "flexural_modulus": {
+     "v": 2162.79,
+     "std": "GB/T 9341",
+     "z": 1483.12
+    },
+    "impact_notched": {
+     "v": 4.95,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 1.93
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Juli 2024 V1.0. Oberflächenwiderstand 10^9 Ω (DIN IEC 60093)."
+  },
+  "PETG-CF": {
+   "source": "https://www.esun3d.com/epetg-cf-product",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26,
+     "std": "Produktseite"
+    },
+    "mfi": {
+     "v": 18,
+     "std": "Produktseite, 220 °C/10 kg"
+    },
+    "tensile_strength": {
+     "v": 51.3,
+     "std": "Produktseite",
+     "z": 32.91
+    },
+    "elongation": {
+     "v": 4.2,
+     "std": "Produktseite",
+     "z": 4.49
+    },
+    "flexural_strength": {
+     "v": 77.2,
+     "std": "Produktseite",
+     "z": 49.9
+    },
+    "flexural_modulus": {
+     "v": 3618.54,
+     "std": "Produktseite",
+     "z": 2030.97
+    },
+    "impact_notched": {
+     "v": 4.39,
+     "std": "Izod (Produktseite, Norm/Kerbung nicht angegeben)",
+     "z": 1.91
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 75,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "Produktseite"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "Produktseite"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Produktseite, >8 h"
+    }
+   },
+   "note": "Das als TDS verlinkte PDF ist das PET-CF-Blatt (identische Datei); Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). HDT 70 °C (GB/T 1634, Last nicht angegeben, daher nicht als hdt_045 übernommen). Gehärtete Düse, geschlossener Bauraum empfohlen."
+  },
+  "PET-FR": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PET-FR/PET-FR-TDS-EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.52,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 18.6,
+     "std": "GB/T 3682, 270 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 75,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 47.66,
+     "std": "GB/T 1040",
+     "z": 20
+    },
+    "elongation": {
+     "v": 3.94,
+     "std": "GB/T 1040",
+     "z": 2.38
+    },
+    "flexural_strength": {
+     "v": 76.4,
+     "std": "GB/T 9341",
+     "z": 26.8
+    },
+    "flexural_modulus": {
+     "v": 3869.28,
+     "std": "GB/T 9341",
+     "z": 1533.26
+    },
+    "impact_notched": {
+     "v": 5.99,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.2
+    },
+    "nozzle_min": {
+     "v": 300,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 320,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 110,
+     "std": "TDS, 100–120 °C"
+    },
+    "dry_hours": {
+     "v": 5,
+     "std": "TDS, 4–6 h"
+    }
+   },
+   "note": "TDS Apr. 2025 V1.0. UL94 V-0. HDT nach Tempern (100 °C/4–8 h) 130 °C (0,45 MPa)."
+  },
+  "PET-CF": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PET-CF/PET-CF_TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.42,
+     "std": "GB/T 1033"
+    },
+    "tg": {
+     "v": 70,
+     "std": "TDS"
+    },
+    "tensile_strength": {
+     "v": 80.32,
+     "std": "GB/T 1040",
+     "z": 22
+    },
+    "elongation": {
+     "v": 3.61,
+     "std": "GB/T 1040",
+     "z": 2.11
+    },
+    "flexural_strength": {
+     "v": 135.6,
+     "std": "GB/T 9341",
+     "z": 33.4
+    },
+    "flexural_modulus": {
+     "v": 8264.15,
+     "std": "GB/T 9341",
+     "z": 2165.01
+    },
+    "impact_notched": {
+     "v": 7.16,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.12
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 320,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 120,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 90,
+     "std": "TDS, 80–100 °C"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS, 4–8 h"
+    }
+   },
+   "note": "TDS Juli 2024 V1.0. Gehärtete Düse empfohlen; Lagerfeuchte ≤20 %."
+  },
+  "ABS": {
+   "source": "https://www.esun3d.com/abs-product",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.04,
+     "std": "Produktseite"
+    },
+    "mfi": {
+     "v": 12,
+     "std": "Produktseite, 220 °C/10 kg"
+    },
+    "tensile_strength": {
+     "v": 42.23,
+     "std": "Produktseite",
+     "z": 16.97
+    },
+    "elongation": {
+     "v": 4.69,
+     "std": "Produktseite",
+     "z": 1.78
+    },
+    "flexural_strength": {
+     "v": 64.7,
+     "std": "Produktseite",
+     "z": 21.1
+    },
+    "flexural_modulus": {
+     "v": 2126.53,
+     "std": "Produktseite",
+     "z": 1971.24
+    },
+    "impact_notched": {
+     "v": 26.53,
+     "std": "Izod (Produktseite, Norm/Kerbung nicht angegeben)",
+     "z": 1.55
+    },
+    "nozzle_min": {
+     "v": 255,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 275,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 95,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 110,
+     "std": "Produktseite"
+    }
+   },
+   "note": "Kein TDS-PDF verlinkt; Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). HDT 78 °C (GB/T 1634, Last nicht angegeben, daher nicht als hdt_045 übernommen). Geschlossener Bauraum empfohlen."
+  },
+  "ABS-ESD": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/ABS-ESD/ABS-ESD_TDS-EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 0.97,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 3.3,
+     "std": "GB/T 3682, 220 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 96,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 38,
+     "std": "GB/T 1040",
+     "z": 22
+    },
+    "elongation": {
+     "v": 4.8,
+     "std": "GB/T 1040",
+     "z": 3.1
+    },
+    "flexural_strength": {
+     "v": 63,
+     "std": "GB/T 9341",
+     "z": 35.9
+    },
+    "flexural_modulus": {
+     "v": 2263,
+     "std": "GB/T 9341",
+     "z": 1677
+    },
+    "impact_notched": {
+     "v": 19.29,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.1
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 85,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Juli 2024 V1.0 (Werte mit ± im Blatt, hier Mittelwert). Oberflächenwiderstand 10^9 Ω. Nicht UV-beständig."
+  },
+  "ASA-LW": {
+   "source": "https://www.esun3d.com/asa-lw-product",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.07,
+     "std": "Produktseite"
+    },
+    "mfi": {
+     "v": 20,
+     "std": "Produktseite, 190 °C/2.16 kg, 15–25"
+    },
+    "tensile_strength": {
+     "v": 34.8,
+     "std": "Produktseite",
+     "z": 9.58
+    },
+    "elongation": {
+     "v": 4.1,
+     "std": "Produktseite",
+     "z": 1.64
+    },
+    "impact_notched": {
+     "v": 2.2,
+     "std": "Izod (Produktseite, Norm/Kerbung nicht angegeben)"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 245,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 40,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 80,
+     "std": "Produktseite"
+    }
+   },
+   "note": "Kein TDS-PDF verlinkt; Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). Geschäumtes ASA; HDT 70–80 °C ohne Lastangabe. Retraction aus."
+  },
+  "TPU 64D": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/TPU-64D/TPU-64D_TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "GB/T 1033"
+    },
+    "tg": {
+     "v": -9,
+     "std": "TDS"
+    },
+    "tensile_strength": {
+     "v": 39,
+     "std": "GB/T 1040",
+     "z": 25
+    },
+    "elongation": {
+     "v": 140,
+     "std": "GB/T 1040",
+     "z": 46
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 250,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 0,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS, 4–8 h"
+    }
+   },
+   "note": "TDS Juli 2024 V1.0. Lagerfeuchte ≤10 %. Hautverträglichkeitstests verlinkt."
+  },
+  "PEBA 90A": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PEBA-90A/PEBA90A-TDS-en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.01,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 13,
+     "std": "GB/T 3682, 190 °C/2.16 kg, 10–16"
+    },
+    "vicat": {
+     "v": 110,
+     "std": "GB/T 1633, 10 N"
+    },
+    "tensile_strength": {
+     "v": 16.5,
+     "std": "GB/T 1040, XY >16.5",
+     "z": 7.5
+    },
+    "elongation": {
+     "v": 520,
+     "std": "GB/T 1040, XY >520",
+     "z": 150
+    },
+    "flexural_modulus": {
+     "v": 80,
+     "std": "GB/T 9341 (Materialwert)"
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 60,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 72.5,
+     "std": "TDS, 70–75 °C"
+    },
+    "dry_hours": {
+     "v": 7,
+     "std": "TDS, 6–8 h"
+    }
+   },
+   "note": "TDS Aug. 2025 V1.0. Materialwerte: Zug 30 MPa, Dehnung >500 %. Izod XY: kein Bruch (NB). Rückprall 70 % (ASTM D2632), DIN-Abrieb <50 mm³. Gedruckte XY-Werte nur als Untergrenze („>“) angegeben."
+  },
+  "PEBA 85A": {
+   "source": "https://www.esun3d.com/peba-85a-product",
+   "specimen": "printed",
+   "values": {
+    "mfi": {
+     "v": 7.5,
+     "std": "Produktseite, 190 °C/2.16 kg, 3–12"
+    },
+    "density": {
+     "v": 1.015,
+     "std": "Produktseite, 1.01–1.02"
+    },
+    "vicat": {
+     "v": 87.5,
+     "std": "Produktseite, 10 N (120 °C), 85–90"
+    },
+    "tensile_strength": {
+     "v": 11,
+     "std": "Produktseite, XY >11",
+     "z": 5.5
+    },
+    "elongation": {
+     "v": 500,
+     "std": "Produktseite, XY >500",
+     "z": 130
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 40,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 80,
+     "std": "Produktseite"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "Produktseite"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "Produktseite, >6 h"
+    }
+   },
+   "note": "Kein TDS-PDF verlinkt; Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). XY-Werte nur als Untergrenze („>“)."
+  },
+  "PEBA LW": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PEBA-LW/PEBA-LW-TDS-EN.docx",
+   "specimen": "printed",
+   "values": {
+    "mfi": {
+     "v": 10,
+     "std": "GB/T 3682, 190 °C/2.16 kg, 5–15"
+    },
+    "tensile_strength": {
+     "v": 14,
+     "std": "GB/T 1040",
+     "z": 5.5
+    },
+    "elongation": {
+     "v": 500,
+     "std": "GB/T 1040",
+     "z": 30
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 75,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_hours": {
+     "v": 7,
+     "std": "TDS, 6–8 h"
+    }
+   },
+   "note": "TDS nur als Word-Datei (.docx). Prüfungen ungeschäumt gedruckt. Dichte nur „<1,24 g/cm³“ (geschäumt laut Produktseite bis 0,48). Charpy gekerbt XY: kein Bruch (NB). Rückprall 60 %, DIN-Abrieb <50 mm³. Retraction aus."
+  },
+  "PA12": {
+   "source": "https://www.esun3d.com/epa12-product",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.012,
+     "std": "Produktseite"
+    },
+    "mfi": {
+     "v": 55.64,
+     "std": "Produktseite, 270 °C/2.16 kg"
+    },
+    "tensile_strength": {
+     "v": 47.74,
+     "std": "Produktseite",
+     "z": 38.15
+    },
+    "elongation": {
+     "v": 19.97,
+     "std": "Produktseite",
+     "z": 7.31
+    },
+    "flexural_strength": {
+     "v": 61.9,
+     "std": "Produktseite",
+     "z": 50.2
+    },
+    "flexural_modulus": {
+     "v": 1443.67,
+     "std": "Produktseite",
+     "z": 1180.38
+    },
+    "impact_notched": {
+     "v": 6.05,
+     "std": "Izod (Produktseite, Norm/Kerbung nicht angegeben)",
+     "z": 4.07
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "Produktseite"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "Produktseite"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "Produktseite"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "Produktseite"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "Produktseite"
+    },
+    "dry_hours": {
+     "v": 12,
+     "std": "Produktseite, >12 h"
+    }
+   },
+   "note": "Kein TDS-PDF verlinkt; Werte aus der Parametertabelle der Produktseite (XY/Z, daher gedruckte Proben; Prüfnormen nicht angegeben). HDT-Feld „100 10/10“ unklar, nicht übernommen. Geschlossener Bauraum empfohlen."
+  },
+  "PC-HT": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PC-HT/PC-HT-TDS-EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 39.6,
+     "std": "GB/T 3682, 300 °C/1.2 kg"
+    },
+    "hdt_045": {
+     "v": 113.6,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 67.6,
+     "std": "GB/T 1040",
+     "z": 50.6
+    },
+    "elongation": {
+     "v": 7.3,
+     "std": "GB/T 1040",
+     "z": 4.9
+    },
+    "flexural_strength": {
+     "v": 97.2,
+     "std": "GB/T 9341",
+     "z": 76.3
+    },
+    "flexural_modulus": {
+     "v": 2353.5,
+     "std": "GB/T 9341",
+     "z": 2340.6
+    },
+    "impact_notched": {
+     "v": 13.6,
+     "std": "Izod gekerbt GB/T 1843",
+     "z": 2.4
+    },
+    "nozzle_min": {
+     "v": 280,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 310,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 110,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 100,
+     "std": "TDS, 95–105 °C"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "TDS, 5–7 h"
+    }
+   },
+   "note": "TDS Juli 2024 V1.0, Datei trotz „-EN“ auf Chinesisch. PC mit PET/PCTG. Düse empfohlen 290–300 °C."
+  },
+  "PC-ESD": {
+   "source": "https://www.esun3d.com/media/esun/catalog/certification/product/PC-ESD/PC-ESD_TDS-EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "GB/T 1033"
+    },
+    "mfi": {
+     "v": 11.07,
+     "std": "GB/T 3682, 220 °C/2.16 kg"
+    },
+    "hdt_045": {
+     "v": 105,
+     "std": "GB/T 1634 0.45 MPa"
+    },
+    "tensile_strength": {
+     "v": 60,
+     "std": "GB/T 1040",
+     "z": 33
+    },
+    "elongation": {
+     "v": 5.8,
+     "std": "GB/T 1040",
+     "z": 3.7
+    },
+    "flexural_strength": {
+     "v": 100,
+     "std": "GB/T 9341",
+     "z": 45
+    },
+    "flexural_modulus": {
+     "v": 2894,
+     "std": "GB/T 9341",
+     "z": 1713
+    },
+    "impact_notched": {
+     "v": 8,
+     "std": "Izod gekerbt GB/T 1843, XY 5–11, Z 2–3",
+     "z": 2.5
+    },
+    "nozzle_min": {
+     "v": 280,
+     "std": "TDS-Empfehlung"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "TDS-Empfehlung"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS-Empfehlung"
+    },
+    "dry_temp": {
+     "v": 75,
+     "std": "TDS"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "TDS, >8 h"
+    }
+   },
+   "note": "TDS Nov. 2025 V2.0 (Werte mit ± im Blatt, hier Mittelwert). Oberflächenwiderstand 10^6–10^9 Ω. Nicht UV-beständig."
+  }
+ }
+}

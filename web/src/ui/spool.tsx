@@ -66,7 +66,9 @@ export function SpoolArt({
 }) {
   const id = useId().replace(/[^a-zA-Z0-9]/g, "");
   const c = /^#[0-9a-f]{6}$/i.test(color) ? color : "#9a9a9a";
-  const f = useTween(empty ? 0 : Math.min(1, Math.max(0, fraction)), 1200, delay);
+  // Mit der Maus darüber: Spule voll zeigen, damit sich die Farbe auch bei fast leeren Spulen gut ansehen lässt
+  const [peek, setPeek] = useState(false);
+  const f = useTween(empty ? 0 : peek ? 1 : Math.min(1, Math.max(0, fraction)), peek ? 450 : 1200, peek ? 0 : delay);
   const rOut = HUB + (MAX - HUB) * f;
   const has = rOut > HUB + 0.6;
   const rings: number[] = [];
@@ -74,7 +76,13 @@ export function SpoolArt({
   const k = HUB / Math.max(rOut, HUB + 1);
 
   return (
-    <svg viewBox="0 0 200 200" className={`block overflow-visible ${className}`} aria-hidden>
+    <svg
+      viewBox="0 0 200 200"
+      className={`block overflow-visible ${className}`}
+      aria-hidden
+      onPointerEnter={(e) => e.pointerType === "mouse" && !empty && setPeek(true)}
+      onPointerLeave={() => setPeek(false)}
+    >
       <defs>
         <radialGradient id={`f${id}`} cx="100" cy="100" r={Math.max(rOut, HUB + 1)} gradientUnits="userSpaceOnUse">
           <stop offset={k} stopColor={mix(c, "#000000", 0.55)} />
@@ -130,6 +138,8 @@ export function SpoolArt({
         )}
         <circle cx="100" cy="100" r={HUB} fill={`url(#h${id})`} />
         <circle cx="100" cy="100" r={HUB - 0.6} fill="none" stroke="#ffffff" strokeOpacity="0.14" strokeWidth="1" />
+        {/* Farbring auf der Nabe: Farbe bleibt erkennbar, auch wenn kaum noch Filament drauf ist */}
+        {!empty && <circle cx="100" cy="100" r={HUB - 6} fill="none" stroke={c} strokeWidth="4.5" />}
         {[0, 90, 180, 270].map((a) => (
           <rect key={a} x="97" y={100 - HUB + 4} width="6" height="7" rx="1.5" fill="#0c0d0f" opacity="0.65" transform={`rotate(${a} 100 100)`} />
         ))}

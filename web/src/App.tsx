@@ -6,18 +6,29 @@ import { useCatalog } from "./lib/catalog.ts";
 import { go, href, slug, useRoute, type Route } from "./lib/router.ts";
 import { Library } from "./pages/Library.tsx";
 import { ModelPage } from "./pages/ModelPage.tsx";
+import { MaintenancePage } from "./pages/MaintenancePage.tsx";
 import { PrinterPage } from "./pages/PrinterPage.tsx";
 import { FilamentPage } from "./pages/FilamentPage.tsx";
 import { HistoryPage } from "./pages/HistoryPage.tsx";
+import { StatsPage } from "./pages/StatsPage.tsx";
 import { HmsPage } from "./pages/HmsPage.tsx";
 import { SettingsPage } from "./pages/SettingsPage.tsx";
 import { SetupPage } from "./pages/SetupPage.tsx";
+import { MakerWorldPage } from "./pages/MakerWorldPage.tsx";
+import { PrintablesPage } from "./pages/PrintablesPage.tsx";
 import { useSettings } from "./lib/settings.ts";
+import { useStock } from "./lib/stock.ts";
 import { StateDot } from "./ui/printer.tsx";
 import { UploadPanel } from "./ui/Uploads.tsx";
 
 export const useLive = (fast = false) =>
-  useQuery({ queryKey: ["live"], queryFn: api.live, refetchInterval: fast ? 2000 : 8000, refetchOnWindowFocus: true });
+  useQuery({
+    queryKey: ["live"],
+    queryFn: api.live,
+    // Wartet ein AMS auf die Bestätigung eines Trocknungsbefehls, überall schnell nachfragen
+    refetchInterval: (q) => (fast || q.state.data?.some((p) => p.ams.some((u) => u.dry_pending)) ? 2000 : 8000),
+    refetchOnWindowFocus: true,
+  });
 
 const NAV: { route: Route; label: string; icon: typeof Box }[] = [
   { route: { page: "printer" }, label: "Drucker", icon: Printer },
@@ -50,8 +61,9 @@ export function App() {
   const route = useRoute();
   const live = useLive();
   const p = live.data?.[0];
-  const active = (r: Route) => r.page === route.page || (r.page === "library" && route.page === "model") || (r.page === "settings" && route.page === "setup");
+  const active = (r: Route) => r.page === route.page || (r.page === "library" && (route.page === "model" || route.page === "printables" || route.page === "makerworld")) || (r.page === "settings" && route.page === "setup");
   const catalog = useCatalog();
+  const stock = useStock();
   // Erster Start ohne Daten: einmal zum Assistenten (danach jederzeit über die Einstellungen)
   const settings = useSettings();
   const routed = useRef(false);
@@ -89,6 +101,34 @@ export function App() {
                   <a href={href({ page: "printer", view: "fehlercodes" })} className={sub(route.page === "printer" && route.view === "fehlercodes") + " pl-2"}>
                     Fehlercodes
                   </a>
+                  <a href={href({ page: "printer", view: "wartung" })} className={sub(route.page === "printer" && route.view === "wartung") + " pl-2"}>
+                    Wartung
+                  </a>
+                </div>
+              )}
+              {/* Bibliothek: eigene Modelle, Printables und MakerWorld */}
+              {r.page === "library" && active(r) && (
+                <div className="mt-0.5 mb-1 ml-[1.15rem] flex flex-col border-l border-sep pl-2.5">
+                  <a href={href({ page: "library" })} className={sub(route.page !== "printables" && route.page !== "makerworld") + " pl-2"}>
+                    Modelle
+                  </a>
+                  <a href={href({ page: "printables" })} className={sub(route.page === "printables") + " pl-2"}>
+                    Printables
+                  </a>
+                  <a href={href({ page: "makerworld" })} className={sub(route.page === "makerworld") + " pl-2"}>
+                    MakerWorld
+                  </a>
+                </div>
+              )}
+              {/* Verlauf: Drucke und Statistik */}
+              {r.page === "history" && active(r) && (
+                <div className="mt-0.5 mb-1 ml-[1.15rem] flex flex-col border-l border-sep pl-2.5">
+                  <a href={href({ page: "history" })} className={sub(route.page === "history" && !route.view) + " pl-2"}>
+                    Drucke
+                  </a>
+                  <a href={href({ page: "history", view: "statistik" })} className={sub(route.page === "history" && route.view === "statistik") + " pl-2"}>
+                    Statistik
+                  </a>
                 </div>
               )}
               {/* Filament: Unterseiten, im Katalog zusätzlich die Marken aus der Datenbank */}
@@ -98,12 +138,18 @@ export function App() {
                     [
                       ["regal", "Regal"],
                       ["spulen", "Spulen"],
+                      ["einkauf", "Einkauf"],
                       ["katalog", "Katalog"],
+                      ["kennwerte", "Kennwerte"],
+                      ["preise", "Preis-Leistung"],
                     ] as const
                   ).map(([v, l]) => (
                     <div key={v}>
-                      <a href={href({ page: "filament", view: v })} className={sub(fv === v && !(v === "katalog" && route.page === "filament" && route.brand)) + " pl-2"}>
+                      <a href={href({ page: "filament", view: v })} className={sub((fv === v || (v === "spulen" && fv === "etiketten")) && !(v === "katalog" && route.page === "filament" && route.view === "katalog" && route.brand)) + " pl-2"}>
                         {l}
+                        {v === "einkauf" && stock.low.length > 0 && (
+                          <span className="ml-auto rounded-full bg-accent px-1.5 text-[11px] leading-[18px] font-bold text-on-accent tnum">{stock.low.length}</span>
+                        )}
                       </a>
                       {v === "katalog" && fv === "katalog" && (
                         <div className="flex flex-col">
@@ -159,12 +205,14 @@ export function App() {
 
       <main className="pb-[calc(4.5rem+env(safe-area-inset-bottom))] md:pb-10">
         <PageBoundary k={JSON.stringify(route)}>
-          {route.page === "library" && <Library />}
+          {route.page === "library" && <Library key={route.collection ?? 0} collection={route.collection} />}
           {route.page === "model" && <ModelPage key={route.id} id={route.id} />}
-          {route.page === "printer" && (route.view === "fehlercodes" ? <HmsPage /> : <PrinterPage />)}
-          {route.page === "filament" && <FilamentPage view={route.view ?? "regal"} brand={route.brand} spoolId={route.spool} />}
-          {route.page === "history" && <HistoryPage />}
-          {route.page === "settings" && <SettingsPage />}
+          {route.page === "printables" && <PrintablesPage id={route.id} />}
+          {route.page === "makerworld" && <MakerWorldPage id={route.id} />}
+          {route.page === "printer" && (route.view === "fehlercodes" ? <HmsPage /> : route.view === "wartung" ? <MaintenancePage /> : <PrinterPage />)}
+          {route.page === "filament" && <FilamentPage view={route.view ?? "regal"} brand={route.brand} line={route.line} material={route.material} spoolId={route.spool} />}
+          {route.page === "history" && (route.view === "statistik" ? <StatsPage /> : <HistoryPage />)}
+          {route.page === "settings" && <SettingsPage view={route.view ?? "drucker"} />}
           {route.page === "setup" && <SetupPage step={route.step ?? 1} />}
         </PageBoundary>
       </main>

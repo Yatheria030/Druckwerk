@@ -1,0 +1,49 @@
+{
+ "brand": "3DJake",
+ "source": "Technische Datenblätter des Herstellers, Werte wie angegeben (Einheiten vereinheitlicht)",
+ "lines": {
+  "PLA Silk": {
+   "source": "https://3d.nice-cdn.com/upload/file/TDS_ecoPLA_Silk_v1.1.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.224,
+     "std": "ISO 1183"
+    },
+    "mfi": {
+     "v": 10.92,
+     "std": "ASTM D1238, 210 °C/2,16 kg"
+    },
+    "tensile_strength": {
+     "v": 39.9,
+     "std": "ISO 527, at yield"
+    },
+    "elongation": {
+     "v": 44.6,
+     "std": "ISO 527, strain at break"
+    },
+    "tensile_modulus": {
+     "v": 412,
+     "std": "ISO 527 (so im Blatt, für PLA ungewöhnlich niedrig)"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "210–230 °C"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "210–230 °C"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "± 35–60 °C, optional"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "± 35–60 °C, optional"
+    }
+   },
+   "note": "3DJAKE ecoPLA Silk, Blatt: gedruckte Proben. Impact strength 3,3 kJ/m² nach ISO 179 ohne Angabe gekerbt/ungekerbt, daher nicht übernommen."
+  }
+ }
+}

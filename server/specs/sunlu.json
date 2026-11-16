@@ -1,0 +1,3736 @@
+{
+ "brand": "Sunlu",
+ "source": "Technische Datenblätter des Herstellers, Werte wie angegeben (Einheiten vereinheitlicht)",
+ "lines": {
+  "PLA": {
+   "source": "https://media.sunlu.com/prod/20260618/73632671781747576290.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±5"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 40,
+     "std": "ISO 527-2, 50 mm/min, 40±6"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±5"
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, 2 mm/min, 65±6"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, 2 mm/min, 2300±300"
+    },
+    "impact_notched": {
+     "v": 5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5±3"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 6.9,
+     "std": "ISO 1133, 190 °C / 2.16kg, 6.9±3"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Matte": {
+   "source": "https://media.sunlu.com/prod/20260330/b42c1ff4-b3d1-42e4-82a3-b85523647407.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.31,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 58.8,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 162.6,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±5"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 39,
+     "std": "ISO 527-2, 50 mm/min, 39±6"
+    },
+    "elongation": {
+     "v": 15,
+     "std": "ISO 527-2, 50 mm/min, 15±5"
+    },
+    "flexural_strength": {
+     "v": 72,
+     "std": "ISO 178, 2 mm/min, 72±6"
+    },
+    "flexural_modulus": {
+     "v": 3700,
+     "std": "ISO 178, 2 mm/min, 3700±400"
+    },
+    "impact_notched": {
+     "v": 5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5±2"
+    },
+    "hardness": {
+     "v": 83,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 5.5,
+     "std": "ISO 1133, 190 °C / 2.16kg, 5.5±1.5"
+    },
+    "nozzle_min": {
+     "v": 205,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 245,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Meta": {
+   "source": "https://media.sunlu.com/prod/20260330/2bb3a5ff-6427-4a96-9bad-636abcd2c883.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "ISO 75, 0,45 MPa, 57±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 50,
+     "std": "ISO 527-2, 50 mm/min, 50±5"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±3"
+    },
+    "flexural_strength": {
+     "v": 85,
+     "std": "ISO 178, 2 mm/min, 85±6"
+    },
+    "flexural_modulus": {
+     "v": 2900,
+     "std": "ISO 178, 2 mm/min, 2900±300"
+    },
+    "impact_notched": {
+     "v": 6.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 6.5±2.5"
+    },
+    "hardness": {
+     "v": 83.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 5,
+     "std": "ISO 1133, 190 °C / 2.16kg, 5±2"
+    },
+    "nozzle_min": {
+     "v": 185,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 225,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA High Speed": {
+   "source": "https://media.sunlu.com/prod/20260330/b129fd4c-7d50-46be-874e-84e0bb6ff1ae.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.28,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 67.2,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 165.3,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "ISO 75, 0,45 MPa, 57±4"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 39,
+     "std": "ISO 527-2, 50 mm/min, 39±5"
+    },
+    "elongation": {
+     "v": 12,
+     "std": "ISO 527-2, 50 mm/min, 12±4"
+    },
+    "flexural_strength": {
+     "v": 70,
+     "std": "ISO 178, 2 mm/min, 70±5"
+    },
+    "flexural_modulus": {
+     "v": 3200,
+     "std": "ISO 178, 2 mm/min, 3200±400"
+    },
+    "impact_notched": {
+     "v": 4.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 4.5±2"
+    },
+    "hardness": {
+     "v": 81.4,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 7,
+     "std": "ISO 1133, 190 °C / 2.16kg, 7±2.5"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA High Speed Matte": {
+   "source": "https://media.sunlu.com/prod/20260330/689d1925-acad-4de8-9079-c8eee9c3081e.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.36,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 56,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 158,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±3"
+    },
+    "tensile_strength": {
+     "v": 27,
+     "std": "ISO 527-2, 50 mm/min, 27±4"
+    },
+    "elongation": {
+     "v": 20,
+     "std": "ISO 527-2, 50 mm/min, 20±7"
+    },
+    "flexural_strength": {
+     "v": 50,
+     "std": "ISO 178, 2 mm/min, 50±6"
+    },
+    "flexural_modulus": {
+     "v": 3300,
+     "std": "ISO 178, 2 mm/min, 3300±400"
+    },
+    "impact_notched": {
+     "v": 8,
+     "std": "Izod gekerbt ISO 180, 23 °C, 8±3"
+    },
+    "hardness": {
+     "v": 80.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 6,
+     "std": "ISO 1133, 190 °C / 2.16kg, 6±2"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Lite": {
+   "source": "https://media.sunlu.com/prod/20260423/bbf6d99b-179f-4eee-a7d6-505d125658cd.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.36,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 56,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 158,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±3"
+    },
+    "tensile_strength": {
+     "v": 27,
+     "std": "ISO 527-2, 50 mm/min, 27±4"
+    },
+    "elongation": {
+     "v": 20,
+     "std": "ISO 527-2, 50 mm/min, 20±7"
+    },
+    "flexural_strength": {
+     "v": 50,
+     "std": "ISO 178, 2 mm/min, 50±6"
+    },
+    "flexural_modulus": {
+     "v": 3300,
+     "std": "ISO 178, 2 mm/min, 3300±400"
+    },
+    "impact_notched": {
+     "v": 8,
+     "std": "Izod gekerbt ISO 180, 23 °C, 8±3"
+    },
+    "hardness": {
+     "v": 80.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 6,
+     "std": "ISO 1133, 190 °C / 2.16kg, 6±2"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "TDS inhaltlich identisch mit High Speed Matte PLA und PLA Classic (gleiche Werte, gleiche Dok.-Nr. SL-TE-WI-118); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Transparent": {
+   "source": "https://media.sunlu.com/prod/20260327/dd80f61e-08b6-4ca9-a2a5-ca7e93c8d5ee.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±5"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 40,
+     "std": "ISO 527-2, 50 mm/min, 40±6"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±5"
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, 2 mm/min, 65±6"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, 2 mm/min, 2300±300"
+    },
+    "impact_notched": {
+     "v": 5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5±3"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 6.9,
+     "std": "ISO 1133, 190 °C / 2.16kg, 6.9±3"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Hersteller verlinkt auf der Produktseite das allgemeine PLA-TDS (Produktname „PLA“); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Fluorescent": {
+   "source": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SL-TE-WI-077_ISO_PLA_A2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±5"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 40,
+     "std": "ISO 527-2, 50 mm/min, 40±6"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±5"
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, 2 mm/min, 65±6"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, 2 mm/min, 2300±300"
+    },
+    "impact_notched": {
+     "v": 5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5±3"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 6.9,
+     "std": "ISO 1133, 190 °C / 2.16kg, 6.9±3"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Variante der Sunlu-PLA-Produktseite (store.sunlu.com), dort verlinktes allgemeines PLA-TDS; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Pastel": {
+   "source": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SL-TE-WI-077_ISO_PLA_A2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±5"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 40,
+     "std": "ISO 527-2, 50 mm/min, 40±6"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±5"
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, 2 mm/min, 65±6"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, 2 mm/min, 2300±300"
+    },
+    "impact_notched": {
+     "v": 5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5±3"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 6.9,
+     "std": "ISO 1133, 190 °C / 2.16kg, 6.9±3"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Variante der Sunlu-PLA-Produktseite (store.sunlu.com), dort verlinktes allgemeines PLA-TDS; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Vibrant": {
+   "source": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SL-TE-WI-077_ISO_PLA_A2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±5"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 40,
+     "std": "ISO 527-2, 50 mm/min, 40±6"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±5"
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, 2 mm/min, 65±6"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, 2 mm/min, 2300±300"
+    },
+    "impact_notched": {
+     "v": 5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5±3"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 6.9,
+     "std": "ISO 1133, 190 °C / 2.16kg, 6.9±3"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Variante der Sunlu-PLA-Produktseite (store.sunlu.com), dort verlinktes allgemeines PLA-TDS; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Glow": {
+   "source": "https://media.sunlu.com/prod/20260327/25674e7f-8c9e-4ff2-8bf6-74bae7d6a030.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±5"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 40,
+     "std": "ISO 527-2, 50 mm/min, 40±6"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±5"
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, 2 mm/min, 65±6"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, 2 mm/min, 2300±300"
+    },
+    "impact_notched": {
+     "v": 5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5±3"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 6.9,
+     "std": "ISO 1133, 190 °C / 2.16kg, 6.9±3"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Werte identisch mit Sunlu-PLA-TDS; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Marble": {
+   "source": "https://media.sunlu.com/prod/20260330/02f59eef-2adc-4bae-8b08-bfd1a8a278fe.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 41,
+     "std": "ISO 527-2, 50 mm/min, 41±6"
+    },
+    "elongation": {
+     "v": 25,
+     "std": "ISO 527-2, 50 mm/min, 25±7"
+    },
+    "flexural_strength": {
+     "v": 72,
+     "std": "ISO 178, 2 mm/min, 72±5"
+    },
+    "flexural_modulus": {
+     "v": 3100,
+     "std": "ISO 178, 2 mm/min, 3100±400"
+    },
+    "impact_notched": {
+     "v": 11,
+     "std": "Izod gekerbt ISO 180, 23 °C, 11±3"
+    },
+    "hardness": {
+     "v": 82,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 8.3,
+     "std": "ISO 1133, 190 °C / 2.16kg, 8.3±2"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Sunlu führt Marble nur als „High Speed Marble PLA“; dessen TDS; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Galaxy": {
+   "source": "https://media.sunlu.com/prod/20260327/cc96ba09-b739-4afb-851f-bcdd5f02dc2b.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 60.9,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 167,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 54.6,
+     "std": "ISO 75, 0,45 MPa, 54.6±3"
+    },
+    "tensile_strength": {
+     "v": 43.3,
+     "std": "ISO 527-2, 50 mm/min, 43.3±6"
+    },
+    "elongation": {
+     "v": 16.3,
+     "std": "ISO 527-2, 50 mm/min, 16.3±5"
+    },
+    "flexural_strength": {
+     "v": 80.3,
+     "std": "ISO 178, 2 mm/min, 80.3±10"
+    },
+    "flexural_modulus": {
+     "v": 3273,
+     "std": "ISO 178, 2 mm/min, 3273±300"
+    },
+    "impact_notched": {
+     "v": 3.8,
+     "std": "Izod gekerbt ISO 180, 23 °C, 3.8±2"
+    },
+    "hardness": {
+     "v": 82,
+     "std": "Shore D (ISO 868)"
+    },
+    "mfi": {
+     "v": 5.46,
+     "std": "ISO 1133, 190 °C / 2.16kg, 5.46±2.5"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Twinkling": {
+   "source": "https://media.sunlu.com/prod/20260327/581a2c53-a377-4a1a-8fa4-f864aa683bd2.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 50.8,
+     "std": "ISO 75, 0,45 MPa, 50.8±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 59,
+     "std": "ISO 527-2, 50 mm/min, 59±4"
+    },
+    "elongation": {
+     "v": 12.5,
+     "std": "ISO 527-2, 50 mm/min, 12.5±3"
+    },
+    "flexural_strength": {
+     "v": 97,
+     "std": "ISO 178, 2 mm/min, 97±3"
+    },
+    "flexural_modulus": {
+     "v": 3100,
+     "std": "ISO 178, 2 mm/min, 3100±250"
+    },
+    "impact_notched": {
+     "v": 3.1,
+     "std": "Izod gekerbt ISO 180, 23 °C, 3.1±1.2"
+    },
+    "hardness": {
+     "v": 78.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 8.6,
+     "std": "ISO 1133, 190 °C / 2.16kg, 8.6±2"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Metallic": {
+   "source": "https://media.sunlu.com/prod/20260916/19364171789540194308.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183, 23 °C, 1.21±0.02"
+    },
+    "tg": {
+     "v": 60,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 165,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 56,
+     "std": "ISO 75, 0,45 MPa, 56±5"
+    },
+    "tensile_strength": {
+     "v": 45,
+     "std": "ISO 527-2, 50 mm/min, 45±5"
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527-2, 50 mm/min, 11±2"
+    },
+    "flexural_strength": {
+     "v": 76,
+     "std": "ISO 178, 2 mm/min, 76±5"
+    },
+    "flexural_modulus": {
+     "v": 2600,
+     "std": "ISO 178, 2 mm/min, 2600±500"
+    },
+    "impact_notched": {
+     "v": 6,
+     "std": "Izod gekerbt ISO 180, 23 °C, 6±2"
+    },
+    "hardness": {
+     "v": 82,
+     "std": "Shore D (ISO 868)"
+    },
+    "mfi": {
+     "v": 5.1,
+     "std": "ISO 1133, 220 °C / 10kg"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Herstellerangabe, 50–60 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Wood": {
+   "source": "https://media.sunlu.com/prod/20260326/9ecc53a5-f50a-4687-97fc-fab43b1db35b.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 60,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 33,
+     "std": "ISO 527-2, 50 mm/min, 33±6"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±5"
+    },
+    "flexural_strength": {
+     "v": 55,
+     "std": "ISO 178, 2 mm/min, 55±5"
+    },
+    "flexural_modulus": {
+     "v": 3040,
+     "std": "ISO 178, 2 mm/min, 3040±200"
+    },
+    "impact_notched": {
+     "v": 6,
+     "std": "Izod gekerbt ISO 180, 23 °C, 6±3"
+    },
+    "hardness": {
+     "v": 77,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 3.8,
+     "std": "ISO 1133, 190 °C / 2.16kg, 3.8±1.5"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 220,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Holzanteil laut Hersteller 15 %; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Anti-String": {
+   "source": "https://media.sunlu.com/prod/20260414/8479d923-5cbe-4574-97b7-f0b9e356c243.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±5"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 40,
+     "std": "ISO 527-2, 50 mm/min, 40±6"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±5"
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, 2 mm/min, 65±6"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, 2 mm/min, 2300±300"
+    },
+    "impact_notched": {
+     "v": 5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5±3"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 6.9,
+     "std": "ISO 1133, 190 °C / 2.16kg, 6.9±3"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); TDS „APLA“; Werte identisch mit Sunlu-PLA-TDS; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Lightweight": {
+   "source": "https://media.sunlu.com/prod/20260413/23d648ce-7d03-45e3-a5db-ff13dda26c5d.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 0.84,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 52,
+     "std": "ISO 75, 0,45 MPa"
+    },
+    "vicat": {
+     "v": 55,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 20,
+     "std": "ISO 527-2, 50 mm/min"
+    },
+    "tensile_modulus": {
+     "v": 3100,
+     "std": "ISO 527-2, 1 mm/min"
+    },
+    "elongation": {
+     "v": 15,
+     "std": "ISO 527-2, 50 mm/min"
+    },
+    "flexural_strength": {
+     "v": 40,
+     "std": "ISO 178, 2 mm/min"
+    },
+    "flexural_modulus": {
+     "v": 3550,
+     "std": "ISO 178, 2 mm/min"
+    },
+    "impact_notched": {
+     "v": 2.5,
+     "std": "Izod gekerbt ISO 180, 23 °C"
+    },
+    "hardness": {
+     "v": 75,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 3.8,
+     "std": "ISO 1133, 190 °C / 2.16kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 210,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); TDS „PLA-LW“ (geschäumt, Dichte gilt fürs Granulat/Filament); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Matte Dual-Color": {
+   "source": "https://media.sunlu.com/prod/20260330/a47cd225-7892-4788-9c73-bd27bfd791f5.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.31,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 58.8,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 162.6,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75, 0,45 MPa, 55±5"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 39,
+     "std": "ISO 527-2, 50 mm/min, 39±6"
+    },
+    "elongation": {
+     "v": 15,
+     "std": "ISO 527-2, 50 mm/min, 15±5"
+    },
+    "flexural_strength": {
+     "v": 72,
+     "std": "ISO 178, 2 mm/min, 72±6"
+    },
+    "flexural_modulus": {
+     "v": 3700,
+     "std": "ISO 178, 2 mm/min, 3700±400"
+    },
+    "impact_notched": {
+     "v": 5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5±2"
+    },
+    "hardness": {
+     "v": 83,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 5.5,
+     "std": "ISO 1133, 190 °C / 2.16kg, 5.5±1.5"
+    },
+    "nozzle_min": {
+     "v": 205,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 245,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA Rainbow": {
+   "source": "https://media.sunlu.com/prod/20260330/bbd3e778-b424-49b7-b203-058327f2f6fc.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 63,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "ISO 75, 0,45 MPa, 57±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 50,
+     "std": "ISO 527-2, 50 mm/min, 50±5"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±3"
+    },
+    "flexural_strength": {
+     "v": 85,
+     "std": "ISO 178, 2 mm/min, 85±6"
+    },
+    "flexural_modulus": {
+     "v": 2900,
+     "std": "ISO 178, 2 mm/min, 2900±300"
+    },
+    "impact_notched": {
+     "v": 6.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 6.5±2.5"
+    },
+    "hardness": {
+     "v": 83.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 5,
+     "std": "ISO 1133, 190 °C / 2.16kg, 5±2"
+    },
+    "nozzle_min": {
+     "v": 185,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 225,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Werte identisch mit PLA Meta; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA-CF": {
+   "source": "https://media.sunlu.com/prod/20260330/75a39c51-7d4c-40c4-839d-58f88cbbbf94.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 59,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 168.6,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55.5,
+     "std": "ISO 75, 0,45 MPa, 55.5±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 44,
+     "std": "ISO 527-2, 50 mm/min, 44±5"
+    },
+    "elongation": {
+     "v": 10.4,
+     "std": "ISO 527-2, 50 mm/min, 10.4±3"
+    },
+    "flexural_strength": {
+     "v": 79,
+     "std": "ISO 178, 2 mm/min, 79±5"
+    },
+    "flexural_modulus": {
+     "v": 3221,
+     "std": "ISO 178, 2 mm/min, 3221±200"
+    },
+    "impact_notched": {
+     "v": 3.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 3.5±1.5"
+    },
+    "hardness": {
+     "v": 84,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 20.4,
+     "std": "ISO 1133, 190 °C / 2.16kg, 20.4±3"
+    },
+    "nozzle_min": {
+     "v": 215,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 245,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); PLA-CF15; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA+": {
+   "source": "https://media.sunlu.com/prod/20260618/65301701781747847057.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 61,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 56,
+     "std": "ISO 75, 0,45 MPa, 56±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 46,
+     "std": "ISO 527-2, 50 mm/min, 46±5"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±2.5"
+    },
+    "flexural_strength": {
+     "v": 83,
+     "std": "ISO 178, 2 mm/min, 83±5"
+    },
+    "flexural_modulus": {
+     "v": 2750,
+     "std": "ISO 178, 2 mm/min, 2750±200"
+    },
+    "impact_notched": {
+     "v": 10,
+     "std": "Izod gekerbt ISO 180, 23 °C, 10±3"
+    },
+    "hardness": {
+     "v": 81,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 8.3,
+     "std": "ISO 1133, 190 °C / 2.16kg, 8.3±2"
+    },
+    "nozzle_min": {
+     "v": 205,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 245,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA+ 2.0": {
+   "source": "https://media.sunlu.com/prod/20260327/81b1d361-0bd9-4783-ba0f-283a311c6870.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 61,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 56,
+     "std": "ISO 75, 0,45 MPa, 56±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 46,
+     "std": "ISO 527-2, 50 mm/min, 46±5"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±2.5"
+    },
+    "flexural_strength": {
+     "v": 83,
+     "std": "ISO 178, 2 mm/min, 83±5"
+    },
+    "flexural_modulus": {
+     "v": 2750,
+     "std": "ISO 178, 2 mm/min, 2750±200"
+    },
+    "impact_notched": {
+     "v": 10,
+     "std": "Izod gekerbt ISO 180, 23 °C, 10±3"
+    },
+    "hardness": {
+     "v": 81,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 8.3,
+     "std": "ISO 1133, 190 °C / 2.16kg, 8.3±2"
+    },
+    "nozzle_min": {
+     "v": 205,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 245,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Werte identisch mit PLA+; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA+ High Speed": {
+   "source": "https://media.sunlu.com/prod/20260330/1cc08af0-45a6-41af-9b5a-07533ce567f3.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 64.2,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 167,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 56,
+     "std": "ISO 75, 0,45 MPa, 56±3"
+    },
+    "tensile_strength": {
+     "v": 38,
+     "std": "ISO 527-2, 50 mm/min, 38±5"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±3"
+    },
+    "flexural_strength": {
+     "v": 72,
+     "std": "ISO 178, 2 mm/min, 72±5"
+    },
+    "flexural_modulus": {
+     "v": 3300,
+     "std": "ISO 178, 2 mm/min, 3300±200"
+    },
+    "impact_notched": {
+     "v": 6,
+     "std": "Izod gekerbt ISO 180, 23 °C, 6±2"
+    },
+    "hardness": {
+     "v": 82,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 7.3,
+     "std": "ISO 1133, 190 °C / 2.16kg, 7.3±2"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA+ High Speed 2.0": {
+   "source": "https://media.sunlu.com/prod/20260330/225ab1bc-a40a-435b-8d20-a2745303674b.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 67.5,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 168.3,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 56.5,
+     "std": "ISO 75, 0,45 MPa, 56.5±3"
+    },
+    "tensile_strength": {
+     "v": 40,
+     "std": "ISO 527-2, 50 mm/min, 40±3"
+    },
+    "elongation": {
+     "v": 14,
+     "std": "ISO 527-2, 50 mm/min, 14±4"
+    },
+    "flexural_strength": {
+     "v": 73,
+     "std": "ISO 178, 2 mm/min, 73±5"
+    },
+    "flexural_modulus": {
+     "v": 3290,
+     "std": "ISO 178, 2 mm/min, 3290±300"
+    },
+    "impact_notched": {
+     "v": 4.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 4.5±1.5"
+    },
+    "hardness": {
+     "v": 86.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 10.2,
+     "std": "ISO 1133, 190 °C / 2.16kg, 10.2±3"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA+ Silk": {
+   "source": "https://media.sunlu.com/prod/20260330/91c03fbc-a5c0-4711-b3ae-10d0efd19f27.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 60.9,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "ISO 75, 0,45 MPa, 57±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 50,
+     "std": "ISO 527-2, 50 mm/min, 50±4"
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527-2, 50 mm/min, 11±3"
+    },
+    "flexural_strength": {
+     "v": 78,
+     "std": "ISO 178, 2 mm/min, 78±5"
+    },
+    "flexural_modulus": {
+     "v": 2600,
+     "std": "ISO 178, 2 mm/min, 2600±300"
+    },
+    "impact_notched": {
+     "v": 3.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 3.5±1.5"
+    },
+    "hardness": {
+     "v": 79.6,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 7,
+     "std": "ISO 1133, 190 °C / 2.16kg, 7±2.5"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA+ Silk 2.0": {
+   "source": "https://media.sunlu.com/prod/20260916/56889371789540318047.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 60.9,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "ISO 75, 0,45 MPa, 57±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 51,
+     "std": "ISO 527-2, 50 mm/min, 51±4 (Z: 18±3)",
+     "z": 18
+    },
+    "tensile_modulus": {
+     "v": 597,
+     "std": "ISO 527-2, 1 mm/min, 597±50 (Z: 363±30)",
+     "z": 363
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527-2, 50 mm/min, 11±3 (Z: 5±1.5)",
+     "z": 5
+    },
+    "flexural_strength": {
+     "v": 77,
+     "std": "ISO 178, 2 mm/min, 77±5 (Z: 27±3)",
+     "z": 27
+    },
+    "flexural_modulus": {
+     "v": 2473,
+     "std": "ISO 178, 2 mm/min, 2473±300 (Z: 1719±200)",
+     "z": 1719
+    },
+    "impact_notched": {
+     "v": 15.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 15.5±1.5"
+    },
+    "hardness": {
+     "v": 82.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 4,
+     "std": "ISO 1133, 190 °C / 2.16kg, 4±2"
+    },
+    "nozzle_min": {
+     "v": 205,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 235,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA+ Silk Multi-Color": {
+   "source": "https://media.sunlu.com/prod/20260330/63d55fe5-d33b-47f2-8930-520f193ade51.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 60.9,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "ISO 75, 0,45 MPa, 57±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 50,
+     "std": "ISO 527-2, 50 mm/min, 50±4"
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527-2, 50 mm/min, 11±3"
+    },
+    "flexural_strength": {
+     "v": 78,
+     "std": "ISO 178, 2 mm/min, 78±5"
+    },
+    "flexural_modulus": {
+     "v": 2600,
+     "std": "ISO 178, 2 mm/min, 2600±300"
+    },
+    "impact_notched": {
+     "v": 3.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 3.5±1.5"
+    },
+    "hardness": {
+     "v": 79.6,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 7,
+     "std": "ISO 1133, 190 °C / 2.16kg, 7±2.5"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); TDS Dual-Color; Tri-Color- und Four-Color-TDS mit identischen Werten; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PLA+ Silk Rainbow": {
+   "source": "https://media.sunlu.com/prod/20260330/5156fe91-c7a8-48bd-9d1a-e753bf9c53a1.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 60.9,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 164,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "ISO 75, 0,45 MPa, 57±3"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 50,
+     "std": "ISO 527-2, 50 mm/min, 50±4"
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527-2, 50 mm/min, 11±3"
+    },
+    "flexural_strength": {
+     "v": 78,
+     "std": "ISO 178, 2 mm/min, 78±5"
+    },
+    "flexural_modulus": {
+     "v": 2600,
+     "std": "ISO 178, 2 mm/min, 2600±300"
+    },
+    "impact_notched": {
+     "v": 3.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 3.5±1.5"
+    },
+    "hardness": {
+     "v": 79.6,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 7,
+     "std": "ISO 1133, 190 °C / 2.16kg, 7±2.5"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PETG": {
+   "source": "https://media.sunlu.com/prod/20260330/f27808f0-3a19-49e3-bd79-6e846d6f4c15.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 79.4,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 195,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 70,
+     "std": "ISO 75, 0,45 MPa, 70±5"
+    },
+    "tensile_strength": {
+     "v": 48,
+     "std": "ISO 527-2, 50 mm/min, 48±10"
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527-2, 50 mm/min, 11±5"
+    },
+    "flexural_strength": {
+     "v": 70,
+     "std": "ISO 178, 2 mm/min, 70±10"
+    },
+    "flexural_modulus": {
+     "v": 2100,
+     "std": "ISO 178, 2 mm/min, 2100±300"
+    },
+    "impact_notched": {
+     "v": 3,
+     "std": "Izod gekerbt ISO 180, 23 °C, 3.0±1"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "Shore D (ISO 868)"
+    },
+    "mfi": {
+     "v": 5.7,
+     "std": "ISO 1133, 190 °C / 2.16kg, 5.7±3"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 62.5,
+     "std": "Herstellerangabe, 60–65 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PETG 2.0": {
+   "source": "https://media.sunlu.com/prod/20260916/30522971789539747056.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 83,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 71,
+     "std": "ISO 75, 0,45 MPa, 71±4"
+    },
+    "tensile_strength": {
+     "v": 43,
+     "std": "ISO 527-2, 50 mm/min, 43±10 (Z: 20±5)",
+     "z": 20
+    },
+    "tensile_modulus": {
+     "v": 500,
+     "std": "ISO 527-2, 1 mm/min, 500±50 (Z: 300±50)",
+     "z": 300
+    },
+    "elongation": {
+     "v": 12,
+     "std": "ISO 527-2, 50 mm/min, 12±5 (Z: 8±3)",
+     "z": 8
+    },
+    "flexural_strength": {
+     "v": 70,
+     "std": "ISO 178, 2 mm/min, 70±10 (Z: 35±10)",
+     "z": 35
+    },
+    "flexural_modulus": {
+     "v": 1900,
+     "std": "ISO 178, 2 mm/min, 1900±300 (Z: 1650±300)",
+     "z": 1650
+    },
+    "impact_notched": {
+     "v": 38,
+     "std": "Izod gekerbt ISO 180, 23 °C, 38±8"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "Shore D (ISO 868)"
+    },
+    "mfi": {
+     "v": 3.42,
+     "std": "ISO 1133, 210 °C / 2.16kg, 3.42±2"
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 80,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PETG High Speed Matte": {
+   "source": "https://media.sunlu.com/prod/20260330/ccf53a55-5b58-49fa-b1d9-08f94c0a4b28.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.28,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 65.5,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 128,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 70,
+     "std": "ISO 75, 0,45 MPa, 70±2"
+    },
+    "tensile_strength": {
+     "v": 46,
+     "std": "ISO 527-2, 50 mm/min, 46±5"
+    },
+    "elongation": {
+     "v": 14,
+     "std": "ISO 527-2, 50 mm/min, 14±5"
+    },
+    "flexural_strength": {
+     "v": 75,
+     "std": "ISO 178, 2 mm/min, 75±6"
+    },
+    "flexural_modulus": {
+     "v": 2650,
+     "std": "ISO 178, 2 mm/min, 2650±200"
+    },
+    "impact_notched": {
+     "v": 3,
+     "std": "Izod gekerbt ISO 180, 23 °C, 3±1.5"
+    },
+    "hardness": {
+     "v": 79,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 4.4,
+     "std": "ISO 1133, 210 °C / 2.16kg, 4.4±2"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 62.5,
+     "std": "Herstellerangabe, 60–65 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PETG Glow": {
+   "source": "https://media.sunlu.com/prod/20260422/52217877-b2d6-44ab-b8f6-d0cc638de94f.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 79.4,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 195,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 70,
+     "std": "ISO 75, 0,45 MPa, 70±5"
+    },
+    "tensile_strength": {
+     "v": 48,
+     "std": "ISO 527-2, 50 mm/min, 48±10"
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527-2, 50 mm/min, 11±5"
+    },
+    "flexural_strength": {
+     "v": 70,
+     "std": "ISO 178, 2 mm/min, 70±10"
+    },
+    "flexural_modulus": {
+     "v": 2100,
+     "std": "ISO 178, 2 mm/min, 2100±300"
+    },
+    "impact_notched": {
+     "v": 3,
+     "std": "Izod gekerbt ISO 180, 23 °C, 3.0±1"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "Shore D (ISO 868)"
+    },
+    "mfi": {
+     "v": 5.7,
+     "std": "ISO 1133, 210 °C / 2.16kg, 5.7±3"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 80,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 62.5,
+     "std": "Herstellerangabe, 60–65 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PETG-CF": {
+   "source": "https://media.sunlu.com/prod/20260330/433432a8-dfcb-485e-bd8e-a7be94dda4ce.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 65,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 71,
+     "std": "ISO 75, 0,45 MPa, 71±3"
+    },
+    "tensile_strength": {
+     "v": 32,
+     "std": "ISO 527-2, 50 mm/min, 32±4"
+    },
+    "elongation": {
+     "v": 14,
+     "std": "ISO 527-2, 50 mm/min, 14±3"
+    },
+    "flexural_strength": {
+     "v": 55.5,
+     "std": "ISO 178, 2 mm/min, 55.5±5"
+    },
+    "flexural_modulus": {
+     "v": 1960,
+     "std": "ISO 178, 2 mm/min, 1960±200"
+    },
+    "impact_notched": {
+     "v": 7,
+     "std": "Izod gekerbt ISO 180, 23 °C, 7±2"
+    },
+    "hardness": {
+     "v": 71,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 5.7,
+     "std": "ISO 1133, 210 °C / 2.16kg, 5.7±1.5"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 250,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); PETG-CF10; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "ABS": {
+   "source": "https://media.sunlu.com/prod/20260327/499dacc6-a1e4-4f81-b1ae-8bf1b8e424ec.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.02,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 109,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 132,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 95,
+     "std": "ISO 75, 0,45 MPa, 95±5"
+    },
+    "vicat": {
+     "v": 86,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 35,
+     "std": "ISO 527-2, 50 mm/min, 35±5"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±5"
+    },
+    "flexural_strength": {
+     "v": 60,
+     "std": "ISO 178, 2 mm/min, 60±10"
+    },
+    "flexural_modulus": {
+     "v": 2000,
+     "std": "ISO 178, 2 mm/min, 2000±500"
+    },
+    "impact_notched": {
+     "v": 15,
+     "std": "Izod gekerbt ISO 180, 23 °C, 15±5"
+    },
+    "hardness": {
+     "v": 85,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 20,
+     "std": "ISO 1133, 220 °C / 10kg, 20±10"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "ABS Easy": {
+   "source": "https://cdn.shopify.com/s/files/1/0851/3159/1999/files/SL-TE-WI-071_ISO_EASY_ABS_A1.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.06,
+     "std": "ISO 1183, 23 °C"
+    },
+    "melt": {
+     "v": 130,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 59.6,
+     "std": "ISO 75, 0,45 MPa, 59.6±3"
+    },
+    "vicat": {
+     "v": 64,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 35,
+     "std": "ISO 527-2, 50 mm/min, 35±4"
+    },
+    "elongation": {
+     "v": 13,
+     "std": "ISO 527-2, 50 mm/min, 13±2.5"
+    },
+    "flexural_strength": {
+     "v": 57.5,
+     "std": "ISO 178, 2 mm/min, 57.5±5"
+    },
+    "flexural_modulus": {
+     "v": 2016,
+     "std": "ISO 178, 2 mm/min, 2016±250"
+    },
+    "impact_notched": {
+     "v": 15,
+     "std": "Izod gekerbt ISO 180, 23 °C, 15±3"
+    },
+    "hardness": {
+     "v": 82,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 116,
+     "std": "ISO 1133, 220 °C / 10kg, 116±10"
+    },
+    "nozzle_min": {
+     "v": 225,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 255,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); TDS „Easy ABS“ (store.sunlu.com); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "ABS-FR": {
+   "source": "https://media.sunlu.com/prod/20260330/48f9a499-b97a-4844-be4b-35ca349b5b64.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.15,
+     "std": "ISO 1183, 23 °C"
+    },
+    "melt": {
+     "v": 132,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 90.5,
+     "std": "ISO 75, 0,45 MPa, 90.5±3"
+    },
+    "tensile_strength": {
+     "v": 31.4,
+     "std": "ISO 527-2, 50 mm/min, 31.4±4"
+    },
+    "elongation": {
+     "v": 11.6,
+     "std": "ISO 527-2, 50 mm/min, 11.6±2"
+    },
+    "flexural_strength": {
+     "v": 55,
+     "std": "ISO 178, 2 mm/min, 55±5"
+    },
+    "flexural_modulus": {
+     "v": 1750,
+     "std": "ISO 178, 2 mm/min, 1750±200"
+    },
+    "impact_notched": {
+     "v": 13.7,
+     "std": "Izod gekerbt ISO 180, 23 °C, 13.7±3"
+    },
+    "hardness": {
+     "v": 79,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 28.6,
+     "std": "ISO 1133, 220 °C / 10kg, 28.6±3"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 V-0 (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "ABS-GF": {
+   "source": "https://media.sunlu.com/prod/20260414/b74bf860-1989-443e-b917-58f7a97096a0.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.016,
+     "std": "ISO 1183, 23 °C, 1.016±0.01"
+    },
+    "tg": {
+     "v": 135,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 148,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 100,
+     "std": "ISO 75, 0,45 MPa, 100±5"
+    },
+    "vicat": {
+     "v": 95,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 55,
+     "std": "ISO 527-2, 50 mm/min, 55±5"
+    },
+    "elongation": {
+     "v": 10,
+     "std": "ISO 527-2, 50 mm/min, 10±2"
+    },
+    "flexural_strength": {
+     "v": 85,
+     "std": "ISO 178, 2 mm/min, 85±5"
+    },
+    "flexural_modulus": {
+     "v": 3300,
+     "std": "ISO 178, 2 mm/min, 3300±500"
+    },
+    "impact_notched": {
+     "v": 6,
+     "std": "Izod gekerbt ISO 180, 23 °C, 6±2"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "Shore D (ISO 868)"
+    },
+    "mfi": {
+     "v": 7,
+     "std": "ISO 1133, 220 °C / 10kg, 7±2"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); ABS-GF10; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "ASA": {
+   "source": "https://media.sunlu.com/prod/20260330/7d61617c-7540-4ae2-88d3-a0d206e5d801.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.04,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 108,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 120,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 101,
+     "std": "ISO 75, 0,45 MPa, 101±2"
+    },
+    "vicat": {
+     "v": 105,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 39,
+     "std": "ISO 527-2, 50 mm/min, 39±4"
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527-2, 50 mm/min, 11±3"
+    },
+    "flexural_strength": {
+     "v": 68,
+     "std": "ISO 178, 2 mm/min, 68±5"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, 2 mm/min, 2300±300"
+    },
+    "impact_notched": {
+     "v": 7,
+     "std": "Izod gekerbt ISO 180, 23 °C, 7±3"
+    },
+    "hardness": {
+     "v": 81.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 30.5,
+     "std": "ISO 1133, 220 °C / 10kg, 30.5±3"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "TPU 95A": {
+   "source": "https://media.sunlu.com/prod/20260330/e8b9c06a-4b93-46cb-9532-d9deb185a7c8.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tensile_strength": {
+     "v": 31,
+     "std": "ISO 527-2, 50 mm/min, 31±3"
+    },
+    "elongation": {
+     "v": 900,
+     "std": "ISO 527-2, 50 mm/min, >900"
+    },
+    "impact_notched": {
+     "v": 47,
+     "std": "Izod gekerbt ISO 180, 23 °C, 47±5"
+    },
+    "hardness": {
+     "v": 95,
+     "std": "Shore A (ISO 868)"
+    },
+    "mfi": {
+     "v": 28,
+     "std": "ISO 1133, 190 °C / 2.16kg, 28±3"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Herstellerangabe, 50–60 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "TPU 90A": {
+   "source": "https://media.sunlu.com/prod/20260330/c7dd1bd8-a2c5-4908-bc1c-479ca23cbd3b.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183, 23 °C, 1.17±0.02"
+    },
+    "hdt_045": {
+     "v": 36,
+     "std": "ISO 75, 0,45 MPa, 36±2"
+    },
+    "tensile_strength": {
+     "v": 30,
+     "std": "ISO 527-2, 50 mm/min, 30±3"
+    },
+    "elongation": {
+     "v": 1000,
+     "std": "ISO 527-2, 50 mm/min, ≥1000"
+    },
+    "hardness": {
+     "v": 90,
+     "std": "Shore A (ISO 868)"
+    },
+    "mfi": {
+     "v": 32,
+     "std": "ISO 1133, 210 °C / 2.16kg, 32±5"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "Herstellerangabe, 60–70 °C"
+    }
+   },
+   "note": "Die Vergleichstabelle (Material Lab) auf sunlu.com zeigt für TPU 90A versehentlich PLA-Werte; hier nur das TDS verwendet; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "TPU Silk": {
+   "source": "https://media.sunlu.com/prod/20260330/04545ebf-ef5c-4fd9-b425-42a06d39c7c0.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tensile_strength": {
+     "v": 22,
+     "std": "ISO 527-2, 50 mm/min, 22±5"
+    },
+    "tensile_modulus": {
+     "v": 190,
+     "std": "ISO 527-2, 1 mm/min, 190±30"
+    },
+    "elongation": {
+     "v": 950,
+     "std": "ISO 527-2, 50 mm/min, >950"
+    },
+    "impact_notched": {
+     "v": 52,
+     "std": "Izod gekerbt ISO 180, 23 °C, 52±4"
+    },
+    "hardness": {
+     "v": 97.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 8.3,
+     "std": "ISO 1133, 190 °C / 2.16kg, 8.3±2"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PC": {
+   "source": "https://media.sunlu.com/prod/20260330/46dca9d5-d877-4a9d-b416-3ad38450204a.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.15,
+     "std": "ISO 1183, 23 °C"
+    },
+    "hdt_045": {
+     "v": 101,
+     "std": "ISO 75, 0,45 MPa, 101±2"
+    },
+    "tensile_strength": {
+     "v": 50,
+     "std": "ISO 527-2, 50 mm/min, 50±3"
+    },
+    "elongation": {
+     "v": 25,
+     "std": "ISO 527-2, 50 mm/min, 25±3"
+    },
+    "flexural_strength": {
+     "v": 75,
+     "std": "ISO 178, 2 mm/min, 75±3"
+    },
+    "flexural_modulus": {
+     "v": 2050,
+     "std": "ISO 178, 2 mm/min, 2050±200"
+    },
+    "impact_notched": {
+     "v": 35,
+     "std": "Izod gekerbt ISO 180, 23 °C, 35±5"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "Shore D (ISO 868)"
+    },
+    "mfi": {
+     "v": 15,
+     "std": "ISO 1133, 260 °C / 2.16kg, 15±5"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 110,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 75,
+     "std": "Herstellerangabe, 70–80 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PC-ABS": {
+   "source": "https://media.sunlu.com/prod/20260330/d7bcafe0-f102-4dcb-a87a-59f458f0358d.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.081,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 106,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 102,
+     "std": "ISO 75, 0,45 MPa, 102±2"
+    },
+    "tensile_strength": {
+     "v": 38,
+     "std": "ISO 527-2, 50 mm/min, 38±3"
+    },
+    "elongation": {
+     "v": 8,
+     "std": "ISO 527-2, 50 mm/min, 8±2"
+    },
+    "flexural_strength": {
+     "v": 70,
+     "std": "ISO 178, 2 mm/min, 70±3"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, 2 mm/min, 2300±200"
+    },
+    "impact_notched": {
+     "v": 15,
+     "std": "Izod gekerbt ISO 180, 23 °C, 15±3"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "Shore D (ISO 868)"
+    },
+    "mfi": {
+     "v": 22,
+     "std": "ISO 1133, 260 °C / 5kg, 22±5"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 110,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 75,
+     "std": "Herstellerangabe, 70–80 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PA Easy": {
+   "source": "https://media.sunlu.com/prod/20260330/a5909dda-0573-4f11-a34a-00d495b1ea09.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.1,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 65,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 198,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 119,
+     "std": "ISO 75, 0,45 MPa, 119±3"
+    },
+    "vicat": {
+     "v": 135,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 61,
+     "std": "ISO 527-2, 50 mm/min, 61±6"
+    },
+    "elongation": {
+     "v": 15,
+     "std": "ISO 527-2, 50 mm/min, 15±3"
+    },
+    "flexural_strength": {
+     "v": 91,
+     "std": "ISO 178, 2 mm/min, 91±5"
+    },
+    "flexural_modulus": {
+     "v": 2314,
+     "std": "ISO 178, 2 mm/min, 2314±250"
+    },
+    "impact_notched": {
+     "v": 11,
+     "std": "Izod gekerbt ISO 180, 23 °C, 11±3"
+    },
+    "hardness": {
+     "v": 78.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 19,
+     "std": "ISO 1133, 250 °C / 2.16kg, 19±2"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 95,
+     "std": "Herstellerangabe, 80–110 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PA6-CF": {
+   "source": "https://media.sunlu.com/prod/20260330/68c0ccf4-9059-4b50-ad40-95ba3634f0ae.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.12,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 65,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 225,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 203,
+     "std": "ISO 75, 0,45 MPa, 203±3"
+    },
+    "tensile_strength": {
+     "v": 112,
+     "std": "ISO 527-2, 50 mm/min, 112±10"
+    },
+    "elongation": {
+     "v": 12,
+     "std": "ISO 527-2, 50 mm/min, 12±3"
+    },
+    "flexural_strength": {
+     "v": 192,
+     "std": "ISO 178, 2 mm/min, 192±20"
+    },
+    "flexural_modulus": {
+     "v": 8600,
+     "std": "ISO 178, 2 mm/min, 8600±400"
+    },
+    "impact_notched": {
+     "v": 6.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 6.5±2"
+    },
+    "hardness": {
+     "v": 80,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 16.5,
+     "std": "ISO 1133, 250 °C / 2.16kg, 16.5±3"
+    },
+    "nozzle_min": {
+     "v": 270,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 95,
+     "std": "Herstellerangabe, 80–110 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); PA6-CF20; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PA6-GF": {
+   "source": "https://media.sunlu.com/prod/20260330/e5f16b43-cef6-4f3e-ad93-3cc86f93f7e4.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.269,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 65,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 225,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 205.2,
+     "std": "ISO 75, 0,45 MPa, 205.2±3"
+    },
+    "tensile_strength": {
+     "v": 89,
+     "std": "ISO 527-2, 50 mm/min, 89±8"
+    },
+    "elongation": {
+     "v": 12.5,
+     "std": "ISO 527-2, 50 mm/min, 12.5±3"
+    },
+    "flexural_strength": {
+     "v": 176,
+     "std": "ISO 178, 2 mm/min, 176±8"
+    },
+    "flexural_modulus": {
+     "v": 6130,
+     "std": "ISO 178, 2 mm/min, 6130±300"
+    },
+    "impact_notched": {
+     "v": 10.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 10.5±2.5"
+    },
+    "hardness": {
+     "v": 82.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 12.2,
+     "std": "ISO 1133, 250 °C / 2.16kg, 12.2±3"
+    },
+    "nozzle_min": {
+     "v": 270,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 95,
+     "std": "Herstellerangabe, 80–110 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); PA6-GF25; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PA12-CF": {
+   "source": "https://media.sunlu.com/prod/20260330/93d827f4-50e9-45b4-8b24-bf5ddaf8273f.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.08,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 99,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 190,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 175,
+     "std": "ISO 75, 0,45 MPa, 175±3"
+    },
+    "tensile_strength": {
+     "v": 86,
+     "std": "ISO 527-2, 50 mm/min, 86±6"
+    },
+    "elongation": {
+     "v": 13.7,
+     "std": "ISO 527-2, 50 mm/min, 13.7±2.5"
+    },
+    "flexural_strength": {
+     "v": 160,
+     "std": "ISO 178, 2 mm/min, 160±30"
+    },
+    "flexural_modulus": {
+     "v": 5800,
+     "std": "ISO 178, 2 mm/min, 5800±300"
+    },
+    "impact_notched": {
+     "v": 11.3,
+     "std": "Izod gekerbt ISO 180, 23 °C, 11.3±2.5"
+    },
+    "hardness": {
+     "v": 82,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 14.4,
+     "std": "ISO 1133, 250 °C / 2.16kg, 14.4±3"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 95,
+     "std": "Herstellerangabe, 80–110 °C"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); PA12-CF20; Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PP": {
+   "source": "https://media.sunlu.com/prod/20260413/fbfe6e74-b29f-4f0f-a9b3-84aaa6b2fc85.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "melt": {
+     "v": 156,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 58.5,
+     "std": "ISO 75, 0,45 MPa, 58.5±3"
+    },
+    "tensile_strength": {
+     "v": 19,
+     "std": "ISO 527-2, 50 mm/min, 19±3"
+    },
+    "elongation": {
+     "v": 850,
+     "std": "ISO 527-2, 50 mm/min, 850±150"
+    },
+    "flexural_strength": {
+     "v": 19,
+     "std": "ISO 178, 2 mm/min, 19±3"
+    },
+    "impact_notched": {
+     "v": 5.3,
+     "std": "Izod gekerbt ISO 180, 23 °C, 5.3±1.5"
+    },
+    "hardness": {
+     "v": 54.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 9.75,
+     "std": "ISO 1133, 230 °C / 2.16kg, 9.75±2"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PP 2.0": {
+   "source": "https://media.sunlu.com/prod/20260916/25182761789529093884.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.01,
+     "std": "ISO 1183, 23 °C"
+    },
+    "melt": {
+     "v": 156,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 65,
+     "std": "ISO 75, 0,45 MPa, 65±10"
+    },
+    "tensile_strength": {
+     "v": 15,
+     "std": "ISO 527-2, 50 mm/min, 15±3"
+    },
+    "elongation": {
+     "v": 900,
+     "std": "ISO 527-2, 50 mm/min, 900±300"
+    },
+    "flexural_strength": {
+     "v": 18,
+     "std": "ISO 178, 2 mm/min, 18±3"
+    },
+    "flexural_modulus": {
+     "v": 500,
+     "std": "ISO 178, 2 mm/min, 500±100"
+    },
+    "impact_notched": {
+     "v": 23,
+     "std": "Izod gekerbt ISO 180, 23 °C, 23±5"
+    },
+    "hardness": {
+     "v": 60,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 4.4,
+     "std": "ISO 1133, 230 °C / 2.16kg, 4.4±1"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 40,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 40,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PEEK": {
+   "source": "https://media.sunlu.com/prod/20260413/ddb6b06d-707f-4226-9c00-cc16ef778873.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.1965,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 143,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "melt": {
+     "v": 343,
+     "std": "ISO 11357-3, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 147,
+     "std": "ISO 75, 0,45 MPa"
+    },
+    "tensile_strength": {
+     "v": 77,
+     "std": "ISO 527-2, 50 mm/min"
+    },
+    "elongation": {
+     "v": 21,
+     "std": "ISO 527-2, 50 mm/min"
+    },
+    "flexural_strength": {
+     "v": 122,
+     "std": "ISO 178, 2 mm/min"
+    },
+    "flexural_modulus": {
+     "v": 3163,
+     "std": "ISO 178, 2 mm/min"
+    },
+    "impact_notched": {
+     "v": 138,
+     "std": "Izod gekerbt ISO 180, 23 °C"
+    },
+    "hardness": {
+     "v": 83,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 17,
+     "std": "ISO 1133, 210 °C / 2.16kg"
+    },
+    "nozzle_min": {
+     "v": 390,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 420,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 110,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 120,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 125,
+     "std": "Herstellerangabe, 110–140 °C"
+    },
+    "dry_hours": {
+     "v": 5,
+     "std": "Herstellerangabe, 4–6 h"
+    }
+   },
+   "note": "UL94 V-0 (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  },
+  "PVB": {
+   "source": "https://media.sunlu.com/prod/20260330/042608c3-25e5-4515-a83e-f2220185296c.pdf?filename=TDS",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.08,
+     "std": "ISO 1183, 23 °C"
+    },
+    "tg": {
+     "v": 70,
+     "std": "ISO 11357-2, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55.8,
+     "std": "ISO 75, 0,45 MPa, 55.8±3"
+    },
+    "vicat": {
+     "v": 60,
+     "std": "ISO 306, 5 kg, 50 °C/h"
+    },
+    "tensile_strength": {
+     "v": 48,
+     "std": "ISO 527-2, 50 mm/min, 48±5"
+    },
+    "elongation": {
+     "v": 14,
+     "std": "ISO 527-2, 50 mm/min, 14±3"
+    },
+    "flexural_strength": {
+     "v": 78,
+     "std": "ISO 178, 2 mm/min, 78±6"
+    },
+    "flexural_modulus": {
+     "v": 2250,
+     "std": "ISO 178, 2 mm/min, 2250±200"
+    },
+    "impact_notched": {
+     "v": 6.5,
+     "std": "Izod gekerbt ISO 180, 23 °C, 6.5±2"
+    },
+    "hardness": {
+     "v": 82.5,
+     "std": "ISO 868, Skala im Blatt nicht angegeben (HA/HD)"
+    },
+    "mfi": {
+     "v": 14.3,
+     "std": "ISO 1133, 210 °C / 2.16kg, 14.3±2"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "Herstellerempfehlung"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "Herstellerempfehlung"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "Herstellerempfehlung"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Herstellerangabe"
+    }
+   },
+   "note": "UL94 HB (1,5 mm); Mechanik in X-Y-Richtung an gedruckten Probekörpern; Izod gekerbt in kJ/m²"
+  }
+ }
+}

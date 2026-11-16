@@ -1,0 +1,448 @@
+{
+ "brand": "3DJake",
+ "match": "3djake",
+ "url": "https://www.3djake.de",
+ "source": "SpoolmanDB (MIT), github.com/Donkie/SpoolmanDB; Farben ohne belegten Hex fehlen",
+ "lines": [
+  {
+   "material": "PLA",
+   "name": "PLA",
+   "profile_id": null,
+   "colors": [
+    {
+     "name": "Transparent",
+     "hex": "FFFFFF",
+     "code": null
+    },
+    {
+     "name": "CMYK White",
+     "hex": "FFFFFF",
+     "code": null
+    },
+    {
+     "name": "White",
+     "hex": "FFFFFF",
+     "code": null
+    },
+    {
+     "name": "Light Gray",
+     "hex": "D7D7D7",
+     "code": null
+    },
+    {
+     "name": "Neon Yellow",
+     "hex": "FFFF00",
+     "code": null
+    },
+    {
+     "name": "CMYK Yellow",
+     "hex": "FFFF00",
+     "code": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "EDFF21",
+     "code": null
+    },
+    {
+     "name": "Orange",
+     "hex": "F75E25",
+     "code": null
+    },
+    {
+     "name": "Neon Orange",
+     "hex": "FF6600",
+     "code": null
+    },
+    {
+     "name": "Pastel Pink",
+     "hex": "EA899A",
+     "code": null
+    },
+    {
+     "name": "Red",
+     "hex": "CC0605",
+     "code": null
+    },
+    {
+     "name": "Pink",
+     "hex": "FE5CAC",
+     "code": null
+    },
+    {
+     "name": "CMYK Magenta",
+     "hex": "CF3476",
+     "code": null
+    },
+    {
+     "name": "Violet",
+     "hex": "6C4675",
+     "code": null
+    },
+    {
+     "name": "Pastel Blue",
+     "hex": "5D9B9B",
+     "code": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "2271B3",
+     "code": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "20214F",
+     "code": null
+    },
+    {
+     "name": "Pastel Green",
+     "hex": "C2ECE2",
+     "code": null
+    },
+    {
+     "name": "Light Green",
+     "hex": "57A639",
+     "code": null
+    },
+    {
+     "name": "Neon Green",
+     "hex": "2DE645",
+     "code": null
+    },
+    {
+     "name": "CMYK Cyan",
+     "hex": "59B0F8",
+     "code": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "1E5945",
+     "code": null
+    },
+    {
+     "name": "Gold",
+     "hex": "DEBF6C",
+     "code": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "705335",
+     "code": null
+    },
+    {
+     "name": "Brown",
+     "hex": "4C2F27",
+     "code": null
+    },
+    {
+     "name": "Silver",
+     "hex": "A5A5A5",
+     "code": null
+    },
+    {
+     "name": "Dark Gray",
+     "hex": "434B4D",
+     "code": null
+    },
+    {
+     "name": "Black",
+     "hex": "000000",
+     "code": null
+    }
+   ]
+  },
+  {
+   "material": "PLA",
+   "name": "PLA Silk",
+   "profile_id": null,
+   "colors": [
+    {
+     "name": "Raspberry",
+     "hex": "CE409E",
+     "code": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "F3D77D",
+     "code": null
+    },
+    {
+     "name": "Gold",
+     "hex": "C49954",
+     "code": null
+    },
+    {
+     "name": "Copper",
+     "hex": "833421",
+     "code": null
+    },
+    {
+     "name": "Violet",
+     "hex": "463BA4",
+     "code": null
+    },
+    {
+     "name": "Blue",
+     "hex": "22359E",
+     "code": null
+    },
+    {
+     "name": "Green",
+     "hex": "287565",
+     "code": null
+    },
+    {
+     "name": "Silver",
+     "hex": "8B90A3",
+     "code": null
+    },
+    {
+     "name": "Black",
+     "hex": "000000",
+     "code": null
+    }
+   ]
+  },
+  {
+   "material": "PETG",
+   "name": "PETG",
+   "profile_id": null,
+   "colors": [
+    {
+     "name": "White",
+     "hex": "FFFFFF",
+     "code": null
+    },
+    {
+     "name": "Black",
+     "hex": "000000",
+     "code": null
+    },
+    {
+     "name": "Dark Gray",
+     "hex": "484848",
+     "code": null
+    },
+    {
+     "name": "Silver",
+     "hex": "CECECE",
+     "code": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "A69059",
+     "code": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "002351",
+     "code": null
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "017CFF",
+     "code": null
+    },
+    {
+     "name": "Light Green",
+     "hex": "65C525",
+     "code": null
+    },
+    {
+     "name": "Neon Orange",
+     "hex": "FF6600",
+     "code": null
+    },
+    {
+     "name": "Red",
+     "hex": "D80000",
+     "code": null
+    },
+    {
+     "name": "Neon Yellow",
+     "hex": "C4FF03",
+     "code": null
+    },
+    {
+     "name": "Pastell pink",
+     "hex": "D89D9D",
+     "code": null
+    },
+    {
+     "name": "Pastel blue",
+     "hex": "7AB4F3",
+     "code": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "FFFFFF",
+     "code": null
+    },
+    {
+     "name": "Red Transparent",
+     "hex": "C50000",
+     "code": null
+    },
+    {
+     "name": "Green Transparent",
+     "hex": "00B01D",
+     "code": null
+    },
+    {
+     "name": "Blue Transparent",
+     "hex": "0039BF",
+     "code": null
+    },
+    {
+     "name": "Yellow Transparent",
+     "hex": "DEAE00",
+     "code": null
+    }
+   ]
+  },
+  {
+   "material": "ASA",
+   "name": "ASA",
+   "profile_id": null,
+   "colors": [
+    {
+     "name": "White",
+     "hex": "EEEEED",
+     "code": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "F9BA09",
+     "code": null
+    },
+    {
+     "name": "Orange",
+     "hex": "EE713A",
+     "code": null
+    },
+    {
+     "name": "Red",
+     "hex": "BE3B37",
+     "code": null
+    },
+    {
+     "name": "Purple",
+     "hex": "8072A1",
+     "code": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "0083B4",
+     "code": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "2F4D86",
+     "code": null
+    },
+    {
+     "name": "Light Green",
+     "hex": "699E4B",
+     "code": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "187359",
+     "code": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "C8CBC8",
+     "code": null
+    },
+    {
+     "name": "Silver",
+     "hex": "A5A5A4",
+     "code": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "5D6366",
+     "code": null
+    },
+    {
+     "name": "Black",
+     "hex": "414040",
+     "code": null
+    }
+   ]
+  },
+  {
+   "material": "PCTG",
+   "name": "PCTG",
+   "profile_id": null,
+   "colors": [
+    {
+     "name": "White",
+     "hex": "FFFFFF",
+     "code": null
+    },
+    {
+     "name": "Black",
+     "hex": "000000",
+     "code": null
+    },
+    {
+     "name": "Silver",
+     "hex": "CECECE",
+     "code": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "002351",
+     "code": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "017CFF",
+     "code": null
+    },
+    {
+     "name": "Light Green",
+     "hex": "65C525",
+     "code": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "036606",
+     "code": null
+    },
+    {
+     "name": "Red",
+     "hex": "D80000",
+     "code": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "FFFFFF",
+     "code": null
+    },
+    {
+     "name": "Transparent Red",
+     "hex": "C50000",
+     "code": null
+    },
+    {
+     "name": "Transparent Green",
+     "hex": "00B01D",
+     "code": null
+    },
+    {
+     "name": "Transparent Blue",
+     "hex": "0039BF",
+     "code": null
+    },
+    {
+     "name": "Transparent Yellow",
+     "hex": "DEAE00",
+     "code": null
+    }
+   ]
+  }
+ ]
+}

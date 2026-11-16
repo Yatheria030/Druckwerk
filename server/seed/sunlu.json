@@ -2,7 +2,7 @@
  "brand": "Sunlu",
  "match": "sunlu",
  "url": "https://store.sunlu.com",
- "source": "Shop store.sunlu.com (Sorten, Namen), Farbtabelle der Produktseiten de.store.sunlu.com (Hex), sonst SpoolmanDB (MIT); null = unbekannt",
+ "source": "Shop store.sunlu.com (Sorten, Namen), Farbtabelle der Produktseiten de.store.sunlu.com (Hex), sonst SpoolmanDB (MIT); einzeln recherchierte Hex-Werte in scripts/hex-recherche.json; Farben ohne belegten Hex fehlen",
  "lines": [
   {
    "material": "PLA",
@@ -55,21 +55,13 @@
    "profile_id": null,
    "colors": [
     {"name": "Sunny Orange", "hex": "ED7334", "code": null},
-    {"name": "Latte Brown", "hex": null, "code": null},
-    {"name": "Ivory White", "hex": null, "code": null},
-    {"name": "Desert Tan", "hex": null, "code": null},
     {"name": "Grass Green", "hex": "328169", "code": null},
-    {"name": "Dark Brown", "hex": null, "code": null},
     {"name": "Black", "hex": "000000", "code": null},
     {"name": "White", "hex": "FFFFFF", "code": null},
-    {"name": "Charcoal", "hex": null, "code": null},
     {"name": "Grey", "hex": "75787B", "code": null},
     {"name": "Red", "hex": "BC2726", "code": null},
     {"name": "Klein Blue", "hex": "1729AB", "code": null},
-    {"name": "Bright Yellow", "hex": null, "code": null},
     {"name": "Green", "hex": "1DAA27", "code": null},
-    {"name": "Light Blue", "hex": null, "code": null},
-    {"name": "Powder Blue", "hex": null, "code": null},
     {"name": "Lavender Purple", "hex": "685BC7", "code": null},
     {"name": "Clay", "hex": "978F81", "code": null},
     {"name": "Olive Green", "hex": "5A6D3D", "code": null},
@@ -144,7 +136,6 @@
     {"name": "Lemon Yellow", "hex": "F2F0A1", "code": null},
     {"name": "Mint Green", "hex": "00C7B1", "code": null},
     {"name": "Chocolate", "hex": "906557", "code": null},
-    {"name": "CMYK", "hex": null, "code": null},
     {"name": "Pri-Magenta", "hex": "D5419E", "code": null},
     {"name": "Pri-White", "hex": "F9FDFF", "code": null},
     {"name": "Pri-Yellow", "hex": "F0EA02", "code": null},
@@ -188,34 +179,10 @@
   },
   {
    "material": "PLA",
-   "name": "PLA Fluorescent",
-   "profile_id": null,
-   "colors": [
-    {"name": "Blue", "hex": null, "code": null},
-    {"name": "Green", "hex": null, "code": null},
-    {"name": "Purple", "hex": null, "code": null},
-    {"name": "Red", "hex": null, "code": null},
-    {"name": "Orange", "hex": null, "code": null},
-    {"name": "Yellow", "hex": null, "code": null}
-   ]
-  },
-  {
-   "material": "PLA",
    "name": "PLA Pastel",
    "profile_id": null,
    "colors": [
-    {"name": "Pistachio Green", "hex": null, "code": null},
-    {"name": "Sage Green", "hex": null, "code": null},
-    {"name": "Pastel Blue", "hex": null, "code": null},
     {"name": "Peach Pink", "hex": "FF9A8D", "code": null}
-   ]
-  },
-  {
-   "material": "PLA",
-   "name": "PLA Vibrant",
-   "profile_id": null,
-   "colors": [
-    {"name": "Earth Green", "hex": null, "code": null}
    ]
   },
   {
@@ -227,8 +194,7 @@
     {"name": "White (Glow Blue)", "hex": "F1F4ED", "code": null},
     {"name": "Yellow (Glow Yellow)", "hex": "FFFF00", "code": null},
     {"name": "Red (Glow Orange)", "hex": "FF0000", "code": null},
-    {"name": "Blue (Glow Blue)", "hex": null, "code": null},
-    {"name": "Future Green (Glow Green)", "hex": null, "code": null},
+    {"name": "Future Green (Glow Green)", "hex": "42E726", "code": null},
     {"name": "Cyber Orange (Glow Orange)", "hex": "FF833F", "code": null},
     {"name": "Tech Blue", "hex": "0073CB", "code": null}
    ]
@@ -248,22 +214,11 @@
   },
   {
    "material": "PLA",
-   "name": "PLA Galaxy",
-   "profile_id": null,
-   "colors": [
-    {"name": "Starlit Flow", "hex": null, "code": null},
-    {"name": "Galaxy Green", "hex": null, "code": null},
-    {"name": "Stardust Purple", "hex": null, "code": null},
-    {"name": "Star Brown", "hex": null, "code": null}
-   ]
-  },
-  {
-   "material": "PLA",
    "name": "PLA Twinkling",
    "profile_id": null,
    "colors": [
-    {"name": "Blue", "hex": null, "code": null},
-    {"name": "Black", "hex": null, "code": null}
+    {"name": "Blue", "hex": "61B5E4", "code": null},
+    {"name": "Black", "hex": "656869", "code": null}
    ]
   },
   {
@@ -305,35 +260,6 @@
    "profile_id": null,
    "colors": [
     {"name": "White", "hex": "FFFFFF", "code": null}
-   ]
-  },
-  {
-   "material": "PLA",
-   "name": "PLA Matte Dual-Color",
-   "profile_id": null,
-   "colors": [
-    {"name": "Red+Yellow", "hex": null, "code": null},
-    {"name": "Red+Blue", "hex": null, "code": null},
-    {"name": "Black+Red", "hex": null, "code": null},
-    {"name": "Orange+Red", "hex": null, "code": null},
-    {"name": "Black+Blue", "hex": null, "code": null},
-    {"name": "Yellow+Cyan", "hex": null, "code": null},
-    {"name": "Green+Purple", "hex": null, "code": null}
-   ]
-  },
-  {
-   "material": "PLA",
-   "name": "PLA Rainbow",
-   "profile_id": null,
-   "colors": [
-    {"name": "Rainbow-01", "hex": null, "code": null},
-    {"name": "Rainbow-02", "hex": null, "code": null},
-    {"name": "Rainbow-03", "hex": null, "code": null},
-    {"name": "Rainbow-04", "hex": null, "code": null},
-    {"name": "Transparent Rainbow-01", "hex": null, "code": null},
-    {"name": "Transparent Rainbow-02", "hex": null, "code": null},
-    {"name": "Transparent Rainbow-03", "hex": null, "code": null},
-    {"name": "Transparent Rainbow-04", "hex": null, "code": null}
    ]
   },
   {
@@ -505,49 +431,10 @@
     {"name": "Copper Red", "hex": "A55F49", "code": null},
     {"name": "Silver", "hex": "919CAC", "code": null},
     {"name": "Soft Satin Pink", "hex": "F8B5C4", "code": null},
-    {"name": "Light Gold", "hex": null, "code": null},
+    {"name": "Light Gold", "hex": "F1BE48", "code": null},
     {"name": "White", "hex": "FFFFFF", "code": null},
     {"name": "Black", "hex": "000000", "code": null},
     {"name": "Gold", "hex": "F1BE48", "code": null}
-   ]
-  },
-  {
-   "material": "PLA",
-   "name": "PLA+ Silk Multi-Color",
-   "profile_id": null,
-   "colors": [
-    {"name": "Dual-Color Black+Purple", "hex": null, "code": null},
-    {"name": "Dual-Color Black+White", "hex": null, "code": null},
-    {"name": "Dual-Color Black+Gold", "hex": null, "code": null},
-    {"name": "Dual-Color Blue+Green", "hex": null, "code": null},
-    {"name": "Dual-Color Pink+Gold", "hex": null, "code": null},
-    {"name": "Dual-Color Black+Blue", "hex": null, "code": null},
-    {"name": "Dual-Color Black+Green", "hex": null, "code": null},
-    {"name": "Dual-Color Red+Blue", "hex": null, "code": null},
-    {"name": "Dual-Color Red+Gold", "hex": null, "code": null},
-    {"name": "Tri-Color Red+Yellow+Blue", "hex": null, "code": null},
-    {"name": "Tri-Color Red+Yellow+Green", "hex": null, "code": null},
-    {"name": "Tri-Color Blue+Green+Purple", "hex": null, "code": null},
-    {"name": "Tri-Color Orange+Blue+Green", "hex": null, "code": null},
-    {"name": "Tri-Color Black+Gold+Purple", "hex": null, "code": null},
-    {"name": "Four-Color Black+Gray+Red+Yellow", "hex": null, "code": null},
-    {"name": "Four-Color Blue+Purple+Orange+Yellow", "hex": null, "code": null},
-    {"name": "Four-Color Blue+Purple+Red+Gold", "hex": null, "code": null},
-    {"name": "Four-Color Red+Yellow+Green+Black", "hex": null, "code": null},
-    {"name": "Dual-Color Green+Purple", "hex": null, "code": null}
-   ]
-  },
-  {
-   "material": "PLA",
-   "name": "PLA+ Silk Rainbow",
-   "profile_id": null,
-   "colors": [
-    {"name": "Rainbow-01", "hex": null, "code": null},
-    {"name": "Rainbow-02", "hex": null, "code": null},
-    {"name": "Rainbow-03", "hex": null, "code": null},
-    {"name": "Rainbow-04", "hex": null, "code": null},
-    {"name": "Rainbow-05", "hex": null, "code": null},
-    {"name": "Rainbow-06", "hex": null, "code": null}
    ]
   },
   {
@@ -650,20 +537,12 @@
    "name": "PETG Glow",
    "profile_id": null,
    "colors": [
-    {"name": "Red (Glow Red)", "hex": null, "code": null},
-    {"name": "Blue (Glow Blue)", "hex": null, "code": null},
-    {"name": "Yellow (Glow Yellow)", "hex": null, "code": null},
-    {"name": "Green (Glow Green)", "hex": null, "code": null},
-    {"name": "White (Glow Green)", "hex": null, "code": null},
-    {"name": "White (Glow Blue)", "hex": null, "code": null}
-   ]
-  },
-  {
-   "material": "PETG",
-   "name": "PETG Rainbow",
-   "profile_id": null,
-   "colors": [
-    {"name": "Rainbow-01", "hex": null, "code": null}
+    {"name": "Red (Glow Red)", "hex": "E40046", "code": null},
+    {"name": "Blue (Glow Blue)", "hex": "0073CB", "code": null},
+    {"name": "Yellow (Glow Yellow)", "hex": "FFE900", "code": null},
+    {"name": "Green (Glow Green)", "hex": "44D62C", "code": null},
+    {"name": "White (Glow Green)", "hex": "DCEABE", "code": null},
+    {"name": "White (Glow Blue)", "hex": "F1F4ED", "code": null}
    ]
   },
   {
@@ -695,7 +574,7 @@
     {"name": "Magenta", "hex": "C52E79", "code": null},
     {"name": "Coffee Brown", "hex": "362111", "code": null},
     {"name": "Olive Green", "hex": "5A6D3D", "code": null},
-    {"name": "Transparent White", "hex": null, "code": null},
+    {"name": "Transparent White", "hex": "FFFFFF", "code": null},
     {"name": "Lavender Purple", "hex": "685BC7", "code": null},
     {"name": "Vivid Yellow", "hex": "EAC642", "code": null},
     {"name": "Oak", "hex": "C2B29A", "code": null},
@@ -709,8 +588,7 @@
    "colors": [
     {"name": "Black", "hex": "000000", "code": null},
     {"name": "Grey", "hex": "75787B", "code": null},
-    {"name": "Mint Green", "hex": "0CCEB4", "code": null},
-    {"name": "Natural", "hex": null, "code": null}
+    {"name": "Mint Green", "hex": "0CCEB4", "code": null}
    ]
   },
   {
@@ -848,7 +726,7 @@
    "name": "PP",
    "profile_id": null,
    "colors": [
-    {"name": "Natural", "hex": null, "code": null}
+    {"name": "Natural", "hex": "FEFEFF", "code": null}
    ]
   },
   {

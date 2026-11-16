@@ -388,7 +388,43 @@
     transform: translateY(-6px) rotate(28deg);
   }
 }
+/* Druckerzeichnung: heiße Teile glühen (der Druckkopf fährt per SMIL) */
+.pf-glow {
+  animation: spool-glow 1.8s ease-in-out infinite;
+}
+/* Datenblatt: Zugstab dehnt sich, Balken biegt sich, Pendel schwingt (ui/specs.tsx) */
+.spec-pull {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spec-pull 2.8s ease-in-out infinite;
+}
+@keyframes spec-pull {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.035); }
+}
+.spec-bend {
+  transform-box: fill-box;
+  transform-origin: top;
+  animation: spec-bend 2.8s ease-in-out infinite;
+}
+@keyframes spec-bend {
+  0%, 100% { transform: scaleY(0.8); }
+  50% { transform: scaleY(1.05); }
+}
+.spec-swing {
+  animation: spec-swing 2.4s ease-in-out infinite;
+}
+@keyframes spec-swing {
+  0% { transform: rotate(52deg); }
+  45% { transform: rotate(0deg); }
+  55% { transform: rotate(-6deg); }
+  100% { transform: rotate(52deg); }
+}
 @media (prefers-reduced-motion: reduce) {
+  .spec-pull,
+  .spec-bend,
+  .spec-swing,
+  .pf-glow,
   .spool-spin,
   .spool-glow,
   .flow,
@@ -420,4 +456,39 @@ body.dragging * {
 }
 .drop-locked {
   opacity: 0.4;
+}
+
+/* Etiketten: gedruckt wird nur #print-root (siehe LabelsPage) */
+@media screen {
+  #print-root {
+    display: none;
+  }
+}
+@media print {
+  body > :not(#print-root) {
+    display: none !important;
+  }
+  html,
+  body {
+    background: #fff !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+/* Slicen: Verbrauch als schraffiertes Stück am Ende des Spulenbalkens, die Schraffur läuft wie abgewickelter Faden */
+.slice-use {
+  background: repeating-linear-gradient(-45deg, var(--use) 0 3px, color-mix(in srgb, var(--use) 35%, transparent) 3px 6px);
+  background-size: 8.49px 100%;
+  animation: slice-use 0.9s linear infinite;
+}
+@keyframes slice-use {
+  to {
+    background-position: 8.49px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slice-use {
+    animation: none;
+  }
 }

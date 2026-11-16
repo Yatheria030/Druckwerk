@@ -1,0 +1,478 @@
+{
+ "brand": "Elegoo",
+ "source": "Technische Datenblätter des Herstellers, Werte wie angegeben (Einheiten vereinheitlicht)",
+ "lines": {
+  "PLA": {
+   "source": "https://eu.elegoo.com/products/pla-filament-1-75mm-colored-1kg",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26
+    },
+    "mfi": {
+     "v": 8.1,
+     "std": "8,1 ± 1,5 (Bedingung nicht angegeben)"
+    },
+    "melt": {
+     "v": 158
+    },
+    "vicat": {
+     "v": 62
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "0,45 MPa"
+    },
+    "tensile_strength": {
+     "v": 38,
+     "z": 23
+    },
+    "elongation": {
+     "v": 10.5,
+     "z": 6.7
+    },
+    "flexural_strength": {
+     "v": 72,
+     "z": 45
+    },
+    "flexural_modulus": {
+     "v": 2993,
+     "z": 2633
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 35
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "50 ± 5 °C"
+    },
+    "dry_hours": {
+     "v": 8
+    }
+   },
+   "note": "Kennwerte aus der Spezifikationstabelle der offiziellen Produktseite (eu./us.elegoo.com identisch); kein PDF-TDS, keine Prüfnormen angegeben. Werte mit X-Y/Z-Angabe, also gedruckte Proben. „Impact Strength“ ohne Angabe Charpy/Izod bzw. gekerbt/ungekerbt: X-Y 66.2, Z 12.5 kJ/m² (nicht als impact übernommen). Kein Zug-E-Modul angegeben."
+  },
+  "PLA Silk": {
+   "source": "https://eu.elegoo.com/products/elegoo-silk-pla-filament-1-75mm-colored-1kg",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25
+    },
+    "mfi": {
+     "v": 28.7,
+     "std": "28,7 ± 2,1 (Bedingung nicht angegeben)"
+    },
+    "melt": {
+     "v": 164
+    },
+    "vicat": {
+     "v": 58
+    },
+    "hdt_045": {
+     "v": 54,
+     "std": "0,45 MPa"
+    },
+    "tensile_strength": {
+     "v": 26,
+     "z": 5
+    },
+    "elongation": {
+     "v": 9.7,
+     "z": 6.1
+    },
+    "flexural_strength": {
+     "v": 79,
+     "z": 22
+    },
+    "flexural_modulus": {
+     "v": 2816,
+     "z": 2507
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 35
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "50 ± 5 °C"
+    },
+    "dry_hours": {
+     "v": 8
+    }
+   },
+   "note": "Kennwerte aus der Spezifikationstabelle der offiziellen Produktseite (eu./us.elegoo.com identisch); kein PDF-TDS, keine Prüfnormen angegeben. Werte mit X-Y/Z-Angabe, also gedruckte Proben. „Impact Strength“ ohne Angabe Charpy/Izod bzw. gekerbt/ungekerbt: X-Y 25.5, Z 2.5 kJ/m² (nicht als impact übernommen). Kein Zug-E-Modul angegeben. Seite empfiehlt gehärtete Düse ≥ 0,4 mm und Trocknen als Pflicht."
+  },
+  "PLA Matte": {
+   "source": "https://eu.elegoo.com/products/pla-matte-filament-1-75mm-colored-1kg",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26
+    },
+    "mfi": {
+     "v": 9.4,
+     "std": "9,4 ± 1,2 (Bedingung nicht angegeben)"
+    },
+    "melt": {
+     "v": 163
+    },
+    "vicat": {
+     "v": 63
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "0,45 MPa"
+    },
+    "tensile_strength": {
+     "v": 30,
+     "z": 24
+    },
+    "elongation": {
+     "v": 7.9,
+     "z": 6.5
+    },
+    "flexural_strength": {
+     "v": 75,
+     "z": 40
+    },
+    "flexural_modulus": {
+     "v": 2996,
+     "z": 2616
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 35
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "50 ± 5 °C"
+    },
+    "dry_hours": {
+     "v": 8
+    }
+   },
+   "note": "Kennwerte aus der Spezifikationstabelle der offiziellen Produktseite (eu./us.elegoo.com identisch); kein PDF-TDS, keine Prüfnormen angegeben. Werte mit X-Y/Z-Angabe, also gedruckte Proben. „Impact Strength“ ohne Angabe Charpy/Izod bzw. gekerbt/ungekerbt: X-Y 29.3, Z 4.5 kJ/m² (nicht als impact übernommen). Kein Zug-E-Modul angegeben."
+  },
+  "PLA+": {
+   "source": "https://eu.elegoo.com/products/elegoo-pla-plus-3d-printer-filament-1-75mm-colored-1kg",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.3
+    },
+    "mfi": {
+     "v": 6.9,
+     "std": "6,9 ± 1,3 (Bedingung nicht angegeben)"
+    },
+    "melt": {
+     "v": 161
+    },
+    "vicat": {
+     "v": 63
+    },
+    "hdt_045": {
+     "v": 56,
+     "std": "0,45 MPa"
+    },
+    "tensile_strength": {
+     "v": 38,
+     "z": 24
+    },
+    "elongation": {
+     "v": 7.9,
+     "z": 5.9
+    },
+    "flexural_strength": {
+     "v": 74,
+     "z": 44
+    },
+    "flexural_modulus": {
+     "v": 2979,
+     "z": 2582
+    },
+    "nozzle_min": {
+     "v": 200
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 35
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "50 ± 5 °C"
+    },
+    "dry_hours": {
+     "v": 8
+    }
+   },
+   "note": "Kennwerte aus der Spezifikationstabelle der offiziellen Produktseite (eu./us.elegoo.com identisch); kein PDF-TDS, keine Prüfnormen angegeben. Werte mit X-Y/Z-Angabe, also gedruckte Proben. „Impact Strength“ ohne Angabe Charpy/Izod bzw. gekerbt/ungekerbt: X-Y 65.5, Z 7.6 kJ/m² (nicht als impact übernommen). Kein Zug-E-Modul angegeben. Produktname „PLA Plus“."
+  },
+  "Rapid PLA+": {
+   "source": "https://eu.elegoo.com/products/elegoo-rapid-pla-plus-filament-1-75mm-colored-1kg",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23
+    },
+    "mfi": {
+     "v": 10.7,
+     "std": "10,7 ± 1,5 (Bedingung nicht angegeben)"
+    },
+    "melt": {
+     "v": 160
+    },
+    "vicat": {
+     "v": 62
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "0,45 MPa"
+    },
+    "tensile_strength": {
+     "v": 39,
+     "z": 28
+    },
+    "elongation": {
+     "v": 8.5,
+     "z": 7.9
+    },
+    "flexural_strength": {
+     "v": 71,
+     "z": 43
+    },
+    "flexural_modulus": {
+     "v": 2846,
+     "z": 2592
+    },
+    "nozzle_min": {
+     "v": 200
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 35
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "50 ± 5 °C"
+    },
+    "dry_hours": {
+     "v": 8
+    }
+   },
+   "note": "Kennwerte aus der Spezifikationstabelle der offiziellen Produktseite (eu./us.elegoo.com identisch); kein PDF-TDS, keine Prüfnormen angegeben. Werte mit X-Y/Z-Angabe, also gedruckte Proben. „Impact Strength“ ohne Angabe Charpy/Izod bzw. gekerbt/ungekerbt: X-Y 50.4, Z 6.7 kJ/m² (nicht als impact übernommen). Kein Zug-E-Modul angegeben. Produktname „Rapid PLA Plus“, bis 600 mm/s."
+  },
+  "Rapid PETG": {
+   "source": "https://eu.elegoo.com/products/rapid-petg-filament-1-75mm-colored-1kg",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.29
+    },
+    "mfi": {
+     "v": 13.4,
+     "std": "13,4 ± 3,8 (Bedingung nicht angegeben)"
+    },
+    "melt": {
+     "v": 216
+    },
+    "vicat": {
+     "v": 70
+    },
+    "hdt_045": {
+     "v": 72,
+     "std": "0,45 MPa"
+    },
+    "tensile_strength": {
+     "v": 42,
+     "z": 28
+    },
+    "elongation": {
+     "v": 8.9,
+     "z": 6.5
+    },
+    "flexural_strength": {
+     "v": 68,
+     "z": 40
+    },
+    "flexural_modulus": {
+     "v": 2097,
+     "z": 1977
+    },
+    "nozzle_min": {
+     "v": 240
+    },
+    "nozzle_max": {
+     "v": 270
+    },
+    "bed_min": {
+     "v": 65
+    },
+    "bed_max": {
+     "v": 75
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "60 ± 5 °C"
+    },
+    "dry_hours": {
+     "v": 8
+    }
+   },
+   "note": "Kennwerte aus der Spezifikationstabelle der offiziellen Produktseite (eu./us.elegoo.com identisch); kein PDF-TDS, keine Prüfnormen angegeben. Werte mit X-Y/Z-Angabe, also gedruckte Proben. „Impact Strength“ ohne Angabe Charpy/Izod bzw. gekerbt/ungekerbt: X-Y 67.6, Z 8.9 kJ/m² (nicht als impact übernommen). Kein Zug-E-Modul angegeben. Bis 600 mm/s."
+  },
+  "PETG Pro": {
+   "source": "https://eu.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27
+    },
+    "mfi": {
+     "v": 8.2,
+     "std": "8,2 ± 3,2 (Bedingung nicht angegeben)"
+    },
+    "melt": {
+     "v": 218
+    },
+    "vicat": {
+     "v": 71
+    },
+    "hdt_045": {
+     "v": 73,
+     "std": "0,45 MPa"
+    },
+    "tensile_strength": {
+     "v": 40,
+     "z": 25
+    },
+    "elongation": {
+     "v": 7.6,
+     "z": 5.8
+    },
+    "flexural_strength": {
+     "v": 70,
+     "z": 42
+    },
+    "flexural_modulus": {
+     "v": 2111,
+     "z": 1846
+    },
+    "nozzle_min": {
+     "v": 230
+    },
+    "nozzle_max": {
+     "v": 260
+    },
+    "bed_min": {
+     "v": 65
+    },
+    "bed_max": {
+     "v": 75
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "60 ± 5 °C"
+    },
+    "dry_hours": {
+     "v": 8
+    }
+   },
+   "note": "Kennwerte aus der Spezifikationstabelle der offiziellen Produktseite (eu./us.elegoo.com identisch); kein PDF-TDS, keine Prüfnormen angegeben. Werte mit X-Y/Z-Angabe, also gedruckte Proben. „Impact Strength“ ohne Angabe Charpy/Izod bzw. gekerbt/ungekerbt: X-Y 78.5, Z 8.7 kJ/m² (nicht als impact übernommen). Kein Zug-E-Modul angegeben."
+  },
+  "ASA": {
+   "source": "https://eu.elegoo.com/products/asa-filament-1-75mm-colored-1kg",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.09
+    },
+    "mfi": {
+     "v": 14.1,
+     "std": "14,1 ± 1,2 (Bedingung nicht angegeben)"
+    },
+    "melt": {
+     "v": 214
+    },
+    "vicat": {
+     "v": 102
+    },
+    "hdt_045": {
+     "v": 99,
+     "std": "0,45 MPa"
+    },
+    "tensile_strength": {
+     "v": 35,
+     "z": 30
+    },
+    "elongation": {
+     "v": 10.6,
+     "z": 9.4
+    },
+    "flexural_strength": {
+     "v": 65,
+     "z": 54
+    },
+    "flexural_modulus": {
+     "v": 2349,
+     "z": 2219
+    },
+    "nozzle_min": {
+     "v": 240
+    },
+    "nozzle_max": {
+     "v": 270
+    },
+    "bed_min": {
+     "v": 90
+    },
+    "bed_max": {
+     "v": 100
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "80 ± 5 °C"
+    },
+    "dry_hours": {
+     "v": 8
+    }
+   },
+   "note": "Kennwerte aus der Spezifikationstabelle der offiziellen Produktseite (eu./us.elegoo.com identisch); kein PDF-TDS, keine Prüfnormen angegeben. Werte mit X-Y/Z-Angabe, also gedruckte Proben. „Impact Strength“ ohne Angabe Charpy/Izod bzw. gekerbt/ungekerbt: X-Y 65.5, Z 11.3 kJ/m² (nicht als impact übernommen). Kein Zug-E-Modul angegeben. Geschlossener Bauraum (45–60 °C) und Kleber laut Seite erforderlich."
+  }
+ }
+}

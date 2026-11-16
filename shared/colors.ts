@@ -1,7 +1,7 @@
 // Farbnamen aus dem Hex-Wert: Spulen aus dem Farbkatalog (Datenbank) mit dem offiziellen Namen, sonst der nächste allgemeine Name.
 import { catalogColorName, profileColorName } from "./catalog.ts";
 
-const GENERIC: [string, string][] = [
+export const GENERIC: [string, string][] = [
   ["000000", "Schwarz"], ["FFFFFF", "Weiß"], ["C8C8C8", "Hellgrau"], ["8C8C8C", "Grau"], ["4A4A4A", "Dunkelgrau"],
   ["D02828", "Rot"], ["8B1A1A", "Dunkelrot"], ["FF7A1A", "Orange"], ["F5D90A", "Gelb"], ["D4AF37", "Gold"], ["E8D9B5", "Beige"],
   ["8B5A2B", "Braun"], ["4A2E1A", "Dunkelbraun"], ["9BE07A", "Hellgrün"], ["2EA043", "Grün"], ["1F5130", "Dunkelgrün"],
@@ -26,6 +26,14 @@ export function genericColorName(hex: string): string {
   let best = GENERIC[0]!;
   for (const g of GENERIC) if (dist(h, g[0]) < dist(h, best[0])) best = g;
   return best[1];
+}
+
+/** Grundfarbe als Familie: „Rot“ umfasst Rot, Hellrot und Dunkelrot; sonst nur sich selbst */
+export const isGenericColor = (name: string) => GENERIC.some((g) => g[1] === name);
+export function inColorFamily(family: string, hex: string): boolean {
+  const g = genericColorName(hex);
+  if (!g) return false;
+  return g === family || g === `Hell${family.toLowerCase()}` || g === `Dunkel${family.toLowerCase()}`;
 }
 
 /** Farbname für eine Spule ohne eigenen Namen: Katalogmarken mit dem offiziellen Namen (Bambu über Profil und Chip-Farbcode),

@@ -6,6 +6,7 @@ services:
       context: .
       args:
         FFMPEG: "1"                    # Kamera von X1, H2 und P2S (RTSPS über ffmpeg); "0" reicht für A1 und P1
+        SLICER: "1"                    # Slicen in der App mit Bambu Studio (amd64; auf arm64 OrcaSlicer)
     image: druckwerk:local
     container_name: druckwerk
     restart: unless-stopped

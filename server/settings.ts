@@ -36,7 +36,7 @@ function resolve(id: SectionId, key: string, row = read(id)): { value: SettingVa
 }
 
 /** Wirksamer Wert einer Einstellung */
-export function setting<T extends SettingValue>(id: SectionId, key: string): T {
+export function setting<T extends SettingValue | null>(id: SectionId, key: string): T {
   return resolve(id, key).value as T;
 }
 /** Wirksamer Wert samt Herkunft (Secrets intern) */

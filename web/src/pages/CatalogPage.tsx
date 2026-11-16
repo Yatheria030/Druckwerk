@@ -4,6 +4,7 @@ import { ChevronLeft, ExternalLink, Pencil, Plus, Search, Trash2 } from "lucide-
 import { useMemo, useState } from "react";
 import { catalogBrand, type CatalogBrand, type CatalogColor, type CatalogLine } from "../../../shared/catalog.ts";
 import { profileById, PROFILES } from "../../../shared/profiles.ts";
+import { host } from "../../../shared/stock.ts";
 import { api } from "../api.ts";
 import { PageHeader } from "../App.tsx";
 import { useCatalog } from "../lib/catalog.ts";
@@ -16,13 +17,8 @@ const norm = (s: string) => s.toLowerCase().trim();
 const baseMat = (m: string) => m.split("-")[0]!.replace(/(?<=[A-Z])\d+$/, "") || m;
 const colorCount = (b: CatalogBrand) => b.lines.reduce((n, l) => n + l.colors.length, 0);
 
-/** Farbpunkt; ohne bekannten Farbcode gestrichelt mit „?“ */
-function Dot({ hex, size = "size-5" }: { hex: string | null; size?: string }) {
-  return hex ? (
-    <span className={`${size} shrink-0 rounded-full`} style={{ background: `#${hex}`, boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.18)" }} />
-  ) : (
-    <span className={`${size} flex shrink-0 items-center justify-center rounded-full border border-dashed border-ink3 text-[10px] font-black text-ink3`}>?</span>
-  );
+function Dot({ hex, size = "size-5" }: { hex: string; size?: string }) {
+  return <span className={`${size} shrink-0 rounded-full`} style={{ background: `#${hex}`, boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.18)" }} />;
 }
 
 type Edit =
@@ -102,7 +98,7 @@ function Overview({ brands, owned }: { brands: CatalogBrand[]; owned: Map<string
   const hits = t
     ? brands.flatMap((b) =>
         b.lines.flatMap((l) =>
-          l.colors.filter((c) => [c.name, c.hex ?? "", c.code ?? "", l.name].some((x) => norm(x).includes(t))).map((c) => ({ b, l, c })),
+          l.colors.filter((c) => [c.name, c.hex, c.code ?? "", l.name].some((x) => norm(x).includes(t))).map((c) => ({ b, l, c })),
         ),
       )
     : [];
@@ -122,7 +118,7 @@ function Overview({ brands, owned }: { brands: CatalogBrand[]; owned: Map<string
                 </div>
               </div>
               <div className="shrink-0 text-right font-mono text-xs text-ink2">
-                {c.hex ? `#${c.hex}` : "–"}
+                #{c.hex}
                 {c.code && <div className="text-ink3">{c.code}</div>}
               </div>
             </a>
@@ -131,7 +127,7 @@ function Overview({ brands, owned }: { brands: CatalogBrand[]; owned: Map<string
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {brands.map((b) => {
-            const strip = b.lines.flatMap((l) => l.colors).filter((c) => c.hex);
+            const strip = b.lines.flatMap((l) => l.colors);
             const mine = owned.get(String(b.id)) ?? 0;
             return (
               <a key={b.id} href={href({ page: "filament", view: "katalog", brand: slug(b.brand) })} className="group block">
@@ -144,7 +140,20 @@ function Overview({ brands, owned }: { brands: CatalogBrand[]; owned: Map<string
                     )}
                   </div>
                   <div className="p-4">
-                    <div className="text-lg font-extrabold tracking-tight">{b.brand}</div>
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="min-w-0 text-lg font-extrabold tracking-tight">{b.brand}</div>
+                      {b.url && (
+                        <button
+                          type="button"
+                          title={`Shop: ${b.url}`}
+                          onClick={(e) => (e.preventDefault(), e.stopPropagation(), window.open(b.url, "_blank", "noopener"))}
+                          className="-mr-1 inline-flex h-7 min-w-0 shrink items-center gap-1 rounded-full px-2 text-xs font-semibold text-accent hover:bg-fill"
+                        >
+                          <span className="truncate">{host(b.url)}</span>
+                          <ExternalLink size={12} className="shrink-0" />
+                        </button>
+                      )}
+                    </div>
                     <div className="mt-2 grid grid-cols-3 gap-2">
                       {(
                         [
@@ -190,7 +199,7 @@ function BrandView({ b, owned, onEdit }: { b: CatalogBrand; owned: Map<string, n
     .filter((l) => !mat || baseMat(l.material) === mat)
     .map((l) => ({
       l,
-      colors: t && !norm(l.name).includes(t) ? l.colors.filter((c) => [c.name, c.hex ?? "", c.code ?? ""].some((x) => norm(x).includes(t))) : l.colors,
+      colors: t && !norm(l.name).includes(t) ? l.colors.filter((c) => [c.name, c.hex, c.code ?? ""].some((x) => norm(x).includes(t))) : l.colors,
     }))
     .filter(({ l, colors }) => !t || colors.length || norm(l.name).includes(t));
   const groups = materials.filter((m) => lines.some(({ l }) => baseMat(l.material) === m));
@@ -242,6 +251,14 @@ function BrandView({ b, owned, onEdit }: { b: CatalogBrand; owned: Map<string, n
                         <div className="truncate text-xs text-ink3">
                           {l.colors.length} Farben{prof ? ` · Profil ${prof.name} (${prof.id})` : l.profile_id ? ` · Profil ${l.profile_id}` : ""}
                           {mine > 0 && <span className="font-semibold text-accent"> · {mine} im Regal</span>}
+                          {l.specs && (
+                            <>
+                              {" · "}
+                              <a href={href({ page: "filament", view: "kennwerte", brand: slug(b.brand), line: slug(l.name) })} className="font-semibold text-accent hover:underline">
+                                Datenblatt
+                              </a>
+                            </>
+                          )}
                         </div>
                       </div>
                       <div className="flex shrink-0 gap-1">
@@ -258,12 +275,12 @@ function BrandView({ b, owned, onEdit }: { b: CatalogBrand; owned: Map<string, n
                         <button
                           key={c.id}
                           onClick={() => onEdit({ kind: "color", lineId: l.id, color: c })}
-                          title={[c.hex ? `#${c.hex}` : "Farbcode unbekannt", c.code && `Code ${c.code}`].filter(Boolean).join(" · ")}
+                          title={[`#${c.hex}`, c.code && `Code ${c.code}`].filter(Boolean).join(" · ")}
                           className="flex h-8 items-center gap-1.5 rounded-full bg-fill pr-2.5 pl-1 text-xs font-semibold hover:bg-fill2"
                         >
                           <Dot hex={c.hex} size="size-6" />
                           <span>{c.name}</span>
-                          <span className="font-mono text-[10.5px] font-medium text-ink3">{c.hex ? `#${c.hex}` : "?"}</span>
+                          <span className="font-mono text-[10.5px] font-medium text-ink3">#{c.hex}</span>
                           {c.code && <span className="rounded bg-card px-1 font-mono text-[10px] text-ink3">{c.code}</span>}
                         </button>
                       ))}
@@ -409,10 +426,10 @@ function ColorDialog({ lineId, color, onClose }: { lineId: number; color: Catalo
   const [v, setV] = useState({ name: color?.name ?? "", hex: color?.hex ?? "", code: color?.code ?? "" });
   const m = useCatalogMutation(onClose);
   const hex = v.hex.replace(/^#/, "").toUpperCase();
-  const valid = !hex || /^[0-9A-F]{6}$/.test(hex);
+  const valid = /^[0-9A-F]{6}$/.test(hex);
   const save = () =>
     m.mutate(() => {
-      const body = { name: v.name.trim(), hex: hex || null, code: v.code.trim() || null };
+      const body = { name: v.name.trim(), hex, code: v.code.trim() || null };
       return color ? api.updateColor(color.id, body) : api.addColor(lineId, body);
     });
   return (
@@ -438,8 +455,10 @@ function ColorDialog({ lineId, color, onClose }: { lineId: number; color: Catalo
             <input className="field font-mono" value={v.code} onChange={(e) => setV({ ...v, code: e.target.value })} placeholder="K1" />
           </Field>
         </div>
-        <p className={`text-xs ${valid ? "text-ink3" : "font-semibold text-bad"}`}>
-          {valid ? "Hex leer = Farbcode unbekannt. Code = Herstellercode, bei Bambu der Teil hinter „-“ vom Chip (z. B. K1)." : "Hex als RRGGBB, z. B. 1E64C8"}
+        <p className={`text-xs ${valid || !hex ? "text-ink3" : "font-semibold text-bad"}`}>
+          {valid || !hex
+            ? "Hex ist Pflicht, nur belegte Werte (Hersteller, Farbtabelle). Code = Herstellercode, bei Bambu der Teil hinter „-“ vom Chip (z. B. K1)."
+            : "Hex als RRGGBB, z. B. 1E64C8"}
         </p>
         <div className="flex flex-wrap justify-between gap-2 pt-2">
           {color ? (

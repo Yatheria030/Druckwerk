@@ -8,8 +8,11 @@
 # Aufruf: python3 scripts/sunlu-colors.py <dir> server/seed/sunlu.json
 # Ist Sunlu schon in der Datenbank, übernimmt der Server die Datei nicht erneut: Marke in der App löschen und Eintrag
 # aus catalog_seeded entfernen, dann neu starten.
-import json, re, sys
+import json, os, re, sys
 from collections import OrderedDict
+
+# Einzeln recherchierte Hex-Werte (scripts/hex-recherche.json, mit Quelle); Farben ohne belegten Hex nimmt der Katalog nicht auf
+EXTRA = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "hex-recherche.json")))
 
 d = sys.argv[1]
 ps = []
@@ -340,6 +343,13 @@ for l in LINES.values():
         base = {"PLA+": "PLA", "ABS-FR": "ABS", "PC-ABS": "PC"}.get(m, m)
         out.append([base, label, cols])
 
+ex = EXTRA.get("Sunlu", {})
+for _, n, cols in out:
+    cols[:] = [(c[0], c[1] or (ex.get(f"{n}|{c[0]}") or {}).get("hex"), *c[2:]) for c in cols]
+missing = [f"{n}: {c[0]}" for _, n, cols in out for c in cols if not c[1]]
+for _, n, cols in out:
+    cols[:] = [c for c in cols if c[1]]
+out = [o for o in out if o[2]]
 print(f"{len(out)} Linien, {sum(len(c) for _, _, c in out)} Farben, {len(missing)} ohne Hex", file=sys.stderr)
 for m in missing:
     print("  ?", m, file=sys.stderr)
@@ -348,7 +358,7 @@ seed = {
     "brand": "Sunlu",
     "match": "sunlu",
     "url": "https://store.sunlu.com",
-    "source": "Shop store.sunlu.com (Sorten, Namen), Farbtabelle der Produktseiten de.store.sunlu.com (Hex), sonst SpoolmanDB (MIT); null = unbekannt",
+    "source": "Shop store.sunlu.com (Sorten, Namen), Farbtabelle der Produktseiten de.store.sunlu.com (Hex), sonst SpoolmanDB (MIT), einzeln recherchierte in scripts/hex-recherche.json; Farben ohne belegten Hex fehlen",
     "lines": [{"material": m, "name": n, "profile_id": None, "colors": [{"name": c[0], "hex": c[1], "code": None} for c in cols]} for m, n, cols in out],
 }
 with open(sys.argv[2], "w") as f:

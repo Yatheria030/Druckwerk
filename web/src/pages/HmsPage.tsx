@@ -3,10 +3,10 @@ import { Search, X } from "lucide-react";
 import { useDeferredValue, useMemo, useState } from "react";
 import { api } from "../api.ts";
 import { PageHeader, useLive } from "../App.tsx";
-import { errorKey, hmsKey, moduleOf, MODULES, useHms, type HmsKind } from "../lib/hms.ts";
+import { errorKey, hmsKey, moduleOf, MODULES, noText, useHms, type HmsKind } from "../lib/hms.ts";
 import { chipCls } from "../ui/FilamentTabs.tsx";
 import { Card, Label, LoadError } from "../ui/controls.tsx";
-import { levelOf, NO_TEXT, TONE_TAG, WikiCode } from "../ui/hms.tsx";
+import { AtTime, ClockNote, levelOf, TONE_TAG, WikiCode } from "../ui/hms.tsx";
 import { PrinterTabs } from "../ui/PrinterTabs.tsx";
 
 const WIDTH = "max-w-4xl";
@@ -14,20 +14,25 @@ const PAGE = 100;
 
 type Entry = { key: string; kind: HmsKind; text: string; module: string };
 
-function Row({ e, at, printer }: { e: Entry; at?: string | null; printer?: string }) {
+function Row({ e, at, offset = null, printer }: { e: Entry; at?: string | null; offset?: number | null; printer?: string }) {
   const lv = levelOf(e.key, e.kind);
   return (
     <div className="px-4 py-3">
       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px]">
         <span className={`rounded-md px-1.5 py-0.5 text-[11px] font-bold ${TONE_TAG[lv.tone]}`}>{lv.label}</span>
-        <WikiCode k={e.key} kind={e.kind} />
+        <WikiCode k={e.key} kind={e.kind} link={!!e.text} />
         <span className="text-xs text-ink3">
           {e.kind === "error" ? "Druckfehler" : "HMS"} · {e.module}
           {printer ? ` · ${printer}` : ""}
-          {at ? ` · ${at.slice(8, 10)}.${at.slice(5, 7)}. ${at.slice(11, 16)}` : ""}
+          {at && (
+            <>
+              {" · "}
+              <AtTime at={at} offset={offset} className="text-xs" />
+            </>
+          )}
         </span>
       </div>
-      <p className={`mt-1 text-sm ${e.text ? "text-ink2" : "text-ink3 italic"}`}>{e.text || NO_TEXT}</p>
+      <p className={`mt-1 text-sm ${e.text ? "text-ink2" : "text-ink3 italic"}`}>{e.text || noText(e.key)}</p>
     </div>
   );
 }
@@ -60,12 +65,12 @@ export function HmsPage() {
         return [
         ...p.hms.map((h) => {
           const key = hmsKey(h.code);
-          return { e: { key, kind: "hms" as const, text: hms.data?.hms[key] ?? "", module: moduleOf(key) }, at: h.at, printer: name };
+          return { e: { key, kind: "hms" as const, text: hms.data?.hms[key] ?? "", module: moduleOf(key) }, at: h.at, offset: p.clock_offset, printer: name };
         }),
         ...(p.print_error
           ? [(() => {
               const key = errorKey(p.print_error);
-              return { e: { key, kind: "error" as const, text: hms.data?.error[key] ?? "", module: moduleOf(key) }, at: null, printer: name };
+              return { e: { key, kind: "error" as const, text: hms.data?.error[key] ?? "", module: moduleOf(key) }, at: null, offset: p.clock_offset, printer: name };
             })()]
           : []),
         ];
@@ -113,9 +118,12 @@ export function HmsPage() {
                 <Label>Gerade am Drucker</Label>
                 <Card className="divide-y divide-sep">
                   {current.map((c) => (
-                    <Row key={`${c.printer}-${c.e.key}`} e={c.e} at={c.at} printer={many ? c.printer : undefined} />
+                    <Row key={`${c.printer}-${c.e.key}`} e={c.e} at={c.at} offset={c.offset} printer={many ? c.printer : undefined} />
                   ))}
                 </Card>
+                {[...new Map(current.map((c) => [c.printer, c.offset])).entries()].map(([pr, off]) => (
+                  <ClockNote key={pr} ats={current.filter((c) => c.printer === pr).map((c) => c.at)} offset={off} className="px-1" />
+                ))}
               </section>
             )}
 

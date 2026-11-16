@@ -63,6 +63,20 @@ export async function saveUpload(modelId: number, rawName: string, body: Readabl
   }
 }
 
+/** Lokale Datei (z. B. vom Drucker geholt) übernehmen; gleiche Datei (sha256) wird nicht doppelt angelegt. Verschiebt src. */
+export async function importLocal(modelId: number | (() => number), rawName: string, src: string): Promise<{ id: number; model_id: number; existed: boolean }> {
+  const hash = createHash("sha256");
+  await pipeline(createReadStream(src), hash);
+  const sha = hash.digest("hex");
+  const known = db.prepare("SELECT id, model_id FROM files WHERE sha256 = ? ORDER BY id LIMIT 1").get(sha) as { id: number; model_id: number } | undefined;
+  if (known) return { ...known, existed: true };
+  const name = cleanName(rawName);
+  const kind = kindOf(name);
+  if (!kind) throw new FileError(`Dateityp nicht unterstützt: ${name}`);
+  const mid = typeof modelId === "function" ? modelId() : modelId;
+  return { id: await addFile(mid, name, kind, src, (await stat(src)).size, sha), model_id: mid, existed: false };
+}
+
 /** Legt die Zeile an und verschiebt die Datei an ihren Platz (files/<model>/<id><ext>) */
 async function addFile(modelId: number, name: string, kind: FileKind, src: string, size: number, sha: string): Promise<number> {
   const r = db.prepare("INSERT INTO files (model_id, name, kind, size, sha256) VALUES (?, ?, ?, ?, ?)").run(modelId, name, kind, size, sha);
@@ -130,9 +144,74 @@ export function parseSliceInfo(xml: string): Plate[] {
       nozzle: meta.nozzle_diameters || null,
       filaments,
       has_image: false,
+      objects: [...block.matchAll(/<object\b[^>]*>/g)].filter(([tag]) => attr(tag, "skipped") !== "true").length,
     });
   }
   return plates;
+}
+
+const xmlAttr = (s: string) => s.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, "&");
+
+/** Lage der Teile auf dem Bett aus Metadata/plate_N.json (`bbox_objects`: [minX, minY, maxX, maxY] in mm), für den Viewer */
+export function plateBoxes(raw: Uint8Array | undefined): [number, number, number, number][] | undefined {
+  if (!raw) return undefined;
+  try {
+    const j = JSON.parse(new TextDecoder().decode(raw)) as { bbox_objects?: { bbox?: number[] }[] };
+    const out = (j.bbox_objects ?? []).map((o) => o.bbox ?? []).filter((b) => b.length === 4 && b.every(Number.isFinite));
+    return out.length ? out.map((b) => b.map((v) => Math.round(v * 100) / 100) as [number, number, number, number]) : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/** Platten aus Metadata/model_settings.config: Nummer, Name und Teilezahl (Bambu Studio, Orca) */
+function modelPlates(xml: Uint8Array | undefined): { index: number; name: string; objects: number }[] {
+  if (!xml) return [];
+  const text = new TextDecoder().decode(xml);
+  return (text.match(/<plate>[\s\S]*?<\/plate>/g) ?? []).map((b, i) => ({
+    index: Number(b.match(/key="plater_id"\s+value="(\d+)"/)?.[1]) || i + 1,
+    name: xmlAttr(b.match(/key="plater_name"\s+value="([^"]*)"/)?.[1] ?? "").trim(),
+    objects: (b.match(/<model_instance>/g) ?? []).length,
+  }));
+}
+
+function nameP(plates: Plate[], xml: Uint8Array | undefined) {
+  const names = modelPlates(xml);
+  for (const p of plates) {
+    const n = names.find((x) => x.index === p.index)?.name;
+    if (n) p.name = n;
+  }
+}
+
+/** Platten einer unslicten Projekt-3MF; Zeit und Gramm, wenn der Autor die Datei geslict gespeichert hat (MakerWorld) */
+function projectPlates(out: Record<string, Uint8Array>, images: number[]): Plate[] {
+  const layout = modelPlates(out["Metadata/model_settings.config"]);
+  const xml = out["Metadata/slice_info.config"];
+  const sliced = xml ? parseSliceInfo(new TextDecoder().decode(xml)) : [];
+  return layout.map((l) => {
+    const s = sliced.find((p) => p.index === l.index);
+    return {
+      index: l.index,
+      name: l.name || undefined,
+      prediction_s: s?.prediction_s ?? null,
+      weight_g: s?.weight_g ?? null,
+      printer_model: s?.printer_model ?? null,
+      nozzle: s?.nozzle ?? null,
+      filaments: s?.filaments ?? [],
+      has_image: images.includes(l.index),
+      objects: l.objects,
+    };
+  });
+}
+
+/** Ältere Dateien ohne Teilezahl je Platte einmal neu auslesen (beim Start, im Hintergrund) */
+export async function upgradeMeta() {
+  const rows = db.prepare("SELECT id, kind, meta FROM files WHERE kind IN ('gcode3mf', '3mf')").all() as { id: number; kind: string; meta: string }[];
+  for (const r of rows) {
+    const m = JSON.parse(r.meta) as FileMeta;
+    if (r.kind === "3mf" ? m.layout : m.plates?.length && m.plates.every((p) => p.objects !== undefined && p.boxes !== undefined)) continue;
+    await analyze(r.id).catch((e) => console.warn(`Analyse von Datei ${r.id} fehlgeschlagen:`, (e as Error).message));
+  }
 }
 
 /** Liest eine Datei nach dem Speichern aus: Vorschaubilder und Platten aus 3MF, Bild = eigenes Vorschaubild */
@@ -150,8 +229,12 @@ export async function analyze(id: number) {
   const out = await unzipAsync(await readFile(absPath(row)), (f) => {
     const g = f.name.match(/^Metadata\/plate_(\d+)\.gcode$/);
     if (g) gcode.push(Number(g[1]));
-    return /^Metadata\/(slice_info\.config|plate_\d+\.png|thumbnail\.png)$/.test(f.name);
+    // Kopf von 3D/3dmodel.model trägt Titel, Designer und Lizenz (MakerWorld, Bambu Studio); nur bei handlicher Größe auspacken
+    if (f.name === "3D/3dmodel.model") return f.originalSize <= 64 * 1024 ** 2;
+    return /^Metadata\/(slice_info\.config|model_settings\.config|plate_\d+\.(png|json)|thumbnail\.png)$/.test(f.name);
   });
+  const head = out["3D/3dmodel.model"];
+  if (head) fillModelMeta(row.model_id, row.name, new TextDecoder().decode(head.subarray(0, 256 * 1024)));
   const meta: FileMeta = {};
   const images: number[] = [];
   for (const [n, data] of Object.entries(out)) {
@@ -173,12 +256,61 @@ export async function analyze(id: number) {
     let plates = xml ? parseSliceInfo(new TextDecoder().decode(xml)) : [];
     // Nur Platten mit G-Code sind druckbar; ohne slice_info wenigstens die Nummern
     plates = gcode.sort((a, b) => a - b).map(
-      (i) => plates.find((p) => p.index === i) ?? { index: i, prediction_s: null, weight_g: null, printer_model: null, nozzle: null, filaments: [], has_image: false },
+      (i) => plates.find((p) => p.index === i) ?? { index: i, prediction_s: null, weight_g: null, printer_model: null, nozzle: null, filaments: [], has_image: false, objects: 0 },
     );
-    for (const p of plates) p.has_image = images.includes(p.index);
+    for (const p of plates) {
+      p.has_image = images.includes(p.index);
+      p.boxes = plateBoxes(out[`Metadata/plate_${p.index}.json`]) ?? []; // Lage der Teile für die Plattenansicht im Druckdialog
+    }
+    nameP(plates, out["Metadata/model_settings.config"]);
     meta.plates = plates;
-  }
+  } else if (kind === "3mf") meta.layout = projectPlates(out, images);
   db.prepare("UPDATE files SET kind = ?, meta = ?, has_thumb = ? WHERE id = ?").run(kind, JSON.stringify(meta), cover ? 1 : 0, id);
+}
+
+const xmlText = (s: string) =>
+  s
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;|&#39;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/[ \t]+/g, " ")
+    .trim();
+
+/** Leere Felder des Modells aus den 3MF-Metadaten füllen; Name nur, wenn er noch der Dateiname ist */
+/** Beschreibung aus der 3MF: MakerWorld legt sie als doppelt maskiertes HTML ab („&amp;lt;p&amp;gt;“); entmaskieren, bis keine Tags mehr übrig sind */
+function descText(raw: string) {
+  let s = raw;
+  for (let i = 0; i < 3 && /&(lt|gt|amp|quot|#\d+);/.test(s); i++)
+    s = s.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&");
+  return s
+    .replace(/<(br|\/p|\/div|\/li|\/h\d|\/commercial\w*)[^>]*>/gi, "\n")
+    .replace(/<li[^>]*>/gi, "• ")
+    .replace(/<[^>]+>/g, "")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n\s*\n+/g, "\n\n")
+    .trim();
+}
+
+function fillModelMeta(modelId: number, fileName: string, xml: string) {
+  const md: Record<string, string> = {};
+  for (const m of xml.matchAll(/<metadata\s+name="([^"]+)"[^>]*>([\s\S]*?)<\/metadata>/g)) md[m[1]!] = m[1] === "Description" ? descText(m[2]!) : xmlText(m[2]!);
+  const m = db.prepare("SELECT name, description, creator, license, source_url FROM models WHERE id = ?").get(modelId) as
+    | { name: string; description: string; creator: string; license: string; source_url: string }
+    | undefined;
+  if (!m) return;
+  const set: Record<string, string> = {};
+  if (!m.creator && md.Designer) set.creator = md.Designer.slice(0, 200);
+  if (!m.license && md.License) set.license = md.License.slice(0, 200);
+  if (!m.description && md.Description) set.description = md.Description.slice(0, 8000);
+  if (md.Title && m.name === baseName(fileName)) set.name = md.Title.slice(0, 200);
+  if (!m.source_url && /^https?:\/\//.test(md.Origin ?? "")) set.source_url = md.Origin!.slice(0, 1000);
+  const keys = Object.keys(set);
+  if (keys.length) db.prepare(`UPDATE models SET ${keys.map((k) => `${k} = ?`).join(", ")} WHERE id = ?`).run(...keys.map((k) => set[k]!), modelId);
 }
 
 export async function removeFile(id: number) {
@@ -196,6 +328,7 @@ async function removeThumbs(id: number, metaJson: string) {
   const meta = JSON.parse(metaJson) as FileMeta;
   await rm(thumbPath(id), { force: true });
   for (const p of meta.images ?? []) await rm(thumbPath(id, p), { force: true });
+  await rm(path.join(FILE_DIR, ".step", `${id}.stl`), { force: true }); // STL zum Slicen (server/step.ts), IDs werden neu vergeben
 }
 
 export async function removeModelFiles(modelId: number) {

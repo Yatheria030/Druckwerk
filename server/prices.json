@@ -1,0 +1,460 @@
+{
+ "date": "2026-11-15",
+ "source": "Offizielle Hersteller-Shops für Deutschland bzw. EU, EUR inkl. MwSt. ohne Versand, günstigste Einzelspule in Schwarz/Weiß; viele Preise sind Black-Week-Aktionen",
+ "brands": {
+  "Sunlu": {
+   "PLA": {
+    "price": 10.89,
+    "regular": null,
+    "refill": 10.49,
+    "net_g": 1000,
+    "url": "https://de.store.sunlu.com/products/pla-pla-plus-3d-drucker-filament-1kg-rolle",
+    "note": "Weiß 10,89 €, Schwarz 13,99 €, andere Farben 15,99 €; kein Streichpreis. Refill PLA 10,49 € (eigenes Angebot)"
+   },
+   "PLA Matte": {
+    "price": 13.99,
+    "regular": 25.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://de.store.sunlu.com/products/pla-matt-filament-glatte-matte-oberflaeche-ordentlich-gewickeltes-filament",
+    "note": "Schwarz/Weiß 13,99 €, andere Farben 15,99 €"
+   },
+   "PLA High Speed": {
+    "price": 19.99,
+    "regular": 24.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://de.store.sunlu.com/products/1-75mm-sunlu-hochgeschwindigkeit-pla-3d-drucker-filament-1kg-rolle",
+    "note": "Einzelspule; Schwarz/Weiß derzeit ausverkauft. Angebot mit Mindestabnahme 3 Rollen: 11,00 €/Rolle"
+   },
+   "PLA+": {
+    "price": 13.99,
+    "regular": null,
+    "refill": 11.49,
+    "net_g": 1000,
+    "url": "https://de.store.sunlu.com/products/pla-pla-plus-3d-drucker-filament-1kg-rolle",
+    "note": "Schwarz/Weiß 13,99 €, kein Streichpreis. Refill PLA+ 11,49 €"
+   },
+   "PLA+ 2.0": {
+    "price": 13.99,
+    "regular": 18.99,
+    "refill": 12.99,
+    "net_g": 1000,
+    "url": "https://de.store.sunlu.com/products/pla-2-0-verbessertes-pla-pla-plus-3d-drucker-filament-1kg",
+    "note": "Schwarz/Weiß 13,99 €, andere Farben 15,99 €; Nachfüll-Variante Schwarz 12,99 €"
+   },
+   "PLA+ Silk": {
+    "price": 13.99,
+    "regular": 29.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://de.store.sunlu.com/products/seide-3d-drucker-filament-1kg-2-2lbs",
+    "note": "Schwarz/Weiß 13,99 €, andere Farben 15,99 €"
+   },
+   "PLA Meta": {
+    "price": 13.99,
+    "regular": 28.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://de.store.sunlu.com/products/sunlu-pla-meta-1-75mm-filament-1kg-2-2lbs-passt-meist-auf-fdm-3d-drucker",
+    "note": "Schwarz/Weiß 13,99 € (derzeit ausverkauft), lieferbare Farben ab 15,99 €"
+   },
+   "PETG": {
+    "price": 13.99,
+    "regular": 22.99,
+    "refill": 10.49,
+    "net_g": 1000,
+    "url": "https://de.store.sunlu.com/products/petg-1-75mm-3d-drucker-filament-1kg-2-2lbs",
+    "note": "Schwarz/Weiß 13,99 €, andere Farben 15,99 €. Refill PETG 10,49 €; neues PETG 2.0 ab 11,49 € (Streichpreis 26,54 €)"
+   }
+  },
+  "eSUN": {
+   "PLA Basic": {
+    "price": 13.99,
+    "regular": 21.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/epla",
+    "note": "EU-Store esun3dstoreeu.com. Schwarz 13,99 €, Cold White 12,99 €, Weiß 16,99 €; günstigste Farbe Fire Engine Red 10,99 € (Streichpreis 17,99 €). Black-Friday-Flash-Sale"
+   },
+   "PLA+": {
+    "price": 14.99,
+    "regular": 21.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/pla-pro",
+    "note": "Schwarz/Weiß 14,99 €; günstigste Farbe Fire Engine Red 13,99 €. Black-Friday-Flash-Sale"
+   },
+   "PLA+ HS": {
+    "price": 13.99,
+    "regular": 21.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/epla-pro-hs",
+    "note": "Schwarz/Cold White 13,99 €, Weiß 15,99 €. Black-Friday-Flash-Sale"
+   },
+   "PLA HS": {
+    "price": null,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/epla-hs",
+    "note": "Im EU-Shop nicht lieferbar, Preis widersprüchlich"
+   },
+   "PLA Matte": {
+    "price": 13.99,
+    "regular": 21.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/epla-matte",
+    "note": "Deep Black 13,99 €, Milky White 14,99 €; günstigste Farbe (z. B. Almond Yellow) 12,99 €. Black-Friday-Flash-Sale"
+   },
+   "PLA Silk": {
+    "price": 14.99,
+    "regular": 21.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/epla-silk",
+    "note": "Silk White 14,99 €, alle geprüften Farben gleich. Black-Friday-Flash-Sale"
+   },
+   "PETG": {
+    "price": 12.99,
+    "regular": 21.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/petg",
+    "note": "Solid Black 12,99 €, Solid White 13,99 €. Black-Friday-Flash-Sale"
+   },
+   "PETG Basic": {
+    "price": 13.99,
+    "regular": 21.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/petg-basic",
+    "note": "Schwarz/Weiß 13,99 €; günstigste Farbe Clear 9,99 € (Streichpreis 18,99 €). Black-Friday-Flash-Sale"
+   },
+   "PETG+": {
+    "price": null,
+    "regular": null,
+    "refill": null,
+    "net_g": null,
+    "url": "https://esun3dstoreeu.com/search/?Keyword=PETG",
+    "note": "Im EU-Store nicht angeboten (Suche/Filament-Übersicht ohne PETG+, nur PETG+HS)"
+   },
+   "PETG+ HS": {
+    "price": 15.99,
+    "regular": 21.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/epetg-hs",
+    "note": "Produkt heißt PETG+HS. Schwarz 15,99 €; günstigste Farben (Rot, Orange, Blau, Gelb) 12,99 €. Black-Friday-Flash-Sale"
+   },
+   "PETG Matte": {
+    "price": 13.99,
+    "regular": 21.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://esun3dstoreeu.com/products/petg-matte",
+    "note": "Weiß 13,99 €, Alabaster White 14,99 €; günstigste Farbe Light Khaki 12,99 €. Black-Friday-Flash-Sale"
+   }
+  },
+  "Elegoo": {
+   "PLA": {
+    "price": 12.99,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://eu.elegoo.com/products/pla-filament-1-75mm-colored-1kg",
+    "note": "Alle Standardfarben 12,99 €, mit und ohne RFID gleich; kein Streichpreis"
+   },
+   "PLA Silk": {
+    "price": 18.99,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://eu.elegoo.com/products/elegoo-silk-pla-filament-1-75mm-colored-1kg",
+    "note": "Alle Farben 18,99 €; kein Streichpreis"
+   },
+   "PLA Matte": {
+    "price": 17.99,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://eu.elegoo.com/products/pla-matte-filament-1-75mm-colored-1kg",
+    "note": "Alle Farben 17,99 €; kein Streichpreis"
+   },
+   "PLA+": {
+    "price": 13.99,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://eu.elegoo.com/products/elegoo-pla-plus-3d-printer-filament-1-75mm-colored-1kg",
+    "note": "Alle Farben 13,99 €; kein Streichpreis"
+   },
+   "PETG Pro": {
+    "price": 13.99,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://eu.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg",
+    "note": "Alle Farben 13,99 €; kein Streichpreis"
+   }
+  },
+  "Anycubic": {
+   "PLA": {
+    "price": null,
+    "regular": 22.99,
+    "refill": 16.99,
+    "net_g": 1000,
+    "url": "https://de.anycubic3d.com/products/pla-filament",
+    "note": "Gleiche Shopseite wie PLA Basic"
+   },
+   "PLA Matte": {
+    "price": 19.99,
+    "regular": 29.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://de.anycubic3d.com/products/matte-pla-filament",
+    "note": "Alle Farben 19,99 €"
+   },
+   "PLA Basic": {
+    "price": 17.99,
+    "regular": 22.99,
+    "refill": 16.99,
+    "net_g": 1000,
+    "url": "https://de.anycubic3d.com/products/pla-filament",
+    "note": "Alle Farben 17,99 €. PLA Basic Refill 16,99 € (Streichpreis 19,99 €)"
+   },
+   "PLA+": {
+    "price": 18.99,
+    "regular": 23.99,
+    "refill": 17.99,
+    "net_g": 1000,
+    "url": "https://de.anycubic3d.com/products/pla-plus-filament",
+    "note": "Alle Farben 18,99 €. PLA+ Refill 17,99 €"
+   },
+   "PLA High Speed": {
+    "price": 18.99,
+    "regular": 27.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://de.anycubic3d.com/products/high-speed-pla-filament",
+    "note": "Alle Farben 18,99 €"
+   },
+   "PETG": {
+    "price": 16.99,
+    "regular": 24.99,
+    "refill": 15.99,
+    "net_g": 1000,
+    "url": "https://de.anycubic3d.com/products/petg-filament",
+    "note": "Alle Farben 16,99 €. PETG Refill 15,99 € (Streichpreis 20,99 €)"
+   }
+  },
+  "Bambu Lab": {
+   "PLA Basic": {
+    "price": 19.99,
+    "regular": null,
+    "refill": 16.99,
+    "net_g": 1000,
+    "url": "https://eu.store.bambulab.com/de/products/pla-basic-filament",
+    "note": "Einzelpreis mit Spule; Refill 16,99 (als UVP angezeigt). Staffel 'ab 9,00 €' gilt erst ab 14 Spulen. Preise inkl. MwSt. (DE)"
+   },
+   "PLA Matte": {
+    "price": 19.99,
+    "regular": null,
+    "refill": 16.99,
+    "net_g": 1000,
+    "url": "https://eu.store.bambulab.com/de/products/pla-matte",
+    "note": "Einzelpreis mit Spule; Staffel ab 14 Spulen nicht berücksichtigt"
+   },
+   "PLA Silk": {
+    "price": 19.99,
+    "regular": null,
+    "refill": 16.99,
+    "net_g": 1000,
+    "url": "https://eu.store.bambulab.com/de/products/pla-silk-upgrade",
+    "note": "Shop führt nur noch PLA Silk+ (alte Seite pla-silk 404); Refill nur Weiß lieferbar"
+   },
+   "PETG Basic": {
+    "price": 18.99,
+    "regular": null,
+    "refill": 15.99,
+    "net_g": 1000,
+    "url": "https://eu.store.bambulab.com/de/products/petg-basic",
+    "note": "Refill 15,99 (als UVP angezeigt)"
+   },
+   "PETG Matte": {
+    "price": 18.99,
+    "regular": null,
+    "refill": 15.99,
+    "net_g": 1000,
+    "url": "https://eu.store.bambulab.com/de/products/petg-matte",
+    "note": ""
+   }
+  },
+  "Polymaker": {
+   "PolyLite PLA": {
+    "price": 29.95,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://shop.polymaker.com/de-eu/products/polythe-pla",
+    "note": "EU-Markt von shop.polymaker.com (EUR, Land DE); Schwarz/Weiß 1,75 mm 1 kg lieferbar; kein MwSt.-Hinweis auf der Seite gefunden"
+   },
+   "PolyLite PLA Pro": {
+    "price": 24.99,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://shop.polymaker.com/de-eu/products/polythe-plapro",
+    "note": "Alle Standardfarben 1,75 mm 1 kg derzeit ausverkauft (Preis gelistet). Lieferbar: 'Polymaker PLA Pro' (Nachfolger) 23,99 statt 24,99, shop.polymaker.com/de-eu/products/polymaker-plapro"
+   },
+   "Panchroma Matte": {
+    "price": 19.99,
+    "regular": null,
+    "refill": 17.99,
+    "net_g": 1000,
+    "url": "https://shop.polymaker.com/de-eu/products/mattes-pla",
+    "note": "Spule (neue Verpackung); Refill 17,99"
+   },
+   "Panchroma Silk": {
+    "price": 24.99,
+    "regular": null,
+    "refill": 22.99,
+    "net_g": 1000,
+    "url": "https://shop.polymaker.com/de-eu/products/silke-pla",
+    "note": "Spule (neue Formel); Refill 22,99; alte Formel 29,95 ausverkauft"
+   },
+   "PolyLite PETG": {
+    "price": 19.99,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://shop.polymaker.com/de-eu/products/petg",
+    "note": "Heißt im Shop jetzt 'Polymaker PETG' (neue Rezeptur); Schwarz ausverkauft, Weiß lieferbar"
+   }
+  },
+  "Overture": {
+   "PLA": {
+    "price": 13.99,
+    "regular": 16.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://overture3d.com/en-eu/products/overture-pla",
+    "note": "EU-Markt von overture3d.com (EUR, Land DE, 'Tax included'); Produkt heißt jetzt 'High Speed PLA' (Handle overture-pla); Preis für Schwarz/Weiß, andere Farben 15,99–24,99"
+   },
+   "PLA Matte": {
+    "price": 16.99,
+    "regular": 19.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://overture3d.com/en-eu/products/overture-matte-pla",
+    "note": "Schwarz; Weiß 17,99"
+   },
+   "PLA Silk": {
+    "price": 16.99,
+    "regular": 19.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://overture3d.com/en-eu/products/overture-silk-pla-3d-printer-filament-1-75mm",
+    "note": "Silk Weiß/Silber/Kupfer lieferbar"
+   },
+   "PETG": {
+    "price": 13.99,
+    "regular": 16.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://overture3d.com/en-eu/products/overture-high-speed-petg",
+    "note": "Heißt 'High Speed PETG'; Preis für Schwarz, Weiß 14,99"
+   }
+  },
+  "Prusament": {
+   "PLA": {
+    "price": 26.39,
+    "regular": 32.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://www.prusa3d.com/de/produkt/prusament-pla-jet-black-1kg-nfc/",
+    "note": "Jet Black 1 kg, Aktion -20 %; Gewicht nur aus Produktname (1 kg)"
+   },
+   "PETG": {
+    "price": 26.39,
+    "regular": 32.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://www.prusa3d.com/de/produkt/prusament-petg-jet-black-1kg-nfc/",
+    "note": "Jet Black 1 kg, Aktion -20 %; Gewicht nur aus Produktname (1 kg)"
+   }
+  },
+  "Extrudr": {
+   "PLA Basic": {
+    "price": 14.86,
+    "regular": 24.78,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://www.extrudr.com/de/de/products/pla-basic/",
+    "note": "black 1,75 mm 1 kg, Aktion (onSale); Preise aus den Shopdaten der DE-Seite (brutto, 19 % MwSt.)"
+   },
+   "PLA HS": {
+    "price": 14.86,
+    "regular": 24.78,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://www.extrudr.com/de/de/products/pla-hs/",
+    "note": "black 1,75 mm 1 kg, Aktion (onSale); Preise aus den Shopdaten der DE-Seite (brutto, 19 % MwSt.)"
+   },
+   "PETG": {
+    "price": 19.34,
+    "regular": 38.68,
+    "refill": null,
+    "net_g": 1100,
+    "url": "https://www.extrudr.com/de/de/products/petg/",
+    "note": "black 1,75 mm 1,1 kg, Aktion -50 % (onSale); Preise aus den Shopdaten der DE-Seite (brutto, 19 % MwSt.)"
+   }
+  },
+  "Das Filament": {
+   "PLA": {
+    "price": 15.99,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://dasfilament.de/produkt/pla-filament-175-mm-schwarz-1-kg/",
+    "note": "Schwarz 1 kg Spule, inkl. 19 % MwSt.; Refill ohne Spule 14,99 €"
+   },
+   "PETG": {
+    "price": 21.0,
+    "regular": null,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://dasfilament.de/produkt/petg-filament-175-mm-schwarz-1-kg/",
+    "note": "Schwarz 1 kg Spule; Refill ohne Spule 20,00 €; rPETG Abrakadabra 19,00 € nicht gewertet (Recycling-Sonderfarbe)"
+   }
+  },
+  "3DJake": {
+   "PLA": {
+    "price": 13.99,
+    "regular": 19.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://www.3djake.de/3djake/ecopla-schwarz?sai=1978",
+    "note": "3DJAKE ecoPLA Schwarz 1 kg, Aktion -30 %, inkl. 19 % MwSt."
+   },
+   "PLA Silk": {
+    "price": 13.99,
+    "regular": 19.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://www.3djake.de/3djake/ecopla-silk",
+    "note": "3DJAKE ecoPLA Silk (z. B. Silber) 1 kg, Aktion -30 %; Mehrfarbige (Rainbow) 20,99 €"
+   },
+   "PETG": {
+    "price": 17.49,
+    "regular": 24.99,
+    "refill": null,
+    "net_g": 1000,
+    "url": "https://www.3djake.de/3djake/easypetg-schwarz?sai=21620",
+    "note": "3DJAKE easyPETG Schwarz 1 kg (Eigenmarke hat kein reines 'PETG'), Aktion -30 %, inkl. 19 % MwSt."
+   }
+  }
+ }
+}

@@ -1,6 +1,7 @@
+import { catalogBrand, catalogLine, getCatalog } from "../../../shared/catalog.ts";
 import { autoColorName } from "../../../shared/colors.ts";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { Archive, ArchiveRestore, ArrowDown, ArrowUp, Copy, Link2, Nfc, Plus, Scale, Search, Sparkles, Trash2, X } from "lucide-react";
+import { Archive, ArchiveRestore, ArrowDown, ArrowUp, Copy, Link2, Nfc, Plus, QrCode, Scale, Search, ShoppingCart, Sparkles, Trash2, X } from "lucide-react";
 import { type ReactNode, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { autoProfile, profileById, PROFILES } from "../../../shared/profiles.ts";
 import { awaitsChip, MATERIALS, paidPrice, type PrinterLive, type Spool, type SpoolDraft, type SpoolInput } from "../../../shared/types.ts";
@@ -11,8 +12,14 @@ import { DragProvider, useDrag, type DragItem, type Draggable, type DropTarget }
 import { PageHeader, useLive } from "../App.tsx";
 import { useCatalog } from "../lib/catalog.ts";
 import { useSetting } from "../lib/settings.ts";
-import { go, type FilamentView as FView } from "../lib/router.ts";
+import { go, href, slug, type FilamentView as FView } from "../lib/router.ts";
 import { CatalogPage } from "./CatalogPage.tsx";
+import { PricesPage } from "./PricesPage.tsx";
+import { SpecsPage } from "./SpecsPage.tsx";
+import { RuleDialog, ShoppingPage } from "./ShoppingPage.tsx";
+import { LabelsPage } from "./LabelsPage.tsx";
+import { useStock } from "../lib/stock.ts";
+import { ruleMatches } from "../../../shared/stock.ts";
 import { chipCls, FilamentTabs } from "../ui/FilamentTabs.tsx";
 import { Button, Card, Dialog, Field, fmtDate, Label, LoadError, useToast } from "../ui/controls.tsx";
 import { FillBar, fmtG, pct, RestChips, SpoolArt, sorteTag, spoolSub, spoolTitle } from "../ui/spool.tsx";
@@ -65,7 +72,7 @@ const activeSpools = (live: PrinterLive[] | undefined) =>
 const dragItem = (s: Spool): Draggable =>
   s.archived ? null : s.rfid ? CHIP_LOCKED : { spoolId: s.id, color: s.color, fraction: pct(s), from: s.printer_id != null && s.tray != null ? { printer_id: s.printer_id, tray: s.tray } : null };
 
-export function FilamentPage(p: { view: FView; brand?: string; spoolId?: number }) {
+export function FilamentPage(p: { view: FView; brand?: string; line?: string; material?: string; spoolId?: number }) {
   const qc = useQueryClient();
   const toast = useToast();
   const live = useLive();
@@ -88,6 +95,10 @@ export function FilamentPage(p: { view: FView; brand?: string; spoolId?: number 
     move.mutate({ item, target });
   };
   if (p.view === "katalog") return <CatalogPage brand={p.brand} />;
+  if (p.view === "kennwerte") return <SpecsPage brand={p.brand} line={p.line} material={p.material} />;
+  if (p.view === "preise") return <PricesPage />;
+  if (p.view === "einkauf") return <ShoppingPage />;
+  if (p.view === "etiketten") return <LabelsPage spoolId={p.spoolId} />;
   return (
     <DragProvider onDrop={onDrop} onBlocked={(m) => toast(m)}>
       <SpoolsView key={p.view} view={p.view} spoolId={p.spoolId} />
@@ -96,6 +107,7 @@ export function FilamentPage(p: { view: FView; brand?: string; spoolId?: number 
 }
 
 function SpoolsView({ view, spoolId }: { view: "regal" | "spulen"; spoolId?: number }) {
+  const stock = useStock();
   const q = useQuery({ queryKey: ["spools"], queryFn: api.spools, refetchInterval: 20_000 });
   const printers = useQuery({ queryKey: ["printers"], queryFn: api.printers });
   const live = useLive();
@@ -173,6 +185,9 @@ function SpoolsView({ view, spoolId }: { view: "regal" | "spulen"; spoolId?: num
     // Lagerwert zählt nur Spulen mit Preis, sonst wirkt er viel zu niedrig
     ...(stats.value && stats.unpriced ? ([[`${stats.unpriced} ohne Preis`, "text-ink3"]] as [string, string][]) : []),
     ...(stats.low ? ([[`${stats.low} fast leer`, "font-semibold text-bad"]] as [string, string][]) : []),
+    ...(stock.low.length
+      ? ([[<a href={href({ page: "filament", view: "einkauf" })} className="font-semibold text-accent hover:underline">{stock.low.length} nachkaufen</a>, null]] as [ReactNode, null][])
+      : []),
   ];
   return (
     <>
@@ -193,6 +208,11 @@ function SpoolsView({ view, spoolId }: { view: "regal" | "spulen"; spoolId?: num
           )
         }
       >
+        {view === "spulen" && all.length > 0 && (
+          <Button onClick={() => go({ page: "filament", view: "etiketten" })}>
+            <QrCode size={16} /> Etiketten
+          </Button>
+        )}
         <Button kind="primary" onClick={() => setCreating({})}>
           <Plus size={16} /> Spule
         </Button>
@@ -610,7 +630,7 @@ const PROFILE_GROUPS = (() => {
 
 const PALETTE = ["#FFFFFF", "#000000", "#8E9089", "#E8462B", "#F28C28", "#F4C430", "#3B9C4B", "#00AE42", "#2B6CB0", "#0A2E5C", "#7B3FA0", "#E86FA0", "#8B5A2B", "#C9B28B"];
 
-function SpoolDialog({
+export function SpoolDialog({
   s,
   preset,
   all,
@@ -653,6 +673,9 @@ function SpoolDialog({
     url: s?.url ?? preset.url ?? "",
   });
   const [draft, setDraft] = useState<SpoolDraft | null>(null);
+  const [rule, setRule] = useState(false);
+  const stock = useStock();
+  const ownRule = s ? stock.list.find((x) => ruleMatches(x.rule, s)) : undefined;
   const [book, setBook] = useState("");
   const [gross, setGross] = useState("");
   const usage = useQuery({ queryKey: ["spool-usage", s?.id], queryFn: () => api.spoolUsage(s!.id), enabled: !!s });
@@ -845,7 +868,7 @@ function SpoolDialog({
             </Field>
           </div>
           <datalist id="brands">
-            {[...new Set([...brands, "Bambu Lab", "Polymaker", "Prusament", "eSun", "Sunlu", "Elegoo", "Extrudr", "Das Filament"])].map((b) => (
+            {[...new Set([...brands, ...getCatalog().map((b) => b.brand), "Polymaker", "Prusament", "Elegoo", "Extrudr", "Das Filament"])].map((b) => (
               <option key={b} value={b} />
             ))}
           </datalist>
@@ -855,7 +878,19 @@ function SpoolDialog({
             ))}
           </datalist>
           <div className="grid grid-cols-2 gap-3">
-            <Field label="Sorte">
+            <Field
+              label="Sorte"
+              hint={
+                catalogLine(v.brand, v.name)?.specs && (
+                  <a
+                    href={href({ page: "filament", view: "kennwerte", brand: slug(catalogBrand(v.brand)!.brand), line: slug(catalogLine(v.brand, v.name)!.name) })}
+                    className="font-semibold text-accent hover:underline"
+                  >
+                    Datenblatt und Kennwerte
+                  </a>
+                )
+              }
+            >
               <SorteField
                 className="field"
                 brand={v.brand}
@@ -891,7 +926,7 @@ function SpoolDialog({
               ))}
             </div>
             <div className="mt-3 empty:hidden">
-              <CatalogColors brand={v.brand} line={v.name} colorName={v.color_name} onPick={(color_name, hex) => setV({ ...v, color_name, color: hex ? `#${hex}` : "" })} />
+              <CatalogColors brand={v.brand} line={v.name} colorName={v.color_name} onPick={(color_name, hex) => setV({ ...v, color_name, color: `#${hex}` })} />
             </div>
             {!s && /bambu/i.test(v.brand) && (
               <p className="mt-2 text-[11px] leading-snug text-ink3">
@@ -1054,6 +1089,12 @@ function SpoolDialog({
                 <Button type="button" kind="ghost" onClick={() => onCopy({ ...input(), net_g: s.net_g })}>
                   <Copy size={15} /> Nachkaufen
                 </Button>
+                <Button type="button" kind="ghost" onClick={() => setRule(true)} title={ownRule ? `Mindestbestand ${fmtG(ownRule.rule.min_g)}, vorrätig ${fmtG(ownRule.stock_g)}` : undefined}>
+                  <ShoppingCart size={15} /> {ownRule ? `Mindestens ${fmtG(ownRule.rule.min_g)}` : "Mindestbestand"}
+                </Button>
+                <Button type="button" kind="ghost" onClick={() => go({ page: "filament", view: "etiketten", spool: s.id })}>
+                  <QrCode size={15} /> Etikett
+                </Button>
                 <Button type="button" kind="ghost" onClick={() => act.mutate(() => api.updateSpool(s.id, { archived: !s.archived }).then(onClose))}>
                   {s.archived ? <ArchiveRestore size={15} /> : <Archive size={15} />} {s.archived ? "Zurück ins Regal" : "Leer, archivieren"}
                 </Button>
@@ -1104,6 +1145,13 @@ function SpoolDialog({
           </div>
         </div>
       </form>
+      {rule && s && (
+        <RuleDialog
+          rule={ownRule?.rule ?? { brand: s.brand, line: s.name, material: s.material, color: s.color, color_name: s.color_name }}
+          spools={all}
+          onClose={() => setRule(false)}
+        />
+      )}
     </Dialog>
   );
 }

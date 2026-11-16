@@ -1,15 +1,18 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { ArrowLeft, Box, Download, ExternalLink, FileBox, Heart, Image as ImageIcon, Pencil, Plus, Printer, Star, Trash2 } from "lucide-react";
+import { ArrowLeft, Box, Download, ExternalLink, FileBox, Heart, Image as ImageIcon, Layers, Pencil, Plus, Printer, Star, Trash2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { fmtDuration, fmtSize, type FileKind, type Model, type ModelFile } from "../../../shared/types.ts";
 import { api, fileUrl } from "../api.ts";
 import { PageHeader } from "../App.tsx";
+import { plateCost, printCost, useCostBasis } from "../lib/cost.ts";
 import { go } from "../lib/router.ts";
 import { VIEWABLE } from "../lib/three.ts";
 import { ACCEPT, ensureThumbs, importFiles } from "../lib/upload.ts";
 import { Button, Card, Dialog, Field, Label, LoadError, Swatch, useToast } from "../ui/controls.tsx";
 import { PrintDialog } from "../ui/PrintDialog.tsx";
+import { SliceAndPrint, useSlicer } from "../ui/SliceDialog.tsx";
 import { PrintRow } from "../ui/PrintRow.tsx";
+import { ModelCollections } from "../ui/collections.tsx";
 import { DropZone } from "../ui/Uploads.tsx";
 import { Viewer } from "../ui/Viewer.tsx";
 
@@ -24,7 +27,10 @@ export function ModelPage({ id }: { id: number }) {
   const [plate, setPlate] = useState(1);
   const [edit, setEdit] = useState(false);
   const [printFile, setPrintFile] = useState<ModelFile | null>(null);
+  const [sliceFile, setSliceFile] = useState<ModelFile | null>(null);
+  const canSlice = useSlicer();
   const input = useRef<HTMLInputElement>(null);
+  const cb = useCostBasis();
 
   const refresh = () => {
     void qc.invalidateQueries({ queryKey: ["model", id] });
@@ -54,7 +60,19 @@ export function ModelPage({ id }: { id: number }) {
 
   const shown = files.find((f) => f.id === sel) ?? files.find((f) => VIEWABLE.includes(f.kind)) ?? files.find((f) => f.kind === "gcode3mf") ?? files[0];
   const printable = files.filter((f) => f.kind === "gcode3mf");
+  // Ohne geslicte Datei: erst eine 3MF (Platten, Farben), sonst STL & Co. im Server slicen
+  const slicable = canSlice ? [...files.filter((f) => f.kind === "3mf"), ...files.filter((f) => ["stl", "obj", "step"].includes(f.kind))] : [];
+  // Quelle einer geslicten Datei: gleicher Name vor „ (Profil).gcode.3mf“, sonst die angezeigte bzw. erste slicebare
+  const stem = (n: string) => n.replace(/( \([^)]*\))?\.gcode\.3mf$/i, "").replace(/\.[^.]+$/, "").toLowerCase();
+  const sourceOf = (f: ModelFile) =>
+    slicable.find((x) => stem(x.name) === stem(f.name)) ?? (shown && slicable.includes(shown) ? shown : slicable[0]!);
   const lastGood = prints.find((p) => p.status === "fertig");
+  // Kosten vorab für die gezeigte bzw. erste druckbare Datei und Platte
+  const costFile = shown?.kind === "gcode3mf" ? shown : printable[0];
+  const costPlates = costFile?.meta.plates ?? [];
+  const costPlate = costPlates.find((p) => p.index === plate) ?? costPlates[0];
+  const pc = costPlate ? plateCost(costPlate, cb.spools, cb.kwh, cb.watts) : null;
+  const lastCost = lastGood ? printCost(lastGood) : null;
 
   const pick = (list: FileList | null) => list?.length && void importFiles(qc, [...list], id);
 
@@ -74,10 +92,16 @@ export function ModelPage({ id }: { id: number }) {
         <Button onClick={() => setEdit(true)}>
           <Pencil size={15} /> Bearbeiten
         </Button>
-        {printable.length > 0 && (
+        {printable.length > 0 ? (
           <Button kind="primary" onClick={() => setPrintFile(printable[0]!)}>
             <Printer size={16} /> Drucken
           </Button>
+        ) : (
+          slicable.length > 0 && (
+            <Button kind="primary" onClick={() => setSliceFile(shown && slicable.includes(shown) ? shown : slicable[0]!)}>
+              <Printer size={16} /> Drucken
+            </Button>
+          )
         )}
       </PageHeader>
 
@@ -131,12 +155,13 @@ export function ModelPage({ id }: { id: number }) {
                   cover={m.cover_file_id === f.id}
                   onSelect={() => setSel(f.id)}
                   onPrint={() => setPrintFile(f)}
+                  onSlice={canSlice && STUDIO.includes(f.kind) ? () => setSliceFile(f) : undefined}
                   onCover={() => patch.mutate({ cover_file_id: f.id })}
                   onDelete={() => confirm(`„${f.name}“ löschen?`) && delFile.mutate(f.id)}
                 />
               ))}
             </div>
-            {files.some((f) => STUDIO.includes(f.kind)) && !printable.length && (
+            {files.some((f) => STUDIO.includes(f.kind)) && !printable.length && !canSlice && (
               <div className="m-3 rounded-xl bg-fill p-3 text-xs leading-relaxed text-ink2">
                 Zum Drucken die Datei in Bambu Studio öffnen, slicen und über <b>Datei → Exportieren → Platte geslict exportieren</b> als
                 <b> .gcode.3mf</b> speichern. Die Datei dann hier hinzufügen.
@@ -147,7 +172,7 @@ export function ModelPage({ id }: { id: number }) {
 
         <div className="space-y-5">
           <Card className="p-4">
-            {m.description ? <p className="text-sm leading-relaxed whitespace-pre-line text-ink2">{m.description}</p> : <p className="text-sm text-ink3">Keine Beschreibung.</p>}
+            {m.description ? <p className="text-sm leading-relaxed whitespace-pre-line text-ink2 [overflow-wrap:anywhere]">{m.description}</p> : <p className="text-sm text-ink3">Keine Beschreibung.</p>}
             {m.tags.length > 0 && (
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {m.tags.map((t) => (
@@ -167,7 +192,32 @@ export function ModelPage({ id }: { id: number }) {
                   </a>
                 </Row>
               )}
+              {(pc?.total != null || lastCost != null) && (
+                <Row k="Kosten">
+                  {pc?.total != null && (
+                    <div>
+                      ca. <b className="tnum">{cb.money(pc.perPiece ?? pc.total)}</b> {pc.perPiece != null ? "pro Stück" : "je Druck"}
+                    </div>
+                  )}
+                  {pc?.total != null && (
+                    <div className="text-xs text-ink3">
+                      {[
+                        costPlates.length > 1 ? `Platte ${costPlate!.index}` : "",
+                        (costPlate!.objects ?? 0) > 1 ? `${cb.money(pc.total)} für ${costPlate!.objects} Teile` : "",
+                        pc.filament != null ? `Filament ${cb.money(pc.filament)}` : "",
+                        pc.energy != null ? `Strom ${cb.money(pc.energy)}` : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" · ")}
+                    </div>
+                  )}
+                  {lastCost != null && <div className="text-xs text-ink3">Zuletzt gedruckt für {cb.money(lastCost)}</div>}
+                </Row>
+              )}
               <Row k="Gedruckt">{prints.length ? `${prints.length}×` : "noch nie"}</Row>
+              <Row k="Sammlung">
+                <ModelCollections modelId={m.id} ids={q.data.collections} />
+              </Row>
               {lastGood && <Row k="Zuletzt gut">{new Date(lastGood.started_at).toLocaleDateString("de-DE")}</Row>}
             </dl>
           </Card>
@@ -188,7 +238,15 @@ export function ModelPage({ id }: { id: number }) {
       </div>
 
       {edit && <EditDialog m={m} onClose={() => setEdit(false)} onSaved={refresh} />}
-      {printFile && <PrintDialog file={printFile} onClose={() => setPrintFile(null)} />}
+      {printFile && (
+        <PrintDialog
+          file={printFile}
+          onClose={() => setPrintFile(null)}
+          onReslice={slicable.length ? () => (setSliceFile(sourceOf(printFile)), setPrintFile(null)) : undefined}
+          source={files.find((x) => VIEWABLE.includes(x.kind) && stem(x.name) === stem(printFile.name)) ?? null}
+        />
+      )}
+      {sliceFile && <SliceAndPrint file={sliceFile} onClose={() => setSliceFile(null)} onSliced={refresh} />}
     </DropZone>
   );
 }
@@ -208,7 +266,16 @@ const Row = ({ k, children }: { k: string; children: React.ReactNode }) => (
   </div>
 );
 
-function FileRow(p: { f: ModelFile; active: boolean; cover: boolean; onSelect: () => void; onPrint: () => void; onCover: () => void; onDelete: () => void }) {
+function FileRow(p: {
+  f: ModelFile;
+  active: boolean;
+  cover: boolean;
+  onSelect: () => void;
+  onPrint: () => void;
+  onSlice?: () => void;
+  onCover: () => void;
+  onDelete: () => void;
+}) {
   const { f } = p;
   const icon = "grid size-8 place-items-center rounded-lg text-ink3 hover:bg-hover hover:text-ink";
   return (
@@ -240,6 +307,11 @@ function FileRow(p: { f: ModelFile; active: boolean; cover: boolean; onSelect: (
         {f.kind === "gcode3mf" && (
           <button className={`${icon} text-accent`} onClick={p.onPrint} title="Drucken" aria-label="Drucken">
             <Printer size={16} />
+          </button>
+        )}
+        {p.onSlice && (
+          <button className={`${icon} text-accent`} onClick={p.onSlice} title="Slicen und drucken" aria-label="Slicen und drucken">
+            <Layers size={16} />
           </button>
         )}
         {STUDIO.includes(f.kind) && (

@@ -1,0 +1,3844 @@
+{
+ "brand": "Bambu Lab",
+ "source": "Technische Datenblätter des Herstellers, Werte wie angegeben (Einheiten vereinheitlicht)",
+ "lines": {
+  "ABS": {
+   "source": "https://store.bblcdn.com/s7/default/23b4cf2b83d5470bb96d19970b5f3ae8/Bambu_ABS_Technical_Data_Sheet_V3.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.05,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 200,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 87,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 84,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 94,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 33,
+     "std": "ISO 527, GB/T 1040",
+     "z": 28
+    },
+    "tensile_modulus": {
+     "v": 2200,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1960
+    },
+    "elongation": {
+     "v": 10.5,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4.7
+    },
+    "flexural_strength": {
+     "v": 62,
+     "std": "ISO 178, GB/T 9341",
+     "z": 39
+    },
+    "flexural_modulus": {
+     "v": 1880,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1590
+    },
+    "impact": {
+     "v": 39.3,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 7.4
+    },
+    "impact_notched": {
+     "v": 21.5,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 34.2,
+     "std": "260 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.65 % (25 °C, 55 % RH)."
+  },
+  "Support for ABS": {
+   "source": "https://store.bblcdn.com/4ea7b59ca78c485f828115735ed35050.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.16,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 195,
+     "std": "DSC, 10 °C/min"
+    },
+    "mfi": {
+     "v": 11.6,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 4,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Stützmaterial; mechanische und thermische Werte im TDS N/A. Sättigungs-Wasseraufnahme 0.14 % (25 °C, 55 % RH)."
+  },
+  "ABS-GF": {
+   "source": "https://store.bblcdn.com/69f0758087c943f8a0a87bffa6dc901b.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.08,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 202,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 99,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 88,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 103,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 36,
+     "std": "ISO 527, GB/T 1040",
+     "z": 29
+    },
+    "tensile_modulus": {
+     "v": 3160,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2250
+    },
+    "elongation": {
+     "v": 6.3,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2.3
+    },
+    "flexural_strength": {
+     "v": 68,
+     "std": "ISO 178, GB/T 9341",
+     "z": 46
+    },
+    "flexural_modulus": {
+     "v": 2860,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1970
+    },
+    "impact": {
+     "v": 14.5,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 5.3
+    },
+    "impact_notched": {
+     "v": 4.2,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 7.56,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.53 % (25 °C, 55 % RH)."
+  },
+  "ASA": {
+   "source": "https://store.bblcdn.com/ad7b08230c164e72856cffbe06bb7dc9.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.05,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 210,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 100,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 92,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 106,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 37,
+     "std": "ISO 527, GB/T 1040",
+     "z": 31
+    },
+    "tensile_modulus": {
+     "v": 2450,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2120
+    },
+    "elongation": {
+     "v": 9.2,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4.6
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, GB/T 9341",
+     "z": 40
+    },
+    "flexural_modulus": {
+     "v": 1920,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1650
+    },
+    "impact": {
+     "v": 41,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 4.9
+    },
+    "impact_notched": {
+     "v": 19.6,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 7,
+     "std": "260 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.45 % (25 °C, 55 % RH)."
+  },
+  "ASA-Aero": {
+   "source": "https://store.bblcdn.com/s1/default/02b005fdf02d450084e3128f7cf0c36f/Bambu_ASA_Aero_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 0.99,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 204,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 85,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 78,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 80,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 32,
+     "std": "ISO 527, GB/T 1040",
+     "z": 21
+    },
+    "tensile_modulus": {
+     "v": 2010,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1180
+    },
+    "elongation": {
+     "v": 5.1,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2.3
+    },
+    "flexural_strength": {
+     "v": 58,
+     "std": "ISO 178, GB/T 9341",
+     "z": 24
+    },
+    "flexural_modulus": {
+     "v": 1510,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1220
+    },
+    "impact": {
+     "v": 32,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 3.4
+    },
+    "impact_notched": {
+     "v": 8.2,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 1.56,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Geschäumtes Leichtbau-ASA (Dichte als Filament). Sättigungs-Wasseraufnahme 0.80 % (25 °C, 55 % RH)."
+  },
+  "ASA-CF": {
+   "source": "https://store.bblcdn.com/s7/default/44b0a48ab1d84e819647c980eb179ae9/Bambus_ASA-CF_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.02,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 210,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 110,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 102,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 108,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 34,
+     "std": "ISO 527, GB/T 1040",
+     "z": 30
+    },
+    "tensile_modulus": {
+     "v": 4200,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2290
+    },
+    "elongation": {
+     "v": 9.6,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4.4
+    },
+    "flexural_strength": {
+     "v": 72,
+     "std": "ISO 178, GB/T 9341",
+     "z": 33
+    },
+    "flexural_modulus": {
+     "v": 3740,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1350
+    },
+    "impact": {
+     "v": 14,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 9.4
+    },
+    "impact_notched": {
+     "v": 6.2,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 1.74,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.33 % (25 °C, 55 % RH)."
+  },
+  "Support For PA/PET": {
+   "source": "https://store.bblcdn.eu/s8/default/a515fafc99ab483092a3aaeed8e95841/Bambu_Support_for_PA_and_PET_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 255,
+     "std": "DSC, 10 °C/min"
+    },
+    "mfi": {
+     "v": 29.2,
+     "std": "280 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "Umluftofen, 8–12 h"
+    }
+   },
+   "note": "Stützmaterial; mechanische und thermische Werte im TDS N/A."
+  },
+  "PAHT-CF": {
+   "source": "https://store.bblcdn.com/7166b20bc68f4c87b32c972b856eeb4b.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.06,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 70,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 225,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 194,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 170,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 220,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 92,
+     "std": "ISO 527, GB/T 1040",
+     "z": 47
+    },
+    "tensile_modulus": {
+     "v": 3860,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2180
+    },
+    "elongation": {
+     "v": 8.4,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4.1
+    },
+    "flexural_strength": {
+     "v": 125,
+     "std": "ISO 178, GB/T 9341",
+     "z": 61
+    },
+    "flexural_modulus": {
+     "v": 4230,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1820
+    },
+    "impact": {
+     "v": 57.5,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 13.3
+    },
+    "impact_notched": {
+     "v": 22.8,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 14.4,
+     "std": "280 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "Umluftofen, 8–12 h"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.88 % (25 °C, 55 % RH)."
+  },
+  "PA6-GF": {
+   "source": "https://store.bblcdn.com/s5/default/f0317db8b3f44d0486553c1e214cff9d.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.14,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 67,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 219,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 182,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 158,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 210,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 75,
+     "std": "ISO 527, GB/T 1040",
+     "z": 27
+    },
+    "tensile_modulus": {
+     "v": 2850,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1950
+    },
+    "elongation": {
+     "v": 3.9,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2.3
+    },
+    "flexural_strength": {
+     "v": 120,
+     "std": "ISO 178, GB/T 9341",
+     "z": 51
+    },
+    "flexural_modulus": {
+     "v": 3670,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2300
+    },
+    "impact": {
+     "v": 27.2,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 4.1
+    },
+    "impact_notched": {
+     "v": 7.2,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 9,
+     "std": "280 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "Umluftofen, 8–12 h"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 2.56 % (25 °C, 55 % RH)."
+  },
+  "PA6-CF": {
+   "source": "https://store.bblcdn.com/b2abc59ac250492b979a52f1ce3e61b3.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.09,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 68,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 223,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 186,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 164,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 212,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 102,
+     "std": "ISO 527, GB/T 1040",
+     "z": 48
+    },
+    "tensile_modulus": {
+     "v": 4430,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2170
+    },
+    "elongation": {
+     "v": 5.8,
+     "std": "ISO 527, GB/T 1040",
+     "z": 3.7
+    },
+    "flexural_strength": {
+     "v": 151,
+     "std": "ISO 178, GB/T 9341",
+     "z": 80
+    },
+    "flexural_modulus": {
+     "v": 5460,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2240
+    },
+    "impact": {
+     "v": 40.3,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 15.5
+    },
+    "impact_notched": {
+     "v": 13.4,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 6.8,
+     "std": "280 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "Umluftofen, 8–12 h"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 2.35 % (25 °C, 55 % RH)."
+  },
+  "PC": {
+   "source": "https://store.bblcdn.com/a52afdccddfd448583d119587122c8c5.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.2,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 145,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 228,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 112,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 117,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 119,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 62,
+     "std": "ISO 527, GB/T 1040",
+     "z": 56
+    },
+    "tensile_modulus": {
+     "v": 2110,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1450
+    },
+    "elongation": {
+     "v": 3.8,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2.1
+    },
+    "flexural_strength": {
+     "v": 108,
+     "std": "ISO 178, GB/T 9341",
+     "z": 55
+    },
+    "flexural_modulus": {
+     "v": 2310,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1620
+    },
+    "impact": {
+     "v": 34.8,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 9
+    },
+    "impact_notched": {
+     "v": 7.5,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 32.2,
+     "std": "260 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 110,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "HDT laut TDS bei 1,8 MPa (117 °C) höher als bei 0,45 MPa (112 °C), so übernommen. Sättigungs-Wasseraufnahme 0.25 % (25 °C, 55 % RH)."
+  },
+  "PC FR": {
+   "source": "https://store.bblcdn.com/s1/default/4adf3c9827a0475d8777e9b8cfd11fbe.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.18,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 145,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 225,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 113,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 108,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 114,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 60,
+     "std": "ISO 527, GB/T 1040",
+     "z": 21
+    },
+    "tensile_modulus": {
+     "v": 1670,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1450
+    },
+    "elongation": {
+     "v": 2.4,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1.5
+    },
+    "flexural_strength": {
+     "v": 90,
+     "std": "ISO 178, GB/T 9341",
+     "z": 47
+    },
+    "flexural_modulus": {
+     "v": 1890,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1660
+    },
+    "impact": {
+     "v": 55,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 8
+    },
+    "impact_notched": {
+     "v": 8.4,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 26.4,
+     "std": "260 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 280,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 110,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Flammability laut TDS „Flame retardant“, keine UL94-Klasse im Blatt. Sättigungs-Wasseraufnahme 0.12 % (25 °C, 55 % RH)."
+  },
+  "PET-CF": {
+   "source": "https://store.bblcdn.com/9690d6226f024acab2ba0dd52dabb654.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.29,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 75,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 250,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 205,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 182,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 226,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 74,
+     "std": "ISO 527, GB/T 1040",
+     "z": 35
+    },
+    "tensile_modulus": {
+     "v": 4730,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2160
+    },
+    "elongation": {
+     "v": 4.5,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2.4
+    },
+    "flexural_strength": {
+     "v": 131,
+     "std": "ISO 178, GB/T 9341",
+     "z": 49
+    },
+    "flexural_modulus": {
+     "v": 5320,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2210
+    },
+    "impact": {
+     "v": 36,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 4.5
+    },
+    "impact_notched": {
+     "v": 8.6,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 25.3,
+     "std": "280 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 80,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "Umluftofen, 8–12 h"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.37 % (25 °C, 55 % RH)."
+  },
+  "PETG Basic": {
+   "source": "https://store.bblcdn.com/s1/default/cb94589bf7994fdcbfa833badefae9cd/Bambu_PETG_Basic_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 69,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 71,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 68,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 69,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 51,
+     "std": "ISO 527, GB/T 1040",
+     "z": 35
+    },
+    "tensile_modulus": {
+     "v": 2780,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2550
+    },
+    "elongation": {
+     "v": 9.5,
+     "std": "ISO 527, GB/T 1040",
+     "z": 5.2
+    },
+    "flexural_strength": {
+     "v": 75,
+     "std": "ISO 178, GB/T 9341",
+     "z": 56
+    },
+    "flexural_modulus": {
+     "v": 1950,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1740
+    },
+    "impact": {
+     "v": 34.2,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 10.5
+    },
+    "mfi": {
+     "v": 22.9,
+     "std": "245 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 65,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 75,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.45 % (25 °C, 55 % RH)."
+  },
+  "PETG HF": {
+   "source": "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PETG_HF_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.28,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 66,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 214,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 69,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 62,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 70,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 34,
+     "std": "ISO 527, GB/T 1040",
+     "z": 23
+    },
+    "tensile_modulus": {
+     "v": 1810,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1540
+    },
+    "elongation": {
+     "v": 8.6,
+     "std": "ISO 527, GB/T 1040",
+     "z": 5.1
+    },
+    "flexural_strength": {
+     "v": 64,
+     "std": "ISO 178, GB/T 9341",
+     "z": 48
+    },
+    "flexural_modulus": {
+     "v": 2050,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1810
+    },
+    "impact": {
+     "v": 31.5,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 10.6
+    },
+    "impact_notched": {
+     "v": 6.2,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 28.2,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 65,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 75,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "TDS V1.0 vom Shop-CDN; PETG HF hat im Shop keine eigene Produktseite mehr. Sättigungs-Wasseraufnahme 0.40 % (25 °C, 55 % RH)."
+  },
+  "PETG Matte": {
+   "source": "https://store.bblcdn.eu/s8/default/240fb0c791fb4903a9d72934895e9a16/PETG_Matte.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.37,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 71,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 160,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 72.3,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 71.2,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 75.7,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 42.9,
+     "std": "ISO 527, GB/T 1040",
+     "z": 30.1
+    },
+    "tensile_modulus": {
+     "v": 3349,
+     "std": "ISO 527, GB/T 1040",
+     "z": 3174
+    },
+    "elongation": {
+     "v": 13.8,
+     "std": "ISO 527, GB/T 1040",
+     "z": 6.5
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, GB/T 9341",
+     "z": 47
+    },
+    "flexural_modulus": {
+     "v": 1995,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1750
+    },
+    "impact": {
+     "v": 32.6,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 10
+    },
+    "mfi": {
+     "v": 13.9,
+     "std": "235 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 65,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 75,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Neues TDS-Format (V1.0, Proben auf H2 gedruckt). Schmelztemperatur 160 °C steht so im Blatt (für PETG ungewöhnlich). Sättigungs-Wasseraufnahme 0.29 % (25 °C, 55 % RH)."
+  },
+  "PETG Translucent": {
+   "source": "https://store.bblcdn.com/s1/default/338c9cd853fd44d9b6ed354a49048e72/Bambu_PETG_Translucent_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 70,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 228,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 74,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 68,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 79,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 33,
+     "std": "ISO 527, GB/T 1040",
+     "z": 29
+    },
+    "tensile_modulus": {
+     "v": 1420,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1230
+    },
+    "elongation": {
+     "v": 8.2,
+     "std": "ISO 527, GB/T 1040",
+     "z": 5.2
+    },
+    "flexural_strength": {
+     "v": 68,
+     "std": "ISO 178, GB/T 9341",
+     "z": 55
+    },
+    "flexural_modulus": {
+     "v": 1610,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1520
+    },
+    "impact": {
+     "v": 37.4,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 7.2
+    },
+    "impact_notched": {
+     "v": 8.6,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 11.7,
+     "std": "230 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 65,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 75,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.30 % (25 °C, 55 % RH)."
+  },
+  "PETG-CF": {
+   "source": "https://store.bblcdn.com/626e4f424bf345ae965ad0ddfcaf2459.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 68,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 225,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 74,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 68,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 85,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 35,
+     "std": "ISO 527, GB/T 1040",
+     "z": 29
+    },
+    "tensile_modulus": {
+     "v": 2460,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1340
+    },
+    "elongation": {
+     "v": 10.4,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4.7
+    },
+    "flexural_strength": {
+     "v": 70,
+     "std": "ISO 178, GB/T 9341",
+     "z": 48
+    },
+    "flexural_modulus": {
+     "v": 2910,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1560
+    },
+    "impact": {
+     "v": 41.2,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 10.7
+    },
+    "impact_notched": {
+     "v": 15.7,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 19.3,
+     "std": "250 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 65,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 75,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 65,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.30 % (25 °C, 55 % RH)."
+  },
+  "PLA Aero": {
+   "source": "https://store.bblcdn.com/cbc8b808aaf84ead9bb3b0b9b43e66af.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 55,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 153,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 53,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 48,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 54,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 24,
+     "std": "ISO 527, GB/T 1040",
+     "z": 18
+    },
+    "tensile_modulus": {
+     "v": 1350,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1240
+    },
+    "elongation": {
+     "v": 2.6,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1.2
+    },
+    "flexural_strength": {
+     "v": 45,
+     "std": "ISO 178, GB/T 9341",
+     "z": 17
+    },
+    "flexural_modulus": {
+     "v": 1690,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1410
+    },
+    "impact": {
+     "v": 28.8,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 3.1
+    },
+    "impact_notched": {
+     "v": 8.2,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 7.7,
+     "std": "260 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Geschäumtes Leicht-PLA; Dichte ISO 1183 als Filament. Sättigungs-Wasseraufnahme 0.45 % (25 °C, 55 % RH)."
+  },
+  "PLA Basic": {
+   "source": "https://store.bblcdn.com/s1/default/58b85d0f3db94878854a28fdb8a0006e/Bambu_PLA_Basic_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 60,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 160,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 57,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 54,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 57,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 35,
+     "std": "ISO 527, GB/T 1040",
+     "z": 31
+    },
+    "tensile_modulus": {
+     "v": 2580,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2060
+    },
+    "elongation": {
+     "v": 12.2,
+     "std": "ISO 527, GB/T 1040",
+     "z": 7.5
+    },
+    "flexural_strength": {
+     "v": 76,
+     "std": "ISO 178, GB/T 9341",
+     "z": 59
+    },
+    "flexural_modulus": {
+     "v": 2750,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2370
+    },
+    "impact": {
+     "v": 26.6,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 13.8
+    },
+    "impact_notched": {
+     "v": 7.9,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 23.2,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.43 % (25 °C, 55 % RH)."
+  },
+  "PLA Galaxy": {
+   "source": "https://store.bblcdn.com/8f0b6b2741e3498689c2c7706374c482.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.19,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 52,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 156,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 52,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 56,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 26,
+     "std": "ISO 527, GB/T 1040",
+     "z": 21
+    },
+    "tensile_modulus": {
+     "v": 1540,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1320
+    },
+    "elongation": {
+     "v": 9.3,
+     "std": "ISO 527, GB/T 1040",
+     "z": 7.1
+    },
+    "flexural_strength": {
+     "v": 58,
+     "std": "ISO 178, GB/T 9341",
+     "z": 37
+    },
+    "flexural_modulus": {
+     "v": 2200,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1850
+    },
+    "impact": {
+     "v": 55.4,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 5.8
+    },
+    "impact_notched": {
+     "v": 17.6,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 11,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.45 % (25 °C, 55 % RH)."
+  },
+  "PLA Glow": {
+   "source": "https://store.bblcdn.com/cd34cf072d14484bbf027290d16abe9b.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 55,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 155,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 52,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 56,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 32,
+     "std": "ISO 527, GB/T 1040",
+     "z": 26
+    },
+    "tensile_modulus": {
+     "v": 2030,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1750
+    },
+    "elongation": {
+     "v": 8.6,
+     "std": "ISO 527, GB/T 1040",
+     "z": 6.5
+    },
+    "flexural_strength": {
+     "v": 76,
+     "std": "ISO 178, GB/T 9341",
+     "z": 55
+    },
+    "flexural_modulus": {
+     "v": 2640,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2230
+    },
+    "impact": {
+     "v": 27.3,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 19.8
+    },
+    "impact_notched": {
+     "v": 8.8,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 23.3,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.46 % (25 °C, 55 % RH)."
+  },
+  "PLA Lite": {
+   "source": "https://store.bblcdn.com/s7/default/27097dd1552447c9819dd18da9489cc3/PLA_PURE_TDS_26-11-4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.4,
+     "std": "Vergleichstabelle im TDS PLA Pure"
+    },
+    "flexural_strength": {
+     "v": 53.4,
+     "std": "ISO 178 (Vergleichstabelle TDS PLA Pure, H2D)",
+     "z": 25.1
+    },
+    "flexural_modulus": {
+     "v": 2622.1,
+     "std": "ISO 178 (Vergleichstabelle TDS PLA Pure, H2D)",
+     "z": 2069.8
+    },
+    "impact": {
+     "v": 18.95,
+     "std": "ISO 179 ungekerbt (Vergleichstabelle TDS PLA Pure, H2D)",
+     "z": 5.45
+    }
+   },
+   "note": "Kein eigenes TDS für PLA Lite gefunden. Werte aus der Tabelle „Mechanical Properties Comparison“ im offiziellen TDS PLA Pure (Bambu Lab, H2D-gedruckt); keine Druck-/Thermowerte."
+  },
+  "PLA Marble": {
+   "source": "https://store.bblcdn.com/b81e083c7d1f4e2182ef749d48f9ec86.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 56,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 156,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 56,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 53,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 57,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 33,
+     "std": "ISO 527, GB/T 1040",
+     "z": 30
+    },
+    "tensile_modulus": {
+     "v": 2330,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1970
+    },
+    "elongation": {
+     "v": 6.7,
+     "std": "ISO 527, GB/T 1040",
+     "z": 5.3
+    },
+    "flexural_strength": {
+     "v": 75,
+     "std": "ISO 178, GB/T 9341",
+     "z": 55
+    },
+    "flexural_modulus": {
+     "v": 2920,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2560
+    },
+    "impact": {
+     "v": 24,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 6.5
+    },
+    "impact_notched": {
+     "v": 9.5,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 32.2,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.44 % (25 °C, 55 % RH)."
+  },
+  "PLA Matte": {
+   "source": "https://store.bblcdn.com/s7/default/5b061f2feeac4ba88f355a33248bbda7/Bambu_PLA_Matte_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.31,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 61,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 163,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 58,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 52,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 63,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 30,
+     "std": "ISO 527, GB/T 1040",
+     "z": 22
+    },
+    "tensile_modulus": {
+     "v": 1960,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1670
+    },
+    "elongation": {
+     "v": 14.8,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4.8
+    },
+    "flexural_strength": {
+     "v": 53,
+     "std": "ISO 178, GB/T 9341",
+     "z": 29
+    },
+    "flexural_modulus": {
+     "v": 2360,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1770
+    },
+    "impact": {
+     "v": 19.2,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 6.6
+    },
+    "impact_notched": {
+     "v": 6.3,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 18,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.40 % (25 °C, 55 % RH)."
+  },
+  "PLA Metal": {
+   "source": "https://store.bblcdn.com/c6c28a13ba294c6f9fe62755ec9188fa.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 60,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 160,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 62,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 58,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 62,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 34,
+     "std": "ISO 527, GB/T 1040",
+     "z": 31
+    },
+    "tensile_modulus": {
+     "v": 2010,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1710
+    },
+    "elongation": {
+     "v": 14.7,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4.5
+    },
+    "flexural_strength": {
+     "v": 66,
+     "std": "ISO 178, GB/T 9341",
+     "z": 51
+    },
+    "flexural_modulus": {
+     "v": 2290,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2150
+    },
+    "impact": {
+     "v": 58.9,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 16.8
+    },
+    "impact_notched": {
+     "v": 22.3,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 38.6,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.40 % (25 °C, 55 % RH)."
+  },
+  "PLA Palette": {
+   "source": "https://store.bblcdn.com/s7/default/151751b0ed7c4b4e963b2b30fbf6e698/TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "tg": {
+     "v": 60,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 160,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 58,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 56,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 60,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 47,
+     "std": "ISO 527, GB/T 1040",
+     "z": 24
+    },
+    "tensile_modulus": {
+     "v": 2920,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2570
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527, GB/T 1040",
+     "z": 6.8
+    },
+    "flexural_strength": {
+     "v": 73,
+     "std": "ISO 178, GB/T 9341",
+     "z": 51
+    },
+    "flexural_modulus": {
+     "v": 3043,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2636
+    },
+    "impact": {
+     "v": 18.3,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 10.2
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 65,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "TDS gilt für PLA Palette CMYKW; keine Dichte und kein MFI im Blatt."
+  },
+  "PLA Pure": {
+   "source": "https://store.bblcdn.com/s7/default/27097dd1552447c9819dd18da9489cc3/PLA_PURE_TDS_26-11-4.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 55,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 160,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 60,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 56,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 63,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 51.5,
+     "std": "ISO 527, GB/T 1040",
+     "z": 30
+    },
+    "tensile_modulus": {
+     "v": 2481,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2196
+    },
+    "elongation": {
+     "v": 5.6,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2.8
+    },
+    "flexural_strength": {
+     "v": 75,
+     "std": "ISO 178, GB/T 9341",
+     "z": 55
+    },
+    "flexural_modulus": {
+     "v": 2880,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2599
+    },
+    "impact": {
+     "v": 20.6,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 10
+    },
+    "mfi": {
+     "v": 11.76,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 65,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Pigmente und Rohstoffe laut TDS nach EU-Lebensmittelkontakt zertifiziert (eigene Zertifikate auf der Produktseite). Sättigungs-Wasseraufnahme 0.28 % (25 °C, 55 % RH)."
+  },
+  "PLA Silk": {
+   "source": "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Silk_Dual_Color_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.32,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 57,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 152,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 53,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 50,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 56,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 27,
+     "std": "ISO 527, GB/T 1040",
+     "z": 18
+    },
+    "tensile_modulus": {
+     "v": 1830,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1250
+    },
+    "elongation": {
+     "v": 3.5,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1.7
+    },
+    "flexural_strength": {
+     "v": 66,
+     "std": "ISO 178, GB/T 9341",
+     "z": 21
+    },
+    "flexural_modulus": {
+     "v": 2370,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1840
+    },
+    "impact": {
+     "v": 24.5,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 4.6
+    },
+    "impact_notched": {
+     "v": 8.2,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 20.5,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Aktuelles TDS „PLA Silk“ V3.0 von der Produktseite PLA Silk Dual/Multi-Color. Älteres TDS PLA Silk V1.0 (cdn.shopify.com/…/0645/5876/0155/files/Bambu_PLA_Silk_Technical_Data_Sheet.pdf) nennt abweichend Dichte 1,19, Zug 35/18 MPa, Zug-E 2470/1390 MPa, MFI 30,5. Sättigungs-Wasseraufnahme 0.52 % (25 °C, 55 % RH)."
+  },
+  "PLA Silk+": {
+   "source": "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Silk__Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 57,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 158,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 60,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 56,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 66,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 33,
+     "std": "ISO 527, GB/T 1040",
+     "z": 25
+    },
+    "tensile_modulus": {
+     "v": 2130,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1850
+    },
+    "elongation": {
+     "v": 2.8,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1.5
+    },
+    "flexural_strength": {
+     "v": 75,
+     "std": "ISO 178, GB/T 9341",
+     "z": 30
+    },
+    "flexural_modulus": {
+     "v": 2460,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2150
+    },
+    "impact": {
+     "v": 18.5,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 8.5
+    },
+    "impact_notched": {
+     "v": 10.3,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 14.5,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.40 % (25 °C, 55 % RH)."
+  },
+  "PLA Sparkle": {
+   "source": "https://store.bblcdn.com/169532c9ce4d4610a9e85d92c0222bb9.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 56,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 156,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 53,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 57,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 39,
+     "std": "ISO 527, GB/T 1040",
+     "z": 32
+    },
+    "tensile_modulus": {
+     "v": 1940,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1660
+    },
+    "elongation": {
+     "v": 11.7,
+     "std": "ISO 527, GB/T 1040",
+     "z": 6.8
+    },
+    "flexural_strength": {
+     "v": 75,
+     "std": "ISO 178, GB/T 9341",
+     "z": 51
+    },
+    "flexural_modulus": {
+     "v": 2350,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2150
+    },
+    "impact": {
+     "v": 66.5,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 10.3
+    },
+    "impact_notched": {
+     "v": 23.2,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 34.2,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": null
+  },
+  "PLA Tough": {
+   "source": "https://cdn.shopify.com/s/files/1/0645/5876/0155/files/Bambu_PLA_Tough_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 57,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 158,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 53,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 58,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 36,
+     "std": "ISO 527, GB/T 1040",
+     "z": 31
+    },
+    "tensile_modulus": {
+     "v": 2590,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2210
+    },
+    "elongation": {
+     "v": 8.2,
+     "std": "ISO 527, GB/T 1040",
+     "z": 5.6
+    },
+    "flexural_strength": {
+     "v": 87,
+     "std": "ISO 178, GB/T 9341",
+     "z": 70
+    },
+    "flexural_modulus": {
+     "v": 2930,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2720
+    },
+    "impact": {
+     "v": 31.2,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 12.3
+    },
+    "impact_notched": {
+     "v": 11.5,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 44.2,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Älteres TDS V3.0 (Nachfolger PLA Tough+), weiterhin auf Bambus Shop-CDN abrufbar. Sättigungs-Wasseraufnahme 0.45 % (25 °C, 55 % RH)."
+  },
+  "PLA Tough+": {
+   "source": "https://store.bblcdn.com/s7/default/80a85371db2e40bda97069d283fed76c/BambuPLA_Tough_TechnicalData_Sheet_(2).pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 61,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 151,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 61,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 58,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 62,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 34.9,
+     "std": "ISO 527, GB/T 1040",
+     "z": 20.9
+    },
+    "tensile_modulus": {
+     "v": 1860,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1920
+    },
+    "elongation": {
+     "v": 9.4,
+     "std": "ISO 527, GB/T 1040",
+     "z": 9.3
+    },
+    "flexural_strength": {
+     "v": 65,
+     "std": "ISO 178, GB/T 9341",
+     "z": 54
+    },
+    "flexural_modulus": {
+     "v": 2140,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2066
+    },
+    "impact": {
+     "v": 80.6,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 25.9
+    },
+    "impact_notched": {
+     "v": 72.3,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 18,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 250,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 65,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Charpy Z für Farbe Silber laut TDS 18,6 kJ/m² (sonst 25,9). Sättigungs-Wasseraufnahme 0.27 % (25 °C, 55 % RH)."
+  },
+  "PLA Translucent": {
+   "source": "https://store.bblcdn.com/s7/default/729a8bf233e9474db25c8d5be1e64a00/Bambu_PLA_Translucent_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 54,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 156,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 60,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 55,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 61,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 55.4,
+     "std": "ISO 527, GB/T 1040",
+     "z": 28.9
+    },
+    "tensile_modulus": {
+     "v": 2880,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2550
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527, GB/T 1040",
+     "z": 9.6
+    },
+    "flexural_strength": {
+     "v": 85,
+     "std": "ISO 178, GB/T 9341",
+     "z": 42
+    },
+    "flexural_modulus": {
+     "v": 3000,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2650
+    },
+    "impact": {
+     "v": 18.5,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 8.5
+    },
+    "impact_notched": {
+     "v": 6.7,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 4.08,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 65,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 50,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.34 % (25 °C, 55 % RH)."
+  },
+  "PLA Wood": {
+   "source": "https://store.bblcdn.com/s4/default/6fda0ae88e5a4e66bb5d58f2968eee42/Bambus_PLA_Wood_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 54,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 156,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 60,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 57,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 64,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 26,
+     "std": "ISO 527, GB/T 1040",
+     "z": 15
+    },
+    "tensile_modulus": {
+     "v": 2360,
+     "std": "ISO 527, GB/T 1040",
+     "z": 1770
+    },
+    "elongation": {
+     "v": 15.3,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4.5
+    },
+    "flexural_strength": {
+     "v": 55,
+     "std": "ISO 178, GB/T 9341",
+     "z": 28
+    },
+    "flexural_modulus": {
+     "v": 2780,
+     "std": "ISO 178, GB/T 9341",
+     "z": 1975
+    },
+    "impact": {
+     "v": 15.7,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 5.6
+    },
+    "impact_notched": {
+     "v": 6.3,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 29.4,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 1.25 % (25 °C, 55 % RH)."
+  },
+  "Support For PLA": {
+   "source": "https://store.bblcdn.com/s2/default/200ef29f5cd04b20ba6c2c86f0cc3ec0/Bambus_Support_for_PLA_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.33,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 190,
+     "std": "DSC, 10 °C/min"
+    },
+    "mfi": {
+     "v": 13.6,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 230,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Stützmaterial; mechanische und thermische Werte im TDS N/A. Sättigungs-Wasseraufnahme 0.43 % (25 °C, 55 % RH)."
+  },
+  "Support For PLA/PETG": {
+   "source": "https://store.bblcdn.com/d09d55778d42495db121e28a3b04a4c5.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.28,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 185,
+     "std": "DSC, 10 °C/min"
+    },
+    "mfi": {
+     "v": 14.3,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 190,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 75,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Stützmaterial; mechanische und thermische Werte im TDS N/A. Sättigungs-Wasseraufnahme 1.02 % (25 °C, 55 % RH)."
+  },
+  "PLA-CF": {
+   "source": "https://store.bblcdn.com/842f399d4e274507953a5231126ec8c1.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 63,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 165,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 54,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 69,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 38,
+     "std": "ISO 527, GB/T 1040",
+     "z": 26
+    },
+    "tensile_modulus": {
+     "v": 2790,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2160
+    },
+    "elongation": {
+     "v": 8.4,
+     "std": "ISO 527, GB/T 1040",
+     "z": 3.6
+    },
+    "flexural_strength": {
+     "v": 89,
+     "std": "ISO 178, GB/T 9341",
+     "z": 49
+    },
+    "flexural_modulus": {
+     "v": 3950,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2260
+    },
+    "impact": {
+     "v": 23.2,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 7.8
+    },
+    "impact_notched": {
+     "v": 7.6,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 3.7,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 210,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 55,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Dritte Schlagzähigkeitszeile im TDS als „(X-Y)“ beschriftet, ist der Z-Wert (7,8 kJ/m²). Sättigungs-Wasseraufnahme 0.42 % (25 °C, 55 % RH)."
+  },
+  "PPA-CF": {
+   "source": "https://store.bblcdn.com/05b0e4ca5ee14a4cb378cfa48df24f91.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 85,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 258,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 227,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 196,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 232,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 168,
+     "std": "ISO 527, GB/T 1040",
+     "z": 57
+    },
+    "tensile_modulus": {
+     "v": 11800,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4300
+    },
+    "elongation": {
+     "v": 3.2,
+     "std": "ISO 527, GB/T 1040",
+     "z": 0.9
+    },
+    "flexural_strength": {
+     "v": 208,
+     "std": "ISO 178, GB/T 9341",
+     "z": 63
+    },
+    "flexural_modulus": {
+     "v": 9860,
+     "std": "ISO 178, GB/T 9341",
+     "z": 3240
+    },
+    "impact": {
+     "v": 41.7,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 4.3
+    },
+    "impact_notched": {
+     "v": 6.5,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 8.4,
+     "std": "280 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 280,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 310,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 120,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 120,
+     "std": "Umluftofen, 100–140 °C"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "Umluftofen, 8–12 h"
+    }
+   },
+   "note": "Trocknung 100–140 °C (höher = besser). Sättigungs-Wasseraufnahme 1.30 % (25 °C, 55 % RH)."
+  },
+  "PPS-CF": {
+   "source": "https://store.bblcdn.com/26f4f40359484040a8660c9150a90fc0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26,
+     "std": "ISO 1183"
+    },
+    "tg": {
+     "v": 100,
+     "std": "DSC, 10 °C/min"
+    },
+    "melt": {
+     "v": 284,
+     "std": "DSC, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 264,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 235,
+     "std": "ISO 75 1.8 MPa"
+    },
+    "vicat": {
+     "v": 268,
+     "std": "ISO 306, GB/T 1633"
+    },
+    "tensile_strength": {
+     "v": 87,
+     "std": "ISO 527, GB/T 1040",
+     "z": 24
+    },
+    "tensile_modulus": {
+     "v": 8230,
+     "std": "ISO 527, GB/T 1040",
+     "z": 2850
+    },
+    "elongation": {
+     "v": 1.2,
+     "std": "ISO 527, GB/T 1040",
+     "z": 0.7
+    },
+    "flexural_strength": {
+     "v": 142,
+     "std": "ISO 178, GB/T 9341",
+     "z": 36
+    },
+    "flexural_modulus": {
+     "v": 7160,
+     "std": "ISO 178, GB/T 9341",
+     "z": 2460
+    },
+    "impact": {
+     "v": 27.8,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 2.8
+    },
+    "impact_notched": {
+     "v": 6.2,
+     "std": "ISO 179, GB/T 1043 (Charpy gekerbt, X-Y)"
+    },
+    "mfi": {
+     "v": 11.48,
+     "std": "320 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 310,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 340,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 120,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 120,
+     "std": "Umluftofen, 100–140 °C"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "Umluftofen, 8–12 h"
+    }
+   },
+   "note": "Trocknung 100–140 °C. Sättigungs-Wasseraufnahme 0.05 % (25 °C, 55 % RH)."
+  },
+  "PVA": {
+   "source": "https://store.bblcdn.com/s7/default/868930e5a44944258586caa250cc8143/Bambu_PVA_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 202,
+     "std": "DSC, 10 °C/min"
+    },
+    "mfi": {
+     "v": 7.2,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 250,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 45,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 80,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 10,
+     "std": "Umluftofen, 8–12 h"
+    }
+   },
+   "note": "Wasserlösliches Stützmaterial; mechanische und thermische Werte im TDS N/A. Sättigungs-Wasseraufnahme 6.25 % (25 °C, 55 % RH)."
+  },
+  "TPU 75A(2.85mm)": {
+   "source": "https://store.bblcdn.eu/s8/default/6c98f7913de24007b54cb75052cd39b5/Bambu_TPU_75A-TDS.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.17,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 190,
+     "std": "DSC, 10 °C/min"
+    },
+    "tensile_strength": {
+     "v": 11.5,
+     "std": "ISO 527, GB/T 1040"
+    },
+    "elongation": {
+     "v": 800,
+     "std": "ISO 527, GB/T 1040, > 800 %"
+    },
+    "hardness": {
+     "v": 76,
+     "std": "Shore A, ASTM D2240"
+    },
+    "mfi": {
+     "v": 25,
+     "std": "190 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 250,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "2,85 mm; Abrieb 116 mm³ (ASTM D5963), Rückprallelastizität 50 %, Weiterreißfestigkeit Z 14 N/mm. Sättigungs-Wasseraufnahme 0.70 % (25 °C, 55 % RH)."
+  },
+  "TPU 85A": {
+   "source": "https://cdn.shopify.com/s/files/1/0645/5876/0155/files/Bambu_TPU_85A_Technical_Data_Sheet_a7233668-497b-487f-af8a-3adb49fafaa1.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.18,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 177,
+     "std": "DSC, 10 °C/min"
+    },
+    "tensile_strength": {
+     "v": 12,
+     "std": "ISO 527, GB/T 1040",
+     "z": 10.5
+    },
+    "tensile_modulus": {
+     "v": 6.8,
+     "std": "ISO 527, GB/T 1040",
+     "z": 5.2
+    },
+    "elongation": {
+     "v": 700,
+     "std": "ISO 527, GB/T 1040 >",
+     "z": 350
+    },
+    "impact": {
+     "v": 124.3,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 88.5
+    },
+    "hardness": {
+     "v": 85,
+     "std": "Shore A (Sortenbezeichnung)"
+    },
+    "mfi": {
+     "v": 8.76,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 250,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.67 % (25 °C, 55 % RH)."
+  },
+  "TPU 90A": {
+   "source": "https://cdn.shopify.com/s/files/1/0645/5876/0155/files/Bambu_TPU_90A_Technical_Data_Sheet_582bf8f6-1f0a-474c-aeda-9e72af3689dc.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 180,
+     "std": "DSC, 10 °C/min"
+    },
+    "tensile_strength": {
+     "v": 12.5,
+     "std": "ISO 527, GB/T 1040",
+     "z": 10.1
+    },
+    "tensile_modulus": {
+     "v": 5.3,
+     "std": "ISO 527, GB/T 1040",
+     "z": 4.4
+    },
+    "elongation": {
+     "v": 650,
+     "std": "ISO 527, GB/T 1040 >",
+     "z": 350
+    },
+    "impact": {
+     "v": 124.2,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 87.3
+    },
+    "hardness": {
+     "v": 90,
+     "std": "Shore A (Sortenbezeichnung)"
+    },
+    "mfi": {
+     "v": 9.36,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 250,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 0.61 % (25 °C, 55 % RH)."
+  },
+  "TPU 95A": {
+   "source": "https://cdn.shopify.com/s/files/1/0645/5876/0155/files/Bambu_TPU_95A_Technical_Data_Sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.2,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 185,
+     "std": "DSC, 10 °C/min"
+    },
+    "tensile_strength": {
+     "v": 29.6,
+     "std": "ISO 527, GB/T 1040",
+     "z": 23.2
+    },
+    "tensile_modulus": {
+     "v": 9.2,
+     "std": "ISO 527, GB/T 1040",
+     "z": 7.8
+    },
+    "elongation": {
+     "v": 700,
+     "std": "ISO 527, GB/T 1040 >",
+     "z": 500
+    },
+    "impact": {
+     "v": 125.2,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 88.7
+    },
+    "hardness": {
+     "v": 95,
+     "std": "Shore A (laut Beschreibung im TDS)"
+    },
+    "mfi": {
+     "v": 5.2,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "TDS V3.0 vom Shop-CDN; Shore 95A laut Beschreibung. Sättigungs-Wasseraufnahme 1.16 % (25 °C, 55 % RH)."
+  },
+  "TPU 95A HF": {
+   "source": "https://store.bblcdn.com/58df32731eab4c90a7dac9b12e13ba88.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 183,
+     "std": "DSC, 10 °C/min"
+    },
+    "tensile_strength": {
+     "v": 27.3,
+     "std": "ISO 527, GB/T 1040",
+     "z": 22.3
+    },
+    "tensile_modulus": {
+     "v": 9.8,
+     "std": "ISO 527, GB/T 1040",
+     "z": 7.4
+    },
+    "elongation": {
+     "v": 650,
+     "std": "ISO 527, GB/T 1040 >",
+     "z": 480
+    },
+    "impact": {
+     "v": 123.2,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 86.3
+    },
+    "hardness": {
+     "v": 95,
+     "std": "Shore A (Sortenbezeichnung)"
+    },
+    "mfi": {
+     "v": 36.5,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Sättigungs-Wasseraufnahme 1.08 % (25 °C, 55 % RH)."
+  },
+  "TPU for AMS": {
+   "source": "https://store.bblcdn.com/s5/default/0a98353dce6d486ca848b21d2b19a207.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26,
+     "std": "ISO 1183"
+    },
+    "melt": {
+     "v": 183,
+     "std": "DSC, 10 °C/min"
+    },
+    "tensile_strength": {
+     "v": 22.4,
+     "std": "ISO 527, GB/T 1040",
+     "z": 11.2
+    },
+    "tensile_modulus": {
+     "v": 1190,
+     "std": "ISO 527, GB/T 1040",
+     "z": 600
+    },
+    "elongation": {
+     "v": 650,
+     "std": "ISO 527, GB/T 1040 >",
+     "z": 31
+    },
+    "impact": {
+     "v": 124.3,
+     "std": "ISO 179, GB/T 1043 (ungekerbt)",
+     "z": 9.6
+    },
+    "hardness": {
+     "v": 68,
+     "std": "Shore D (laut Beschreibung im TDS)"
+    },
+    "mfi": {
+     "v": 21.8,
+     "std": "210 °C, 2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "TDS, empfohlen"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "TDS, empfohlen"
+    },
+    "bed_min": {
+     "v": 30,
+     "std": "TDS, empfohlen"
+    },
+    "bed_max": {
+     "v": 35,
+     "std": "TDS, empfohlen"
+    },
+    "dry_temp": {
+     "v": 70,
+     "std": "Umluftofen"
+    },
+    "dry_hours": {
+     "v": 8,
+     "std": "Umluftofen"
+    }
+   },
+   "note": "Shore 68D laut Beschreibung im TDS. Sättigungs-Wasseraufnahme 1.20 % (25 °C, 55 % RH)."
+  }
+ }
+}

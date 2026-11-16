@@ -85,13 +85,12 @@ export function SorteField({
   );
 }
 
-/** Farben der gewählten Sorte; unbekannter Farbcode (?) übernimmt nur den Namen, die Farbe setzt der Nutzer selbst */
-export function CatalogColors({ brand, line, colorName, onPick }: { brand: string; line: string; colorName: string; onPick: (name: string, hex: string | null) => void }) {
+/** Farben der gewählten Sorte, ein Klick übernimmt Name und Farbe */
+export function CatalogColors({ brand, line, colorName, onPick }: { brand: string; line: string; colorName: string; onPick: (name: string, hex: string) => void }) {
   useCatalog();
   const l = catalogLine(brand, line);
   if (!l) return null;
   const b = catalogBrand(brand)!;
-  const picked = l.colors.find((c) => c.name === colorName);
   return (
     <div>
       <div className="text-[11px] font-bold tracking-[0.08em] text-ink3 uppercase">
@@ -105,18 +104,11 @@ export function CatalogColors({ brand, line, colorName, onPick }: { brand: strin
             onClick={() => onPick(c.name, c.hex)}
             className={`flex h-7 items-center gap-1.5 rounded-full bg-card pr-2.5 pl-1 text-xs font-semibold shadow-seg ${colorName === c.name ? "ring-2 ring-accent" : ""}`}
           >
-            {c.hex ? (
-              <span className="size-5 shrink-0 rounded-full" style={{ background: `#${c.hex}`, boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.18)" }} />
-            ) : (
-              <span className="flex size-5 shrink-0 items-center justify-center rounded-full border border-dashed border-ink3 text-[10px] font-black text-ink3">?</span>
-            )}
+            <span className="size-5 shrink-0 rounded-full" style={{ background: `#${c.hex}`, boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.18)" }} />
             {c.name}
           </button>
         ))}
       </div>
-      {picked && !picked.hex && (
-        <p className="mt-1.5 text-[11px] leading-snug text-ink3">Für „{picked.name}“ ist kein Farbcode hinterlegt, bitte die Farbe selbst wählen.</p>
-      )}
     </div>
   );
 }

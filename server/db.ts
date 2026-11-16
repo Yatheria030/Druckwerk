@@ -6,7 +6,8 @@ export const DATA_DIR = path.resolve(process.env.DATA_DIR ?? "data");
 export const FILE_DIR = path.join(DATA_DIR, "files");
 export const THUMB_DIR = path.join(DATA_DIR, "thumbs");
 export const PHOTO_DIR = path.join(DATA_DIR, "photos");
-for (const d of [FILE_DIR, THUMB_DIR, PHOTO_DIR]) mkdirSync(d, { recursive: true });
+export const TIMELAPSE_DIR = path.join(DATA_DIR, "timelapse");
+for (const d of [FILE_DIR, THUMB_DIR, PHOTO_DIR, TIMELAPSE_DIR]) mkdirSync(d, { recursive: true });
 
 export const db = new DatabaseSync(path.join(DATA_DIR, "stl.db"));
 db.exec("PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON; PRAGMA busy_timeout = 5000;");
@@ -190,6 +191,79 @@ const migrations: string[] = [
   -- Bestehende Installationen mit Daten brauchen den Assistenten nicht
   INSERT INTO settings (key, value) SELECT 'setup', '{"done":true}'
     WHERE EXISTS (SELECT 1 FROM printers) OR EXISTS (SELECT 1 FROM models) OR EXISTS (SELECT 1 FROM spools);
+  `,
+  `
+  -- Messende Steckdose je Drucker ("shelly:192.168.1.60", "tasmota:…", leer = keine); Zählerstand am Start und Verbrauch je Druck
+  ALTER TABLE printers ADD COLUMN plug TEXT NOT NULL DEFAULT '';
+  ALTER TABLE prints ADD COLUMN energy_start REAL;
+  ALTER TABLE prints ADD COLUMN energy_wh REAL;
+  `,
+  `
+  -- Mindestbestand je Sorte (line, leer = Material) oder Farbe (color/color_name, leer = alle Farben)
+  CREATE TABLE stock_rules (
+    id INTEGER PRIMARY KEY,
+    brand TEXT NOT NULL,
+    line TEXT NOT NULL DEFAULT '',
+    material TEXT NOT NULL DEFAULT 'PLA',
+    color TEXT NOT NULL DEFAULT '',
+    color_name TEXT NOT NULL DEFAULT '',
+    min_g REAL NOT NULL,
+    url TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL
+  );
+  `,
+  `
+  -- Zeitraffer vom Drucker (Endung der Datei in timelapse/<id>.<ext>) und Name auf der SD-Karte (nicht doppelt zuordnen)
+  ALTER TABLE prints ADD COLUMN timelapse TEXT;
+  ALTER TABLE prints ADD COLUMN timelapse_src TEXT;
+  `,
+  `
+  -- Wartung je Drucker: Intervall in Druckstunden und/oder Tagen, Stand beim letzten Erledigen. hours_base = Stunden vor Druckwerk
+  ALTER TABLE printers ADD COLUMN hours_base REAL NOT NULL DEFAULT 0;
+  CREATE TABLE maintenance (
+    id INTEGER PRIMARY KEY,
+    printer_id INTEGER NOT NULL REFERENCES printers(id) ON DELETE CASCADE,
+    name TEXT NOT NULL,
+    interval_h REAL,
+    interval_d REAL,
+    done_hours REAL NOT NULL DEFAULT 0,
+    done_at TEXT NOT NULL,
+    note TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL
+  );
+  CREATE INDEX maintenance_printer ON maintenance(printer_id);
+  `,
+  `
+  -- Sammlungen (Projekte): ein Modell kann in mehreren stehen
+  CREATE TABLE collections (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL
+  );
+  CREATE TABLE collection_models (
+    collection_id INTEGER NOT NULL REFERENCES collections(id) ON DELETE CASCADE,
+    model_id INTEGER NOT NULL REFERENCES models(id) ON DELETE CASCADE,
+    added_at TEXT NOT NULL,
+    PRIMARY KEY (collection_id, model_id)
+  );
+  CREATE INDEX collection_models_model ON collection_models(model_id);
+  `,
+  `
+  -- Druckwarteschlange: Datei und Platte, Drucker optional (NULL = erster freier); AMS-Zuordnung erst beim Start im Druckdialog
+  CREATE TABLE print_queue (
+    id INTEGER PRIMARY KEY,
+    file_id INTEGER NOT NULL REFERENCES files(id) ON DELETE CASCADE,
+    plate INTEGER NOT NULL DEFAULT 1,
+    printer_id INTEGER REFERENCES printers(id) ON DELETE SET NULL,
+    position REAL NOT NULL,
+    note TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL
+  );
+  `,
+  `
+  -- Uhr des Druckers: Abstand seiner Ortszeit zu UTC in Minuten (gelernt, NULL = unbekannt); P2S im LAN-Modus steht oft auf UTC+8
+  ALTER TABLE printers ADD COLUMN clock_offset INTEGER;
   `,
 ];
 

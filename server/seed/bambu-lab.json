@@ -2,7 +2,7 @@
  "brand": "Bambu Lab",
  "match": "bambu",
  "url": "https://bambulab.com/de/filament",
- "source": "Bambu Studio, resources/profiles/BBL/filament/filaments_color_codes.json (deutsche Namen)",
+ "source": "Bambu Studio, resources/profiles/BBL/filament/filaments_color_codes.json (deutsche Namen); Farben ohne belegten Hex fehlen",
  "lines": [
   {
    "material": "ABS",

@@ -1,0 +1,714 @@
+{
+ "brand": "Anycubic",
+ "source": "Technische Datenblätter des Herstellers, Werte wie angegeben (Einheiten vereinheitlicht)",
+ "lines": {
+  "PLA": {
+   "source": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/ANYCUBIC_TDS_PLA_V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 5.7,
+     "std": "ISO 1133, 5,7 ± 0,67 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 48,
+     "std": "ISO 527",
+     "z": 28
+    },
+    "tensile_modulus": {
+     "v": 2534,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 8,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 90,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 3360,
+     "std": "ISO 178"
+    },
+    "tg": {
+     "v": 61.2,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "melt": {
+     "v": 166,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "vicat": {
+     "v": 55,
+     "std": "ISO 306, 10 N"
+    },
+    "hdt_045": {
+     "v": 54,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 55
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 47.5,
+     "std": "45–50 °C"
+    },
+    "dry_hours": {
+     "v": 7.0,
+     "std": "6–8 h"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Schlagzähigkeit X-Y 22 ± 1 kJ/m², im Blatt widersprüchlich als „Izod“ mit Norm ISO 179 (Charpy) und ohne Angabe zur Kerbe – nicht als impact übernommen. Gleiches Blatt wie PLA Basic (Produktseite „PLA Basic“ verlinkt das TDS „Anycubic PLA“)."
+  },
+  "PLA Glow": {
+   "source": "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/ANYCUBIC_TDS_PLA_Glow_V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.26,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 6,
+     "std": "ISO 1133, 6 ± 0,38 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 49,
+     "std": "ISO 527",
+     "z": 27.2
+    },
+    "tensile_modulus": {
+     "v": 2620,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 8.9,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 79,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2155,
+     "std": "ISO 178"
+    },
+    "tg": {
+     "v": 56,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "melt": {
+     "v": 162,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "vicat": {
+     "v": 55.1,
+     "std": "ISO 306, 10 N"
+    },
+    "hdt_045": {
+     "v": 53,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 200
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 55
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 62.5,
+     "std": "60–65 °C"
+    },
+    "dry_hours": {
+     "v": 7.0,
+     "std": "6–8 h"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Schlagzähigkeit X-Y 18,77 ± 1,23 kJ/m², im Blatt widersprüchlich als „Izod“ mit Norm ISO 179 (Charpy) und ohne Angabe zur Kerbe – nicht als impact übernommen."
+  },
+  "PLA Matte": {
+   "source": "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/ANYCUBIC_TDS_PLA_Matte_V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.31,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 18.2,
+     "std": "ISO 1133, 18,2 ± 1,45 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 23,
+     "std": "ISO 527",
+     "z": 12
+    },
+    "tensile_modulus": {
+     "v": 2000,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 28,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 40,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2200,
+     "std": "ISO 178"
+    },
+    "tg": {
+     "v": 64,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "melt": {
+     "v": 162.6,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "vicat": {
+     "v": 62.7,
+     "std": "ISO 306, 10 N"
+    },
+    "hdt_045": {
+     "v": 57.4,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 55
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 60.0,
+     "std": "55–65 °C"
+    },
+    "dry_hours": {
+     "v": 7.0,
+     "std": "6–8 h"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Schlagzähigkeit X-Y 24 ± 0,18 kJ/m², im Blatt widersprüchlich als „Izod“ mit Norm ISO 179 (Charpy) und ohne Angabe zur Kerbe – nicht als impact übernommen."
+  },
+  "PLA Basic": {
+   "source": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/ANYCUBIC_TDS_PLA_V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 5.7,
+     "std": "ISO 1133, 5,7 ± 0,67 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 48,
+     "std": "ISO 527",
+     "z": 28
+    },
+    "tensile_modulus": {
+     "v": 2534,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 8,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 90,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 3360,
+     "std": "ISO 178"
+    },
+    "tg": {
+     "v": 61.2,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "melt": {
+     "v": 166,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "vicat": {
+     "v": 55,
+     "std": "ISO 306, 10 N"
+    },
+    "hdt_045": {
+     "v": 54,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 55
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 47.5,
+     "std": "45–50 °C"
+    },
+    "dry_hours": {
+     "v": 7.0,
+     "std": "6–8 h"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Schlagzähigkeit X-Y 22 ± 1 kJ/m², im Blatt widersprüchlich als „Izod“ mit Norm ISO 179 (Charpy) und ohne Angabe zur Kerbe – nicht als impact übernommen. Blatt heißt „Anycubic PLA“; die Produktseite „PLA Basic“ (store.anycubic.com/products/pla-filament) verlinkt genau dieses TDS."
+  },
+  "PLA+": {
+   "source": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/ANYCUBIC_TDS_PLA__V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 6.2,
+     "std": "ISO 1133, 6,2 ± 0,32 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 45,
+     "std": "ISO 527",
+     "z": 23.8
+    },
+    "tensile_modulus": {
+     "v": 2790,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 12,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 82,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 3980,
+     "std": "ISO 178"
+    },
+    "tg": {
+     "v": 54.2,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "melt": {
+     "v": 162,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "vicat": {
+     "v": 52,
+     "std": "ISO 306, 10 N"
+    },
+    "hdt_045": {
+     "v": 50,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 55
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 47.5,
+     "std": "45–50 °C"
+    },
+    "dry_hours": {
+     "v": 7.0,
+     "std": "6–8 h"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Schlagzähigkeit X-Y 28 ± 1 kJ/m², im Blatt widersprüchlich als „Izod“ mit Norm ISO 179 (Charpy) und ohne Angabe zur Kerbe – nicht als impact übernommen."
+  },
+  "PLA High Speed": {
+   "source": "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/ANYCUBIC_TDS_PLA_HS_V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.19,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 13.2,
+     "std": "ISO 1133, 13,2 ± 0,21 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 45,
+     "std": "ISO 527",
+     "z": 22.1
+    },
+    "tensile_modulus": {
+     "v": 2750,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 9,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 82,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 3905,
+     "std": "ISO 178"
+    },
+    "tg": {
+     "v": 55.1,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "melt": {
+     "v": 157,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "vicat": {
+     "v": 54.1,
+     "std": "ISO 306, 10 N"
+    },
+    "hdt_045": {
+     "v": 52,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 190
+    },
+    "nozzle_max": {
+     "v": 260
+    },
+    "bed_min": {
+     "v": 55
+    },
+    "bed_max": {
+     "v": 65
+    },
+    "dry_temp": {
+     "v": 47.5,
+     "std": "45–50 °C"
+    },
+    "dry_hours": {
+     "v": 7.0,
+     "std": "6–8 h"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Schlagzähigkeit X-Y 21 ± 1 kJ/m², im Blatt widersprüchlich als „Izod“ mit Norm ISO 179 (Charpy) und ohne Angabe zur Kerbe – nicht als impact übernommen. Blatt „Anycubic PLA High Speed“, verlinkt auf den Anycubic-Shops CA/AU (store.anycubic.com verlinkt kein TDS). Düse je nach Tempo: 190–210 °C bis 150 mm/s, bis 260 °C bei 300–600 mm/s."
+  },
+  "PLA Metal": {
+   "source": "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/ANYCUBIC_TDS_PLA_Metal_V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.2,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 21.6,
+     "std": "ISO 1133, 21,6 ± 0,65 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 34,
+     "std": "ISO 527",
+     "z": 25
+    },
+    "tensile_modulus": {
+     "v": 1900,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 61,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2100,
+     "std": "ISO 178"
+    },
+    "tg": {
+     "v": 63.5,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "melt": {
+     "v": 160,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "vicat": {
+     "v": 62,
+     "std": "ISO 306, 10 N"
+    },
+    "hdt_045": {
+     "v": 58,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 200
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 50
+    },
+    "bed_max": {
+     "v": 60
+    },
+    "dry_temp": {
+     "v": 60.0,
+     "std": "55–65 °C"
+    },
+    "dry_hours": {
+     "v": 7.0,
+     "std": "6–8 h"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Schlagzähigkeit X-Y 52 ± 3 kJ/m², im Blatt widersprüchlich als „Izod“ mit Norm ISO 179 (Charpy) und ohne Angabe zur Kerbe – nicht als impact übernommen."
+  },
+  "PETG": {
+   "source": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/ANYCUBIC_TDS_PETG_V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 26.3,
+     "std": "ISO 1133, 26,3 ± 2,35 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 52,
+     "std": "ISO 527",
+     "z": 31
+    },
+    "tensile_modulus": {
+     "v": 1850,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 13,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 80,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2000,
+     "std": "ISO 178"
+    },
+    "tg": {
+     "v": 74.1,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "vicat": {
+     "v": 72,
+     "std": "ISO 306, 10 N"
+    },
+    "hdt_045": {
+     "v": 69,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 230
+    },
+    "nozzle_max": {
+     "v": 250
+    },
+    "bed_min": {
+     "v": 60
+    },
+    "bed_max": {
+     "v": 70
+    },
+    "dry_temp": {
+     "v": 60.0,
+     "std": "55–65 °C"
+    },
+    "dry_hours": {
+     "v": 7.0,
+     "std": "6–8 h"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Schlagzähigkeit X-Y 45 ± 2 kJ/m², im Blatt widersprüchlich als „Izod“ mit Norm ISO 179 (Charpy) und ohne Angabe zur Kerbe – nicht als impact übernommen."
+  },
+  "ABS": {
+   "source": "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/ANYCUBIC_TDS_ABS_V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.05,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 32.1,
+     "std": "ISO 1133, 32,1 ± 0,63 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 34,
+     "std": "ISO 527",
+     "z": 22
+    },
+    "tensile_modulus": {
+     "v": 2200,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 11,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 63,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 2200,
+     "std": "ISO 178"
+    },
+    "tg": {
+     "v": 105,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "vicat": {
+     "v": 95,
+     "std": "ISO 306, 10 N"
+    },
+    "hdt_045": {
+     "v": 85,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 240
+    },
+    "nozzle_max": {
+     "v": 280
+    },
+    "bed_min": {
+     "v": 80
+    },
+    "bed_max": {
+     "v": 100
+    },
+    "dry_temp": {
+     "v": 75.0,
+     "std": "70–80 °C"
+    },
+    "dry_hours": {
+     "v": 10.0,
+     "std": "8–12 h"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Schlagzähigkeit X-Y 40 kJ/m², im Blatt widersprüchlich als „Izod“ mit Norm ISO 179 (Charpy) und ohne Angabe zur Kerbe – nicht als impact übernommen."
+  },
+  "TPU": {
+   "source": "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/ANYCUBIC_TDS_TPU_V3.0.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.23,
+     "std": "ISO 1183, 23 °C"
+    },
+    "mfi": {
+     "v": 25,
+     "std": "ISO 1133, 25 (Temperatur/Last nicht angegeben)"
+    },
+    "tensile_strength": {
+     "v": 34.4,
+     "std": "ISO 527",
+     "z": 18.5
+    },
+    "tensile_modulus": {
+     "v": 50.2,
+     "std": "ISO 527"
+    },
+    "elongation": {
+     "v": 697,
+     "std": "ISO 527"
+    },
+    "flexural_strength": {
+     "v": 4.26,
+     "std": "ISO 178"
+    },
+    "flexural_modulus": {
+     "v": 87.6,
+     "std": "ISO 178"
+    },
+    "melt": {
+     "v": 145.1,
+     "std": "ISO 11357-1, 10 °C/min"
+    },
+    "hdt_045": {
+     "v": 52,
+     "std": "ISO 75-2, 0,45 MPa"
+    },
+    "nozzle_min": {
+     "v": 195
+    },
+    "nozzle_max": {
+     "v": 230
+    },
+    "bed_min": {
+     "v": 50
+    },
+    "bed_max": {
+     "v": 60
+    },
+    "dry_temp": {
+     "v": 75.0,
+     "std": "70–80 °C"
+    },
+    "dry_hours": {
+     "v": 10.0,
+     "std": "8–12 h"
+    },
+    "hardness": {
+     "v": 95,
+     "std": "Shore A (Beschreibung im TDS)"
+    }
+   },
+   "note": "TDS V3.0, gedruckte Proben. Härte 95A nur im Beschreibungstext des Blatts. Produkt im Shop „TPU 95A“."
+  }
+ }
+}

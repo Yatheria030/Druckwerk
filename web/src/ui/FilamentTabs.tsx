@@ -6,7 +6,7 @@ export const chipCls = (on: boolean) => `flex h-8 shrink-0 items-center gap-1 ro
 /** Unterseiten der Filament-Seite; auf dem Desktop stehen sie in der Seitenleiste, darunter als Tabs oben */
 export function FilamentTabs({ view, brand }: { view: FilamentView; brand?: string }) {
   const cat = useCatalog();
-  const tab = (active: boolean) => `flex h-8 shrink-0 items-center rounded-md px-3 text-[13px] font-semibold ${active ? "bg-[var(--c-seg-active)] text-ink shadow-seg" : "text-ink2"}`;
+  const tab = (active: boolean) => `flex h-8 shrink-0 items-center rounded-md px-1.5 text-[13px] sm:px-3 font-semibold ${active ? "bg-[var(--c-seg-active)] text-ink shadow-seg" : "text-ink2"}`;
   return (
     <div className="mx-auto max-w-6xl space-y-2 px-4 pb-3 sm:px-6 md:hidden">
       <nav className="flex rounded-lg bg-fill p-0.5 *:flex-1 *:justify-center">
@@ -14,7 +14,10 @@ export function FilamentTabs({ view, brand }: { view: FilamentView; brand?: stri
           [
             ["regal", "Regal"],
             ["spulen", "Spulen"],
+            ["einkauf", "Einkauf"],
             ["katalog", "Katalog"],
+            ["kennwerte", "Werte"],
+            ["preise", "Preise"],
           ] as const
         ).map(([v, l]) => (
           <a key={v} href={href({ page: "filament", view: v })} className={tab(view === v)}>

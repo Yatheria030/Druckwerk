@@ -1,18 +1,28 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { CameraOff, Lightbulb, Pause, Play, Square, Video } from "lucide-react";
-import { useState } from "react";
+import { CameraOff, Check, Cpu, Gauge, EyeOff, HardDrive, SlidersHorizontal, ListX, Move, Pause, Play, Square, Video } from "lucide-react";
+import { useState, type CSSProperties } from "react";
 import { cameraOf, PRINTER_MODELS, type Printer, type PrinterLive } from "../../../shared/types.ts";
 import { api } from "../api.ts";
+import { QueueCard } from "../ui/Queue.tsx";
 import { PageHeader, useLive } from "../App.tsx";
-import { errorKey, hmsKey, useHms } from "../lib/hms.ts";
+import { errorKey, hmsKey, noText, useHms } from "../lib/hms.ts";
 import { href } from "../lib/router.ts";
-import { Button, Card, Label, LoadError, useToast } from "../ui/controls.tsx";
-import { finishAt, fmtRemaining, fmtTemp, stateColor, StateDot, stateLabel } from "../ui/printer.tsx";
+import { Button, Card, LoadError, useToast } from "../ui/controls.tsx";
+import { DeviceDialog, FanDialog, MoveDialog, OptionsDialog, SkipDialog, StorageDialog, TempDialog, useControl } from "../ui/PrinterControls.tsx";
+import { finishAt, fmtRemaining, stateColor, StateDot, stateLabel } from "../ui/printer.tsx";
 import { AmsPanel } from "../ui/Ams.tsx";
+import { PrinterFigure } from "../ui/PrinterFigure.tsx";
 import { PrinterTabs } from "../ui/PrinterTabs.tsx";
-import { levelOf, NO_TEXT, TONE_TEXT, WikiCode } from "../ui/hms.tsx";
+import { MaintDue } from "./MaintenancePage.tsx";
+import { AtTime, ClockNote, levelOf, TONE_TEXT, WikiCode } from "../ui/hms.tsx";
 
 const SPEED = ["", "Leise", "Normal", "Sport", "Rasend"];
+/** Bedienknöpfe als gleich breite Kacheln, Symbol über der Beschriftung */
+const TILE = "h-auto! w-full flex-col gap-1! px-1.5! py-2.5 text-xs!";
+/** Spalten ohne einzelne Kachel in der letzten Reihe: bis 5 in einer Reihe, sonst auf zwei Reihen verteilt; ab xl alle in einer */
+const tileCols = (n: number) => ({ "--m": n <= 5 ? n : Math.ceil(n / 2), "--n": n }) as CSSProperties;
+/** P2S und H2 haben statt SD-Karte einen USB-Anschluss */
+const STORAGE = (model: string) => (/^(P2|H2)/.test(model) ? "USB-Stick" : "SD-Karte");
 
 export function PrinterPage() {
   const printers = useQuery({ queryKey: ["printers"], queryFn: api.printers });
@@ -36,7 +46,13 @@ export function PrinterPage() {
             </a>
           </Card>
         ) : (
-          printers.data.map((p) => <PrinterCard key={p.id} p={p} l={live.data?.find((x) => x.id === p.id)} />)
+          <>
+            {printers.data.map((p) => (
+              <PrinterCard key={p.id} p={p} l={live.data?.find((x) => x.id === p.id)} />
+            ))}
+            <QueueCard live={live.data ?? []} />
+            <MaintDue />
+          </>
         )}
       </div>
     </>
@@ -44,15 +60,10 @@ export function PrinterPage() {
 }
 
 function PrinterCard({ p, l }: { p: Printer; l?: PrinterLive }) {
-  const qc = useQueryClient();
-  const toast = useToast();
   const [cam, setCam] = useState(true);
   const [camErr, setCamErr] = useState(false);
-  const ctl = useMutation({
-    mutationFn: (a: { action: string; value?: number }) => api.control(p.id, a.action, a.value),
-    onSuccess: () => qc.invalidateQueries({ queryKey: ["live"] }),
-    onError: (e) => toast((e as Error).message, "fehler"),
-  });
+  const [dlg, setDlg] = useState<"nozzle" | "bed" | "fans" | "skip" | "storage" | "options" | "move" | "device" | null>(null);
+  const ctl = useControl(p.id);
   const hasCam = cameraOf(p.model) !== "none";
   const running = !!l && ["RUNNING", "PREPARE", "PAUSE"].includes(l.state);
   const current = useQuery({ queryKey: ["prints"], queryFn: api.prints, enabled: !!l?.current_print_id, refetchInterval: 15_000 });
@@ -68,6 +79,8 @@ function PrinterCard({ p, l }: { p: Printer; l?: PrinterLive }) {
             <div className="text-xs text-ink3">
               {PRINTER_MODELS.find((m) => m.id === p.model)?.label ?? p.model} · {p.host}
               {l?.wifi ? ` · WLAN ${l.wifi}` : ""}
+              {l?.power_w != null ? ` · ${Math.round(l.power_w)} W` : l?.plug_error ? " · Steckdose nicht erreichbar" : ""}
+              {l?.connected && l.sdcard === false ? ` · ${STORAGE(p.model)} fehlt` : ""}
             </div>
           </div>
         </div>
@@ -79,8 +92,9 @@ function PrinterCard({ p, l }: { p: Printer; l?: PrinterLive }) {
 
       {l?.error && !l.connected && <div className="bg-bad-soft px-4 py-2.5 text-sm text-bad">{l.error}</div>}
 
-      <div className="grid gap-0 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
-        <div className="relative aspect-video bg-black">
+      {/* Mobil: Kamera, Status, Zeichnung, Bedienung; ab md links Kamera/Status/Bedienung, rechts die Zeichnung als Bühne */}
+      <div className="grid md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] md:grid-rows-[auto_auto_1fr]">
+        <div className="relative aspect-video bg-black md:col-start-1 md:row-start-1">
           {hasCam && cam && l?.connected && l.liveview !== false && !camErr ? (
             <img src={`/api/printers/${p.id}/camera`} alt="Kamera" className="absolute inset-0 size-full object-contain" onError={() => setCamErr(true)} />
           ) : (
@@ -106,7 +120,7 @@ function PrinterCard({ p, l }: { p: Printer; l?: PrinterLive }) {
           )}
         </div>
 
-        <div className="space-y-4 p-4">
+        <div className="px-4 pt-4 md:col-start-1 md:row-start-2">
           {running && l ? (
             <div>
               <div className="flex items-baseline justify-between gap-2">
@@ -119,7 +133,7 @@ function PrinterCard({ p, l }: { p: Printer; l?: PrinterLive }) {
                     l.job
                   )}
                 </div>
-                <div className="text-2xl font-extrabold tnum">{l.percent ?? 0} %</div>
+                <div className="shrink-0 whitespace-nowrap text-2xl font-extrabold tnum">{Math.round(l.percent ?? 0)} %</div>
               </div>
               <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-fill2">
                 <div className="h-full rounded-full transition-[width] duration-700" style={{ width: `${l.percent ?? 0}%`, background: stateColor(l.state) }} />
@@ -135,62 +149,90 @@ function PrinterCard({ p, l }: { p: Printer; l?: PrinterLive }) {
               </div>
             </div>
           ) : (
-            <div className="min-w-0 text-sm text-ink2">
-              {!l?.connected ? "Nicht verbunden." : "Kein Druck aktiv."}
+            <div className="min-w-0">
+              <div className="font-bold">{!l?.connected ? "Nicht verbunden" : "Kein Druck aktiv"}</div>
               {l?.connected && l.job && (l.state === "FINISH" || l.state === "FAILED") && (
-                <div className="mt-0.5 truncate text-xs text-ink3">
+                <div className="mt-0.5 truncate text-sm text-ink3">
                   Zuletzt: <span className="font-semibold text-ink2">{l.job}</span>
                 </div>
               )}
             </div>
           )}
+        </div>
 
-          <div className="grid grid-cols-3 gap-2">
-            {(
-              [
-                ["Düse", fmtTemp(l?.nozzle ?? null, l?.nozzle_target)],
-                ["Bett", fmtTemp(l?.bed ?? null, l?.bed_target)],
-                ["Kammer", fmtTemp(l?.chamber ?? null)],
-              ] as const
-            ).map(([k, v]) => (
-              <div key={k} className="rounded-xl bg-fill px-2.5 py-2">
-                <Label>{k}</Label>
-                <div className="mt-0.5 text-sm font-bold whitespace-nowrap tnum">{v}</div>
-              </div>
-            ))}
-          </div>
+        <div className="flex items-center justify-center px-3 pt-4 pb-1 md:col-start-2 md:row-span-3 md:row-start-1 md:border-l md:border-sep md:bg-card2 md:px-5 md:py-6">
+          <PrinterFigure
+            l={l}
+            onTemp={setDlg}
+            onFans={() => setDlg("fans")}
+            onLight={() => ctl.mutate({ action: l?.light ? "light_off" : "light_on" })}
+          />
+        </div>
 
-          {(!!l?.hms.length || !!l?.print_error) && <Alerts l={l} />}
+        <div className="space-y-4 p-4 md:col-start-1 md:row-start-3">
+          {(!!l?.hms.length || !!l?.print_error) && <Alerts l={l} printerId={p.id} />}
 
-          <div className="flex flex-wrap gap-2">
+          <div
+            className="grid grid-cols-[repeat(var(--m),minmax(0,1fr))] gap-2 xl:grid-cols-[repeat(var(--n),minmax(0,1fr))]"
+            style={tileCols(2 + (running ? 2 : 0) + (l?.connected ? 2 : 0) + (l?.options.length ? 1 : 0) + (l?.connected && l.sdcard !== false ? 1 : 0))}
+          >
             {l?.state === "PAUSE" ? (
-              <Button kind="primary" busy={ctl.isPending} onClick={() => ctl.mutate({ action: "resume" })}>
-                <Play size={15} /> Fortsetzen
+              <Button kind="primary" className={TILE} busy={ctl.isPending} onClick={() => ctl.mutate({ action: "resume" })}>
+                <Play size={18} /> Fortsetzen
               </Button>
             ) : (
-              <Button disabled={l?.state !== "RUNNING"} busy={ctl.isPending} onClick={() => ctl.mutate({ action: "pause" })}>
-                <Pause size={15} /> Pause
+              <Button className={TILE} disabled={l?.state !== "RUNNING"} busy={ctl.isPending} onClick={() => ctl.mutate({ action: "pause" })}>
+                <Pause size={18} /> Pause
               </Button>
             )}
-            <Button kind="danger" disabled={!running} onClick={() => confirm("Druck wirklich abbrechen?") && ctl.mutate({ action: "stop" })}>
-              <Square size={14} /> Abbrechen
-            </Button>
-            <Button disabled={!l?.connected} onClick={() => ctl.mutate({ action: l?.light ? "light_off" : "light_on" })}>
-              <Lightbulb size={15} className={l?.light ? "text-star" : ""} fill={l?.light ? "currentColor" : "none"} /> Licht
+            <Button kind="danger" className={TILE} disabled={!running} onClick={() => confirm("Druck wirklich abbrechen?") && ctl.mutate({ action: "stop" })}>
+              <Square size={17} /> Abbrechen
             </Button>
             {running && (
-              <select
-                className="h-9 rounded-lg bg-card px-2 text-sm font-semibold shadow-seg"
-                value={l?.speed ?? 2}
-                onChange={(e) => ctl.mutate({ action: "speed", value: Number(e.target.value) })}
-                aria-label="Geschwindigkeit"
-              >
-                {[1, 2, 3, 4].map((s) => (
-                  <option key={s} value={s}>
-                    {SPEED[s]}
-                  </option>
-                ))}
-              </select>
+              <Button className={TILE} onClick={() => setDlg("skip")}>
+                <ListX size={18} />
+                <span>
+                  Objekte{!!l?.skipped.length && <span className="ml-1 text-ink3 tnum">−{l.skipped.length}</span>}
+                </span>
+              </Button>
+            )}
+            {l?.connected && (
+              <Button className={TILE} onClick={() => setDlg("move")}>
+                <Move size={18} /> Bewegen
+              </Button>
+            )}
+            {l?.connected && (
+              <Button className={TILE} onClick={() => setDlg("device")}>
+                <Cpu size={18} /> Gerät
+              </Button>
+            )}
+            {!!l?.options.length && (
+              <Button className={TILE} onClick={() => setDlg("options")}>
+                <SlidersHorizontal size={18} /> Optionen
+              </Button>
+            )}
+            {l?.connected && l.sdcard !== false && (
+              <Button className={TILE} onClick={() => setDlg("storage")}>
+                <HardDrive size={18} /> Dateien
+              </Button>
+            )}
+            {running && (
+              <label className={`${TILE} relative inline-flex cursor-pointer items-center justify-center rounded-lg bg-card font-semibold shadow-seg hover:bg-fill`}>
+                <Gauge size={18} />
+                {SPEED[l?.speed ?? 2]}
+                <select
+                  className="absolute inset-0 cursor-pointer opacity-0"
+                  value={l?.speed ?? 2}
+                  onChange={(e) => ctl.mutate({ action: "speed", value: Number(e.target.value) })}
+                  aria-label="Geschwindigkeit"
+                >
+                  {[1, 2, 3, 4].map((s) => (
+                    <option key={s} value={s}>
+                      {SPEED[s]}
+                    </option>
+                  ))}
+                </select>
+              </label>
             )}
           </div>
         </div>
@@ -200,19 +242,30 @@ function PrinterCard({ p, l }: { p: Printer; l?: PrinterLive }) {
           <AmsPanel l={l} printerId={p.id} />
         </div>
       )}
+      {l && (dlg === "nozzle" || dlg === "bed") && <TempDialog printerId={p.id} kind={dlg} l={l} onClose={() => setDlg(null)} />}
+      {l && dlg === "fans" && <FanDialog printerId={p.id} l={l} onClose={() => setDlg(null)} />}
+      {l && dlg === "options" && <OptionsDialog printerId={p.id} l={l} onClose={() => setDlg(null)} />}
+      {l && dlg === "device" && <DeviceDialog printerId={p.id} l={l} onClose={() => setDlg(null)} />}
+      {l && dlg === "move" && <MoveDialog printerId={p.id} l={l} onClose={() => setDlg(null)} />}
+      {dlg === "skip" && <SkipDialog printerId={p.id} onClose={() => setDlg(null)} />}
+      {dlg === "storage" && <StorageDialog printerId={p.id} model={p.model} onClose={() => setDlg(null)} />}
     </Card>
   );
 }
 
-/** "2026-11-11 03:58" (Druckerzeit) → "11.11. 03:58" */
-const fmtHmsTime = (at: string) => `${at.slice(8, 10)}.${at.slice(5, 7)}. ${at.slice(11, 16)}`;
-
 /** HMS-Meldungen und Druckfehler mit Text von Bambu; der Code führt ins Wiki */
-function Alerts({ l }: { l: PrinterLive }) {
+function Alerts({ l, printerId }: { l: PrinterLive; printerId: number }) {
   const hms = useHms();
+  const qc = useQueryClient();
+  const toast = useToast();
+  const dismiss = useMutation({
+    mutationFn: (i: { kind: "error" | "hms"; code: string }) => api.dismissAlert(printerId, i.kind, i.code),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["live"] }),
+    onError: (e) => toast((e as Error).message, "fehler"),
+  });
   const items = [
-    ...l.hms.map((h) => ({ key: hmsKey(h.code), kind: "hms" as const, at: h.at })),
-    ...(l.print_error ? [{ key: errorKey(l.print_error), kind: "error" as const, at: null }] : []),
+    ...l.hms.map((h) => ({ key: hmsKey(h.code), code: h.code, kind: "hms" as const, at: h.at })),
+    ...(l.print_error ? [{ key: errorKey(l.print_error), code: String(l.print_error), kind: "error" as const, at: null }] : []),
   ];
   const serious = items.some((i) => levelOf(i.key, i.kind).tone === "bad");
   return (
@@ -226,13 +279,23 @@ function Alerts({ l }: { l: PrinterLive }) {
               <span className={`font-bold ${TONE_TEXT[lv.tone]}`}>
                 {i.kind === "error" ? `Druckfehler · ${lv.label}` : lv.label}
               </span>
-              <WikiCode k={i.key} kind={i.kind} className="text-ink2" />
-              {i.at && <span className="text-ink3 tnum">{fmtHmsTime(i.at)}</span>}
+              <WikiCode k={i.key} kind={i.kind} link={!hms.data || !!text} className="text-ink2" />
+              {i.at && <AtTime at={i.at} offset={l.clock_offset} />}
+              <button
+                onClick={() => dismiss.mutate({ kind: i.kind, code: i.code })}
+                disabled={dismiss.isPending}
+                className="ml-auto inline-flex items-center gap-1 rounded-md p-1 font-semibold text-ink2 hover:bg-hover hover:text-ink sm:px-1.5 sm:py-0.5"
+                title={i.kind === "error" ? "Fehler am Drucker quittieren" : "Ausblenden, bis der Drucker die Meldung nicht mehr meldet"}
+              >
+                {i.kind === "error" ? <Check size={13} /> : <EyeOff size={13} />}
+                <span className="max-sm:sr-only">{i.kind === "error" ? "Quittieren" : "Ausblenden"}</span>
+              </button>
             </div>
-            {hms.data && <p className="mt-0.5 text-[13px] leading-snug text-ink">{text || NO_TEXT}</p>}
+            {hms.data && <p className="mt-0.5 text-[13px] leading-snug text-ink">{text || noText(i.key)}</p>}
           </div>
         );
       })}
+      <ClockNote ats={items.map((i) => i.at)} offset={l.clock_offset} />
       <a href={href({ page: "printer", view: "fehlercodes" })} className="inline-block font-semibold text-ink3 hover:text-accent">
         Alle Fehlercodes
       </a>

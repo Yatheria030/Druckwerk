@@ -1,0 +1,1162 @@
+{
+ "brand": "Prusament",
+ "source": "Technische Datenblätter des Herstellers, Werte wie angegeben (Einheiten vereinheitlicht)",
+ "lines": {
+  "PLA": {
+   "source": "https://prusament.com/wp-content/uploads/2022/10/PLA_Prusament_TDS_2021_10_EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 55,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 51,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 17
+    },
+    "tensile_modulus": {
+     "v": 2300,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 83,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 3100,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 13,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 81,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 10,
+     "std": "ISO 1133, 210 °C/2.16 kg, 9–11"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "210 ± 10"
+    },
+    "nozzle_max": {
+     "v": 220,
+     "std": "210 ± 10"
+    },
+    "bed_min": {
+     "v": 40,
+     "std": "40–60"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "40–60"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 59 MPa, E-Modul 2,4 GPa, Biegung 99 MPa, Charpy 14 kJ/m². Zugfestigkeit Filament 57 MPa; Streckdehnung 2,9 % (keine Bruchdehnung angegeben); Charpy gekerbt laut Blatt nicht anwendbar; Feuchteaufnahme 0,13 %/24 h, 0,19 %/7 d. TDS v1.1 (16-02-2022)."
+  },
+  "PLA Blend": {
+   "source": "https://prusament.com/wp-content/uploads/2022/10/PLA_Prusament_TDS_2021_10_EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 55,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 55,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 51,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 17
+    },
+    "tensile_modulus": {
+     "v": 2300,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 83,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 3100,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 13,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 81,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 10,
+     "std": "ISO 1133, 210 °C/2.16 kg, 9–11"
+    },
+    "nozzle_min": {
+     "v": 200,
+     "std": "210 ± 10"
+    },
+    "nozzle_max": {
+     "v": 220,
+     "std": "210 ± 10"
+    },
+    "bed_min": {
+     "v": 40,
+     "std": "40–60"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "40–60"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 59 MPa, E-Modul 2,4 GPa, Biegung 99 MPa, Charpy 14 kJ/m². Zugfestigkeit Filament 57 MPa; Streckdehnung 2,9 % (keine Bruchdehnung angegeben); Charpy gekerbt laut Blatt nicht anwendbar; Feuchteaufnahme 0,13 %/24 h, 0,19 %/7 d. Das Datenblatt gilt laut Trade Name für „Prusament PLA/PLA (Blend)“ (Durchmesser Blend ± 0,03 mm); keine eigenen Blend-Werte."
+  },
+  "rPLA": {
+   "source": "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2023/11/0eaa8597-prusament-rpla-natural-pigments-technical-data-sheet.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.24,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 61,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 59,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 50.6,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 23
+    },
+    "tensile_modulus": {
+     "v": 2300,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 75,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 3000,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 12,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 86,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 23.5,
+     "std": "ISO 1133, 210 °C/2.16 kg, 21–26"
+    },
+    "nozzle_min": {
+     "v": 195,
+     "std": "205 ± 10"
+    },
+    "nozzle_max": {
+     "v": 215,
+     "std": "205 ± 10"
+    },
+    "bed_min": {
+     "v": 40,
+     "std": "40–60"
+    },
+    "bed_max": {
+     "v": 60,
+     "std": "40–60"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 52 MPa, E-Modul 2,4 GPa, Biegung 77 MPa, Charpy 13 kJ/m². Datenblatt „rPLA Natural Pigments“ (Farbe Algae), verlinkt auf prusament.com/materials/prusament-rpla. Ältere „PLA Recycled“ hat ein eigenes TDS (2021). Zugfestigkeit Filament 51 MPa; Streckdehnung 3,1 %; Feuchteaufnahme 0,30 %/24 h."
+  },
+  "Woodfill": {
+   "source": "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2024/07/286c3bc0-tds_prusament_woodfill-linden-light_en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.16,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 62.6,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 58.2,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 21,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 7
+    },
+    "tensile_modulus": {
+     "v": 900,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 30,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 1400,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 17,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 67,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 4.5,
+     "std": "ISO 1133, 210 °C/2.16 kg, 4–5"
+    },
+    "nozzle_min": {
+     "v": 185,
+     "std": "195 ± 10"
+    },
+    "nozzle_max": {
+     "v": 205,
+     "std": "195 ± 10"
+    },
+    "bed_min": {
+     "v": 50,
+     "std": "60 ± 10"
+    },
+    "bed_max": {
+     "v": 70,
+     "std": "60 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 23 MPa, E-Modul 0,8 GPa, Biegung 37 MPa, Charpy 21 kJ/m². Blatt für Farbe Linden Light, Biobased Polymer Blend. Zugfestigkeit Filament 30 MPa; Streckdehnung 4,3 %; Feuchteaufnahme 0,45 %/24 h, 0,82 %/7 d."
+  },
+  "PETG": {
+   "source": "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2023/10/9f8d2165-tds_prusament-petg_n_en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 68,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 68,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 47,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 18
+    },
+    "tensile_modulus": {
+     "v": 1500,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 66,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 1700,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 6,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 74,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "250 ± 10"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "250 ± 10"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "80 ± 10"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "80 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 50 MPa, E-Modul 1,6 GPa, Biegung 70 MPa, Charpy gekerbt 3 kJ/m². Charpy ungekerbt: kein Bruch (4-J-Pendel). Zugfestigkeit Filament 46 MPa; Streckdehnung 5,1 %; Feuchteaufnahme 0,07 %/24 h."
+  },
+  "rPETG": {
+   "source": "https://prusament.com/wp-content/uploads/2022/03/8_PETG_RECYCLED_Prusament_TDS_2022.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 68,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 68,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 43,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 15
+    },
+    "tensile_modulus": {
+     "v": 1500,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 63,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 1800,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 25,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 12,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 74,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "nozzle_min": {
+     "v": 240,
+     "std": "250 ± 10"
+    },
+    "nozzle_max": {
+     "v": 260,
+     "std": "250 ± 10"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "80 ± 10"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "80 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 48 MPa, E-Modul 1,6 GPa, Biegung 70 MPa, Charpy 38 / gekerbt 15 kJ/m². Datenblatt „PETG Recycled“ v1.0 (14-03-2022). Zugfestigkeit Filament 45 MPa; Streckdehnung 4,5 %. Schlagwerte identisch mit dem ASA-Blatt (möglicher Übertragungsfehler bei Prusa)."
+  },
+  "PETG Magnetite 40%": {
+   "source": "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2025/01/7cdc9586-technical-data-sheet-2.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.82,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 93,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 90,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 45.9,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 13.8
+    },
+    "tensile_modulus": {
+     "v": 2000,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 72.8,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 2800,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 49,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 4.8,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 82,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "nozzle_min": {
+     "v": 265,
+     "std": "270 ± 5"
+    },
+    "nozzle_max": {
+     "v": 275,
+     "std": "270 ± 5"
+    },
+    "bed_min": {
+     "v": 90,
+     "std": "100 ± 10"
+    },
+    "bed_max": {
+     "v": 110,
+     "std": "100 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 43,3 MPa, E-Modul 2,0 GPa, Biegung 70,3 MPa, Charpy 60,2 / gekerbt 3,6 kJ/m². Magnetisch, gehärtete Düse verwendet. Zugfestigkeit Filament 47,6 MPa; Streckdehnung 3,9 %; Feuchteaufnahme 0,11 %/24 h."
+  },
+  "PETG Tungsten 75%": {
+   "source": "https://prusament.com/wp-content/uploads/2023/03/TDS_Prusament-PETG-Tungsten-75_EN-1.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 4.0,
+     "std": "Prusa Polymers"
+    },
+    "hdt_045": {
+     "v": 94,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 86,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 35,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 9
+    },
+    "tensile_modulus": {
+     "v": 1900,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 59,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 2800,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 22,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 79,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "260 ± 10"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "260 ± 10"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "80 ± 10"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "80 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 39 MPa, E-Modul 2,1 GPa, Biegung 70 MPa, Charpy 19 kJ/m². 75 % Wolframpulver (Masse), Strahlenabschirmung HVL 1,402 mm (99mTc, 140 keV). Zugfestigkeit Filament 49 MPa; Streckdehnung 3,5 %; kein Charpy gekerbt angegeben."
+  },
+  "PETG V0": {
+   "source": "https://prusament.com/wp-content/uploads/2023/07/PETG_V0_ENG.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 68,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 74,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 39,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 16.4
+    },
+    "tensile_modulus": {
+     "v": 1700,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 60,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 1000,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 23,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 79,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "230 ± 10"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "230 ± 10"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "80 ± 10"
+    },
+    "bed_max": {
+     "v": 90,
+     "std": "80 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 42 MPa, E-Modul 1,8 GPa, Biegung 64 MPa, Charpy 33 kJ/m². Flammgeschützt (Name V0; UL94-Einstufung selbst steht nicht im TDS). HDT 1,8 MPa (74) laut Blatt höher als 0,45 MPa (68). Zugfestigkeit Filament 39,4 MPa; Streckdehnung 3,5 %; Charpy gekerbt nicht anwendbar."
+  },
+  "ASA": {
+   "source": "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2024/05/bc8551ef-tds_prusament-asa_2024_en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.07,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 93,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 86,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 42,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 11
+    },
+    "tensile_modulus": {
+     "v": 1600,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 64,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 2000,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 25,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 12,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 78,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 22,
+     "std": "ISO 1133, 220 °C/10 kg, 20–24"
+    },
+    "nozzle_min": {
+     "v": 250,
+     "std": "260 ± 10"
+    },
+    "nozzle_max": {
+     "v": 270,
+     "std": "260 ± 10"
+    },
+    "bed_min": {
+     "v": 105,
+     "std": "110 ± 5"
+    },
+    "bed_max": {
+     "v": 115,
+     "std": "110 ± 5"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 45 MPa, E-Modul 1,7 GPa, Biegung 69 MPa, Charpy 38 / gekerbt 15 kJ/m². TDS v1.1 (20-05-2024). Zugfestigkeit Filament 40 MPa; Streckdehnung 3,4 %. Schlagwerte identisch mit dem rPETG-Blatt."
+  },
+  "TPU 95A": {
+   "source": "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2025/05/80316f6d-tds-prusament_tpu_95a_en-1.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.25,
+     "std": "ISO 1183"
+    },
+    "vicat": {
+     "v": 101.6,
+     "std": "ISO 306 Vicat A"
+    },
+    "hdt_18": {
+     "v": 78.6,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 41.4,
+     "std": "ISO 37, horizontal gedruckt; z = Interlayer Adhesion (ISO 527)",
+     "z": 9.5
+    },
+    "elongation": {
+     "v": 563.3,
+     "std": "ISO 37, maximale Dehnung, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 92,
+     "std": "Shore A (Prusa Polymers)"
+    },
+    "nozzle_min": {
+     "v": 220,
+     "std": "230 ± 10"
+    },
+    "nozzle_max": {
+     "v": 240,
+     "std": "230 ± 10"
+    },
+    "bed_min": {
+     "v": 55,
+     "std": "65 ± 10"
+    },
+    "bed_max": {
+     "v": 75,
+     "std": "65 ± 10"
+    }
+   },
+   "note": "Shore D 39. Filament: Zugfestigkeit 64 MPa, Dehnung 7264 % (ISO 527). Druckkörper: Modul 100/200/300 % = 8,9/14,7/21,3 MPa, Druckverformungsrest 23 °C 33,5 %, Abrieb 0,21 % (ISO 4649). Druckgeschwindigkeit bis 30 mm/s."
+  },
+  "PC Blend Carbon Fiber": {
+   "source": "https://prusament.com/wp-content/uploads/2023/04/TDS_Prusament-PCCF_2023_EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "Prusa Polymers"
+    },
+    "hdt_045": {
+     "v": 114,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 106,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 64,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 23
+    },
+    "tensile_modulus": {
+     "v": 2600,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 94,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 3500,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 32,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 12,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 83,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 12,
+     "std": "ISO 1133, 265 °C/5 kg, 11–13"
+    },
+    "nozzle_min": {
+     "v": 275,
+     "std": "285 ± 10"
+    },
+    "nozzle_max": {
+     "v": 295,
+     "std": "285 ± 10"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "110 ± 10"
+    },
+    "bed_max": {
+     "v": 120,
+     "std": "110 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 70 MPa, E-Modul 3,2 GPa, Biegung 130 MPa, Biege-E 4,2 GPa, Charpy 35 / gekerbt 17 kJ/m². TDS v2.0 (19-04-2023). Zugfestigkeit Filament 76 MPa; Streckdehnung 4,6 %."
+  },
+  "PC Blend": {
+   "source": "https://prusament.com/wp-content/uploads/2022/10/PCBlend_Prusament_TDS_2022_16_EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.22,
+     "std": "Prusa Polymers"
+    },
+    "hdt_045": {
+     "v": 113,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 93,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 63,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 21
+    },
+    "tensile_modulus": {
+     "v": 1900,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 88,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 2100,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 12,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 79,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 22,
+     "std": "ISO 1133, 265 °C/5 kg, 20–24"
+    },
+    "nozzle_min": {
+     "v": 265,
+     "std": "275 ± 10"
+    },
+    "nozzle_max": {
+     "v": 285,
+     "std": "275 ± 10"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "110 ± 10"
+    },
+    "bed_max": {
+     "v": 120,
+     "std": "110 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 63 MPa, E-Modul 2,0 GPa, Biegung 94 MPa, Charpy gekerbt 12 kJ/m². Charpy ungekerbt: kein Bruch. Zugfestigkeit Filament 58 MPa; Streckdehnung 5,8 %."
+  },
+  "PC-CF Space Grade": {
+   "source": "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2025/09/e032493a-tds_pc_space_grade_en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.21,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 137.6,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 128.8,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 72,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 18
+    },
+    "tensile_modulus": {
+     "v": 3100,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 89,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 3700,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 22,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 83,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "nozzle_min": {
+     "v": 280,
+     "std": "290 ± 10"
+    },
+    "nozzle_max": {
+     "v": 300,
+     "std": "290 ± 10"
+    },
+    "bed_min": {
+     "v": 110,
+     "std": "120 ± 10"
+    },
+    "bed_max": {
+     "v": 130,
+     "std": "120 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 75 MPa, E-Modul 3,7 GPa, Biegung 104 MPa, Biege-E 4,9 GPa, Charpy 27 kJ/m². Blatt „PC Space Grade Black“ (PC mit kohlenstoffbasierten Additiven). Ausgasung ECSS-Q-70-02: TML 0,25 %, RML 0,12 %, CVCM 0,00 %; Volumenwiderstand 2,2·10⁴ Ω·m, Oberflächenwiderstand 6·10⁷ Ω/sq. Streckdehnung 3,8 %; gehärtete Düse nötig."
+  },
+  "PA11-CF": {
+   "source": "https://prusament.com/wp-content/uploads/2022/08/TDS_PA11CFB.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.11,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 192,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 152,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 42,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 20
+    },
+    "tensile_modulus": {
+     "v": 2500,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 63,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 3000,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 30,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 12,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 77,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "nozzle_min": {
+     "v": 280,
+     "std": "285 ± 5"
+    },
+    "nozzle_max": {
+     "v": 290,
+     "std": "285 ± 5"
+    },
+    "bed_min": {
+     "v": 100,
+     "std": "110 ± 10"
+    },
+    "bed_max": {
+     "v": 120,
+     "std": "110 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 49 MPa, E-Modul 3,3 GPa, Biegung 103 MPa, Biege-E 6,2 GPa, Charpy 51 / gekerbt 17 kJ/m². Zugfestigkeit Filament 61 MPa; Streckdehnung 3,3 %; Feuchteaufnahme 0,20 %/24 h, 0,50 %/7 d; gehärtete Düse, PA-Nylon-Druckplatte."
+  },
+  "PVB": {
+   "source": "https://prusament.com/wp-content/uploads/2022/10/PVB_Prusament_TDS_2021_10_EN.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.1,
+     "std": "Prusa Polymers"
+    },
+    "hdt_045": {
+     "v": 63,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 58,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 50,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 9
+    },
+    "tensile_modulus": {
+     "v": 1700,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 72,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 2200,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 55,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 7,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 77,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 6.5,
+     "std": "ISO 1133, 230 °C/2.16 kg, 6–7"
+    },
+    "nozzle_min": {
+     "v": 205,
+     "std": "215 ± 10"
+    },
+    "nozzle_max": {
+     "v": 225,
+     "std": "215 ± 10"
+    },
+    "bed_min": {
+     "v": 70,
+     "std": "75 ± 5"
+    },
+    "bed_max": {
+     "v": 80,
+     "std": "75 ± 5"
+    },
+    "dry_temp": {
+     "v": 60,
+     "std": "max. 60 °C, 4–8 h je nach Feuchte"
+    },
+    "dry_hours": {
+     "v": 6,
+     "std": "max. 60 °C, 4–8 h je nach Feuchte"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 49 MPa, E-Modul 1,7 GPa, Biegung 73 MPa, Charpy 59 / gekerbt 10 kJ/m². Zugfestigkeit Filament 57 MPa; Streckdehnung 4,6 %; Feuchteaufnahme 0,18 %/24 h, 0,35 %/7 d; mit Isopropanol glättbar (nicht im Blatt)."
+  },
+  "PP-GF": {
+   "source": "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2025/07/512923fd-tds_pp_glass_fiber_en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.12,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 138.3,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 112.6,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 40.3,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 18
+    },
+    "tensile_modulus": {
+     "v": 2100,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 50.2,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 2100,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 17.6,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 7.9,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 68.5,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 14.7,
+     "std": "ISO 1133, 230 °C/2.16 kg"
+    },
+    "nozzle_min": {
+     "v": 235,
+     "std": "245 ± 10"
+    },
+    "nozzle_max": {
+     "v": 255,
+     "std": "245 ± 10"
+    },
+    "bed_min": {
+     "v": 85,
+     "std": "95 ± 10"
+    },
+    "bed_max": {
+     "v": 105,
+     "std": "95 ± 10"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 48,8 MPa, E-Modul 2,5 GPa, Biegung 70,4 MPa, Biege-E 2,7 GPa, Charpy 26,9 / gekerbt 9,9 kJ/m². Zugfestigkeit Filament 46,6 MPa; Streckdehnung 4,5 %; PP-Druckplatte, gehärtete Düse."
+  },
+  "PEI 1010": {
+   "source": "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2024/09/53ee8f5e-tds_prusament_pei-1010_en.pdf",
+   "specimen": "printed",
+   "values": {
+    "density": {
+     "v": 1.27,
+     "std": "ISO 1183"
+    },
+    "hdt_045": {
+     "v": 207,
+     "std": "ISO 75 0.45 MPa"
+    },
+    "hdt_18": {
+     "v": 194,
+     "std": "ISO 75 1.80 MPa"
+    },
+    "tensile_strength": {
+     "v": 95,
+     "std": "ISO 527-1, Streckgrenze, horizontal gedruckt; z = Interlayer Adhesion (Prusa Polymers)",
+     "z": 13.97
+    },
+    "tensile_modulus": {
+     "v": 2300,
+     "std": "ISO 527-1, horizontal gedruckt"
+    },
+    "flexural_strength": {
+     "v": 98,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "flexural_modulus": {
+     "v": 2300,
+     "std": "ISO 178, horizontal gedruckt"
+    },
+    "impact": {
+     "v": 19.7,
+     "std": "ISO 179-1 Charpy ungekerbt, edgewise, horizontal gedruckt"
+    },
+    "impact_notched": {
+     "v": 3.4,
+     "std": "ISO 179-1 Charpy gekerbt, edgewise, horizontal gedruckt"
+    },
+    "hardness": {
+     "v": 83.5,
+     "std": "Shore D (Prusa Polymers)"
+    },
+    "mfi": {
+     "v": 17,
+     "std": "ISO 1133, 340 °C/5 kg"
+    },
+    "nozzle_min": {
+     "v": 400,
+     "std": "410 ± 10"
+    },
+    "nozzle_max": {
+     "v": 420,
+     "std": "410 ± 10"
+    },
+    "bed_min": {
+     "v": 140,
+     "std": "140–160"
+    },
+    "bed_max": {
+     "v": 160,
+     "std": "140–160"
+    },
+    "dry_temp": {
+     "v": 150,
+     "std": "150 °C, 6–8 h"
+    },
+    "dry_hours": {
+     "v": 7,
+     "std": "150 °C, 6–8 h"
+    }
+   },
+   "note": "Probekörper horizontal gedruckt; hochkant (vertical xz): Zug 72 MPa, E-Modul 2,1 GPa, Biegung 138 MPa, Biege-E 2,7 GPa, Charpy 39 / gekerbt 3,6 kJ/m². Beheizte Kammer 90 °C nötig, Druck bis 40 mm/s. Zugfestigkeit Filament 111,5 MPa; Streckdehnung 6,6 %; Feuchteaufnahme 0,4 %/24 h, 0,7 %/7 d."
+  }
+ }
+}

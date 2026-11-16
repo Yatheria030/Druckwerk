@@ -49,7 +49,7 @@ export async function loadObject(id: number, kind: FileKind, color: string): Pro
   return root;
 }
 
-export function addLights(scene: THREE.Scene) {
+export function addLights(scene: THREE.Scene): THREE.DirectionalLight {
   scene.add(new THREE.HemisphereLight(0xffffff, 0x8a8a80, 1.6));
   const key = new THREE.DirectionalLight(0xffffff, 2.2);
   key.position.set(1, 2, 1.4);
@@ -57,6 +57,7 @@ export function addLights(scene: THREE.Scene) {
   const fill = new THREE.DirectionalLight(0xffffff, 0.7);
   fill.position.set(-1.5, 0.8, -1);
   scene.add(fill);
+  return key;
 }
 
 /** Kamera so setzen, dass das Objekt schräg von vorne oben ganz ins Bild passt */

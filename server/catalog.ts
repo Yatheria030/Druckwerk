@@ -3,11 +3,40 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { setCatalog, type CatalogBrand } from "../shared/catalog.ts";
+import type { LinePrice } from "../shared/prices.ts";
+import type { LineSpecs } from "../shared/specs.ts";
 import { db, nowIso } from "./db.ts";
 
 type Seed = Omit<CatalogBrand, "id" | "lines"> & { lines: { material: string; name: string; profile_id: string | null; colors: { name: string; hex: string | null; code: string | null }[] }[] };
 
 const SEED_DIR = path.join(import.meta.dirname, "seed");
+const SPECS_DIR = path.join(import.meta.dirname, "specs");
+
+const key = (s: string) => s.toLowerCase().replace(/[^a-z0-9+]+/g, " ").trim();
+/** Datenblatt-Kennwerte aus server/specs/*.json je Marke und Sorte (Namen ohne Groß-/Kleinschreibung und Satzzeichen) */
+const SPECS = (() => {
+  const m = new Map<string, Map<string, LineSpecs>>();
+  for (const f of readdirSync(SPECS_DIR).filter((f) => f.endsWith(".json"))) {
+    const s = JSON.parse(readFileSync(path.join(SPECS_DIR, f), "utf8")) as { brand: string; lines: Record<string, LineSpecs> };
+    m.set(key(s.brand), new Map(Object.entries(s.lines).filter(([, l]) => l.source || Object.keys(l.values).length).map(([n, l]) => [key(n), l])));
+  }
+  return m;
+})();
+const specsFor = (brand: string, match: string, line: string) =>
+  (SPECS.get(key(brand)) ?? [...SPECS].find(([b]) => match && b.includes(key(match)))?.[1])?.get(key(line)) ?? null;
+
+/** Shoppreise aus server/prices.json je Marke und Sorte (gleiche Namensregel wie die Kennwerte) */
+const PRICES = (() => {
+  const s = JSON.parse(readFileSync(path.join(import.meta.dirname, "prices.json"), "utf8")) as {
+    date: string; brands: Record<string, Record<string, Omit<LinePrice, "date"> & { price: number | null }>>;
+  };
+  const m = new Map<string, Map<string, LinePrice>>();
+  for (const [b, lines] of Object.entries(s.brands))
+    m.set(key(b), new Map(Object.entries(lines).filter(([, p]) => p.price != null && p.net_g > 0).map(([n, p]) => [key(n), { ...p, price: p.price!, date: s.date }])));
+  return m;
+})();
+const priceFor = (brand: string, match: string, line: string) =>
+  (PRICES.get(key(brand)) ?? [...PRICES].find(([b]) => match && b.includes(key(match)))?.[1])?.get(key(line)) ?? null;
 
 export class CatalogError extends Error {}
 
@@ -28,7 +57,35 @@ export function seedCatalog() {
       throw e;
     }
   }
+  dropUnknownHex();
   loadCatalog();
+}
+
+/** Farben ohne Hex gehören nicht in den Katalog: ältere Bestände bekommen den Hex aus dem Seed, falls er inzwischen recherchiert ist,
+ *  der Rest fliegt raus */
+function dropUnknownHex() {
+  const open = db.prepare(
+    "SELECT c.id, c.name, l.name AS line, b.name AS brand FROM catalog_colors c JOIN catalog_lines l ON l.id = c.line_id JOIN catalog_brands b ON b.id = l.brand_id WHERE c.hex IS NULL",
+  ).all() as { id: number; name: string; line: string; brand: string }[];
+  if (!open.length) return;
+  const known = new Map<string, string>();
+  for (const f of readdirSync(SEED_DIR).filter((f) => f.endsWith(".json"))) {
+    const s = JSON.parse(readFileSync(path.join(SEED_DIR, f), "utf8")) as Seed;
+    for (const l of s.lines) for (const c of l.colors) if (c.hex) known.set(`${s.brand}|${l.name}|${c.name}`, c.hex);
+  }
+  let filled = 0;
+  db.exec("BEGIN");
+  for (const c of open) {
+    const h = known.get(`${c.brand}|${c.line}|${c.name}`);
+    if (h) db.prepare("UPDATE catalog_colors SET hex = ? WHERE id = ?").run(h, c.id), filled++;
+  }
+  const lines = (db.prepare("SELECT DISTINCT line_id FROM catalog_colors WHERE hex IS NULL").all() as { line_id: number }[]).map((r) => r.line_id);
+  const gone = Number(db.prepare("DELETE FROM catalog_colors WHERE hex IS NULL").run().changes);
+  const empty = db.prepare("DELETE FROM catalog_lines WHERE id = ? AND NOT EXISTS (SELECT 1 FROM catalog_colors WHERE line_id = ?)");
+  const emptied = lines.reduce((n, id) => n + Number(empty.run(id, id).changes), 0);
+  db.prepare("UPDATE catalog_brands SET source = REPLACE(source, '; null = unbekannt', '; Farben ohne belegten Hex fehlen') WHERE source LIKE '%null = unbekannt%'").run();
+  db.exec("COMMIT");
+  console.log(`Katalog: ${filled} Farben mit recherchiertem Hex ergänzt, ${gone} ohne Hex entfernt, ${emptied} leere Sorten entfernt`);
 }
 
 function importBrand(s: Seed) {
@@ -37,7 +94,7 @@ function importBrand(s: Seed) {
   const color = db.prepare("INSERT INTO catalog_colors (line_id, name, hex, code, sort) VALUES (?, ?, ?, ?, ?)");
   s.lines.forEach((l, i) => {
     const lid = line.run(b.lastInsertRowid, l.material, l.name, l.profile_id, i).lastInsertRowid;
-    l.colors.forEach((c, j) => color.run(lid, c.name, c.hex, c.code, j));
+    l.colors.filter((c) => c.hex).forEach((c, j) => color.run(lid, c.name, c.hex, c.code, j));
   });
 }
 
@@ -50,7 +107,7 @@ export function readCatalog(): CatalogBrand[] {
     id: number; brand_id: number; material: string; name: string; profile_id: string | null;
   }[];
   const colors = db.prepare("SELECT id, line_id, name, hex, code FROM catalog_colors ORDER BY sort, id").all() as {
-    id: number; line_id: number; name: string; hex: string | null; code: string | null;
+    id: number; line_id: number; name: string; hex: string; code: string | null;
   }[];
   const byLine = new Map<number, CatalogBrand["lines"][number]["colors"]>();
   for (const c of colors) byLine.set(c.line_id, [...(byLine.get(c.line_id) ?? []), { id: c.id, name: c.name, hex: c.hex, code: c.code }]);
@@ -62,15 +119,15 @@ export function readCatalog(): CatalogBrand[] {
     source: b.source,
     lines: lines
       .filter((l) => l.brand_id === b.id)
-      .map((l) => ({ id: l.id, material: l.material, name: l.name, profile_id: l.profile_id, colors: byLine.get(l.id) ?? [] })),
+      .map((l) => ({ id: l.id, material: l.material, name: l.name, profile_id: l.profile_id, colors: byLine.get(l.id) ?? [], specs: specsFor(b.name, b.match, l.name), price: priceFor(b.name, b.match, l.name) })),
   }));
 }
 
 export const loadCatalog = () => setCatalog(readCatalog());
 
 const hex = (h: string | null | undefined) => {
-  if (h == null || h === "") return null;
-  const v = h.replace(/^#/, "").toUpperCase();
+  const v = (h ?? "").replace(/^#/, "").toUpperCase();
+  if (!v) throw new CatalogError("Farben brauchen einen Farbcode (RRGGBB)");
   if (!/^[0-9A-F]{6}$/.test(v)) throw new CatalogError("Farbcode als RRGGBB, z. B. 1E64C8");
   return v;
 };
@@ -87,7 +144,7 @@ function run(fn: () => void, dup: string) {
 
 export type BrandInput = { name: string; match?: string; url?: string; source?: string };
 export type LineInput = { material: string; name: string; profile_id?: string | null };
-export type ColorInput = { name: string; hex?: string | null; code?: string | null };
+export type ColorInput = { name: string; hex?: string | null; code?: string | null }; // hex ist Pflicht, hex() prüft
 
 export function addBrand(b: BrandInput): number {
   let id = 0;
@@ -142,8 +199,8 @@ export function addColor(lineId: number, c: ColorInput): number {
 export function updateColor(id: number, c: Partial<ColorInput>) {
   const h = c.hex !== undefined ? hex(c.hex) : undefined;
   run(() => {
-    db.prepare("UPDATE catalog_colors SET name = COALESCE(?, name), hex = CASE WHEN ? THEN ? ELSE hex END, code = CASE WHEN ? THEN ? ELSE code END WHERE id = ?")
-      .run(c.name ?? null, h !== undefined ? 1 : 0, h ?? null, c.code !== undefined ? 1 : 0, c.code || null, id);
+    db.prepare("UPDATE catalog_colors SET name = COALESCE(?, name), hex = COALESCE(?, hex), code = CASE WHEN ? THEN ? ELSE code END WHERE id = ?")
+      .run(c.name ?? null, h ?? null, c.code !== undefined ? 1 : 0, c.code || null, id);
   }, `Die Farbe ${c.name} gibt es in dieser Sorte schon`);
 }
 export const deleteColor = (id: number) => run(() => db.prepare("DELETE FROM catalog_colors WHERE id = ?").run(id), "");

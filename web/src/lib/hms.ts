@@ -44,5 +44,42 @@ export const MODULES: [string, string][] = [
 const MODULE_NAME = new Map(MODULES);
 export const moduleOf = (key: string) => MODULE_NAME.get(key.slice(0, 2)) ?? "Sonstiges";
 
+const UNIT = "ABCDEFGH";
+/** Betroffenes Teil, so genau der Code es hergibt: AMS-Einheit aus dem zweiten Byte, beim Kameramodul die Untergruppe */
+export function partOf(key: string): string | null {
+  const m = key.slice(0, 2);
+  const n = parseInt(key.slice(2, 4), 16);
+  if (m === "07" || m === "18") {
+    const name = m === "07" ? "AMS" : "AMS HT";
+    if (n === 0xff) return "Externe Spule";
+    return n < 8 ? `${name} ${UNIT[n]}` : name;
+  }
+  if (m === "0C" && key.length === 16) return { "01": "Kamera & Bilderkennung", "02": "Lasersensoren", "03": "Prüfung der ersten Schicht" }[key.slice(4, 6)] ?? moduleOf(key);
+  const mod = moduleOf(key);
+  return mod === "Sonstiges" ? null : mod;
+}
+
+/** Ersatz, wenn Bambus Liste keinen Text hat: Bambu führt viele Codes ohne Text, das Wiki hat dazu auch keine Seite */
+export function noText(key: string) {
+  const part = partOf(key);
+  return `Bambu Lab nennt zu diesem Code keinen Text${part ? `. Betrifft: ${part}` : ""}`;
+}
+
+/** Zeit einer Meldung (ISO) in Ortszeit des Browsers: "16.11. 02:59" */
+export const fmtAt = (iso: string) => {
+  const d = new Date(iso);
+  const p = (x: number) => String(x).padStart(2, "0");
+  return `${p(d.getDate())}.${p(d.getMonth() + 1)}. ${p(d.getHours())}:${p(d.getMinutes())}`;
+};
+
+/** Zone der Druckeruhr als Text: 480 → "UTC+8", 330 → "UTC+5:30" */
+export const zoneLabel = (m: number) => {
+  const a = Math.abs(m);
+  return `UTC${m < 0 ? "−" : "+"}${Math.floor(a / 60)}${a % 60 ? `:${String(a % 60).padStart(2, "0")}` : ""}`;
+};
+
+/** Wurde die Zeit umgerechnet? Nur wenn die Druckeruhr in einer anderen Zone steht als der Browser zu dem Zeitpunkt */
+export const clockFixed = (offset: number | null, iso: string) => offset != null && offset !== -new Date(iso).getTimezoneOffset();
+
 /** Druckfehler: erste Stelle des zweiten Worts sagt, was der Drucker tut (4 bricht ab, 8 pausiert, C weist hin) */
 export const ERROR_LEVEL: Record<string, string> = { "4": "Abbruch", "8": "Pause", C: "Hinweis" };

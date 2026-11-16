@@ -5,6 +5,7 @@ import { api } from "../api.ts";
 import { PageHeader } from "../App.tsx";
 import { Card, Label, LoadError } from "../ui/controls.tsx";
 import { PrintRow } from "../ui/PrintRow.tsx";
+import { HistoryTabs } from "./StatsPage.tsx";
 
 const FILTER: { k: "" | PrintJob["status"]; label: string }[] = [
   { k: "", label: "Alle" },
@@ -32,6 +33,7 @@ export function HistoryPage() {
     <>
       <PageHeader width="max-w-4xl" title="Verlauf" />
       <div className="mx-auto max-w-4xl space-y-5 px-4 sm:px-6">
+        <HistoryTabs view="drucke" />
         <div className="grid grid-cols-3 gap-3">
           {(
             [

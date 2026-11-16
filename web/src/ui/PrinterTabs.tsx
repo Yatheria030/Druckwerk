@@ -1,7 +1,7 @@
 import { href } from "../lib/router.ts";
 
 /** Unterseiten des Druckers; auf dem Desktop stehen sie in der Seitenleiste, darunter als Tabs oben */
-export function PrinterTabs({ view, width = "max-w-6xl 2xl:max-w-[88rem]" }: { view: "printer" | "errors"; width?: string }) {
+export function PrinterTabs({ view, width = "max-w-6xl 2xl:max-w-[88rem]" }: { view: "printer" | "errors" | "maint"; width?: string }) {
   const tab = (active: boolean) =>
     `flex h-8 shrink-0 items-center justify-center rounded-md px-3 text-[13px] font-semibold ${active ? "bg-[var(--c-seg-active)] text-ink shadow-seg" : "text-ink2"}`;
   return (
@@ -12,6 +12,9 @@ export function PrinterTabs({ view, width = "max-w-6xl 2xl:max-w-[88rem]" }: { v
         </a>
         <a href={href({ page: "printer", view: "fehlercodes" })} className={tab(view === "errors")}>
           Fehlercodes
+        </a>
+        <a href={href({ page: "printer", view: "wartung" })} className={tab(view === "maint")}>
+          Wartung
         </a>
       </nav>
     </div>

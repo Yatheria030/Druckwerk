@@ -1,8 +1,15 @@
 // Farbkatalog je Hersteller und Sorte. Die Daten liegen in der Datenbank (server/catalog.ts, Seed in server/seed/*.json),
 // Server und UI setzen den aktuellen Stand hier per setCatalog und rechnen damit (Farbnamen, Sortenauswahl).
 
-export type CatalogColor = { id: number; name: string; hex: string | null; code: string | null }; // hex ohne #, null = unbekannt
-export type CatalogLine = { id: number; material: string; name: string; profile_id: string | null; colors: CatalogColor[] };
+import type { LinePrice } from "./prices.ts";
+import type { LineSpecs } from "./specs.ts";
+
+export type CatalogColor = { id: number; name: string; hex: string; code: string | null }; // hex ohne #, Farben ohne Hex nimmt der Katalog nicht auf
+/** `specs` = Kennwerte aus dem Datenblatt des Herstellers (server/specs), null = keins hinterlegt */
+/** `price` = Shoppreis der Standardspule (server/prices.json), null = nicht recherchiert */
+export type CatalogLine = {
+  id: number; material: string; name: string; profile_id: string | null; colors: CatalogColor[]; specs: LineSpecs | null; price: LinePrice | null;
+};
 export type CatalogBrand = { id: number; brand: string; match: string; url: string; source: string; lines: CatalogLine[] };
 
 let CATALOG: CatalogBrand[] = [];

@@ -55,17 +55,22 @@ type Draft = Record<string, string | boolean>;
 /**
  * Felder eines Bereichs. Leeres Feld = Standard (steht als Platzhalter drin), „Auf Standard“ löscht den gespeicherten Wert.
  * `instant`: Schalter sichern sofort (Einstellungsseite). `footer` ersetzt die Sichern-Zeile (Assistent: Zurück/Weiter).
+ * `columns`: Felder ab `xl` zweispaltig (breite Einstellungsseite). `only`: nur diese Felder (Suche).
  */
 export function SectionForm({
   id,
   instant = false,
   onDone,
   footer,
+  columns = false,
+  only,
 }: {
   id: SectionId;
   instant?: boolean;
   onDone?: () => void;
   footer?: (busy: boolean, dirty: boolean) => ReactNode;
+  columns?: boolean;
+  only?: Set<string>;
 }) {
   const qc = useQueryClient();
   const toast = useToast();
@@ -109,7 +114,8 @@ export function SectionForm({
   const status = sectionStatus(id, st.data);
   return (
     <form className="space-y-4" onSubmit={submit} noValidate>
-      {sec.fields.map((f) => {
+      <div className={columns ? "grid items-start gap-x-8 gap-y-5 xl:grid-cols-2" : "space-y-4"}>
+      {sec.fields.filter((f) => !only || only.has(f.key)).map((f) => {
         const s = vals[f.key]!;
         const stored = f.type === "secret" ? s.set : s.stored != null;
         const src =
@@ -157,14 +163,14 @@ export function SectionForm({
           );
         }
         const placeholder =
-          f.type === "secret" ? (s.hint ? `${s.hint} behalten` : "sk-ant-…") : String(s.source === "env" ? s.effective : (s.default ?? ""));
+          f.type === "secret" ? (s.hint ? `${s.hint} behalten` : f.key === "api_key" ? "sk-ant-…" : "") : String(s.source === "env" ? s.effective : (s.default ?? ""));
         const value = (draft[f.key] as string | undefined) ?? (f.type === "secret" ? "" : s.stored != null ? String(s.stored) : "");
         return (
           <Field key={f.key} label={f.unit ? `${f.label} (${f.unit})` : f.label} required={false} aside={aside} hint={hint}>
             <input
               className={`field ${f.type === "secret" || f.key === "model" ? "font-mono" : ""} ${f.type === "number" ? "tnum" : ""}`}
               type={f.type === "secret" ? "password" : "text"}
-              inputMode={f.type === "number" ? "numeric" : undefined}
+              inputMode={f.type === "number" ? (f.integer ? "numeric" : "decimal") : undefined}
               value={value}
               placeholder={placeholder}
               autoComplete={f.type === "secret" ? "new-password" : "off"}
@@ -173,6 +179,7 @@ export function SectionForm({
           </Field>
         );
       })}
+      </div>
       {error && <div className="rounded-lg bg-bad-soft px-3 py-2 text-sm font-semibold text-bad">{error}</div>}
       {footer ? (
         footer(save.isPending, dirty)
@@ -200,7 +207,16 @@ export function PrinterForm({
 }) {
   const qc = useQueryClient();
   const toast = useToast();
-  const [v, setV] = useState<PrinterInput>({ name: p?.name ?? "Bambu", host: p?.host ?? "", serial: p?.serial ?? "", model: p?.model ?? "P2S", access_code: "" });
+  const [v, setV] = useState<PrinterInput>({
+    name: p?.name ?? "Bambu",
+    host: p?.host ?? "",
+    serial: p?.serial ?? "",
+    model: p?.model ?? "P2S",
+    access_code: "",
+    plug: p?.plug ?? "",
+  });
+  const [plugKind, plugHost] = (v.plug ?? "").includes(":") ? [v.plug!.split(":")[0]!, v.plug!.slice(v.plug!.indexOf(":") + 1)] : ["", ""];
+  const setPlug = (kind: string, host: string) => setV({ ...v, plug: kind ? `${kind}:${host.trim()}` : "" });
   const save = useMutation({
     mutationFn: () => {
       const b = { ...v, access_code: v.access_code || undefined };
@@ -255,6 +271,31 @@ export function PrinterForm({
         }
       >
         <input className="field font-mono" type="password" value={v.access_code} onChange={set("access_code")} autoComplete="new-password" required={!p} />
+      </Field>
+      <Field
+        label="Messende Steckdose"
+        required={false}
+        hint="Für die Stromkosten je Druck und die Leistung im Dashboard. Shelly (Plug S, Plus, Gen3) oder Tasmota im selben Netz, ohne Cloud."
+      >
+        <div className="flex gap-2">
+          <select className="field w-32 shrink-0" value={plugKind} onChange={(e) => setPlug(e.target.value, plugHost)} aria-label="Art der Steckdose">
+            <option value="">Keine</option>
+            <option value="shelly">Shelly</option>
+            <option value="tasmota">Tasmota</option>
+          </select>
+          {plugKind && (
+            <input
+              className="field min-w-0 flex-1 tnum"
+              value={plugHost}
+              onChange={(e) => setPlug(plugKind, e.target.value)}
+              placeholder="192.168.1.60"
+              inputMode="decimal"
+              autoComplete="off"
+              aria-label="IP der Steckdose"
+              required
+            />
+          )}
+        </div>
       </Field>
       {footer(save.isPending)}
     </form>

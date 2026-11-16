@@ -1,0 +1,132 @@
+{
+ "Anycubic": {
+  "PLA Matte|Green-Brown": {
+   "hex": "62704D",
+   "source": "https://ca.anycubic.com/products/matte-pla-filament"
+  },
+  "PLA Matte|Red-Blue": {
+   "hex": "B8373B",
+   "source": "https://ca.anycubic.com/products/matte-pla-filament"
+  }
+ },
+ "Overture": {
+  "PLA Matte|Black-White": {
+   "hex": "000000",
+   "source": "https://cdn.shopify.com/s/files/1/0207/3624/5824/files/Overture_Hex_Code_List.pdf"
+  },
+  "PLA Matte|Orange-Red": {
+   "hex": "FCAB59",
+   "source": "https://cdn.shopify.com/s/files/1/0207/3624/5824/files/Overture_Hex_Code_List.pdf"
+  },
+  "PLA Matte|Blue-Red": {
+   "hex": "0074BD",
+   "source": "https://cdn.shopify.com/s/files/1/0207/3624/5824/files/Overture_Hex_Code_List.pdf"
+  },
+  "PLA Matte|Light Blue-Yellow": {
+   "hex": "B8FFFF",
+   "source": "https://cdn.shopify.com/s/files/1/0207/3624/5824/files/Overture_Hex_Code_List.pdf"
+  }
+ },
+ "Polymaker": {
+  "Panchroma Dual|Chameleon (Teal-Yellow)": {
+   "hex": "61BCC3",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Shadow Black (White-Black)": {
+   "hex": "F4EFEB",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Shadow Red (Black-Red)": {
+   "hex": "2F2E30",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Shadow Orange (Orange-Black)": {
+   "hex": "F88B17",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Foggy Orange (Grey-Orange)": {
+   "hex": "8A8C94",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Foggy Purple (Grey-Purple)": {
+   "hex": "8A8C94",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Glacier Blue (Ice-Blue)": {
+   "hex": "A4D0DF",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Flamingo (Pink-Red)": {
+   "hex": "EAADBD",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Sunrise (Red-Yellow)": {
+   "hex": "ED2F2E",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Camouflage (Dark Green-Brown)": {
+   "hex": "5F6244",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  },
+  "Panchroma Dual|Mixed Berries (Red-Dark Blue)": {
+   "hex": "BF312E",
+   "source": "https://wiki.polymaker.com/polymaker-wiki/polymaker-wiki-pt/produtos-polymaker/mais-sobre-nossos-produtos/codigos-hex-e-distancias-de-transmissao"
+  }
+ },
+ "Sunlu": {
+  "PLA Glow|Future Green (Glow Green)": {
+   "hex": "42E726",
+   "source": "https://www.sunlu.com/products/glow-in-the-dark-pla-filament"
+  },
+  "PLA Twinkling|Blue": {
+   "hex": "61B5E4",
+   "source": "https://www.sunlu.com/products/twinkling-pla-filament"
+  },
+  "PLA Twinkling|Black": {
+   "hex": "656869",
+   "source": "https://www.sunlu.com/products/twinkling-pla-filament"
+  },
+  "PLA+ Silk 2.0|Light Gold": {
+   "hex": "F1BE48",
+   "source": "https://de.store.sunlu.com/products/silk-pla-v2-filament-1kg-mehr-glanz-staerkere-schichthaftung"
+  },
+  "PETG Glow|Red (Glow Red)": {
+   "hex": "E40046",
+   "source": "https://www.sunlu.com/products/petg-glow-in-the-dark"
+  },
+  "PETG Glow|Blue (Glow Blue)": {
+   "hex": "0073CB",
+   "source": "https://www.sunlu.com/products/petg-glow-in-the-dark"
+  },
+  "PETG Glow|Yellow (Glow Yellow)": {
+   "hex": "FFE900",
+   "source": "https://www.sunlu.com/products/petg-glow-in-the-dark"
+  },
+  "PETG Glow|Green (Glow Green)": {
+   "hex": "44D62C",
+   "source": "https://www.sunlu.com/products/petg-glow-in-the-dark"
+  },
+  "PETG Glow|White (Glow Green)": {
+   "hex": "DCEABE",
+   "source": "https://www.sunlu.com/products/petg-glow-in-the-dark"
+  },
+  "PETG Glow|White (Glow Blue)": {
+   "hex": "F1F4ED",
+   "source": "https://www.sunlu.com/products/petg-glow-in-the-dark"
+  },
+  "ABS|Transparent White": {
+   "hex": "FFFFFF",
+   "source": "https://www.sunlu.com/products/transparent-abs-filament"
+  },
+  "PP|Natural": {
+   "hex": "FEFEFF",
+   "source": "https://www.sunlu.com/products/pp-filament-3d"
+  }
+ },
+ "eSUN": {
+  "ABS-CF|Dark Green": {
+   "hex": "60706F",
+   "source": "https://www.esun3d.com/epetg-cf-product"
+  }
+ }
+}

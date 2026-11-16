@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { Box, Heart, Plus, Printer, Search, X } from "lucide-react";
+import { Box, ChevronLeft, Link2, FolderOpen, FolderPlus, Heart, ListChecks, Pencil, Plus, Printer, Search, X } from "lucide-react";
 import { useMemo, useRef, useState } from "react";
 import type { ModelListItem } from "../../../shared/types.ts";
 import { api } from "../api.ts";
@@ -7,6 +7,9 @@ import { PageHeader } from "../App.tsx";
 import { go, href } from "../lib/router.ts";
 import { ACCEPT, importFiles } from "../lib/upload.ts";
 import { Button, LoadError } from "../ui/controls.tsx";
+import { CollectionDialog, CollectionTile, ModelPicker, useCollections } from "../ui/collections.tsx";
+import { ModelImportDialog } from "../ui/ModelImport.tsx";
+import { LibraryTabs } from "./PrintablesPage.tsx";
 import { DropZone } from "../ui/Uploads.tsx";
 
 type Sort = "neu" | "name" | "gedruckt";
@@ -23,7 +26,7 @@ const save = (k: string, v: unknown) => {
   } catch {}
 };
 
-export function Library() {
+export function Library({ collection }: { collection?: number }) {
   const qc = useQueryClient();
   const models = useQuery({ queryKey: ["models"], queryFn: api.models });
   const tags = useQuery({ queryKey: ["tags"], queryFn: api.tags });
@@ -32,11 +35,15 @@ export function Library() {
   const [only, setOnly] = useState<"" | "fav" | "druckbar">(() => load("stl.only", ""));
   const [sort, setSort] = useState<Sort>(() => load("stl.sort", "neu"));
   const input = useRef<HTMLInputElement>(null);
+  const colls = useCollections();
+  const coll = collection ? colls.data?.find((c) => c.id === collection) : undefined;
+  const [collDialog, setCollDialog] = useState<"new" | "edit" | "pick" | "link" | null>(null);
 
   const list = useMemo(() => {
     const words = q.toLowerCase().split(/\s+/).filter(Boolean);
     const out = (models.data ?? []).filter(
       (m) =>
+        (!collection || m.collections.includes(collection)) &&
         (!tag || m.tags.includes(tag)) &&
         (only !== "fav" || m.favorite) &&
         (only !== "druckbar" || m.printable) &&
@@ -45,20 +52,52 @@ export function Library() {
     if (sort === "name") out.sort((a, b) => a.name.localeCompare(b.name, "de"));
     if (sort === "gedruckt") out.sort((a, b) => (b.last_print ?? "").localeCompare(a.last_print ?? "") || b.print_count - a.print_count);
     return out;
-  }, [models.data, q, tag, only, sort]);
+  }, [models.data, q, tag, only, sort, collection]);
 
   const pick = (files: FileList | null) => {
     if (!files?.length) return;
-    void importFiles(qc, [...files]).then((ids) => ids.length === 1 && go({ page: "model", id: ids[0]! }));
+    void importFiles(qc, [...files]).then(added);
+  };
+  // In einer Sammlung landen neue Modelle gleich darin
+  const added = async (ids: number[]) => {
+    if (collection) {
+      for (const id of ids) await api.setModelCollections(id, [collection]);
+      await Promise.all([qc.invalidateQueries({ queryKey: ["models"] }), qc.invalidateQueries({ queryKey: ["collections"] })]);
+    }
+    if (ids.length === 1) go({ page: "model", id: ids[0]! });
   };
 
   const chip = (active: boolean) =>
     `h-8 shrink-0 rounded-full px-3 text-[13px] font-semibold whitespace-nowrap ${active ? "bg-ink text-bg" : "bg-card text-ink2 shadow-seg hover:text-ink"}`;
 
   return (
-    <DropZone label="Als neues Modell ablegen" onDone={(ids) => ids.length === 1 && go({ page: "model", id: ids[0]! })}>
-      <PageHeader title="Bibliothek">
+    <DropZone label={coll ? `Als neues Modell in „${coll.name}“ ablegen` : "Als neues Modell ablegen"} onDone={(ids) => void added(ids)}>
+      {!collection && <LibraryTabs active="modelle" />}
+      <PageHeader
+        title={collection ? (coll?.name ?? "Sammlung") : "Bibliothek"}
+        sub={coll && [coll.description, coll.count === 1 ? "1 Modell" : `${coll.count} Modelle`].filter(Boolean).join(" · ")}
+        back={
+          collection ? (
+            <a href={href({ page: "library" })} className="mb-1 inline-flex items-center gap-1 text-sm font-semibold text-ink3 hover:text-ink">
+              <ChevronLeft size={16} /> Bibliothek
+            </a>
+          ) : undefined
+        }
+      >
+        {coll && (
+          <>
+            <Button onClick={() => setCollDialog("edit")} aria-label="Sammlung ändern">
+              <Pencil size={15} />
+            </Button>
+            <Button onClick={() => setCollDialog("pick")}>
+              <ListChecks size={16} /> Modelle wählen
+            </Button>
+          </>
+        )}
         <input ref={input} type="file" multiple accept={ACCEPT} className="hidden" onChange={(e) => (pick(e.target.files), (e.target.value = ""))} />
+        <Button onClick={() => setCollDialog("link")}>
+          <Link2 size={16} /> Per Link
+        </Button>
         <Button kind="primary" onClick={() => input.current?.click()}>
           <Plus size={16} strokeWidth={2.6} /> Modell hinzufügen
         </Button>
@@ -89,7 +128,7 @@ export function Library() {
 
         <div className="no-scrollbar -mx-4 mt-2.5 flex gap-2 overflow-x-auto px-4 pt-0.5 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
           <button className={chip(!tag && !only)} onClick={() => (setTag(null), setOnly(""), save("stl.tag", null), save("stl.only", ""))}>
-            Alle {models.data ? <span className="ml-1 opacity-60">{models.data.length}</span> : null}
+            Alle {models.data ? <span className="ml-1 opacity-60">{collection ? models.data.filter((m) => m.collections.includes(collection)).length : models.data.length}</span> : null}
           </button>
           <button className={chip(only === "fav")} onClick={() => (setOnly(only === "fav" ? "" : "fav"), save("stl.only", only === "fav" ? "" : "fav"))}>
             <Heart size={13} className="mr-1 -mt-0.5 inline" /> Favoriten
@@ -97,6 +136,11 @@ export function Library() {
           <button className={chip(only === "druckbar")} onClick={() => (setOnly(only === "druckbar" ? "" : "druckbar"), save("stl.only", only === "druckbar" ? "" : "druckbar"))}>
             <Printer size={13} className="mr-1 -mt-0.5 inline" /> Druckbereit
           </button>
+          {!collection && !colls.data?.length && (
+            <button className={chip(false)} onClick={() => setCollDialog("new")}>
+              <FolderPlus size={13} className="mr-1 -mt-0.5 inline" /> Sammlung
+            </button>
+          )}
           {tags.data?.map((t) => (
             <button key={t.tag} className={chip(tag === t.tag)} onClick={() => (setTag(tag === t.tag ? null : t.tag), save("stl.tag", tag === t.tag ? null : t.tag))}>
               #{t.tag} <span className="ml-1 opacity-60">{t.count}</span>
@@ -104,8 +148,26 @@ export function Library() {
           ))}
         </div>
 
+        {!collection && !q && !tag && !only && !!colls.data?.length && (
+          <div className="no-scrollbar -mx-4 mt-4 flex gap-3 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0">
+            {colls.data.map((c) => (
+              <CollectionTile key={c.id} c={c} />
+            ))}
+            <button
+              onClick={() => setCollDialog("new")}
+              className="grid w-32 shrink-0 place-items-center rounded-2xl border-2 border-dashed border-line text-[13px] font-semibold text-ink3 hover:text-ink"
+            >
+              <span className="flex flex-col items-center gap-1">
+                <FolderPlus size={20} /> Neue Sammlung
+              </span>
+            </button>
+          </div>
+        )}
+
         <div className="mt-5">
-          {models.isError ? (
+          {collection && colls.isSuccess && !coll ? (
+            <div className="py-16 text-center text-ink3">Diese Sammlung gibt es nicht mehr.</div>
+          ) : models.isError ? (
             <LoadError error={models.error} retry={() => models.refetch()} />
           ) : models.isPending ? (
             <Grid>
@@ -115,6 +177,15 @@ export function Library() {
             </Grid>
           ) : !models.data.length ? (
             <Empty onAdd={() => input.current?.click()} />
+          ) : collection && !list.length && !q && !tag && !only ? (
+            <div className="rounded-3xl border-2 border-dashed border-line px-6 py-14 text-center">
+              <FolderOpen size={36} strokeWidth={1.5} className="mx-auto text-ink3" />
+              <div className="mt-3 font-bold">Noch leer</div>
+              <p className="mx-auto mt-1 max-w-sm text-sm text-ink2">Vorhandene Modelle auswählen oder neue Dateien hierher ziehen.</p>
+              <Button kind="primary" className="mt-4" onClick={() => setCollDialog("pick")}>
+                <ListChecks size={16} /> Modelle wählen
+              </Button>
+            </div>
           ) : !list.length ? (
             <div className="py-16 text-center text-ink3">Nichts gefunden.</div>
           ) : (
@@ -126,6 +197,10 @@ export function Library() {
           )}
         </div>
       </div>
+      {collDialog === "new" && <CollectionDialog onClose={() => setCollDialog(null)} onCreated={(id) => go({ page: "library", collection: id })} />}
+      {collDialog === "edit" && coll && <CollectionDialog c={coll} onClose={() => setCollDialog(null)} />}
+      {collDialog === "pick" && coll && <ModelPicker c={coll} onClose={() => setCollDialog(null)} />}
+      {collDialog === "link" && <ModelImportDialog collection={collection} onClose={() => setCollDialog(null)} />}
     </DropZone>
   );
 }
@@ -173,7 +248,7 @@ function Empty({ onAdd }: { onAdd: () => void }) {
       <Box size={40} strokeWidth={1.5} className="mx-auto text-ink3" />
       <div className="mt-3 text-lg font-bold">Noch keine Modelle</div>
       <p className="mx-auto mt-1 max-w-sm text-sm text-ink2">
-        Dateien hierher ziehen oder auswählen: STL, 3MF, OBJ, STEP, Bilder oder ein ZIP von Printables, Thingiverse oder MakerWorld.
+        Dateien hierher ziehen oder auswählen: STL, 3MF, OBJ, STEP, Bilder oder ein ZIP von Printables, Thingiverse oder MakerWorld. Printables- und MakerWorld-Modelle gehen auch „Per Link“.
       </p>
       <Button kind="primary" className="mt-5" onClick={onAdd}>
         <Plus size={16} strokeWidth={2.6} /> Modell hinzufügen

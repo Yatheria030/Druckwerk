@@ -6,6 +6,7 @@
 import type { Spool, SpoolInput, SpoolUsage } from "../shared/types.ts";
 import { autoColorName } from "../shared/colors.ts";
 import { db, nowIso } from "./db.ts";
+import { checkLowSpools } from "./notify.ts";
 import { setting } from "./settings.ts";
 
 type Row = Record<string, unknown>;
@@ -106,6 +107,7 @@ export function addUsage(spoolId: number, grams: number, source: SpoolUsage["sou
   db.prepare(`UPDATE spools SET used_g = MAX(0, used_g + ?), updated_at = ?${touch ? ", last_used_at = ?" : ""}${own ? ", track = 'eigen', rfid_full = 0" : ""} WHERE id = ?`).run(
     ...(touch ? [grams, nowIso(), nowIso(), spoolId] : [grams, nowIso(), spoolId]),
   );
+  if (grams > 0) checkLowSpools();
 }
 
 /**
@@ -130,7 +132,10 @@ export function syncRfidRemain(trays: TrayInfo[], onlyNew = false) {
     if (onlyNew && db.prepare("SELECT 1 FROM spool_usage WHERE spool_id = ?").get(s.id)) continue;
     const target = t.remain >= 100 ? 0 : Math.round(s.net_g * (1 - t.remain / 100) * 10) / 10;
     const diff = Math.round((target - s.used_g) * 10) / 10;
-    if (Math.abs(diff) >= 1) addUsage(s.id, diff, "rfid", null, `Drucker meldet ${t.remain} %`);
+    // Das AMS schätzt den Rest und springt dabei gern 1–3 % hoch und wieder runter: kleine Anstiege sind Rauschen, kein
+    // zurückgewonnenes Filament (sonst wechseln sich Buchungen von ±20 g ab)
+    const noise = diff < 0 && -diff < s.net_g * 0.05;
+    if (Math.abs(diff) >= 1 && !noise) addUsage(s.id, diff, "rfid", null, `Drucker meldet ${t.remain} %`);
     if (t.remain >= 100) {
       db.prepare("UPDATE spools SET track = 'eigen', rfid_full = 1, updated_at = ? WHERE id = ?").run(nowIso(), s.id);
       console.log(`Spule #${s.id} ist voll (100 %): ab jetzt eigene Zählung`);
@@ -182,6 +187,8 @@ export type TrayInfo = {
   reading: boolean; // RFID wird gelesen
   profile: string; // tray_info_idx (Profil-ID des Fachs)
   code: string; // Farbcode vom Chip (tray_id_name „A01-K1“ → „K1“), "" ohne Chip
+  dry_temp: number | null; // Trocknungsvorschlag (drying_temp/drying_time des Fachs)
+  dry_hours: number | null;
 };
 
 const sameMaterial = (a: string, b: string) => {
@@ -223,7 +230,7 @@ const norm = (x: string) => x.toLowerCase().replace(/\s+/g, " ").trim();
  * Fächer mit der Bibliothek abgleichen: Bambu-Spulen (RFID) werden beim ersten Einlegen angelegt und ihrem Fach zugeordnet,
  * Spulen ohne Chip fliegen aus dem Fach, wenn es leer ist oder dort ein anderes Material liegt.
  */
-export function syncTrays(printerId: number, trays: TrayInfo[]) {
+export function syncTrays(printerId: number, trays: TrayInfo[], printing = false) {
   for (const t of trays) {
     const occupant = db.prepare("SELECT id, rfid, material FROM spools WHERE printer_id = ? AND tray = ?").get(printerId, t.id) as
       | { id: number; rfid: string | null; material: string }
@@ -252,12 +259,32 @@ export function syncTrays(printerId: number, trays: TrayInfo[]) {
         db.prepare("UPDATE spools SET color_name = ? WHERE id = ? AND color_name = ''").run(name, s.id);
       }
       if (s.printer_id !== printerId || s.tray !== t.id) setSlot(s.id, printerId, t.id);
-    } else if (occupant && (occupant.rfid || !t.loaded || (t.type && !sameMaterial(occupant.material, t.type)))) {
-      // Steckt eine Spule ohne Material am Drucker, bleibt die von Hand zugeordnete Spule im Fach
+    } else if (occupant) {
+      const key = `${printerId}:${t.id}`;
+      const why = occupant.rfid ? "Chip fehlt" : !t.loaded ? "Fach leer" : t.type && !sameMaterial(occupant.material, t.type) ? `Material ${t.type}` : "";
+      if (!why) {
+        leaving.delete(key);
+        continue;
+      }
+      // Beim Filamentwechsel und Druckstart meldet die P2S Fächer kurz leer bzw. ohne Material: währenddessen nie ausräumen,
+      // sonst erst, wenn der Zustand 30 s anhält (syncLibrary prüft erneut)
+      if (printing) continue;
+      const since = leaving.get(key);
+      if (since == null) leaving.set(key, Date.now());
+      if (since == null || Date.now() - since < LEAVE_MS) continue;
+      leaving.delete(key);
+      console.log(`Spule #${occupant.id} aus Fach ${trayLabel(t.id)} genommen: ${why}`);
       setSlot(occupant.id, null, null);
-    }
+    } else leaving.delete(`${printerId}:${t.id}`);
   }
 }
+
+/** Fächer, deren Spule ohne Chip gerade als „leer/anderes Material“ gilt, seit wann (Schlüssel Drucker:Fach) */
+const leaving = new Map<string, number>();
+const LEAVE_MS = 30_000;
+/** Steht eine Entnahme aus, deren Wartezeit um ist? Dann muss syncTrays erneut laufen */
+export const leavingDue = (printerId: number) =>
+  [...leaving].some(([k, t]) => k.startsWith(`${printerId}:`) && Date.now() - t >= LEAVE_MS);
 
 /** Plan-Eintrag je Filament eines Drucks */
 export type PlanItem = { tray: number | null; spool_id: number | null; type: string; color: string; grams: number };
@@ -326,6 +353,29 @@ export function bookPrint(
     }
   }
   if (booked) console.log(`Druck ${printId} (${row.name}): ${booked.toFixed(1)} g Filament gebucht`);
+}
+
+/**
+ * Verbrauch eines Drucks von Hand setzen (Druck aus Bambu Studio oder der Cloud ohne lesbare Datei, oder Korrektur):
+ * ersetzt die bisherigen Druckbuchungen dieses Drucks. Die Gramm zählen wie eine Druckbuchung, die Spule bleibt in ihrem Modus.
+ */
+export function setPrintUsage(printId: number, items: { spool_id: number; grams: number }[]) {
+  db.exec("BEGIN");
+  try {
+    const old = db.prepare("SELECT spool_id, grams FROM spool_usage WHERE print_id = ? AND source = 'druck'").all(printId) as { spool_id: number; grams: number }[];
+    for (const o of old) db.prepare("UPDATE spools SET used_g = MAX(0, used_g - ?), updated_at = ? WHERE id = ?").run(o.grams, nowIso(), o.spool_id);
+    db.prepare("DELETE FROM spool_usage WHERE print_id = ? AND source = 'druck'").run(printId);
+    for (const i of items) {
+      const g = Math.round(i.grams * 10) / 10;
+      if (g > 0 && db.prepare("SELECT 1 FROM spools WHERE id = ?").get(i.spool_id)) addUsage(i.spool_id, g, "druck", printId, "nachgetragen");
+    }
+    db.exec("COMMIT");
+  } catch (e) {
+    db.exec("ROLLBACK");
+    throw e;
+  }
+  const sum = items.reduce((a, i) => a + (i.grams > 0 ? i.grams : 0), 0);
+  console.log(`Druck ${printId}: Verbrauch von Hand gesetzt, ${sum.toFixed(1)} g auf ${items.filter((i) => i.grams > 0).length} Spule(n)`);
 }
 
 /** Spulen ohne Farbname bekommen einen (beim Start, für vorhandene Daten); eigene Namen bleiben */
